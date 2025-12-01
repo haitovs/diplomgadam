@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Avg. satisfaction",
+    "value": "4.6 / 5",
+    "trend": 3,
+    "description": "Derived from 1,800 qualitative interviews across 12 venues."
+  },
+  {
+    "title": "Local sourcing",
+    "value": "78%",
+    "trend": 5,
+    "description": "Portion of ingredients traced to farms within 150km radius."
+  },
+  {
+    "title": "Digital bookings",
+    "value": "64%",
+    "trend": 7,
+    "description": "Share of reservations completed via mobile-first flows."
+  },
+  {
+    "title": "AI concierge usage",
+    "value": "420 req/day",
+    "trend": 22,
+    "description": "Simulated demand for TripAI sessions during soft launch."
+  }
+]

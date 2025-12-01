@@ -1,0 +1,9 @@
+[
+  { "cuisine": "Modern Georgian", "demandScore": 92 },
+  { "cuisine": "Plant-based", "demandScore": 78 },
+  { "cuisine": "Pan-Asian", "demandScore": 83 },
+  { "cuisine": "Seafood", "demandScore": 74 },
+  { "cuisine": "Middle Eastern", "demandScore": 69 },
+  { "cuisine": "Cafe", "demandScore": 65 },
+  { "cuisine": "Experimental", "demandScore": 58 }
+]

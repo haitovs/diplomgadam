@@ -1,0 +1,464 @@
+[
+  {
+    "id": "riverstone-atelier",
+    "name": "Riverstone Atelier",
+    "description": "Seasonal tasting menus highlighting mountain botanicals and charcoal-fired techniques overlooking the Mtkvari riverbend.",
+    "heroImage": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Modern Georgian", "New Nordic"],
+    "tags": ["Tasting Menu", "Chef's Table", "Panoramic"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "priceTier": "$$$",
+    "rating": 4.8,
+    "reviewCount": 241,
+    "location": {
+      "address": "14 Riverside Promenade",
+      "neighborhood": "Old Wharf",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7142, "lng": 44.7941 }
+    },
+    "contact": {
+      "phone": "+995 599 101 220",
+      "website": "https://riverstoneatelier.example.com"
+    },
+    "schedule": [
+      { "days": "Mon–Thu", "hours": "17:30 – 23:30" },
+      { "days": "Fri–Sat", "hours": "17:30 – 01:00" },
+      { "days": "Sun", "hours": "Closed" }
+    ],
+    "amenities": ["Chef Counter", "Sommelier Pairings", "River View", "Private Salon"],
+    "menuHighlights": [
+      { "name": "Charred Adjika Beetroot", "price": "45₾", "description": "Coal-grilled beet with fermented blackberry glaze." },
+      { "name": "Amber Trout Mosaic", "price": "62₾", "description": "River trout cured in spruce oil with chilled tarragon nage." },
+      { "name": "Gin-Tonic Sorbet", "price": "28₾", "description": "Foraged juniper granité with citrus blossom foam." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1429554513019-6c61c19ffb7e?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 92,
+    "aiSummary": "Best-in-class tasting studio with research kitchen pedigree; ideal for gastronomic tourism cohorts."
+  },
+  {
+    "id": "botanical-nook",
+    "name": "Botanical Nook",
+    "description": "Greenhouse café serving biodynamic small plates, cold-brew tonics, and edible flower pastries.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Plant-based", "Mediterranean"],
+    "tags": ["Greenhouse", "Tea Lab", "Acoustic Sessions"],
+    "dietary": ["Vegan", "Gluten-Free"],
+    "priceTier": "$$",
+    "rating": 4.6,
+    "reviewCount": 188,
+    "location": {
+      "address": "22 Lisi Ridge",
+      "neighborhood": "Botanical Quarter",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7205, "lng": 44.7993 }
+    },
+    "contact": {
+      "phone": "+995 555 882 114",
+      "website": "https://botanicalnook.example.com"
+    },
+    "schedule": [
+      { "days": "Mon–Fri", "hours": "08:00 – 20:00" },
+      { "days": "Sat", "hours": "09:00 – 22:00" },
+      { "days": "Sun", "hours": "09:00 – 18:00" }
+    ],
+    "amenities": ["Garden Wi-Fi", "Workshop Space", "Zero Plastic"],
+    "menuHighlights": [
+      { "name": "Labneh Meadow Bowl", "price": "28₾", "description": "Cashew labneh, roasted carrots, candied buckwheat." },
+      { "name": "Chilled Pine Tea", "price": "14₾", "description": "Nitro-infused pine needle brew with citrus pearls." },
+      { "name": "Citrus Blossom Tart", "price": "19₾", "description": "Gluten-free sable with chamomile custard." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 88,
+    "aiSummary": "Energetic daylight venue for remote creators, featuring high-fiber brunch boards and adaptogenic tonics."
+  },
+  {
+    "id": "forge-flame",
+    "name": "Forge & Flame BBQ Lab",
+    "description": "Experimental smokehouse blending Caucasian wood-fire tradition with Texas craft barbecue science.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Smokehouse", "Georgian"],
+    "tags": ["Live Fire", "Ferments", "Taproom"],
+    "dietary": ["Gluten-Free", "Keto"],
+    "priceTier": "$$",
+    "rating": 4.5,
+    "reviewCount": 210,
+    "location": {
+      "address": "5 Forge Yard",
+      "neighborhood": "Industrial Belt",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7068, "lng": 44.7888 }
+    },
+    "contact": {
+      "phone": "+995 598 034 776",
+      "website": "https://forgeflame.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "12:00 – 23:00" }
+    ],
+    "amenities": ["Taproom", "Chef Demos", "Takeaway Counter"],
+    "menuHighlights": [
+      { "name": "Adjika Brisket", "price": "36₾", "description": "16-hour smoked beef with pomegranate glaze." },
+      { "name": "Suluguni Cornbread", "price": "18₾", "description": "Smoked cheese cornbread with wildflower honey butter." },
+      { "name": "Black Garlic Pickles", "price": "12₾", "description": "House ferment flight with smoked salt." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 74,
+    "aiSummary": "Ideal for protein-heavy itineraries, offering data-backed smoke profiles and traceable sourcing."
+  },
+  {
+    "id": "night-market-88",
+    "name": "Night Market 88",
+    "description": "Lantern-lit hawker alley with rotating chefs from Seoul, Saigon, and Singapore offering small-plate flights.",
+    "heroImage": "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Pan-Asian", "Street Food"],
+    "tags": ["Nightlife", "DJ Sets", "Communal"],
+    "dietary": ["Vegetarian", "Halal"],
+    "priceTier": "$$",
+    "rating": 4.7,
+    "reviewCount": 312,
+    "location": {
+      "address": "2 Meridian Arcade",
+      "neighborhood": "Neon District",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7121, "lng": 44.8012 }
+    },
+    "contact": {
+      "phone": "+995 570 922 113",
+      "website": "https://nightmarket88.example.com"
+    },
+    "schedule": [
+      { "days": "Wed–Sun", "hours": "18:00 – 02:00" }
+    ],
+    "amenities": ["Live DJs", "Cashless", "Tasting Passport"],
+    "menuHighlights": [
+      { "name": "Gochujang Cauliflower", "price": "22₾", "description": "Tempura florets with kimchi caramel." },
+      { "name": "Saigon Pho Bites", "price": "26₾", "description": "Compressed pho cubes with aromatic beef glaze." },
+      { "name": "Sichuan Gelato", "price": "18₾", "description": "Mala spiced ice cream with citrus dust." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 68,
+    "aiSummary": "Vibrant option for nocturnal explorers; static dataset ties each stall to unique sentiment scores."
+  },
+  {
+    "id": "aurora-rooftop",
+    "name": "Aurora Rooftop Observatory",
+    "description": "Skyline lounge pairing cloud cocktails with astronomer-led stargazing and ambient downtempo sets.",
+    "heroImage": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Fusion", "Seafood"],
+    "tags": ["Rooftop", "Mixology", "Live Ambient"],
+    "dietary": ["Pescatarian", "Gluten-Free"],
+    "priceTier": "$$$",
+    "rating": 4.6,
+    "reviewCount": 145,
+    "location": {
+      "address": "48 Zenith Tower",
+      "neighborhood": "Aurora Park",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7189, "lng": 44.8091 }
+    },
+    "contact": {
+      "phone": "+995 591 230 044",
+      "website": "https://aurorarooftop.example.com"
+    },
+    "schedule": [
+      { "days": "Tue–Sun", "hours": "17:00 – 02:00" }
+    ],
+    "amenities": ["Telescope Deck", "Mixology Class", "Heated Pods"],
+    "menuHighlights": [
+      { "name": "Osmium Oyster Trio", "price": "54₾", "description": "Smoked, pickled, and foam-finished oyster flight." },
+      { "name": "Cloud Citrus Highball", "price": "29₾", "description": "Nitro highball with yuzu vapor garnish." },
+      { "name": "Graphene Tuna Crudo", "price": "48₾", "description": "Compressed tuna with activated sesame soil." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 71,
+    "aiSummary": "Choice for celebratory itineraries needing skyline visuals and pescatarian-forward menus."
+  },
+  {
+    "id": "harborline-canteen",
+    "name": "Harborline Canteen",
+    "description": "Maritime-inspired communal counter with smoked mussels, sourdough chowders, and kelp tonics.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Seafood", "Nordic"],
+    "tags": ["Communal", "Work Lunch", "Zero Waste"],
+    "dietary": ["Pescatarian"],
+    "priceTier": "$$",
+    "rating": 4.4,
+    "reviewCount": 167,
+    "location": {
+      "address": "31 Dock Terrace",
+      "neighborhood": "Harborline",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7043, "lng": 44.7833 }
+    },
+    "contact": {
+      "phone": "+995 514 778 900",
+      "website": "https://harborlinecanteen.example.com"
+    },
+    "schedule": [
+      { "days": "Mon–Fri", "hours": "11:30 – 21:30" },
+      { "days": "Sat", "hours": "11:00 – 23:00" },
+      { "days": "Sun", "hours": "Closed" }
+    ],
+    "amenities": ["Community Table", "Fermentation Lab", "Bike Parking"],
+    "menuHighlights": [
+      { "name": "Smoked Mussel Toast", "price": "24₾", "description": "Black bread, dill aioli, charcoal oil." },
+      { "name": "Kelp Chowder", "price": "26₾", "description": "Creamy soup with sunflower cream and potato pearls." },
+      { "name": "Sea Buckthorn Tonic", "price": "17₾", "description": "House-fermented kefir soda with kelp bitters." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 85,
+    "aiSummary": "Great for conscious travelers seeking midday seafood with measurable waste-diversion metrics."
+  },
+  {
+    "id": "nomads-table",
+    "name": "Nomad's Table",
+    "description": "Desert-inspired kitchen merging Levantine spices with Caucasian grains in a slow-dining format.",
+    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Middle Eastern", "Georgian"],
+    "tags": ["Slow Dining", "Spice Bar", "Storytelling"],
+    "dietary": ["Halal", "Vegetarian"],
+    "priceTier": "$$",
+    "rating": 4.5,
+    "reviewCount": 198,
+    "location": {
+      "address": "19 Caravan Lane",
+      "neighborhood": "Silk Quarter",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7162, "lng": 44.7765 }
+    },
+    "contact": {
+      "phone": "+995 592 780 334",
+      "website": "https://nomadstable.example.com"
+    },
+    "schedule": [
+      { "days": "Tue–Sun", "hours": "12:00 – 22:30" }
+    ],
+    "amenities": ["Tea Library", "Spice Pairing", "Prayer Space"],
+    "menuHighlights": [
+      { "name": "Saffron Khinkali", "price": "21₾", "description": "Hand-pinched dumplings with chickpea & preserved lemon." },
+      { "name": "Desert Ash Bread", "price": "13₾", "description": "Smoked ash flatbread with labneh butter." },
+      { "name": "Rose Pistachio Malabi", "price": "18₾", "description": "Cardamom custard with date molasses." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 83,
+    "aiSummary": "Popular among cultural delegates seeking narrative-driven meals with halal accreditation."
+  },
+  {
+    "id": "pixel-pantry",
+    "name": "Pixel Pantry",
+    "description": "AR-ready café with projection-mapped latte art, 24/7 study pods, and edible-ink pastries.",
+    "heroImage": "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Cafe", "Bakery"],
+    "tags": ["24/7", "AR Menu", "Makerspace"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "priceTier": "$",
+    "rating": 4.3,
+    "reviewCount": 254,
+    "location": {
+      "address": "6 Innovation Loop",
+      "neighborhood": "Tech Park",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7244, "lng": 44.8118 }
+    },
+    "contact": {
+      "phone": "+995 557 112 900",
+      "website": "https://pixelpantry.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "00:00 – 24:00" }
+    ],
+    "amenities": ["Focus Pods", "USB-C Everywhere", "Makers Pantry"],
+    "menuHighlights": [
+      { "name": "Nitro Grapefruit Cold Brew", "price": "16₾", "description": "Cascara nitro brew with citrus foam." },
+      { "name": "Hologram Latte", "price": "14₾", "description": "Projection-mapped art latte with oat milk." },
+      { "name": "Neon Mochi Donut", "price": "12₾", "description": "Gluten-free mochi donut with yuzu glaze." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 76,
+    "aiSummary": "Always-open study refuge with energy dashboards and AR-first UX; perfect for hackathon crews."
+  },
+  {
+    "id": "juniper-test-kitchen",
+    "name": "Juniper Test Kitchen",
+    "description": "Research-forward R&D lab blending biophilic design with algorithmic menu sequencing.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Experimental", "Fine Dining"],
+    "tags": ["R&D Lab", "Data Pairing", "Chef Residency"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "priceTier": "$$$",
+    "rating": 4.9,
+    "reviewCount": 132,
+    "location": {
+      "address": "1 Research Concourse",
+      "neighborhood": "Knowledge City",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7299, "lng": 44.8174 }
+    },
+    "contact": {
+      "phone": "+995 511 220 009",
+      "website": "https://junipertestkitchen.example.com"
+    },
+    "schedule": [
+      { "days": "Thu–Sun", "hours": "18:00 – 00:00" }
+    ],
+    "amenities": ["Lab Tours", "Algorithmic Pairings", "Residency Talks"],
+    "menuHighlights": [
+      { "name": "Fermented Cedar Broth", "price": "58₾", "description": "Clarified cedar with koji custard pearls." },
+      { "name": "Juniper Vapor Pasta", "price": "64₾", "description": "Extruded pasta finished under aromatic vapor dome." },
+      { "name": "AI-Paired Dessert Flight", "price": "72₾", "description": "Data-personalized dessert trio." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 90,
+    "aiSummary": "Anchor venue for thesis demonstrations linking IoT sensors, AI pairing, and culinary craft."
+  },
+  {
+    "id": "cobalt-espresso",
+    "name": "Cobalt Espresso & Bakes",
+    "description": "Micro-bakery and espresso lab focused on single-origin beans and laminated dough masterclasses.",
+    "heroImage": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Cafe", "Bakery"],
+    "tags": ["Work-Friendly", "Pastry School", "Roastery"],
+    "dietary": ["Vegetarian"],
+    "priceTier": "$",
+    "rating": 4.4,
+    "reviewCount": 201,
+    "location": {
+      "address": "8 Atrium Street",
+      "neighborhood": "Cobalt Square",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7094, "lng": 44.8098 }
+    },
+    "contact": {
+      "phone": "+995 593 889 120",
+      "website": "https://cobaltespresso.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "07:00 – 21:00" }
+    ],
+    "amenities": ["Roasting Classes", "Subscription Locker", "Babyccino Bar"],
+    "menuHighlights": [
+      { "name": "Midnight Cappuccino", "price": "11₾", "description": "Smoky espresso with cardamom dust." },
+      { "name": "Twice-Baked Pistachio Croissant", "price": "15₾", "description": "House frangipane, citrus zest." },
+      { "name": "Blue Pea Cold Foam", "price": "13₾", "description": "Butterfly pea infusion with oat cold foam." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 79,
+    "aiSummary": "High-throughput café for daily rituals; POS data ready for forecasting labs."
+  },
+  {
+    "id": "ember-oak",
+    "name": "Ember & Oak",
+    "description": "Farmhouse kitchen pairing fermented pantry staples with hearth-driven mains from regenerative farms.",
+    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Farm-to-Table", "Georgian"],
+    "tags": ["Hearth", "Wine Cellar", "Family Style"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "priceTier": "$$",
+    "rating": 4.7,
+    "reviewCount": 223,
+    "location": {
+      "address": "3 Orchard Close",
+      "neighborhood": "Amber Fields",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7015, "lng": 44.7727 }
+    },
+    "contact": {
+      "phone": "+995 599 014 887",
+      "website": "https://emberandoak.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "11:00 – 22:00" }
+    ],
+    "amenities": ["Cellar Tastings", "Children's Corner", "Outdoor Firepit"],
+    "menuHighlights": [
+      { "name": "Wildflower Khachapuri", "price": "24₾", "description": "Fermented dough, seasonal greens, aged cheese." },
+      { "name": "Ember Lamb Shoulder", "price": "48₾", "description": "Clay-pot lamb with smoked carrot puree." },
+      { "name": "Sunflower Honey Cake", "price": "19₾", "description": "Layered cake with pollen cream." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 87,
+    "aiSummary": "Family-friendly anchor with transparent farm sourcing and fermentation education."
+  },
+  {
+    "id": "solstice-supper-club",
+    "name": "Solstice Supper Club",
+    "description": "Invitation-only supper tracing solar calendar rituals with immersive projection storytelling.",
+    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["New Caucasian", "Immersive"],
+    "tags": ["Immersive", "Projection", "Limited Seats"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "priceTier": "$$$",
+    "rating": 4.9,
+    "reviewCount": 98,
+    "location": {
+      "address": "Secret Warehouse 7",
+      "neighborhood": "North Bank",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.728, "lng": 44.7694 }
+    },
+    "contact": {
+      "phone": "+995 555 007 441",
+      "website": "https://solsticesupper.example.com"
+    },
+    "schedule": [
+      { "days": "Fri–Sun", "hours": "Two seatings nightly" }
+    ],
+    "amenities": ["Immersive Storyline", "Projection Dome", "Research Booklet"],
+    "menuHighlights": [
+      { "name": "Solstice Ember Broth", "price": "72₾", "description": "Smoked broth served with projection-mapped herbs." },
+      { "name": "Forager's Atlas", "price": "64₾", "description": "Course featuring 12 micro dishes linked to zodiac." },
+      { "name": "Lunar Honey Sphere", "price": "48₾", "description": "Nitro dessert with honeycomb core." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 80,
+    "aiSummary": "Experiential dining for limited cohorts; data suitable for narrative UX research."
+  }
+]

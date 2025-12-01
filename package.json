@@ -1,0 +1,27 @@
+{
+  "name": "gadam-restaurant-finder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Diploma template for the design & implementation of a restaurant discovery platform.",
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:frontend\"",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix frontend && npm run build --prefix server",
+    "start": "npm run start --prefix server",
+    "lint": "npm run lint --prefix frontend && npm run lint --prefix server",
+    "format": "echo \"Formatting handled by IDE / Tailwind preflight\"",
+    "test": "npm run test --prefix frontend"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
