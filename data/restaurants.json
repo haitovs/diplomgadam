@@ -460,5 +460,237 @@
     ],
     "sustainabilityScore": 80,
     "aiSummary": "Experiential dining for limited cohorts; data suitable for narrative UX research."
+  },
+  {
+    "id": "copper-yard-smokehouse",
+    "name": "Copper Yard Smokehouse",
+    "description": "Live-fire smokehouse with oak embers, pasture beef, and pickling bar steps from the tram depot.",
+    "heroImage": "https://images.unsplash.com/photo-1458696765561-12142eaead13?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Smokehouse", "Southern", "Modern Georgian"],
+    "tags": ["Live Fire", "Craft Beer", "Group Friendly"],
+    "dietary": ["Gluten-Free"],
+    "priceTier": "$$",
+    "rating": 4.7,
+    "reviewCount": 312,
+    "location": {
+      "address": "48 Rustavi Depot Lane",
+      "neighborhood": "Tramworks",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7128, "lng": 44.8079 }
+    },
+    "contact": {
+      "phone": "+995 555 221 884",
+      "website": "https://copperyard.example.com"
+    },
+    "schedule": [
+      { "days": "Mon–Thu", "hours": "12:00 – 23:00" },
+      { "days": "Fri–Sat", "hours": "12:00 – 01:00" },
+      { "days": "Sun", "hours": "12:00 – 21:00" }
+    ],
+    "amenities": ["Covered Terrace", "Tap Wall", "Kids Menu"],
+    "menuHighlights": [
+      { "name": "Ember Brisket Plate", "price": "58₾", "description": "14-hour smoked brisket with adjika molasses." },
+      { "name": "Burnt-End Khachapuri", "price": "34₾", "description": "Suluguni boat topped with charred burnt ends." },
+      { "name": "Pickle Flight", "price": "16₾", "description": "Seasonal ferments with smoked salt." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1421622548261-c45bfe178854?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 75,
+    "aiSummary": "Great for carnivore groups; still offers gluten-free plates and outdoor seating for smoke-sensitive guests."
+  },
+  {
+    "id": "harbor-oyster-room",
+    "name": "Harbor Oyster Room",
+    "description": "Raw bar and champagne lounge overlooking the funicular dock, with tide-to-table sourcing and DJ vinyl nights.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Seafood", "Raw Bar"],
+    "tags": ["Waterfront", "Vinyl", "Date Night"],
+    "dietary": ["Pescatarian"],
+    "priceTier": "$$$",
+    "rating": 4.7,
+    "reviewCount": 204,
+    "location": {
+      "address": "9 Funicular Pier",
+      "neighborhood": "Harbor Loop",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7094, "lng": 44.8025 }
+    },
+    "contact": {
+      "phone": "+995 599 440 112",
+      "website": "https://harboroyster.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "12:00 – 00:30" }
+    ],
+    "amenities": ["Oyster Shucker Bar", "Waterfront Seating", "DJ Booth"],
+    "menuHighlights": [
+      { "name": "Black Sea Oyster Flight", "price": "72₾", "description": "Six oysters with citrus ponzu and dill ice." },
+      { "name": "Charred Octopus", "price": "64₾", "description": "Smoked paprika rub, preserved lemon mash." },
+      { "name": "Champagne Granite", "price": "32₾", "description": "Palate cleanser with bergamot zest." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 82,
+    "aiSummary": "Ideal for seafood-forward dates; proximity to tram makes it easy to combine with waterfront walks."
+  },
+  {
+    "id": "kinetic-ramen-lab",
+    "name": "Kinetic Ramen Lab",
+    "description": "Neon-lit broth lab with table-side tare tastings, vinyl hip-hop sets, and midnight ramen drops.",
+    "heroImage": "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Japanese", "Pan-Asian"],
+    "tags": ["Late Night", "Open Kitchen", "Counter Seating"],
+    "dietary": ["Halal", "Vegetarian"],
+    "priceTier": "$$",
+    "rating": 4.5,
+    "reviewCount": 276,
+    "location": {
+      "address": "31 Neon Alley",
+      "neighborhood": "Creative Grid",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7322, "lng": 44.7866 }
+    },
+    "contact": {
+      "phone": "+995 595 002 818",
+      "website": "https://kineticramen.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "11:30 – 02:00" }
+    ],
+    "amenities": ["Bar Seating", "Vinyl Nights", "Spice Bar"],
+    "menuHighlights": [
+      { "name": "Black Garlic Tonkotsu", "price": "32₾", "description": "12-hour broth with burnt garlic oil and soft egg." },
+      { "name": "Miso Tofu Mazemen", "price": "28₾", "description": "Dry-style ramen with sesame tare and crispy tofu." },
+      { "name": "Yuzu Shio Shot", "price": "8₾", "description": "Tare tasting served in ceramic shooters." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 70,
+    "aiSummary": "Late-night noodle safe bet with halal-friendly options; counter seating fits solo diners."
+  },
+  {
+    "id": "atlas-family-table",
+    "name": "Atlas Family Table",
+    "description": "Sunlit canteen with indoor playground, weekend brunch buffet, and kids cooking classes.",
+    "heroImage": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Family", "Comfort Food", "Bakery"],
+    "tags": ["Family-Friendly", "Play Area", "Brunch"],
+    "dietary": ["Vegetarian"],
+    "priceTier": "$$",
+    "rating": 4.3,
+    "reviewCount": 189,
+    "location": {
+      "address": "77 Atlas Avenue",
+      "neighborhood": "Education Park",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7254, "lng": 44.7781 }
+    },
+    "contact": {
+      "phone": "+995 598 441 212",
+      "website": "https://atlasfamily.example.com"
+    },
+    "schedule": [
+      { "days": "Mon–Fri", "hours": "08:00 – 21:00" },
+      { "days": "Sat–Sun", "hours": "08:00 – 22:00" }
+    ],
+    "amenities": ["Playroom", "Nursing Room", "Parking"],
+    "menuHighlights": [
+      { "name": "Adjika Chicken Waffles", "price": "24₾", "description": "Corn waffle with honey adjika glaze." },
+      { "name": "Kids Bakeshop Bench", "price": "18₾", "description": "Mini pastry set with sprinkles and jams." },
+      { "name": "Supra Skillet", "price": "34₾", "description": "Family-style eggs, lobiani, and roasted veggies." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1458640904116-093b74971de9?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 68,
+    "aiSummary": "Best for families needing space and predictability; brunch buffet keeps wait times low."
+  },
+  {
+    "id": "terrace-cyclist-cafe",
+    "name": "Terrace Cyclist Cafe",
+    "description": "Bike-in espresso bar with repair stand, power outlets, and slow-carb bowls overlooking the park loop.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Cafe", "Healthy"],
+    "tags": ["Remote Work", "Cyclist Friendly", "Outdoor"],
+    "dietary": ["Vegan", "Gluten-Free"],
+    "priceTier": "$",
+    "rating": 4.4,
+    "reviewCount": 163,
+    "location": {
+      "address": "5 Park Loop Terrace",
+      "neighborhood": "Central Loop",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7185, "lng": 44.7842 }
+    },
+    "contact": {
+      "phone": "+995 577 889 210",
+      "website": "https://terracecyclist.example.com"
+    },
+    "schedule": [
+      { "days": "Daily", "hours": "07:00 – 20:00" }
+    ],
+    "amenities": ["Bike Repair Stand", "USB Outlets", "Shaded Terrace"],
+    "menuHighlights": [
+      { "name": "Cold Brew Cascara", "price": "12₾", "description": "Steeped cascara with orange peel." },
+      { "name": "Quinoa Power Bowl", "price": "22₾", "description": "Roasted veg, pickled onions, tahini drizzle." },
+      { "name": "Oat Espresso Shake", "price": "15₾", "description": "Double shot with oat protein base." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 74,
+    "aiSummary": "Reliable laptop spot and meetup hub for cyclists; vegan-friendly fuel and early hours."
+  },
+  {
+    "id": "makers-den",
+    "name": "Makers Den",
+    "description": "Hybrid cowork and dining studio with day passes, fiber internet, and chef collabs on rotation.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+    "cuisines": ["Fusion", "Cafe"],
+    "tags": ["Remote Work", "Pop-up Kitchen", "Workshops"],
+    "dietary": ["Vegetarian", "Gluten-Free"],
+    "priceTier": "$$",
+    "rating": 4.5,
+    "reviewCount": 142,
+    "location": {
+      "address": "12 Prototype Street",
+      "neighborhood": "Innovation Hub",
+      "city": "Gadam",
+      "coordinates": { "lat": 41.7227, "lng": 44.7729 }
+    },
+    "contact": {
+      "phone": "+995 593 330 221",
+      "website": "https://makersden.example.com"
+    },
+    "schedule": [
+      { "days": "Mon–Fri", "hours": "08:00 – 22:00" },
+      { "days": "Sat–Sun", "hours": "10:00 – 20:00" }
+    ],
+    "amenities": ["Phone Booths", "Meeting Rooms", "Ergonomic Chairs"],
+    "menuHighlights": [
+      { "name": "Caramelized Mtsvadi Bowl", "price": "29₾", "description": "Grilled pork over buckwheat with herb labneh." },
+      { "name": "Miso Mushroom Toast", "price": "24₾", "description": "Sourdough with miso butter and pickled leek." },
+      { "name": "Cold-Drip Tonic", "price": "14₾", "description": "Cascara tonic with lime bitters." }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1455778977538-0430f43f118a?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sustainabilityScore": 79,
+    "aiSummary": "Top pick for laptop sessions and meetups; rotating chefs keep the menu interesting for repeat visits."
   }
 ]

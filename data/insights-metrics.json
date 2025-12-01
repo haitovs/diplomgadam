@@ -22,5 +22,17 @@
     "value": "420 req/day",
     "trend": 22,
     "description": "Simulated demand for TripAI sessions during soft launch."
+  },
+  {
+    "title": "Remote-work readiness",
+    "value": "68%",
+    "trend": 9,
+    "description": "Venues offering reliable Wi‑Fi, outlets, and quiet seating during daylight hours."
+  },
+  {
+    "title": "Late-night coverage",
+    "value": "43 venues",
+    "trend": 6,
+    "description": "Restaurants operating past midnight across ramen labs, smokehouses, and raw bars."
   }
 ]

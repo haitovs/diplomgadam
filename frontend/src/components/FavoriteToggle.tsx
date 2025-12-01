@@ -12,8 +12,8 @@ export default function FavoriteToggle({ id }: FavoriteToggleProps) {
   return (
     <button
       onClick={() => toggle(id)}
-      className={`p-2 rounded-full bg-white/90 shadow ${
-        isActive ? "text-rose-500" : "text-slate-400"
+      className={`p-2 rounded-full bg-white/90 dark:bg-slate-800/90 shadow border border-slate-200 dark:border-slate-700 ${
+        isActive ? "text-rose-500" : "text-slate-400 dark:text-slate-300"
       } transition hover:scale-105`}
     >
       <Heart className={isActive ? "fill-rose-500" : ""} />

@@ -19,7 +19,7 @@ export default function HomePage() {
 
       {!isLoading && !isError && (
         <>
-          <section className="grid gap-6 md:grid-cols-2">
+          <section className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {filtered.map((restaurant) => (
               <RestaurantCard key={restaurant.id} restaurant={restaurant} />
             ))}

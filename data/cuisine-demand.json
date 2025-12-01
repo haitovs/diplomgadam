@@ -5,5 +5,10 @@
   { "cuisine": "Seafood", "demandScore": 74 },
   { "cuisine": "Middle Eastern", "demandScore": 69 },
   { "cuisine": "Cafe", "demandScore": 65 },
-  { "cuisine": "Experimental", "demandScore": 58 }
+  { "cuisine": "Experimental", "demandScore": 58 },
+  { "cuisine": "Smokehouse BBQ", "demandScore": 76 },
+  { "cuisine": "Ramen & Noodles", "demandScore": 71 },
+  { "cuisine": "Raw Bar", "demandScore": 68 },
+  { "cuisine": "Brunch & Bakery", "demandScore": 73 },
+  { "cuisine": "Cowork Cafes", "demandScore": 62 }
 ]

@@ -12,7 +12,7 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
   return (
     <article className="glass-panel overflow-hidden flex flex-col">
       <div className="relative">
-        <img src={restaurant.heroImage} alt={restaurant.name} className="h-48 w-full object-cover" loading="lazy" />
+        <img src={restaurant.heroImage} alt={restaurant.name} className="h-40 w-full object-cover" loading="lazy" />
         <div className="absolute top-3 right-3">
           <FavoriteToggle id={restaurant.id} />
         </div>
@@ -20,13 +20,13 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
           <RatingBadge rating={restaurant.rating} reviews={restaurant.reviewCount} />
         </div>
       </div>
-      <div className="p-5 flex flex-col gap-3 flex-1">
+      <div className="p-4 flex flex-col gap-2.5 flex-1">
         <div className="flex items-center justify-between gap-3">
-          <h3 className="text-lg font-semibold text-slate-900">{restaurant.name}</h3>
-          <span className="text-sm font-medium text-slate-500">{restaurant.priceTier}</span>
+          <h3 className="text-base font-semibold text-slate-900 dark:text-white">{restaurant.name}</h3>
+          <span className="text-xs font-semibold text-slate-500 dark:text-slate-300">{restaurant.priceTier}</span>
         </div>
-        <p className="text-sm text-slate-500">{restaurant.description}</p>
-        <div className="flex flex-wrap gap-2 text-xs text-slate-400">
+        <p className="text-sm text-slate-500 dark:text-slate-300 leading-snug clamp-2">{restaurant.description}</p>
+        <div className="flex flex-wrap gap-2 text-xs text-slate-400 dark:text-slate-400">
           <span>{restaurant.location.neighborhood}</span>
           <span>•</span>
           <span>{restaurant.cuisines.slice(0, 2).join(", ")}</span>
@@ -34,7 +34,7 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
         <DietaryTags tags={restaurant.dietary} />
         <Link
           to={`/restaurants/${restaurant.id}`}
-          className="mt-auto inline-flex items-center justify-center rounded-xl bg-slate-900 text-white text-sm font-medium py-2.5"
+          className="mt-auto inline-flex items-center justify-center rounded-xl bg-slate-900 dark:bg-brand-600 text-white text-sm font-semibold py-2"
         >
           View profile
         </Link>
