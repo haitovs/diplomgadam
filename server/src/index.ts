@@ -1,10 +1,14 @@
-import "dotenv/config";
-import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
+import "dotenv/config";
+import express, { NextFunction, Request, Response } from "express";
 import morgan from "morgan";
-import restaurantsRouter from "./routes/restaurants.js";
-import insightsRouter from "./routes/insights.js";
+import adminRouter from "./routes/admin.js";
 import aiRouter from "./routes/ai.js";
+import insightsRouter from "./routes/insights.js";
+import restaurantsRouter from "./routes/restaurants.js";
+
+// Initialize database (imports will configure it)
+import "./db/init.js";
 
 const app = express();
 const port = Number(process.env.PORT ?? 4000);
@@ -17,13 +21,15 @@ app.get("/", (_req, res) => {
   res.json({
     name: "Gadam Restaurant Finder API",
     status: "ok",
-    version: "0.1.0"
+    version: "0.2.0",
+    location: "Ashgabat, Turkmenistan"
   });
 });
 
 app.use("/api/restaurants", restaurantsRouter);
 app.use("/api/insights", insightsRouter);
 app.use("/api/ai", aiRouter);
+app.use("/api/admin", adminRouter);
 
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.error(err);
@@ -31,5 +37,6 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+  console.log(`🍽️  Gadam Restaurant API: http://localhost:${port}`);
+  console.log(`📍 Location: Ashgabat, Turkmenistan`);
 });
