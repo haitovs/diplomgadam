@@ -9,11 +9,26 @@ const navItems = [
   { label: "AI Concierge", path: "/concierge" }
 ];
 
+const getInitialTheme = (): "light" | "dark" => {
+  if (typeof localStorage !== "undefined") {
+    const stored = localStorage.getItem("gadam-theme") as "light" | "dark" | null;
+    if (stored) return stored;
+  }
+  if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  return "dark";
+};
+
 export default function ShellLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">(
-    (typeof localStorage !== "undefined" && (localStorage.getItem("gadam-theme") as "light" | "dark")) || "light"
-  );
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    const initial = getInitialTheme();
+    if (typeof document !== "undefined" && initial === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+    return initial;
+  });
 
   useEffect(() => {
     const root = document.documentElement;
@@ -26,7 +41,7 @@ export default function ShellLayout() {
   }, [theme]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
       <div className="border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-30">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
           <NavLink to="/" className="flex items-center gap-2 text-xl font-semibold">

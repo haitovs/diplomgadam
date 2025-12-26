@@ -1,7 +1,10 @@
-import { useState } from "react";
-import { Sparkles, Send, Clock } from "lucide-react";
+import { useState, useMemo } from "react";
+import { Sparkles, Send, Clock, ListChecks } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useAiConcierge } from "../hooks/useAiConcierge";
 import ErrorState from "../components/ErrorState";
+import { useQuery } from "@tanstack/react-query";
+import { fetchRestaurants } from "../api/restaurants";
 
 const starterPrompts = [
   "Need a romantic dinner with vegan options tonight.",
@@ -12,12 +15,21 @@ const starterPrompts = [
 export default function AiConciergePage() {
   const [question, setQuestion] = useState(starterPrompts[0]);
   const mutation = useAiConcierge();
+  const restaurantsQuery = useQuery({ queryKey: ["restaurants"], queryFn: fetchRestaurants });
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (!question.trim()) return;
     mutation.mutate({ question });
   };
+
+  const suggestionRestaurants = useMemo(() => {
+    if (!mutation.data || !restaurantsQuery.data) return [];
+    const ids = Array.from(new Set(mutation.data.suggestions.flatMap((s) => s.restaurants)));
+    return ids
+      .map((id) => restaurantsQuery.data?.find((restaurant) => restaurant.id === id))
+      .filter(Boolean);
+  }, [mutation.data, restaurantsQuery.data]);
 
   return (
     <div className="space-y-8">
@@ -73,6 +85,26 @@ export default function AiConciergePage() {
             )}
           </button>
         </form>
+
+        {mutation.data && suggestionRestaurants.length > 0 && (
+          <div className="border border-slate-200 dark:border-slate-800 rounded-2xl p-4 space-y-3 bg-white/60 dark:bg-slate-900/60">
+            <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200">
+              <ListChecks className="w-4 h-4 text-brand-500" />
+              Suggested restaurants
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {suggestionRestaurants.map((restaurant) => (
+                <Link
+                  key={restaurant!.id}
+                  to={`/restaurants/${restaurant!.id}`}
+                  className="px-3 py-1.5 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-200 text-xs font-semibold border border-brand-100 dark:border-slate-700"
+                >
+                  {restaurant!.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {mutation.isError && (
           <ErrorState

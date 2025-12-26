@@ -29,7 +29,9 @@
     "menuHighlights": [
       { "name": "Charred Adjika Beetroot", "price": "45₾", "description": "Coal-grilled beet with fermented blackberry glaze." },
       { "name": "Amber Trout Mosaic", "price": "62₾", "description": "River trout cured in spruce oil with chilled tarragon nage." },
-      { "name": "Gin-Tonic Sorbet", "price": "28₾", "description": "Foraged juniper granité with citrus blossom foam." }
+      { "name": "Gin-Tonic Sorbet", "price": "28₾", "description": "Foraged juniper granité with citrus blossom foam." },
+      { "name": "Coal-Kissed Lamb Saddle", "price": "78₾", "description": "Wild herbs, ember-roasted garlic, river greens." },
+      { "name": "Fermented Plum Tartlet", "price": "36₾", "description": "Buckwheat shell, smoked plum caramel, spruce cream." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80",
@@ -69,7 +71,9 @@
     "menuHighlights": [
       { "name": "Labneh Meadow Bowl", "price": "28₾", "description": "Cashew labneh, roasted carrots, candied buckwheat." },
       { "name": "Chilled Pine Tea", "price": "14₾", "description": "Nitro-infused pine needle brew with citrus pearls." },
-      { "name": "Citrus Blossom Tart", "price": "19₾", "description": "Gluten-free sable with chamomile custard." }
+      { "name": "Citrus Blossom Tart", "price": "19₾", "description": "Gluten-free sable with chamomile custard." },
+      { "name": "Mushroom Moss Toast", "price": "24₾", "description": "Cultured butter, thyme soil, microgreens." },
+      { "name": "Lavender Kefir Float", "price": "16₾", "description": "Wildflower kefir over lavender ice with honey shards." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
@@ -491,7 +495,8 @@
     "menuHighlights": [
       { "name": "Ember Brisket Plate", "price": "58₾", "description": "14-hour smoked brisket with adjika molasses." },
       { "name": "Burnt-End Khachapuri", "price": "34₾", "description": "Suluguni boat topped with charred burnt ends." },
-      { "name": "Pickle Flight", "price": "16₾", "description": "Seasonal ferments with smoked salt." }
+      { "name": "Pickle Flight", "price": "16₾", "description": "Seasonal ferments with smoked salt." },
+      { "name": "Smoked Peach BBQ Wings", "price": "26₾", "description": "Charred wings, peach glaze, house ranch." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
@@ -529,7 +534,8 @@
     "menuHighlights": [
       { "name": "Black Sea Oyster Flight", "price": "72₾", "description": "Six oysters with citrus ponzu and dill ice." },
       { "name": "Charred Octopus", "price": "64₾", "description": "Smoked paprika rub, preserved lemon mash." },
-      { "name": "Champagne Granite", "price": "32₾", "description": "Palate cleanser with bergamot zest." }
+      { "name": "Champagne Granite", "price": "32₾", "description": "Palate cleanser with bergamot zest." },
+      { "name": "Lobster Brioche Roll", "price": "68₾", "description": "Brown butter lobster, dill aioli, brioche bun." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80",
@@ -567,7 +573,8 @@
     "menuHighlights": [
       { "name": "Black Garlic Tonkotsu", "price": "32₾", "description": "12-hour broth with burnt garlic oil and soft egg." },
       { "name": "Miso Tofu Mazemen", "price": "28₾", "description": "Dry-style ramen with sesame tare and crispy tofu." },
-      { "name": "Yuzu Shio Shot", "price": "8₾", "description": "Tare tasting served in ceramic shooters." }
+      { "name": "Yuzu Shio Shot", "price": "8₾", "description": "Tare tasting served in ceramic shooters." },
+      { "name": "Spicy Sesame Karaage", "price": "24₾", "description": "Crispy chicken, sesame chili dust, lime." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
@@ -606,7 +613,8 @@
     "menuHighlights": [
       { "name": "Adjika Chicken Waffles", "price": "24₾", "description": "Corn waffle with honey adjika glaze." },
       { "name": "Kids Bakeshop Bench", "price": "18₾", "description": "Mini pastry set with sprinkles and jams." },
-      { "name": "Supra Skillet", "price": "34₾", "description": "Family-style eggs, lobiani, and roasted veggies." }
+      { "name": "Supra Skillet", "price": "34₾", "description": "Family-style eggs, lobiani, and roasted veggies." },
+      { "name": "Banana Bread French Toast", "price": "21₾", "description": "Caramelized banana, cinnamon syrup, vanilla labneh." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
@@ -644,7 +652,8 @@
     "menuHighlights": [
       { "name": "Cold Brew Cascara", "price": "12₾", "description": "Steeped cascara with orange peel." },
       { "name": "Quinoa Power Bowl", "price": "22₾", "description": "Roasted veg, pickled onions, tahini drizzle." },
-      { "name": "Oat Espresso Shake", "price": "15₾", "description": "Double shot with oat protein base." }
+      { "name": "Oat Espresso Shake", "price": "15₾", "description": "Double shot with oat protein base." },
+      { "name": "Pistachio Energy Bites", "price": "9₾", "description": "Date, pistachio, cacao nib clusters." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
@@ -683,7 +692,8 @@
     "menuHighlights": [
       { "name": "Caramelized Mtsvadi Bowl", "price": "29₾", "description": "Grilled pork over buckwheat with herb labneh." },
       { "name": "Miso Mushroom Toast", "price": "24₾", "description": "Sourdough with miso butter and pickled leek." },
-      { "name": "Cold-Drip Tonic", "price": "14₾", "description": "Cascara tonic with lime bitters." }
+      { "name": "Cold-Drip Tonic", "price": "14₾", "description": "Cascara tonic with lime bitters." },
+      { "name": "Sesame Panna Cotta", "price": "18₾", "description": "Black sesame cream, salted caramel, brittle." }
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1455778977538-0430f43f118a?auto=format&fit=crop&w=900&q=80",
