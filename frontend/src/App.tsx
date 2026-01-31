@@ -11,6 +11,7 @@ import RestaurantDetailPage from "./pages/RestaurantDetailPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
 import AdminRestaurantsPage from "./pages/AdminRestaurantsPage";
+import AdminRestaurantMenuPage from "./pages/AdminRestaurantMenuPage";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
       <Route path="/admin/login" element={<AdminLoginPage />} />
       <Route path="/admin" element={<AdminDashboardPage />} />
       <Route path="/admin/restaurants" element={<AdminRestaurantsPage />} />
+      <Route path="/admin/restaurants/:id/menu" element={<AdminRestaurantMenuPage />} />
 
       {/* 404 */}
       <Route path="*" element={<NotFoundPage />} />

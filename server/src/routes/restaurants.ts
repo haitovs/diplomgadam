@@ -6,34 +6,34 @@ const router = Router();
 // Get all active restaurants (public)
 router.get('/', (req: Request, res: Response) => {
   const { cuisine, neighborhood, priceRange, search, sort } = req.query;
-  
+
   let query = 'SELECT * FROM restaurants WHERE status = ?';
   const params: any[] = ['active'];
-  
+
   // Filter by cuisine (searches in JSON array)
   if (cuisine && cuisine !== 'All') {
     query += ' AND cuisines LIKE ?';
     params.push(`%${cuisine}%`);
   }
-  
+
   // Filter by neighborhood
   if (neighborhood && neighborhood !== 'All') {
     query += ' AND neighborhood = ?';
     params.push(neighborhood);
   }
-  
+
   // Filter by price range
   if (priceRange && priceRange !== 'All') {
     query += ' AND price_tier = ?';
     params.push(priceRange);
   }
-  
+
   // Search
   if (search) {
     query += ' AND (name LIKE ? OR description LIKE ? OR neighborhood LIKE ?)';
     params.push(`%${search}%`, `%${search}%`, `%${search}%`);
   }
-  
+
   // Sorting
   switch (sort) {
     case 'rating':
@@ -48,9 +48,9 @@ router.get('/', (req: Request, res: Response) => {
     default:
       query += ' ORDER BY rating DESC';
   }
-  
+
   const restaurants = db.prepare(query).all(...params);
-  
+
   // Parse JSON fields and format for frontend
   const parsed = restaurants.map((r: any) => ({
     id: r.id,
@@ -80,23 +80,27 @@ router.get('/', (req: Request, res: Response) => {
     sustainabilityScore: r.sustainability_score,
     aiSummary: r.ai_summary
   }));
-  
+
   res.json(parsed);
 });
 
 // Get single restaurant by ID
 router.get('/:id', (req: Request, res: Response) => {
   const { id } = req.params;
-  
+
   const restaurant = db.prepare('SELECT * FROM restaurants WHERE id = ? AND status = ?').get(id, 'active') as any;
-  
+
   if (!restaurant) {
     return res.status(404).json({ error: 'Restaurant not found' });
   }
-  
+
+  // Increment view count
   // Increment view count
   db.prepare('UPDATE restaurants SET views = views + 1 WHERE id = ?').run(id);
-  
+
+  // Fetch full menu items
+  const fullMenu = db.prepare('SELECT * FROM menu_items WHERE restaurant_id = ? AND is_available = 1 ORDER BY category, name').all(id);
+
   // Parse and format
   res.json({
     id: restaurant.id,
@@ -124,7 +128,8 @@ router.get('/:id', (req: Request, res: Response) => {
     menuHighlights: JSON.parse(restaurant.menu_highlights || '[]'),
     gallery: JSON.parse(restaurant.gallery || '[]'),
     sustainabilityScore: restaurant.sustainability_score,
-    aiSummary: restaurant.ai_summary
+    aiSummary: restaurant.ai_summary,
+    fullMenu: fullMenu // Attach full menu
   });
 });
 
@@ -135,16 +140,16 @@ router.get('/filters/options', (req: Request, res: Response) => {
     FROM restaurants, json_each(cuisines) 
     WHERE status = 'active'
   `).all().map((r: any) => r.cuisine);
-  
+
   const neighborhoods = db.prepare(`
     SELECT DISTINCT neighborhood 
     FROM restaurants 
     WHERE status = 'active' AND neighborhood IS NOT NULL
     ORDER BY neighborhood
   `).all().map((r: any) => r.neighborhood);
-  
+
   const priceTiers = ['$', '$$', '$$$'];
-  
+
   res.json({
     cuisines: ['All', ...new Set(cuisines)],
     neighborhoods: ['All', ...neighborhoods],

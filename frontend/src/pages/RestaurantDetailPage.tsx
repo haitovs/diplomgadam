@@ -70,6 +70,44 @@ export default function RestaurantDetailPage() {
         </div>
       </section>
 
+      {/* Full Menu Section */}
+      {data.fullMenu && data.fullMenu.length > 0 && (
+        <section className="glass-panel p-6 space-y-6">
+          <h2 className="text-xl font-semibold text-slate-900">Full Menu</h2>
+
+          {Object.entries(
+            data.fullMenu.reduce((acc, item) => {
+              const category = item.category || 'Other';
+              if (!acc[category]) acc[category] = [];
+              acc[category].push(item);
+              return acc;
+            }, {} as Record<string, typeof data.fullMenu>)
+          ).map(([category, items]) => (
+            <div key={category} className="space-y-3">
+              <h3 className="text-lg font-medium text-slate-800 border-b border-slate-100 pb-2">
+                {category}
+              </h3>
+              <div className="grid md:grid-cols-2 gap-5">
+                {items.map((item) => (
+                  <div key={item.id} className="flex gap-4 p-4 border border-slate-100 rounded-xl bg-white/50 hover:bg-white/80 transition-colors">
+                    {item.image_url && (
+                      <img src={item.image_url} alt={item.name} className="w-20 h-20 object-cover rounded-lg flex-shrink-0" />
+                    )}
+                    <div className="flex-1">
+                      <div className="flex justify-between text-slate-900 font-semibold mb-1">
+                        <span>{item.name}</span>
+                        <span className="text-orange-500">{item.price} {item.currency}</span>
+                      </div>
+                      <p className="text-sm text-slate-500 line-clamp-2">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
+
       <section className="glass-panel p-6 space-y-4">
         <h2 className="text-xl font-semibold text-slate-900">Schedule</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-slate-600">

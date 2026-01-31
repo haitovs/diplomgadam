@@ -39,6 +39,16 @@ export interface Restaurant {
   gallery: string[];
   sustainabilityScore: number;
   aiSummary: string;
+  fullMenu?: {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    currency: string;
+    category: string;
+    image_url: string;
+    is_available: number;
+  }[];
 }
 
 export interface InsightMetric {

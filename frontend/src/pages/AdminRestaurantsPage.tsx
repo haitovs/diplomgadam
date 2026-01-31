@@ -41,7 +41,7 @@ export default function AdminRestaurantsPage() {
       const params = new URLSearchParams();
       if (filter !== 'all') params.set('status', filter);
       if (search) params.set('search', search);
-      
+
       const res = await fetch(`http://localhost:4000/api/admin/restaurants?${params}`);
       const data = await res.json();
       setRestaurants(data);
@@ -177,9 +177,8 @@ export default function AdminRestaurantsPage() {
                       <select
                         value={r.status}
                         onChange={(e) => handleStatusChange(r.id, e.target.value)}
-                        className={`px-2 py-1 rounded text-sm ${
-                          r.status === 'active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                        }`}
+                        className={`px-2 py-1 rounded text-sm ${r.status === 'active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          }`}
                       >
                         <option value="active">Active</option>
                         <option value="inactive">Inactive</option>
@@ -187,15 +186,21 @@ export default function AdminRestaurantsPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-2">
+                        <Link
+                          to={`/admin/restaurants/${r.id}/menu`}
+                          className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded hover:bg-orange-500/30 text-sm flex items-center"
+                        >
+                          Menu
+                        </Link>
                         <button
                           onClick={() => { setEditingId(r.id); setShowForm(true); }}
-                          className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded hover:bg-blue-500/30"
+                          className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded hover:bg-blue-500/30 text-sm"
                         >
                           Edit
                         </button>
                         <button
                           onClick={() => handleDelete(r.id)}
-                          className="px-3 py-1 bg-red-500/20 text-red-400 rounded hover:bg-red-500/30"
+                          className="px-3 py-1 bg-red-500/20 text-red-400 rounded hover:bg-red-500/30 text-sm"
                         >
                           Delete
                         </button>
@@ -278,16 +283,16 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
     };
 
     try {
-      const url = id 
+      const url = id
         ? `http://localhost:4000/api/admin/restaurants/${id}`
         : 'http://localhost:4000/api/admin/restaurants';
-      
+
       await fetch(url, {
         method: id ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
-      
+
       onSaved();
     } catch (err) {
       console.error('Save failed', err);
