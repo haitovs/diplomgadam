@@ -31,7 +31,7 @@
 - **Error handling**: Central Express error middleware surfaces friendly responses to the SPA.
 
 ## 4.4 Datasets
-- `restaurants.json` – 12 richly described venues (images, copywriting, sustainability stats). Coordinates cluster near Gadam City landmarks to allow believable map exploration.
+- `restaurants.json` – 12 richly described venues (images, copywriting, sustainability stats). Coordinates cluster near Ashgabat City landmarks to allow believable map exploration.
 - `insights-metrics.json` – Card values citing surveys (frozen but easily updatable).
 - `cuisine-demand.json` – Chart-ready dataset to highlight cuisine popularity.
 

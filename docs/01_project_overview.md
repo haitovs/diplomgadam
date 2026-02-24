@@ -38,6 +38,6 @@
 
 ## Next Steps
 1. Scaffold monorepo (pnpm workspaces) with `frontend` and `server`.
-2. Populate `data/` with believable restaurant metadata (curated from fictional “Gadam City”).
+2. Populate `data/` with believable restaurant metadata (curated from fictional “Ashgabat City”).
 3. Build out key UI flows and connect to Express API.
 4. Write narrative documentation referencing actual code artifacts.

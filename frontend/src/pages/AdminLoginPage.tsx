@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { apiClient } from '../api/client';
 
 export default function AdminLoginPage() {
   const [username, setUsername] = useState('');
@@ -14,23 +15,13 @@ export default function AdminLoginPage() {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:4000/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-      });
+      const { data } = await apiClient.post('/admin/login', { username, password });
       
-      const data = await res.json();
-      
-      if (!res.ok) {
-        throw new Error(data.error || 'Login failed');
-      }
-      
-      localStorage.setItem('admin_token', data.token);
-      localStorage.setItem('admin_user', JSON.stringify(data.user));
+      localStorage.setItem('admin_token', (data as any).token);
+      localStorage.setItem('admin_user', JSON.stringify((data as any).user));
       navigate('/admin');
     } catch (err: any) {
-      setError(err.message);
+      setError(err.response?.data?.error || err.message || 'Login failed');
     } finally {
       setLoading(false);
     }
@@ -42,7 +33,7 @@ export default function AdminLoginPage() {
         <div className="bg-slate-800 rounded-2xl shadow-2xl p-8 border border-slate-700">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-white mb-2">🍽️ Admin Panel</h1>
-            <p className="text-slate-400">Gadam Restaurant Finder</p>
+            <p className="text-slate-400">Ashgabat Restaurant Finder</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">

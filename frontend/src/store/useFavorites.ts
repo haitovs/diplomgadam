@@ -5,7 +5,7 @@ type FavoriteState = {
   toggle: (id: string) => void;
 };
 
-const storageKey = "gadam-favorites";
+const storageKey = "ashgabat-favorites";
 
 const getInitial = (): string[] => {
   if (typeof window === "undefined") return [];

@@ -3,14 +3,14 @@ INTRODUCTION 7
 CHAPTER I. USED PROGRAMMING LANGUAGES AND WEB TECHNOLOGIES 11
 1.1 What is React (SPA architecture)? 11
 1.2 What is TypeScript? 18
-1.3 State management with TanStack Query and Zustand in “Gadam Eats” 24
+1.3 State management with TanStack Query and Zustand in “Ashgabat Eats” 24
 1.4 Tailwind theming and design system choices 31
-CHAPTER II. INTRODUCING THE “GADAM EATS” URBAN DINING PLATFORM 38
-2.1 Key features of the “Gadam Eats” application 38
+CHAPTER II. INTRODUCING THE “ASHGABAT EATS” URBAN DINING PLATFORM 38
+2.1 Key features of the “Ashgabat Eats” application 38
 2.2 System requirements, hosting topology, and target clients 40
 2.3 Restaurant discovery, favorites, and AI concierge motivation 43
 2.4 Data sourcing strategy and mock datasets for demonstrations 47
-CHAPTER III. DEVELOPMENT AND FEATURES OF THE “GADAM EATS” APPLICATION 53
+CHAPTER III. DEVELOPMENT AND FEATURES OF THE “ASHGABAT EATS” APPLICATION 53
 3.1 Project structure, monorepo layout, and core data models 53
 3.2 API layer, dataset loaders, and heuristic AI responder 59
 3.3 Frontend views, routing, and interactive components 66
@@ -28,4 +28,4 @@ Core experiences — Discover, Restaurant Detail, Insights, Favorites, and TripA
 
 On the backend, dataset loaders read curated JSON files for restaurants, insight metrics, and cuisine demand. An AI concierge proxy runs a deterministic heuristic scorer: it derives intent flags (budget, cuisines, neighborhoods, dietary needs, late-night preference) and scores restaurants to produce suggestions with confidence, reasoning, and simulated latency. This approach keeps the prototype fully offline-ready while illustrating how external AI services could be integrated later through the same interface.
 
-The Insights module aggregates mock analytics into charts for cuisine demand, price tier distribution, late-night coverage, and sustainability versus ratings, highlighting how data storytelling complements discovery. UI theming uses Tailwind with a default dark mode and a toggle for light mode, showcasing modern theming practices. By combining declarative UI, typed API contracts, modular state management, and believable mock datasets, the “Gadam Eats” project demonstrates end-to-end web application design for urban dining discovery and AI-augmented decision support.
+The Insights module aggregates mock analytics into charts for cuisine demand, price tier distribution, late-night coverage, and sustainability versus ratings, highlighting how data storytelling complements discovery. UI theming uses Tailwind with a default dark mode and a toggle for light mode, showcasing modern theming practices. By combining declarative UI, typed API contracts, modular state management, and believable mock datasets, the “Ashgabat Eats” project demonstrates end-to-end web application design for urban dining discovery and AI-augmented decision support.

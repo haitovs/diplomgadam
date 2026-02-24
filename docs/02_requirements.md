@@ -4,7 +4,7 @@
 - **Field interviews (42 participants)** uncovered three personas: eco-conscious locals, remote-working expats, and night-market explorers. All want decision support without app fatigue.
 - **Desk research** compared platforms (Google Maps, TripAdvisor, Bolt Food). None combine qualitative storytelling, AI concierge, and sustainability metrics for a mid-sized city.
 - **Data sources** used in this template:
-  - Curated static dataset of 12 restaurants mapped to real coordinates in the fictional “Gadam City”.
+  - Curated static dataset of 12 restaurants mapped to real coordinates in the fictional “Ashgabat City”.
   - Insight metrics derived from surveys + delivery platforms (values frozen for demo).
   - Optional HuggingFace inference endpoint for the conversational layer.
 

@@ -1,706 +1,1659 @@
 [
   {
-    "id": "riverstone-atelier",
-    "name": "Riverstone Atelier",
-    "description": "Seasonal tasting menus highlighting mountain botanicals and charcoal-fired techniques overlooking the Mtkvari riverbend.",
-    "heroImage": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Modern Georgian", "New Nordic"],
-    "tags": ["Tasting Menu", "Chef's Table", "Panoramic"],
-    "dietary": ["Vegetarian", "Gluten-Free"],
+    "id": "alpet-steakhouse",
+    "name": "AlpEt Steakhouse",
+    "description": "Distinguished steakhouse specializing in 28-day dry-aged meats, served in an elegant setting with a garden backdrop. A premier destination for meat lovers in Ashgabat.",
+    "heroImage": "/images/restaurants/alpet-steakhouse/hero.jpg",
+    "cuisines": ["Steakhouse", "International"],
+    "tags": ["Dry-Aged Meats", "Garden Seating", "Premium"],
+    "dietary": ["Halal"],
     "priceTier": "$$$",
-    "rating": 4.8,
-    "reviewCount": 241,
-    "location": {
-      "address": "14 Riverside Promenade",
-      "neighborhood": "Old Wharf",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7142, "lng": 44.7941 }
-    },
-    "contact": {
-      "phone": "+995 599 101 220",
-      "website": "https://riverstoneatelier.example.com"
-    },
-    "schedule": [
-      { "days": "Mon–Thu", "hours": "17:30 – 23:30" },
-      { "days": "Fri–Sat", "hours": "17:30 – 01:00" },
-      { "days": "Sun", "hours": "Closed" }
-    ],
-    "amenities": ["Chef Counter", "Sommelier Pairings", "River View", "Private Salon"],
-    "menuHighlights": [
-      { "name": "Charred Adjika Beetroot", "price": "45₾", "description": "Coal-grilled beet with fermented blackberry glaze." },
-      { "name": "Amber Trout Mosaic", "price": "62₾", "description": "River trout cured in spruce oil with chilled tarragon nage." },
-      { "name": "Gin-Tonic Sorbet", "price": "28₾", "description": "Foraged juniper granité with citrus blossom foam." },
-      { "name": "Coal-Kissed Lamb Saddle", "price": "78₾", "description": "Wild herbs, ember-roasted garlic, river greens." },
-      { "name": "Fermented Plum Tartlet", "price": "36₾", "description": "Buckwheat shell, smoked plum caramel, spruce cream." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1429554513019-6c61c19ffb7e?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 92,
-    "aiSummary": "Best-in-class tasting studio with research kitchen pedigree; ideal for gastronomic tourism cohorts."
-  },
-  {
-    "id": "botanical-nook",
-    "name": "Botanical Nook",
-    "description": "Greenhouse café serving biodynamic small plates, cold-brew tonics, and edible flower pastries.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Plant-based", "Mediterranean"],
-    "tags": ["Greenhouse", "Tea Lab", "Acoustic Sessions"],
-    "dietary": ["Vegan", "Gluten-Free"],
-    "priceTier": "$$",
-    "rating": 4.6,
-    "reviewCount": 188,
-    "location": {
-      "address": "22 Lisi Ridge",
-      "neighborhood": "Botanical Quarter",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7205, "lng": 44.7993 }
-    },
-    "contact": {
-      "phone": "+995 555 882 114",
-      "website": "https://botanicalnook.example.com"
-    },
-    "schedule": [
-      { "days": "Mon–Fri", "hours": "08:00 – 20:00" },
-      { "days": "Sat", "hours": "09:00 – 22:00" },
-      { "days": "Sun", "hours": "09:00 – 18:00" }
-    ],
-    "amenities": ["Garden Wi-Fi", "Workshop Space", "Zero Plastic"],
-    "menuHighlights": [
-      { "name": "Labneh Meadow Bowl", "price": "28₾", "description": "Cashew labneh, roasted carrots, candied buckwheat." },
-      { "name": "Chilled Pine Tea", "price": "14₾", "description": "Nitro-infused pine needle brew with citrus pearls." },
-      { "name": "Citrus Blossom Tart", "price": "19₾", "description": "Gluten-free sable with chamomile custard." },
-      { "name": "Mushroom Moss Toast", "price": "24₾", "description": "Cultured butter, thyme soil, microgreens." },
-      { "name": "Lavender Kefir Float", "price": "16₾", "description": "Wildflower kefir over lavender ice with honey shards." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 88,
-    "aiSummary": "Energetic daylight venue for remote creators, featuring high-fiber brunch boards and adaptogenic tonics."
-  },
-  {
-    "id": "forge-flame",
-    "name": "Forge & Flame BBQ Lab",
-    "description": "Experimental smokehouse blending Caucasian wood-fire tradition with Texas craft barbecue science.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Smokehouse", "Georgian"],
-    "tags": ["Live Fire", "Ferments", "Taproom"],
-    "dietary": ["Gluten-Free", "Keto"],
-    "priceTier": "$$",
-    "rating": 4.5,
-    "reviewCount": 210,
-    "location": {
-      "address": "5 Forge Yard",
-      "neighborhood": "Industrial Belt",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7068, "lng": 44.7888 }
-    },
-    "contact": {
-      "phone": "+995 598 034 776",
-      "website": "https://forgeflame.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "12:00 – 23:00" }
-    ],
-    "amenities": ["Taproom", "Chef Demos", "Takeaway Counter"],
-    "menuHighlights": [
-      { "name": "Adjika Brisket", "price": "36₾", "description": "16-hour smoked beef with pomegranate glaze." },
-      { "name": "Suluguni Cornbread", "price": "18₾", "description": "Smoked cheese cornbread with wildflower honey butter." },
-      { "name": "Black Garlic Pickles", "price": "12₾", "description": "House ferment flight with smoked salt." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 74,
-    "aiSummary": "Ideal for protein-heavy itineraries, offering data-backed smoke profiles and traceable sourcing."
-  },
-  {
-    "id": "night-market-88",
-    "name": "Night Market 88",
-    "description": "Lantern-lit hawker alley with rotating chefs from Seoul, Saigon, and Singapore offering small-plate flights.",
-    "heroImage": "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Pan-Asian", "Street Food"],
-    "tags": ["Nightlife", "DJ Sets", "Communal"],
-    "dietary": ["Vegetarian", "Halal"],
-    "priceTier": "$$",
     "rating": 4.7,
-    "reviewCount": 312,
+    "reviewCount": 286,
     "location": {
-      "address": "2 Meridian Arcade",
-      "neighborhood": "Neon District",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7121, "lng": 44.8012 }
+      "address": "9th km, Archabil Highway",
+      "neighborhood": "Berzengi",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.918, "lng": 58.359 }
     },
     "contact": {
-      "phone": "+995 570 922 113",
-      "website": "https://nightmarket88.example.com"
+      "phone": "+993 12 48 72 30",
+      "website": null
     },
-    "schedule": [
-      { "days": "Wed–Sun", "hours": "18:00 – 02:00" }
+    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:00" }],
+    "amenities": [
+      "Garden Terrace",
+      "Private Rooms",
+      "Valet Parking",
+      "Full Bar"
     ],
-    "amenities": ["Live DJs", "Cashless", "Tasting Passport"],
     "menuHighlights": [
-      { "name": "Gochujang Cauliflower", "price": "22₾", "description": "Tempura florets with kimchi caramel." },
-      { "name": "Saigon Pho Bites", "price": "26₾", "description": "Compressed pho cubes with aromatic beef glaze." },
-      { "name": "Sichuan Gelato", "price": "18₾", "description": "Mala spiced ice cream with citrus dust." }
+      {
+        "name": "Dry-Aged Ribeye (400g)",
+        "price": "280 TMT",
+        "description": "28-day aged beef ribeye, charcoal-grilled to perfection."
+      },
+      {
+        "name": "T-Bone Steak",
+        "price": "350 TMT",
+        "description": "Premium cut with herb butter and seasonal vegetables."
+      },
+      {
+        "name": "Lamb Chops",
+        "price": "220 TMT",
+        "description": "Grilled lamb chops with rosemary jus and mashed potatoes."
+      },
+      {
+        "name": "Caesar Salad",
+        "price": "85 TMT",
+        "description": "Classic Caesar with parmesan, croutons and anchovy dressing."
+      }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
+      "/images/restaurants/alpet-steakhouse/gallery-1.jpg",
+      "/images/restaurants/alpet-steakhouse/gallery-2.jpg",
+      "/images/restaurants/alpet-steakhouse/gallery-3.jpg"
     ],
-    "sustainabilityScore": 68,
-    "aiSummary": "Vibrant option for nocturnal explorers; static dataset ties each stall to unique sentiment scores."
+    "sustainabilityScore": 72,
+    "aiSummary": "Top-tier steakhouse with dry-aging expertise; ideal for business dinners and special occasions."
   },
   {
-    "id": "aurora-rooftop",
-    "name": "Aurora Rooftop Observatory",
-    "description": "Skyline lounge pairing cloud cocktails with astronomer-led stargazing and ambient downtempo sets.",
-    "heroImage": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Fusion", "Seafood"],
-    "tags": ["Rooftop", "Mixology", "Live Ambient"],
-    "dietary": ["Pescatarian", "Gluten-Free"],
-    "priceTier": "$$$",
-    "rating": 4.6,
-    "reviewCount": 145,
-    "location": {
-      "address": "48 Zenith Tower",
-      "neighborhood": "Aurora Park",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7189, "lng": 44.8091 }
-    },
-    "contact": {
-      "phone": "+995 591 230 044",
-      "website": "https://aurorarooftop.example.com"
-    },
-    "schedule": [
-      { "days": "Tue–Sun", "hours": "17:00 – 02:00" }
-    ],
-    "amenities": ["Telescope Deck", "Mixology Class", "Heated Pods"],
-    "menuHighlights": [
-      { "name": "Osmium Oyster Trio", "price": "54₾", "description": "Smoked, pickled, and foam-finished oyster flight." },
-      { "name": "Cloud Citrus Highball", "price": "29₾", "description": "Nitro highball with yuzu vapor garnish." },
-      { "name": "Graphene Tuna Crudo", "price": "48₾", "description": "Compressed tuna with activated sesame soil." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 71,
-    "aiSummary": "Choice for celebratory itineraries needing skyline visuals and pescatarian-forward menus."
-  },
-  {
-    "id": "harborline-canteen",
-    "name": "Harborline Canteen",
-    "description": "Maritime-inspired communal counter with smoked mussels, sourdough chowders, and kelp tonics.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Seafood", "Nordic"],
-    "tags": ["Communal", "Work Lunch", "Zero Waste"],
-    "dietary": ["Pescatarian"],
+    "id": "hezzet",
+    "name": "Hezzet Restaurant",
+    "description": "Highly regarded dining complex offering Turkmen and Turkish cuisine in a welcoming atmosphere, with dining available in traditional yurt-like tents surrounded by greenery.",
+    "heroImage": "/images/restaurants/hezzet/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Turkish"],
+    "tags": ["Yurt Dining", "Family-Friendly", "Garden"],
+    "dietary": ["Halal"],
     "priceTier": "$$",
-    "rating": 4.4,
-    "reviewCount": 167,
+    "rating": 4.6,
+    "reviewCount": 412,
     "location": {
-      "address": "31 Dock Terrace",
-      "neighborhood": "Harborline",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7043, "lng": 44.7833 }
+      "address": "Oguzhan köçesi 5/7",
+      "neighborhood": "Parahat",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.932, "lng": 58.387 }
     },
     "contact": {
-      "phone": "+995 514 778 900",
-      "website": "https://harborlinecanteen.example.com"
+      "phone": "+993 12 36 55 18",
+      "website": null
     },
-    "schedule": [
-      { "days": "Mon–Fri", "hours": "11:30 – 21:30" },
-      { "days": "Sat", "hours": "11:00 – 23:00" },
-      { "days": "Sun", "hours": "Closed" }
-    ],
-    "amenities": ["Community Table", "Fermentation Lab", "Bike Parking"],
+    "schedule": [{ "days": "Daily", "hours": "11:00 – 23:00" }],
+    "amenities": ["Yurt Seating", "Children's Area", "Parking", "Live Music"],
     "menuHighlights": [
-      { "name": "Smoked Mussel Toast", "price": "24₾", "description": "Black bread, dill aioli, charcoal oil." },
-      { "name": "Kelp Chowder", "price": "26₾", "description": "Creamy soup with sunflower cream and potato pearls." },
-      { "name": "Sea Buckthorn Tonic", "price": "17₾", "description": "House-fermented kefir soda with kelp bitters." }
+      {
+        "name": "Turkmen Plov",
+        "price": "65 TMT",
+        "description": "Traditional rice pilaf with lamb, carrots, and aromatic spices."
+      },
+      {
+        "name": "Shashlik Platter",
+        "price": "120 TMT",
+        "description": "Assorted grilled meats including lamb, beef, and chicken."
+      },
+      {
+        "name": "Manty",
+        "price": "55 TMT",
+        "description": "Steamed dumplings filled with spiced lamb and onion."
+      },
+      {
+        "name": "Turkmen Chörba",
+        "price": "40 TMT",
+        "description": "Hearty lamb soup with vegetables and herbs."
+      }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+      "/images/restaurants/hezzet/gallery-1.jpg",
+      "/images/restaurants/hezzet/gallery-2.jpg",
+      "/images/restaurants/hezzet/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 78,
+    "aiSummary": "Authentic Turkmen dining experience with yurt seating and generous portions; great for families and groups."
+  },
+  {
+    "id": "joshgun-palow-house",
+    "name": "Joshgun Palow House",
+    "description": "Beloved traditional restaurant specializing in over 20 varieties of plov (pilaf), from classic lamb to festive Ishlekli, served in a cozy and homey atmosphere.",
+    "heroImage": "/images/restaurants/joshgun-palow-house/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Plov & Rice"],
+    "tags": ["Plov Specialist", "Traditional", "Cozy"],
+    "dietary": ["Halal"],
+    "priceTier": "$",
+    "rating": 4.8,
+    "reviewCount": 534,
+    "location": {
+      "address": "Andalib köçesi",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.951, "lng": 58.372 }
+    },
+    "contact": {
+      "phone": "+993 65 78 12 40",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "10:00 – 22:00" }],
+    "amenities": ["Family Seating", "Takeaway", "Traditional Decor"],
+    "menuHighlights": [
+      {
+        "name": "Classic Turkmen Palow",
+        "price": "45 TMT",
+        "description": "Traditional lamb plov with caramelized carrots and cumin."
+      },
+      {
+        "name": "Ishlekli",
+        "price": "50 TMT",
+        "description": "Festive meat pie baked in tandoor with spiced lamb filling."
+      },
+      {
+        "name": "Chicken Palow",
+        "price": "40 TMT",
+        "description": "Aromatic rice with tender chicken and dried fruits."
+      },
+      {
+        "name": "Gutap",
+        "price": "25 TMT",
+        "description": "Thin flatbread stuffed with lamb, spinach, or pumpkin."
+      },
+      {
+        "name": "Green Tea",
+        "price": "10 TMT",
+        "description": "Traditional Turkmen çaý served in a porcelain bowl."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/joshgun-palow-house/gallery-1.jpg",
+      "/images/restaurants/joshgun-palow-house/gallery-2.jpg",
+      "/images/restaurants/joshgun-palow-house/gallery-3.jpg"
     ],
     "sustainabilityScore": 85,
-    "aiSummary": "Great for conscious travelers seeking midday seafood with measurable waste-diversion metrics."
+    "aiSummary": "The definitive plov destination in Ashgabat with 20+ varieties; a must-visit for authentic Turkmen cuisine."
   },
   {
-    "id": "nomads-table",
-    "name": "Nomad's Table",
-    "description": "Desert-inspired kitchen merging Levantine spices with Caucasian grains in a slow-dining format.",
-    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Middle Eastern", "Georgian"],
-    "tags": ["Slow Dining", "Spice Bar", "Storytelling"],
-    "dietary": ["Halal", "Vegetarian"],
+    "id": "chatma-lounge",
+    "name": "Chatma Restaurant & Lounge",
+    "description": "One of Ashgabat's oldest and most charming restaurants, offering traditional dishes amidst abundant foliage with a well-stocked bar and relaxed atmosphere.",
+    "heroImage": "/images/restaurants/chatma-lounge/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "International"],
+    "tags": ["Historic", "Garden", "Lounge Bar"],
+    "dietary": ["Halal", "Vegetarian Options"],
     "priceTier": "$$",
     "rating": 4.5,
-    "reviewCount": 198,
+    "reviewCount": 378,
     "location": {
-      "address": "19 Caravan Lane",
-      "neighborhood": "Silk Quarter",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7162, "lng": 44.7765 }
+      "address": "Azadi köçesi",
+      "neighborhood": "Köpetdag",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.945, "lng": 58.383 }
     },
     "contact": {
-      "phone": "+995 592 780 334",
-      "website": "https://nomadstable.example.com"
+      "phone": "+993 12 34 22 10",
+      "website": null
     },
-    "schedule": [
-      { "days": "Tue–Sun", "hours": "12:00 – 22:30" }
-    ],
-    "amenities": ["Tea Library", "Spice Pairing", "Prayer Space"],
+    "schedule": [{ "days": "Daily", "hours": "11:00 – 00:00" }],
+    "amenities": ["Outdoor Garden", "Full Bar", "Live Music", "Hookah Lounge"],
     "menuHighlights": [
-      { "name": "Saffron Khinkali", "price": "21₾", "description": "Hand-pinched dumplings with chickpea & preserved lemon." },
-      { "name": "Desert Ash Bread", "price": "13₾", "description": "Smoked ash flatbread with labneh butter." },
-      { "name": "Rose Pistachio Malabi", "price": "18₾", "description": "Cardamom custard with date molasses." }
+      {
+        "name": "Fried Manty",
+        "price": "55 TMT",
+        "description": "Crispy pan-fried dumplings with yogurt and garlic sauce."
+      },
+      {
+        "name": "Khachapuri",
+        "price": "60 TMT",
+        "description": "Georgian cheese bread baked in traditional clay oven."
+      },
+      {
+        "name": "Grilled Lamb Kebab",
+        "price": "95 TMT",
+        "description": "Charcoal-grilled lamb skewers with fresh herbs and onions."
+      },
+      {
+        "name": "Mixed Salad Platter",
+        "price": "45 TMT",
+        "description": "Fresh seasonal vegetables with pomegranate dressing."
+      }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 83,
-    "aiSummary": "Popular among cultural delegates seeking narrative-driven meals with halal accreditation."
-  },
-  {
-    "id": "pixel-pantry",
-    "name": "Pixel Pantry",
-    "description": "AR-ready café with projection-mapped latte art, 24/7 study pods, and edible-ink pastries.",
-    "heroImage": "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Cafe", "Bakery"],
-    "tags": ["24/7", "AR Menu", "Makerspace"],
-    "dietary": ["Vegetarian", "Gluten-Free"],
-    "priceTier": "$",
-    "rating": 4.3,
-    "reviewCount": 254,
-    "location": {
-      "address": "6 Innovation Loop",
-      "neighborhood": "Tech Park",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7244, "lng": 44.8118 }
-    },
-    "contact": {
-      "phone": "+995 557 112 900",
-      "website": "https://pixelpantry.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "00:00 – 24:00" }
-    ],
-    "amenities": ["Focus Pods", "USB-C Everywhere", "Makers Pantry"],
-    "menuHighlights": [
-      { "name": "Nitro Grapefruit Cold Brew", "price": "16₾", "description": "Cascara nitro brew with citrus foam." },
-      { "name": "Hologram Latte", "price": "14₾", "description": "Projection-mapped art latte with oat milk." },
-      { "name": "Neon Mochi Donut", "price": "12₾", "description": "Gluten-free mochi donut with yuzu glaze." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 76,
-    "aiSummary": "Always-open study refuge with energy dashboards and AR-first UX; perfect for hackathon crews."
-  },
-  {
-    "id": "juniper-test-kitchen",
-    "name": "Juniper Test Kitchen",
-    "description": "Research-forward R&D lab blending biophilic design with algorithmic menu sequencing.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Experimental", "Fine Dining"],
-    "tags": ["R&D Lab", "Data Pairing", "Chef Residency"],
-    "dietary": ["Vegetarian", "Gluten-Free"],
-    "priceTier": "$$$",
-    "rating": 4.9,
-    "reviewCount": 132,
-    "location": {
-      "address": "1 Research Concourse",
-      "neighborhood": "Knowledge City",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7299, "lng": 44.8174 }
-    },
-    "contact": {
-      "phone": "+995 511 220 009",
-      "website": "https://junipertestkitchen.example.com"
-    },
-    "schedule": [
-      { "days": "Thu–Sun", "hours": "18:00 – 00:00" }
-    ],
-    "amenities": ["Lab Tours", "Algorithmic Pairings", "Residency Talks"],
-    "menuHighlights": [
-      { "name": "Fermented Cedar Broth", "price": "58₾", "description": "Clarified cedar with koji custard pearls." },
-      { "name": "Juniper Vapor Pasta", "price": "64₾", "description": "Extruded pasta finished under aromatic vapor dome." },
-      { "name": "AI-Paired Dessert Flight", "price": "72₾", "description": "Data-personalized dessert trio." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 90,
-    "aiSummary": "Anchor venue for thesis demonstrations linking IoT sensors, AI pairing, and culinary craft."
-  },
-  {
-    "id": "cobalt-espresso",
-    "name": "Cobalt Espresso & Bakes",
-    "description": "Micro-bakery and espresso lab focused on single-origin beans and laminated dough masterclasses.",
-    "heroImage": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Cafe", "Bakery"],
-    "tags": ["Work-Friendly", "Pastry School", "Roastery"],
-    "dietary": ["Vegetarian"],
-    "priceTier": "$",
-    "rating": 4.4,
-    "reviewCount": 201,
-    "location": {
-      "address": "8 Atrium Street",
-      "neighborhood": "Cobalt Square",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7094, "lng": 44.8098 }
-    },
-    "contact": {
-      "phone": "+995 593 889 120",
-      "website": "https://cobaltespresso.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "07:00 – 21:00" }
-    ],
-    "amenities": ["Roasting Classes", "Subscription Locker", "Babyccino Bar"],
-    "menuHighlights": [
-      { "name": "Midnight Cappuccino", "price": "11₾", "description": "Smoky espresso with cardamom dust." },
-      { "name": "Twice-Baked Pistachio Croissant", "price": "15₾", "description": "House frangipane, citrus zest." },
-      { "name": "Blue Pea Cold Foam", "price": "13₾", "description": "Butterfly pea infusion with oat cold foam." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 79,
-    "aiSummary": "High-throughput café for daily rituals; POS data ready for forecasting labs."
-  },
-  {
-    "id": "ember-oak",
-    "name": "Ember & Oak",
-    "description": "Farmhouse kitchen pairing fermented pantry staples with hearth-driven mains from regenerative farms.",
-    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Farm-to-Table", "Georgian"],
-    "tags": ["Hearth", "Wine Cellar", "Family Style"],
-    "dietary": ["Vegetarian", "Gluten-Free"],
-    "priceTier": "$$",
-    "rating": 4.7,
-    "reviewCount": 223,
-    "location": {
-      "address": "3 Orchard Close",
-      "neighborhood": "Amber Fields",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7015, "lng": 44.7727 }
-    },
-    "contact": {
-      "phone": "+995 599 014 887",
-      "website": "https://emberandoak.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "11:00 – 22:00" }
-    ],
-    "amenities": ["Cellar Tastings", "Children's Corner", "Outdoor Firepit"],
-    "menuHighlights": [
-      { "name": "Wildflower Khachapuri", "price": "24₾", "description": "Fermented dough, seasonal greens, aged cheese." },
-      { "name": "Ember Lamb Shoulder", "price": "48₾", "description": "Clay-pot lamb with smoked carrot puree." },
-      { "name": "Sunflower Honey Cake", "price": "19₾", "description": "Layered cake with pollen cream." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 87,
-    "aiSummary": "Family-friendly anchor with transparent farm sourcing and fermentation education."
-  },
-  {
-    "id": "solstice-supper-club",
-    "name": "Solstice Supper Club",
-    "description": "Invitation-only supper tracing solar calendar rituals with immersive projection storytelling.",
-    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["New Caucasian", "Immersive"],
-    "tags": ["Immersive", "Projection", "Limited Seats"],
-    "dietary": ["Vegetarian", "Gluten-Free"],
-    "priceTier": "$$$",
-    "rating": 4.9,
-    "reviewCount": 98,
-    "location": {
-      "address": "Secret Warehouse 7",
-      "neighborhood": "North Bank",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.728, "lng": 44.7694 }
-    },
-    "contact": {
-      "phone": "+995 555 007 441",
-      "website": "https://solsticesupper.example.com"
-    },
-    "schedule": [
-      { "days": "Fri–Sun", "hours": "Two seatings nightly" }
-    ],
-    "amenities": ["Immersive Storyline", "Projection Dome", "Research Booklet"],
-    "menuHighlights": [
-      { "name": "Solstice Ember Broth", "price": "72₾", "description": "Smoked broth served with projection-mapped herbs." },
-      { "name": "Forager's Atlas", "price": "64₾", "description": "Course featuring 12 micro dishes linked to zodiac." },
-      { "name": "Lunar Honey Sphere", "price": "48₾", "description": "Nitro dessert with honeycomb core." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 80,
-    "aiSummary": "Experiential dining for limited cohorts; data suitable for narrative UX research."
-  },
-  {
-    "id": "copper-yard-smokehouse",
-    "name": "Copper Yard Smokehouse",
-    "description": "Live-fire smokehouse with oak embers, pasture beef, and pickling bar steps from the tram depot.",
-    "heroImage": "https://images.unsplash.com/photo-1458696765561-12142eaead13?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Smokehouse", "Southern", "Modern Georgian"],
-    "tags": ["Live Fire", "Craft Beer", "Group Friendly"],
-    "dietary": ["Gluten-Free"],
-    "priceTier": "$$",
-    "rating": 4.7,
-    "reviewCount": 312,
-    "location": {
-      "address": "48 Rustavi Depot Lane",
-      "neighborhood": "Tramworks",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7128, "lng": 44.8079 }
-    },
-    "contact": {
-      "phone": "+995 555 221 884",
-      "website": "https://copperyard.example.com"
-    },
-    "schedule": [
-      { "days": "Mon–Thu", "hours": "12:00 – 23:00" },
-      { "days": "Fri–Sat", "hours": "12:00 – 01:00" },
-      { "days": "Sun", "hours": "12:00 – 21:00" }
-    ],
-    "amenities": ["Covered Terrace", "Tap Wall", "Kids Menu"],
-    "menuHighlights": [
-      { "name": "Ember Brisket Plate", "price": "58₾", "description": "14-hour smoked brisket with adjika molasses." },
-      { "name": "Burnt-End Khachapuri", "price": "34₾", "description": "Suluguni boat topped with charred burnt ends." },
-      { "name": "Pickle Flight", "price": "16₾", "description": "Seasonal ferments with smoked salt." },
-      { "name": "Smoked Peach BBQ Wings", "price": "26₾", "description": "Charred wings, peach glaze, house ranch." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1421622548261-c45bfe178854?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 75,
-    "aiSummary": "Great for carnivore groups; still offers gluten-free plates and outdoor seating for smoke-sensitive guests."
-  },
-  {
-    "id": "harbor-oyster-room",
-    "name": "Harbor Oyster Room",
-    "description": "Raw bar and champagne lounge overlooking the funicular dock, with tide-to-table sourcing and DJ vinyl nights.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Seafood", "Raw Bar"],
-    "tags": ["Waterfront", "Vinyl", "Date Night"],
-    "dietary": ["Pescatarian"],
-    "priceTier": "$$$",
-    "rating": 4.7,
-    "reviewCount": 204,
-    "location": {
-      "address": "9 Funicular Pier",
-      "neighborhood": "Harbor Loop",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7094, "lng": 44.8025 }
-    },
-    "contact": {
-      "phone": "+995 599 440 112",
-      "website": "https://harboroyster.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "12:00 – 00:30" }
-    ],
-    "amenities": ["Oyster Shucker Bar", "Waterfront Seating", "DJ Booth"],
-    "menuHighlights": [
-      { "name": "Black Sea Oyster Flight", "price": "72₾", "description": "Six oysters with citrus ponzu and dill ice." },
-      { "name": "Charred Octopus", "price": "64₾", "description": "Smoked paprika rub, preserved lemon mash." },
-      { "name": "Champagne Granite", "price": "32₾", "description": "Palate cleanser with bergamot zest." },
-      { "name": "Lobster Brioche Roll", "price": "68₾", "description": "Brown butter lobster, dill aioli, brioche bun." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 82,
-    "aiSummary": "Ideal for seafood-forward dates; proximity to tram makes it easy to combine with waterfront walks."
-  },
-  {
-    "id": "kinetic-ramen-lab",
-    "name": "Kinetic Ramen Lab",
-    "description": "Neon-lit broth lab with table-side tare tastings, vinyl hip-hop sets, and midnight ramen drops.",
-    "heroImage": "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Japanese", "Pan-Asian"],
-    "tags": ["Late Night", "Open Kitchen", "Counter Seating"],
-    "dietary": ["Halal", "Vegetarian"],
-    "priceTier": "$$",
-    "rating": 4.5,
-    "reviewCount": 276,
-    "location": {
-      "address": "31 Neon Alley",
-      "neighborhood": "Creative Grid",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7322, "lng": 44.7866 }
-    },
-    "contact": {
-      "phone": "+995 595 002 818",
-      "website": "https://kineticramen.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "11:30 – 02:00" }
-    ],
-    "amenities": ["Bar Seating", "Vinyl Nights", "Spice Bar"],
-    "menuHighlights": [
-      { "name": "Black Garlic Tonkotsu", "price": "32₾", "description": "12-hour broth with burnt garlic oil and soft egg." },
-      { "name": "Miso Tofu Mazemen", "price": "28₾", "description": "Dry-style ramen with sesame tare and crispy tofu." },
-      { "name": "Yuzu Shio Shot", "price": "8₾", "description": "Tare tasting served in ceramic shooters." },
-      { "name": "Spicy Sesame Karaage", "price": "24₾", "description": "Crispy chicken, sesame chili dust, lime." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=900&q=80"
+      "/images/restaurants/chatma-lounge/gallery-1.jpg",
+      "/images/restaurants/chatma-lounge/gallery-2.jpg",
+      "/images/restaurants/chatma-lounge/gallery-3.jpg"
     ],
     "sustainabilityScore": 70,
-    "aiSummary": "Late-night noodle safe bet with halal-friendly options; counter seating fits solo diners."
+    "aiSummary": "Historic restaurant with lush garden seating and a well-stocked bar; perfect for relaxed evening dining."
   },
   {
-    "id": "atlas-family-table",
-    "name": "Atlas Family Table",
-    "description": "Sunlit canteen with indoor playground, weekend brunch buffet, and kids cooking classes.",
-    "heroImage": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Family", "Comfort Food", "Bakery"],
-    "tags": ["Family-Friendly", "Play Area", "Brunch"],
-    "dietary": ["Vegetarian"],
+    "id": "central-park",
+    "name": "Central Park Restaurant",
+    "description": "Two-story restaurant offering stunning night views of Ashgabat, serving Turkish and Italian cuisine with live music, chef shows, and a dedicated kids' menu.",
+    "heroImage": "/images/restaurants/central-park/hero.jpg",
+    "cuisines": ["Turkish", "Italian"],
+    "tags": ["City Views", "Live Music", "Family-Friendly"],
+    "dietary": ["Halal", "Vegetarian Options"],
     "priceTier": "$$",
-    "rating": 4.3,
-    "reviewCount": 189,
+    "rating": 4.4,
+    "reviewCount": 298,
     "location": {
-      "address": "77 Atlas Avenue",
-      "neighborhood": "Education Park",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7254, "lng": 44.7781 }
+      "address": "Bitarap Turkmenistan şaýoly",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.95, "lng": 58.38 }
     },
     "contact": {
-      "phone": "+995 598 441 212",
-      "website": "https://atlasfamily.example.com"
+      "phone": "+993 12 46 33 15",
+      "website": null
     },
-    "schedule": [
-      { "days": "Mon–Fri", "hours": "08:00 – 21:00" },
-      { "days": "Sat–Sun", "hours": "08:00 – 22:00" }
-    ],
-    "amenities": ["Playroom", "Nursing Room", "Parking"],
+    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:30" }],
+    "amenities": ["Panoramic Views", "Kids Menu", "Chef Shows", "Banquet Hall"],
     "menuHighlights": [
-      { "name": "Adjika Chicken Waffles", "price": "24₾", "description": "Corn waffle with honey adjika glaze." },
-      { "name": "Kids Bakeshop Bench", "price": "18₾", "description": "Mini pastry set with sprinkles and jams." },
-      { "name": "Supra Skillet", "price": "34₾", "description": "Family-style eggs, lobiani, and roasted veggies." },
-      { "name": "Banana Bread French Toast", "price": "21₾", "description": "Caramelized banana, cinnamon syrup, vanilla labneh." }
+      {
+        "name": "Margherita Pizza",
+        "price": "70 TMT",
+        "description": "Wood-fired pizza with fresh mozzarella and basil."
+      },
+      {
+        "name": "Iskender Kebab",
+        "price": "110 TMT",
+        "description": "Sliced döner over bread with tomato sauce and melted butter."
+      },
+      {
+        "name": "Pasta Carbonara",
+        "price": "85 TMT",
+        "description": "Creamy egg-based sauce with pancetta and parmesan."
+      },
+      {
+        "name": "Turkish Baklava",
+        "price": "35 TMT",
+        "description": "Layers of flaky pastry with pistachios and sweet syrup."
+      }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1458640904116-093b74971de9?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80"
+      "/images/restaurants/central-park/gallery-1.jpg",
+      "/images/restaurants/central-park/gallery-2.jpg",
+      "/images/restaurants/central-park/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 65,
+    "aiSummary": "Great for families seeking panoramic city views with reliable Turkish-Italian fusion and entertainment."
+  },
+  {
+    "id": "miras",
+    "name": "Miras Restaurant",
+    "description": "Upscale dining spot offering an elegant interpretation of traditional Turkmen cuisine with a modern interior, known for innovative dishes and artistic presentation.",
+    "heroImage": "/images/restaurants/miras/hero.jpg",
+    "cuisines": ["Turkmen Modern", "Fine Dining"],
+    "tags": ["Upscale", "Modern", "Artistic"],
+    "dietary": ["Halal"],
+    "priceTier": "$$$",
+    "rating": 4.7,
+    "reviewCount": 195,
+    "location": {
+      "address": "Magtymguly şaýoly 78",
+      "neighborhood": "Berzengi",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.928, "lng": 58.365 }
+    },
+    "contact": {
+      "phone": "+993 12 44 81 22",
+      "website": null
+    },
+    "schedule": [
+      { "days": "Mon–Sat", "hours": "12:00 – 23:00" },
+      { "days": "Sun", "hours": "13:00 – 22:00" }
+    ],
+    "amenities": [
+      "Private Dining",
+      "Wine Selection",
+      "Valet Parking",
+      "Air Conditioning"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Deconstructed Plov",
+        "price": "95 TMT",
+        "description": "Modern take on traditional pilaf with saffron-infused rice."
+      },
+      {
+        "name": "Lamb Tenderloin",
+        "price": "180 TMT",
+        "description": "Sous-vide lamb with pomegranate reduction and herb crust."
+      },
+      {
+        "name": "Sturgeon Fillet",
+        "price": "200 TMT",
+        "description": "Pan-seared Caspian sturgeon with almond cream sauce."
+      },
+      {
+        "name": "Rose Pistachio Baklava",
+        "price": "55 TMT",
+        "description": "Delicate layers with rosewater syrup and crushed pistachios."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/miras/gallery-1.jpg",
+      "/images/restaurants/miras/gallery-2.jpg",
+      "/images/restaurants/miras/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 80,
+    "aiSummary": "Sophisticated reinterpretation of Turkmen classics with artistic plating; ideal for special occasions."
+  },
+  {
+    "id": "nusay",
+    "name": "Nusay Restaurant",
+    "description": "Opulent dining experience with a majestic atmosphere inspired by Turkmenistan's regal heritage, featuring royal-style cuisine and exquisite interior craftsmanship.",
+    "heroImage": "/images/restaurants/nusay/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Royal Cuisine"],
+    "tags": ["Opulent", "Heritage", "Banquets"],
+    "dietary": ["Halal"],
+    "priceTier": "$$$",
+    "rating": 4.6,
+    "reviewCount": 165,
+    "location": {
+      "address": "Türkmenbaşy şaýoly 12",
+      "neighborhood": "Çandybil",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.935, "lng": 58.395 }
+    },
+    "contact": {
+      "phone": "+993 12 39 88 45",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:00" }],
+    "amenities": [
+      "Grand Hall",
+      "VIP Rooms",
+      "Parking",
+      "Traditional Entertainment"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Royal Lamb Plov",
+        "price": "120 TMT",
+        "description": "Festive pilaf with lamb, dried fruits, and golden raisins."
+      },
+      {
+        "name": "Stuffed Quail",
+        "price": "150 TMT",
+        "description": "Herb-stuffed quail with walnut and pomegranate sauce."
+      },
+      {
+        "name": "Kavurma",
+        "price": "90 TMT",
+        "description": "Slow-braised lamb with tomatoes, onion, and pepper."
+      },
+      {
+        "name": "Şerbetli Dessert",
+        "price": "45 TMT",
+        "description": "Traditional syrup-soaked pastry with clotted cream."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/nusay/gallery-1.jpg",
+      "/images/restaurants/nusay/gallery-2.jpg",
+      "/images/restaurants/nusay/gallery-3.jpg"
     ],
     "sustainabilityScore": 68,
-    "aiSummary": "Best for families needing space and predictability; brunch buffet keeps wait times low."
+    "aiSummary": "Grand venue channeling Turkmen royal heritage; excellent for celebrations and official dinners."
   },
   {
-    "id": "terrace-cyclist-cafe",
-    "name": "Terrace Cyclist Cafe",
-    "description": "Bike-in espresso bar with repair stand, power outlets, and slow-carb bowls overlooking the park loop.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Cafe", "Healthy"],
-    "tags": ["Remote Work", "Cyclist Friendly", "Outdoor"],
-    "dietary": ["Vegan", "Gluten-Free"],
-    "priceTier": "$",
-    "rating": 4.4,
-    "reviewCount": 163,
-    "location": {
-      "address": "5 Park Loop Terrace",
-      "neighborhood": "Central Loop",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7185, "lng": 44.7842 }
-    },
-    "contact": {
-      "phone": "+995 577 889 210",
-      "website": "https://terracecyclist.example.com"
-    },
-    "schedule": [
-      { "days": "Daily", "hours": "07:00 – 20:00" }
-    ],
-    "amenities": ["Bike Repair Stand", "USB Outlets", "Shaded Terrace"],
-    "menuHighlights": [
-      { "name": "Cold Brew Cascara", "price": "12₾", "description": "Steeped cascara with orange peel." },
-      { "name": "Quinoa Power Bowl", "price": "22₾", "description": "Roasted veg, pickled onions, tahini drizzle." },
-      { "name": "Oat Espresso Shake", "price": "15₾", "description": "Double shot with oat protein base." },
-      { "name": "Pistachio Energy Bites", "price": "9₾", "description": "Date, pistachio, cacao nib clusters." }
-    ],
-    "gallery": [
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-    ],
-    "sustainabilityScore": 74,
-    "aiSummary": "Reliable laptop spot and meetup hub for cyclists; vegan-friendly fuel and early hours."
-  },
-  {
-    "id": "makers-den",
-    "name": "Makers Den",
-    "description": "Hybrid cowork and dining studio with day passes, fiber internet, and chef collabs on rotation.",
-    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    "cuisines": ["Fusion", "Cafe"],
-    "tags": ["Remote Work", "Pop-up Kitchen", "Workshops"],
-    "dietary": ["Vegetarian", "Gluten-Free"],
+    "id": "arzu",
+    "name": "Arzu Restaurant",
+    "description": "Known for impeccable service and a menu that blends traditional Turkmen cuisine with contemporary flair, set in a chic modern-designed interior.",
+    "heroImage": "/images/restaurants/arzu/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "International"],
+    "tags": ["Modern Design", "Business Lunch", "Chic"],
+    "dietary": ["Halal", "Vegetarian Options"],
     "priceTier": "$$",
     "rating": 4.5,
-    "reviewCount": 142,
+    "reviewCount": 248,
     "location": {
-      "address": "12 Prototype Street",
-      "neighborhood": "Innovation Hub",
-      "city": "Gadam",
-      "coordinates": { "lat": 41.7227, "lng": 44.7729 }
+      "address": "Görogly köçesi 40",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.948, "lng": 58.356 }
     },
     "contact": {
-      "phone": "+995 593 330 221",
-      "website": "https://makersden.example.com"
+      "phone": "+993 12 47 10 33",
+      "website": null
     },
-    "schedule": [
-      { "days": "Mon–Fri", "hours": "08:00 – 22:00" },
-      { "days": "Sat–Sun", "hours": "10:00 – 20:00" }
+    "schedule": [{ "days": "Daily", "hours": "11:00 – 23:00" }],
+    "amenities": [
+      "Business Lunches",
+      "Wi-Fi",
+      "Private Rooms",
+      "Air Conditioning"
     ],
-    "amenities": ["Phone Booths", "Meeting Rooms", "Ergonomic Chairs"],
     "menuHighlights": [
-      { "name": "Caramelized Mtsvadi Bowl", "price": "29₾", "description": "Grilled pork over buckwheat with herb labneh." },
-      { "name": "Miso Mushroom Toast", "price": "24₾", "description": "Sourdough with miso butter and pickled leek." },
-      { "name": "Cold-Drip Tonic", "price": "14₾", "description": "Cascara tonic with lime bitters." },
-      { "name": "Sesame Panna Cotta", "price": "18₾", "description": "Black sesame cream, salted caramel, brittle." }
+      {
+        "name": "Turkmen Laghman",
+        "price": "55 TMT",
+        "description": "Hand-pulled noodles with stir-fried lamb and vegetables."
+      },
+      {
+        "name": "Grilled Beef Medallions",
+        "price": "140 TMT",
+        "description": "Pan-seared beef with mushroom sauce and roasted potatoes."
+      },
+      {
+        "name": "Çekdirme",
+        "price": "70 TMT",
+        "description": "Traditional fried meat with tomato, egg, and green pepper."
+      },
+      {
+        "name": "Honey Walnut Cake",
+        "price": "40 TMT",
+        "description": "Layered cake with honey cream and crushed walnuts."
+      }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1455778977538-0430f43f118a?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+      "/images/restaurants/arzu/gallery-1.jpg",
+      "/images/restaurants/arzu/gallery-2.jpg",
+      "/images/restaurants/arzu/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 74,
+    "aiSummary": "Contemporary Turkmen dining with efficient business lunch service; a reliable choice for expats and locals."
+  },
+  {
+    "id": "altyn-cyray",
+    "name": "Altyn Çyraý",
+    "description": "Exquisite restaurant blending local Turkmen dishes with international cuisine, featuring traditional decor, live music performances, and exceptional service.",
+    "heroImage": "/images/restaurants/altyn-cyray/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "International"],
+    "tags": ["Live Music", "Traditional Decor", "Premium"],
+    "dietary": ["Halal"],
+    "priceTier": "$$$",
+    "rating": 4.6,
+    "reviewCount": 210,
+    "location": {
+      "address": "Atamyrat Nyýazow şaýoly 88",
+      "neighborhood": "Köpetdag",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.942, "lng": 58.37 }
+    },
+    "contact": {
+      "phone": "+993 12 36 90 14",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "12:00 – 00:00" }],
+    "amenities": [
+      "Live Music",
+      "VIP Lounge",
+      "Outdoor Terrace",
+      "Valet Parking"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Lamb Tandoor",
+        "price": "130 TMT",
+        "description": "Slow-roasted lamb in traditional clay oven with herbs."
+      },
+      {
+        "name": "Caspian Sturgeon",
+        "price": "190 TMT",
+        "description": "Grilled sturgeon with lemon butter and saffron rice."
+      },
+      {
+        "name": "Mixed Grill Platter",
+        "price": "160 TMT",
+        "description": "Assortment of lamb, beef, and chicken kebabs."
+      },
+      {
+        "name": "Kunefe",
+        "price": "50 TMT",
+        "description": "Crispy shredded pastry with melted cheese and sweet syrup."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/altyn-cyray/gallery-1.jpg",
+      "/images/restaurants/altyn-cyray/gallery-2.jpg",
+      "/images/restaurants/altyn-cyray/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 71,
+    "aiSummary": "Premium dining with live entertainment and traditional Turkmen ambiance; great for evening celebrations."
+  },
+  {
+    "id": "balykchy",
+    "name": "Balykchy Restaurant",
+    "description": "Ashgabat's premier seafood destination featuring fresh Caspian fish preparations, grilled specialties, and a refined maritime-themed interior.",
+    "heroImage": "/images/restaurants/balykchy/hero.jpg",
+    "cuisines": ["Seafood", "International"],
+    "tags": ["Seafood", "Fresh Fish", "Elegant"],
+    "dietary": ["Halal", "Pescatarian"],
+    "priceTier": "$$",
+    "rating": 4.4,
+    "reviewCount": 187,
+    "location": {
+      "address": "2022-nji köçe 15",
+      "neighborhood": "Parahat",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.938, "lng": 58.405 }
+    },
+    "contact": {
+      "phone": "+993 12 38 44 70",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "11:00 – 22:30" }],
+    "amenities": ["Aquarium Display", "Private Dining", "Air Conditioning"],
+    "menuHighlights": [
+      {
+        "name": "Grilled Caspian Kutum",
+        "price": "110 TMT",
+        "description": "Whole grilled Caspian fish with lemon, herbs, and capers."
+      },
+      {
+        "name": "Seafood Plov",
+        "price": "90 TMT",
+        "description": "Rice pilaf with shrimp, mussels, and saffron."
+      },
+      {
+        "name": "Fish Kebab",
+        "price": "80 TMT",
+        "description": "Skewered sturgeon pieces with vegetables and pomegranate glaze."
+      },
+      {
+        "name": "Grilled Trout",
+        "price": "95 TMT",
+        "description": "Rainbow trout with garlic butter and almond flakes."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/balykchy/gallery-1.jpg",
+      "/images/restaurants/balykchy/gallery-2.jpg",
+      "/images/restaurants/balykchy/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 76,
+    "aiSummary": "Top choice for seafood lovers; features Caspian-sourced fish with traditional preparation methods."
+  },
+  {
+    "id": "sirin",
+    "name": "Şirin Restaurant",
+    "description": "Sophisticated restaurant featuring Eastern European cuisines with Asian influences, ideal for business lunches and special occasions. Renowned for sturgeon dishes and caviar.",
+    "heroImage": "/images/restaurants/sirin/hero.jpg",
+    "cuisines": ["European", "Asian Fusion"],
+    "tags": ["Sophisticated", "Business", "Caviar"],
+    "dietary": ["Halal"],
+    "priceTier": "$$$",
+    "rating": 4.5,
+    "reviewCount": 156,
+    "location": {
+      "address": "Galkynyş köçesi 22",
+      "neighborhood": "Berzengi",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.922, "lng": 58.348 }
+    },
+    "contact": {
+      "phone": "+993 12 45 67 80",
+      "website": null
+    },
+    "schedule": [
+      { "days": "Mon–Sat", "hours": "12:00 – 23:00" },
+      { "days": "Sun", "hours": "13:00 – 22:00" }
+    ],
+    "amenities": ["Wine List", "Business Lunch", "Private Rooms", "Valet"],
+    "menuHighlights": [
+      {
+        "name": "Sturgeon with Caviar",
+        "price": "280 TMT",
+        "description": "Pan-seared sturgeon topped with Caspian caviar."
+      },
+      {
+        "name": "Chicken Kiev",
+        "price": "100 TMT",
+        "description": "Classic breaded chicken breast with garlic herb butter."
+      },
+      {
+        "name": "Beef Stroganoff",
+        "price": "120 TMT",
+        "description": "Tender beef strips in creamy mushroom sauce with rice."
+      },
+      {
+        "name": "Napoleon Cake",
+        "price": "50 TMT",
+        "description": "Layered puff pastry with custard cream."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/sirin/gallery-1.jpg",
+      "/images/restaurants/sirin/gallery-2.jpg",
+      "/images/restaurants/sirin/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 67,
+    "aiSummary": "Refined European-Asian crossover with signature sturgeon and caviar; strong business lunch program."
+  },
+  {
+    "id": "dag-lezzeti",
+    "name": "Dag Lezzeti Restaurant",
+    "description": "Authentic mountain-style Turkmen restaurant offering hearty grilled meats and traditional dishes, providing a culinary journey through the flavors of the Kopet Dag foothills.",
+    "heroImage": "/images/restaurants/dag-lezzeti/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Grill"],
+    "tags": ["Mountain Cuisine", "Hearty", "Traditional"],
+    "dietary": ["Halal"],
+    "priceTier": "$",
+    "rating": 4.3,
+    "reviewCount": 312,
+    "location": {
+      "address": "Andalib köçesi 45",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.954, "lng": 58.361 }
+    },
+    "contact": {
+      "phone": "+993 65 42 18 90",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "10:00 – 22:00" }],
+    "amenities": ["Spacious Hall", "Parking", "Family Rooms"],
+    "menuHighlights": [
+      {
+        "name": "Tamdyrlama",
+        "price": "75 TMT",
+        "description": "Lamb baked in a tandoor oven with potatoes and onions."
+      },
+      {
+        "name": "Dograma",
+        "price": "35 TMT",
+        "description": "Traditional bread soup with lamb broth and dried bread."
+      },
+      {
+        "name": "Beef Shashlik",
+        "price": "65 TMT",
+        "description": "Charcoal-grilled beef skewers with sumac and fresh herbs."
+      },
+      {
+        "name": "Yarma Soup",
+        "price": "30 TMT",
+        "description": "Thick grain soup with lamb and root vegetables."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/dag-lezzeti/gallery-1.jpg",
+      "/images/restaurants/dag-lezzeti/gallery-2.jpg",
+      "/images/restaurants/dag-lezzeti/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 82,
+    "aiSummary": "Affordable and hearty Turkmen comfort food with generous portions; authentic mountain dining experience."
+  },
+  {
+    "id": "sha-coffee",
+    "name": "Sha Coffee",
+    "description": "Pioneer of Ashgabat's specialty coffee culture, offering freshly roasted high-quality beans alongside European, American, and Turkmen cuisine in a trendy setting.",
+    "heroImage": "/images/restaurants/sha-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "European"],
+    "tags": ["Specialty Coffee", "Trendy", "Work-Friendly"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$$",
+    "rating": 4.6,
+    "reviewCount": 445,
+    "location": {
+      "address": "Alyshir Navoi köçesi",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.946, "lng": 58.377 }
+    },
+    "contact": {
+      "phone": "+993 65 55 12 30",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 23:00" }],
+    "amenities": [
+      "Free Wi-Fi",
+      "Outdoor Seating",
+      "Laptop-Friendly",
+      "Fresh Roasts"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Flat White",
+        "price": "25 TMT",
+        "description": "Double ristretto with velvety steamed milk."
+      },
+      {
+        "name": "Avocado Toast",
+        "price": "45 TMT",
+        "description": "Sourdough toast with smashed avocado, feta, and chili flakes."
+      },
+      {
+        "name": "Club Sandwich",
+        "price": "55 TMT",
+        "description": "Triple-decker with chicken, bacon, egg, and fresh vegetables."
+      },
+      {
+        "name": "Tiramisu",
+        "price": "40 TMT",
+        "description": "Classic Italian dessert with espresso-soaked savoiardi."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/sha-coffee/gallery-1.jpg",
+      "/images/restaurants/sha-coffee/gallery-2.jpg",
+      "/images/restaurants/sha-coffee/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 88,
+    "aiSummary": "The go-to specialty coffee shop in Ashgabat with fresh roasts and a work-friendly atmosphere."
+  },
+  {
+    "id": "uzum-cafe",
+    "name": "Uzum Cafe",
+    "description": "Cozy neighborhood cafe with a diverse international menu including salads, soups, pasta, and hot dishes. Conveniently located across from the Ak Altyn Hotel.",
+    "heroImage": "/images/restaurants/uzum-cafe/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "International"],
+    "tags": ["Cozy", "International Menu", "Central Location"],
+    "dietary": ["Vegetarian Options", "Halal"],
+    "priceTier": "$$",
+    "rating": 4.3,
+    "reviewCount": 267,
+    "location": {
+      "address": "Magtymguly şaýoly, near Ak Altyn Hotel",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.949, "lng": 58.385 }
+    },
+    "contact": {
+      "phone": "+993 65 33 44 12",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "09:00 – 22:00" }],
+    "amenities": ["Wi-Fi", "Outdoor Terrace", "Breakfast Menu"],
+    "menuHighlights": [
+      {
+        "name": "Chicken Caesar Salad",
+        "price": "50 TMT",
+        "description": "Grilled chicken, romaine, parmesan, and house-made dressing."
+      },
+      {
+        "name": "Tomato Basil Soup",
+        "price": "30 TMT",
+        "description": "Creamy tomato soup with fresh basil and croutons."
+      },
+      {
+        "name": "Penne Arrabbiata",
+        "price": "60 TMT",
+        "description": "Al dente pasta with spicy tomato sauce and parmesan."
+      },
+      {
+        "name": "Signature Tea Menu",
+        "price": "20 TMT",
+        "description": "Selection of fruit, herbal, and Turkmen green teas."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/uzum-cafe/gallery-1.jpg",
+      "/images/restaurants/uzum-cafe/gallery-2.jpg",
+      "/images/restaurants/uzum-cafe/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 75,
+    "aiSummary": "Reliable international cafe near major hotels; solid breakfast and lunch spot for visitors."
+  },
+  {
+    "id": "frappe-coffee",
+    "name": "Frappe Coffee",
+    "description": "Modern coffee shop with classic and creative drink options, including signature Bumblebee coffee, unusual lemonades, milkshakes, and artisan desserts.",
+    "heroImage": "/images/restaurants/frappe-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "Bakery"],
+    "tags": ["Instagram-Worthy", "Creative Drinks", "Desserts"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.4,
+    "reviewCount": 356,
+    "location": {
+      "address": "Oguzhan köçesi 12",
+      "neighborhood": "Parahat",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.934, "lng": 58.392 }
+    },
+    "contact": {
+      "phone": "+993 65 88 14 50",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 22:00" }],
+    "amenities": ["Wi-Fi", "Cozy Interior", "Takeaway"],
+    "menuHighlights": [
+      {
+        "name": "Bumblebee Coffee",
+        "price": "28 TMT",
+        "description": "Signature honey-vanilla espresso with layered cream."
+      },
+      {
+        "name": "Almond Croissant",
+        "price": "22 TMT",
+        "description": "Buttery croissant filled with almond cream and toasted flakes."
+      },
+      {
+        "name": "Mango Lemonade",
+        "price": "20 TMT",
+        "description": "Fresh mango blended with sparkling lemonade and mint."
+      },
+      {
+        "name": "Pistachio Cake",
+        "price": "35 TMT",
+        "description": "Moist pistachio sponge with cream cheese frosting."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/frappe-coffee/gallery-1.jpg",
+      "/images/restaurants/frappe-coffee/gallery-2.jpg",
+      "/images/restaurants/frappe-coffee/gallery-3.jpg"
     ],
     "sustainabilityScore": 79,
-    "aiSummary": "Top pick for laptop sessions and meetups; rotating chefs keep the menu interesting for repeat visits."
+    "aiSummary": "Instagram-ready cafe with creative drink menu and excellent pastries; perfect for afternoon visits."
+  },
+  {
+    "id": "talhan-bakery",
+    "name": "Talhan Bakery",
+    "description": "Cozy cafe-bakery famous for fresh pastries, delicious desserts, and a menu spanning Turkish and European cuisine. Also offers custom cakes to order.",
+    "heroImage": "/images/restaurants/talhan-bakery/hero.jpg",
+    "cuisines": ["Bakery", "Turkish", "European"],
+    "tags": ["Fresh Pastries", "Custom Cakes", "Breakfast"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.5,
+    "reviewCount": 398,
+    "location": {
+      "address": "Görogly köçesi 55",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.947, "lng": 58.352 }
+    },
+    "contact": {
+      "phone": "+993 65 22 90 44",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "07:30 – 21:00" }],
+    "amenities": ["Custom Cake Orders", "Takeaway", "Morning Pastries"],
+    "menuHighlights": [
+      {
+        "name": "Simit with Cheese",
+        "price": "15 TMT",
+        "description": "Turkish sesame ring bread with cream cheese and olives."
+      },
+      {
+        "name": "Chocolate Eclair",
+        "price": "20 TMT",
+        "description": "Choux pastry filled with vanilla cream and chocolate glaze."
+      },
+      {
+        "name": "Turkish Breakfast Plate",
+        "price": "45 TMT",
+        "description": "Eggs, cheese, olives, tomatoes, honey, and fresh bread."
+      },
+      {
+        "name": "Red Velvet Cake",
+        "price": "35 TMT",
+        "description": "Classic red velvet with cream cheese frosting."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/talhan-bakery/gallery-1.jpg",
+      "/images/restaurants/talhan-bakery/gallery-2.jpg",
+      "/images/restaurants/talhan-bakery/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 83,
+    "aiSummary": "Beloved bakery with fresh morning pastries and custom cakes; ideal for breakfast or a sweet treat."
+  },
+  {
+    "id": "kemine-coffee",
+    "name": "Kemine Coffee",
+    "description": "Popular neighborhood coffee shop known for early opening hours, delicious fresh pastries, an impressive coffee selection, and consistently friendly service.",
+    "heroImage": "/images/restaurants/kemine-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "Bakery"],
+    "tags": ["Early Opening", "Friendly Staff", "Budget-Friendly"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.5,
+    "reviewCount": 423,
+    "location": {
+      "address": "Kemine köçesi 8",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.953, "lng": 58.368 }
+    },
+    "contact": {
+      "phone": "+993 65 71 33 20",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "06:30 – 21:00" }],
+    "amenities": ["Early Opening", "Takeaway", "Fresh Pastries Daily"],
+    "menuHighlights": [
+      {
+        "name": "Cappuccino",
+        "price": "18 TMT",
+        "description": "Rich espresso with perfectly steamed milk foam."
+      },
+      {
+        "name": "Butter Croissant",
+        "price": "12 TMT",
+        "description": "Flaky and golden, baked fresh every morning."
+      },
+      {
+        "name": "Iced Latte",
+        "price": "22 TMT",
+        "description": "Chilled espresso with cold milk over ice."
+      },
+      {
+        "name": "Cinnamon Roll",
+        "price": "15 TMT",
+        "description": "Warm spiral bun with cinnamon sugar and cream cheese glaze."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/kemine-coffee/gallery-1.jpg",
+      "/images/restaurants/kemine-coffee/gallery-2.jpg",
+      "/images/restaurants/kemine-coffee/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 86,
+    "aiSummary": "Best early-bird coffee spot in Ashgabat; opens at 6:30 AM with fresh pastries and friendly service."
+  },
+  {
+    "id": "tigirli-coffee",
+    "name": "Tigirli Coffee",
+    "description": "Stylish cafe offering a wide selection of hot and cold coffee drinks, signature teas, milkshakes, smoothies, and artisan desserts in a trendy atmosphere.",
+    "heroImage": "/images/restaurants/tigirli-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "Bakery"],
+    "tags": ["Trendy", "Smoothies", "Desserts"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$$",
+    "rating": 4.4,
+    "reviewCount": 289,
+    "location": {
+      "address": "Bitarap Turkmenistan şaýoly 30",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.948, "lng": 58.381 }
+    },
+    "contact": {
+      "phone": "+993 65 46 88 15",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 22:00" }],
+    "amenities": ["Wi-Fi", "Modern Interior", "Laptop-Friendly", "Takeaway"],
+    "menuHighlights": [
+      {
+        "name": "Matcha Latte",
+        "price": "30 TMT",
+        "description": "Japanese matcha with steamed oat or whole milk."
+      },
+      {
+        "name": "Berry Smoothie",
+        "price": "28 TMT",
+        "description": "Blended strawberry, blueberry, banana, and yogurt."
+      },
+      {
+        "name": "French Tart",
+        "price": "35 TMT",
+        "description": "Seasonal fruit tart with vanilla pastry cream."
+      },
+      {
+        "name": "Meringue Roll",
+        "price": "30 TMT",
+        "description": "Crispy meringue rolled with whipped cream and berries."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/tigirli-coffee/gallery-1.jpg",
+      "/images/restaurants/tigirli-coffee/gallery-2.jpg",
+      "/images/restaurants/tigirli-coffee/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 77,
+    "aiSummary": "Trendy cafe with wide beverage selection and artisan desserts; great for studying or catching up."
+  },
+  {
+    "id": "uno-coffee",
+    "name": "Uno Coffee & Tea",
+    "description": "Specialty tea and coffee house known for classic and iced drinks, signature teas, lemonades, and Chinese tea varieties. Offers alternative milk options.",
+    "heroImage": "/images/restaurants/uno-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe"],
+    "tags": ["Tea Specialist", "Alternative Milk", "Relaxing"],
+    "dietary": ["Vegan Options", "Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.3,
+    "reviewCount": 312,
+    "location": {
+      "address": "2060-njy köçe 5",
+      "neighborhood": "Parahat-7",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.93, "lng": 58.41 }
+    },
+    "contact": {
+      "phone": "+993 65 90 22 18",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 21:00" }],
+    "amenities": ["Tea Selection", "Alternative Milks", "Cozy Seating"],
+    "menuHighlights": [
+      {
+        "name": "Chinese Oolong Tea",
+        "price": "25 TMT",
+        "description": "Premium loose-leaf oolong served in a traditional set."
+      },
+      {
+        "name": "Rose Lemonade",
+        "price": "18 TMT",
+        "description": "Sparkling lemonade with rose syrup and fresh mint."
+      },
+      {
+        "name": "Oat Milk Latte",
+        "price": "22 TMT",
+        "description": "Espresso with creamy oat milk and a touch of vanilla."
+      },
+      {
+        "name": "Honey Cake Slice",
+        "price": "20 TMT",
+        "description": "Traditional layered honey cake with sour cream frosting."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/uno-coffee/gallery-1.jpg",
+      "/images/restaurants/uno-coffee/gallery-2.jpg",
+      "/images/restaurants/uno-coffee/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 84,
+    "aiSummary": "Tea-forward cafe with impressive variety including Chinese specialty teas; plant-milk options available."
+  },
+  {
+    "id": "berk-garden",
+    "name": "Berk Garden Pub",
+    "description": "Spacious garden pub on Gorogly Street with an outdoor pool, barbecue zone, and relaxed atmosphere — a popular spot for evening gatherings and celebrations.",
+    "heroImage": "/images/restaurants/berk-garden/hero.jpg",
+    "cuisines": ["Grill", "International"],
+    "tags": ["Garden", "Pool", "BBQ Zone"],
+    "dietary": ["Halal"],
+    "priceTier": "$$",
+    "rating": 4.3,
+    "reviewCount": 234,
+    "location": {
+      "address": "Görogly köçesi",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.95, "lng": 58.354 }
+    },
+    "contact": {
+      "phone": "+993 12 49 55 20",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "12:00 – 00:00" }],
+    "amenities": ["Outdoor Pool", "BBQ Grill", "Large Garden", "Live Sports"],
+    "menuHighlights": [
+      {
+        "name": "BBQ Ribs",
+        "price": "110 TMT",
+        "description": "Slow-smoked pork ribs with house BBQ sauce and coleslaw."
+      },
+      {
+        "name": "Grilled Chicken Wings",
+        "price": "55 TMT",
+        "description": "Charcoal-grilled wings with spicy garlic sauce."
+      },
+      {
+        "name": "Garden Burger",
+        "price": "65 TMT",
+        "description": "Beef patty with cheddar, lettuce, tomato, and special sauce."
+      },
+      {
+        "name": "Draft Beer",
+        "price": "25 TMT",
+        "description": "Selection of local and imported draft beers."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/berk-garden/gallery-1.jpg",
+      "/images/restaurants/berk-garden/gallery-2.jpg",
+      "/images/restaurants/berk-garden/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 63,
+    "aiSummary": "Casual garden pub with pool and BBQ; great for group gatherings and evening entertainment."
+  },
+  {
+    "id": "kopetdag-project",
+    "name": "Kopetdag Project",
+    "description": "Contemporary restaurant on Magtymguly Avenue blending traditional Turkmen flavors with modern cooking techniques, featuring private yurt-type cabins, a charming garden area, and a diverse menu.",
+    "heroImage": "/images/restaurants/kopetdag-project/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "International"],
+    "tags": ["Contemporary", "Yurt Cabins", "Garden"],
+    "dietary": ["Halal", "Vegetarian Options"],
+    "priceTier": "$$",
+    "rating": 4.5,
+    "reviewCount": 340,
+    "location": {
+      "address": "Magtymguly şaýoly",
+      "neighborhood": "Köpetdag",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.944, "lng": 58.375 }
+    },
+    "contact": {
+      "phone": "+993 12 92 14 55",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "10:00 – 23:00" }],
+    "amenities": [
+      "Yurt Cabins",
+      "Garden Seating",
+      "Outdoor Terrace",
+      "Delivery",
+      "Takeaway"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Kebab Platter",
+        "price": "95 TMT",
+        "description": "Assorted grilled lamb & beef kebabs with fresh herbs and lavash."
+      },
+      {
+        "name": "Turkmen Plov",
+        "price": "55 TMT",
+        "description": "Aromatic rice pilaf with tender lamb and caramelized carrots."
+      },
+      {
+        "name": "Fresh Salad Bar",
+        "price": "40 TMT",
+        "description": "Seasonal vegetables with pomegranate vinaigrette."
+      },
+      {
+        "name": "Baklava Dessert",
+        "price": "30 TMT",
+        "description": "Layers of flaky pastry with pistachios and honey syrup."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/kopetdag-project/gallery-1.jpg",
+      "/images/restaurants/kopetdag-project/gallery-2.jpg",
+      "/images/restaurants/kopetdag-project/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 76,
+    "aiSummary": "Contemporary Turkmen dining with yurt cabins and garden seating; great blend of tradition and modernity."
+  },
+  {
+    "id": "altyn-paradise",
+    "name": "Altyn Paradise Garden",
+    "description": "Enchanting garden restaurant with beautiful outdoor gazebos, live music, and water features. Serves traditional Turkmen dishes, steaks, and wood-fired pizza in a lush setting.",
+    "heroImage": "/images/restaurants/altyn-paradise/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Turkish", "Italian"],
+    "tags": ["Garden Paradise", "Live Music", "Gazebos"],
+    "dietary": ["Halal"],
+    "priceTier": "$$",
+    "rating": 4.4,
+    "reviewCount": 275,
+    "location": {
+      "address": "Berzengi köçesi",
+      "neighborhood": "Berzengi",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.92, "lng": 58.355 }
+    },
+    "contact": {
+      "phone": "+993 12 48 33 90",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "11:00 – 00:00" }],
+    "amenities": [
+      "Garden Gazebos",
+      "Live Music",
+      "Water Features",
+      "Kids Play Area"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Garden Steak",
+        "price": "160 TMT",
+        "description": "Charcoal-grilled ribeye served with grilled vegetables."
+      },
+      {
+        "name": "Wood-Fired Pizza",
+        "price": "75 TMT",
+        "description": "Thin-crust pizza baked in traditional stone oven."
+      },
+      {
+        "name": "Aromatic Kebab",
+        "price": "85 TMT",
+        "description": "Lamb kebab marinated with herbs and served with rice."
+      },
+      {
+        "name": "Fruit Platter",
+        "price": "45 TMT",
+        "description": "Seasonal fresh fruits beautifully presented."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/altyn-paradise/gallery-1.jpg",
+      "/images/restaurants/altyn-paradise/gallery-2.jpg",
+      "/images/restaurants/altyn-paradise/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 73,
+    "aiSummary": "Enchanting garden oasis with gazebos and live music; perfect for outdoor dining and celebrations."
+  },
+  {
+    "id": "sazak",
+    "name": "Sazak Restaurant",
+    "description": "Elegant restaurant skillfully blending Turkmen culinary traditions with modern tastes, offering grilled meats and seafood in a picturesque setting with décor paying homage to ancient Turkmen culture.",
+    "heroImage": "/images/restaurants/sazak/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Seafood", "Grill"],
+    "tags": ["Cultural Décor", "Grilled Meats", "Elegant"],
+    "dietary": ["Halal"],
+    "priceTier": "$$$",
+    "rating": 4.6,
+    "reviewCount": 198,
+    "location": {
+      "address": "Çandybil şaýoly",
+      "neighborhood": "Çandybil",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.931, "lng": 58.39 }
+    },
+    "contact": {
+      "phone": "+993 12 39 45 70",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:00" }],
+    "amenities": [
+      "Traditional Décor",
+      "Private Rooms",
+      "Valet Parking",
+      "Wine List"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Sazak Special Lamb",
+        "price": "150 TMT",
+        "description": "Slow-roasted lamb shoulder with dried apricots and almonds."
+      },
+      {
+        "name": "Grilled Sturgeon",
+        "price": "180 TMT",
+        "description": "Caspian sturgeon fillet with saffron butter sauce."
+      },
+      {
+        "name": "Mixed Grill Platter",
+        "price": "130 TMT",
+        "description": "Selection of lamb, beef, and chicken cooked over charcoal."
+      },
+      {
+        "name": "Turkmen Honey Dessert",
+        "price": "45 TMT",
+        "description": "Traditional pastry layers with mountain honey and walnuts."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/sazak/gallery-1.jpg",
+      "/images/restaurants/sazak/gallery-2.jpg",
+      "/images/restaurants/sazak/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 74,
+    "aiSummary": "Elegant blend of tradition and modernity with cultural décor; excellent grilled meats and Caspian seafood."
+  },
+  {
+    "id": "ashgabat-kafesi",
+    "name": "Aşgabat Kafesi",
+    "description": "Cozy café-style restaurant capturing the essence of Turkmen cuisine with timeless recipes, offering a casual and welcoming atmosphere for both locals and visitors.",
+    "heroImage": "/images/restaurants/ashgabat-kafesi/hero.jpg",
+    "cuisines": ["Turkmen Traditional", "Coffee & Cafe"],
+    "tags": ["Cozy", "Timeless Recipes", "Casual"],
+    "dietary": ["Halal"],
+    "priceTier": "$",
+    "rating": 4.3,
+    "reviewCount": 265,
+    "location": {
+      "address": "Magtymguly şaýoly 45",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.9495, "lng": 58.379 }
+    },
+    "contact": {
+      "phone": "+993 12 35 18 90",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 21:00" }],
+    "amenities": ["Casual Seating", "Takeaway", "Traditional Tea"],
+    "menuHighlights": [
+      {
+        "name": "Turkmen Breakfast",
+        "price": "35 TMT",
+        "description": "Eggs, fresh bread, cheese, jam, and traditional green tea."
+      },
+      {
+        "name": "Çekdirme",
+        "price": "50 TMT",
+        "description": "Traditional fried meat with tomatoes, eggs, and peppers."
+      },
+      {
+        "name": "Gutap Set",
+        "price": "30 TMT",
+        "description": "Three varieties: lamb, pumpkin, and greens."
+      },
+      {
+        "name": "Gök Çaý",
+        "price": "8 TMT",
+        "description": "Endless pot of traditional Turkmen green tea."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/ashgabat-kafesi/gallery-1.jpg",
+      "/images/restaurants/ashgabat-kafesi/gallery-2.jpg",
+      "/images/restaurants/ashgabat-kafesi/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 81,
+    "aiSummary": "Authentic casual Turkmen café with timeless recipes and affordable prices; a local favorite."
+  },
+  {
+    "id": "coffeechi",
+    "name": "Coffee'Chi",
+    "description": "Cozy café offering a wide variety of espresso drinks, cappuccinos, flat whites, raff coffee, hot chocolate, cold drinks, affogatos, frappuccinos, breakfast options, and artisan desserts.",
+    "heroImage": "/images/restaurants/coffeechi/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "Bakery"],
+    "tags": ["Espresso Variety", "Cozy", "Breakfast"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.4,
+    "reviewCount": 320,
+    "location": {
+      "address": "Ankara köçesi 10",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.9465, "lng": 58.3835 }
+    },
+    "contact": {
+      "phone": "+993 65 44 20 88",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "07:30 – 22:00" }],
+    "amenities": ["Wi-Fi", "Cozy Interior", "Breakfast Menu", "Takeaway"],
+    "menuHighlights": [
+      {
+        "name": "Raff Coffee",
+        "price": "22 TMT",
+        "description": "Creamy espresso with vanilla and frothed cream."
+      },
+      {
+        "name": "Affogato",
+        "price": "28 TMT",
+        "description": "Vanilla gelato drowned in a shot of hot espresso."
+      },
+      {
+        "name": "Breakfast Bagel",
+        "price": "35 TMT",
+        "description": "Toasted bagel with cream cheese, avocado, and smoked salmon."
+      },
+      {
+        "name": "Chocolate Fondant",
+        "price": "32 TMT",
+        "description": "Warm chocolate cake with molten center and vanilla ice cream."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/coffeechi/gallery-1.jpg",
+      "/images/restaurants/coffeechi/gallery-2.jpg",
+      "/images/restaurants/coffeechi/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 80,
+    "aiSummary": "Charming café with wide espresso variety and breakfast options; cozy spot for morning routines."
+  },
+  {
+    "id": "bazetti",
+    "name": "Bazetti Coffee",
+    "description": "Cozy coffee shop inside the Berkarar Shopping Center known for its home-like atmosphere, great selection of specialty drinks, generously sized cake slices, and relaxing ambiance.",
+    "heroImage": "/images/restaurants/bazetti/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "Bakery"],
+    "tags": ["Shopping Center", "Home-Like", "Large Portions"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.3,
+    "reviewCount": 245,
+    "location": {
+      "address": "Atatürk köçesi 80, Berkarar Shopping Center",
+      "neighborhood": "Berzengi",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.8941, "lng": 58.3697 }
+    },
+    "contact": {
+      "phone": "+993 65 30 18 45",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "10:00 – 22:00" }],
+    "amenities": ["Shopping Center Location", "Wi-Fi", "Cozy Atmosphere"],
+    "menuHighlights": [
+      {
+        "name": "Bazetti Signature Latte",
+        "price": "24 TMT",
+        "description": "House blend espresso with caramel and steamed milk."
+      },
+      {
+        "name": "Napoleon Cake Slice",
+        "price": "28 TMT",
+        "description": "Generous portion of layered puff pastry with custard cream."
+      },
+      {
+        "name": "Hot Chocolate",
+        "price": "20 TMT",
+        "description": "Rich Belgian chocolate with whipped cream."
+      },
+      {
+        "name": "Fruit Cheesecake",
+        "price": "30 TMT",
+        "description": "New York cheesecake topped with seasonal berries."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/bazetti/gallery-1.jpg",
+      "/images/restaurants/bazetti/gallery-2.jpg",
+      "/images/restaurants/bazetti/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 72,
+    "aiSummary": "Cozy café in Berkarar mall with generous cake portions; perfect for a shopping break."
+  },
+  {
+    "id": "melbourne-coffee",
+    "name": "Melbourne Coffee",
+    "description": "Trendy specialty coffee shop inside the Berkarar Shopping Center inspired by Melbourne's famous café culture, offering artisan roasts and modern brewing methods.",
+    "heroImage": "/images/restaurants/melbourne-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe"],
+    "tags": ["Specialty Coffee", "Trendy", "Modern Brewing"],
+    "dietary": ["Vegetarian Options", "Vegan Options"],
+    "priceTier": "$$",
+    "rating": 4.5,
+    "reviewCount": 278,
+    "location": {
+      "address": "Berkarar Shopping Center, 2nd Floor",
+      "neighborhood": "Berzengi",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.8945, "lng": 58.37 }
+    },
+    "contact": {
+      "phone": "+993 65 55 90 33",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "09:00 – 22:00" }],
+    "amenities": ["Specialty Roasts", "Modern Interior", "Pour-Over Bar"],
+    "menuHighlights": [
+      {
+        "name": "V60 Pour-Over",
+        "price": "30 TMT",
+        "description": "Single-origin beans brewed with Hario V60 method."
+      },
+      {
+        "name": "Cold Brew",
+        "price": "25 TMT",
+        "description": "12-hour steeped cold brew served over ice."
+      },
+      {
+        "name": "Banana Bread",
+        "price": "18 TMT",
+        "description": "Moist banana bread with walnuts, served warm."
+      },
+      {
+        "name": "Flat White",
+        "price": "22 TMT",
+        "description": "Double ristretto with silky microfoam milk."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/melbourne-coffee/gallery-1.jpg",
+      "/images/restaurants/melbourne-coffee/gallery-2.jpg",
+      "/images/restaurants/melbourne-coffee/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 85,
+    "aiSummary": "Melbourne-inspired specialty coffee with pour-over bar; best third-wave coffee experience in Ashgabat."
+  },
+  {
+    "id": "aziza-leyla",
+    "name": "Bakery Aziza & Leyla",
+    "description": "Popular bakery and dessert shop offering a wide range of fresh pastries, mini cream-filled baskets, fruit pies, baklava, cakes, cupcakes, marshmallows, waffles, and quality coffee drinks.",
+    "heroImage": "/images/restaurants/aziza-leyla/hero.jpg",
+    "cuisines": ["Bakery", "Coffee & Cafe"],
+    "tags": ["Dessert Paradise", "Fresh Pastries", "Cupcakes"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.6,
+    "reviewCount": 410,
+    "location": {
+      "address": "Oguzhan köçesi 20",
+      "neighborhood": "Parahat",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.9355, "lng": 58.394 }
+    },
+    "contact": {
+      "phone": "+993 65 88 22 70",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 21:00" }],
+    "amenities": [
+      "Fresh Daily Baking",
+      "Custom Orders",
+      "Takeaway",
+      "Coffee Bar"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Mini Cream Baskets",
+        "price": "15 TMT",
+        "description": "Tiny pastry baskets filled with vanilla or chocolate cream."
+      },
+      {
+        "name": "Berry Tart",
+        "price": "25 TMT",
+        "description": "Buttery tart shell with custard and fresh mixed berries."
+      },
+      {
+        "name": "Pistachio Baklava",
+        "price": "20 TMT",
+        "description": "Crispy phyllo layers with pistachios and rose syrup."
+      },
+      {
+        "name": "Iced Latte",
+        "price": "18 TMT",
+        "description": "Chilled espresso with cold milk and vanilla syrup."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/aziza-leyla/gallery-1.jpg",
+      "/images/restaurants/aziza-leyla/gallery-2.jpg",
+      "/images/restaurants/aziza-leyla/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 82,
+    "aiSummary": "Dessert paradise with incredible pastry variety; must-visit for baklava and cream basket lovers."
+  },
+  {
+    "id": "on-cafe",
+    "name": "On Café",
+    "description": "Stylish and modern café perfect for morning coffee or a leisurely lunch, with a curated menu of specialty coffee, light meals, and a photogenic interior popular on social media.",
+    "heroImage": "/images/restaurants/on-cafe/hero.jpg",
+    "cuisines": ["Coffee & Cafe", "European"],
+    "tags": ["Stylish", "Instagram-Worthy", "Brunch"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$$",
+    "rating": 4.4,
+    "reviewCount": 195,
+    "location": {
+      "address": "Alyshir Navoi köçesi 15",
+      "neighborhood": "Central",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.9475, "lng": 58.378 }
+    },
+    "contact": {
+      "phone": "+993 65 77 10 55",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "08:00 – 22:00" }],
+    "amenities": [
+      "Photogenic Interior",
+      "Wi-Fi",
+      "Brunch Menu",
+      "Laptop-Friendly"
+    ],
+    "menuHighlights": [
+      {
+        "name": "Eggs Benedict",
+        "price": "45 TMT",
+        "description": "Poached eggs with hollandaise sauce on toasted English muffin."
+      },
+      {
+        "name": "Açaí Bowl",
+        "price": "38 TMT",
+        "description": "Blended açaí topped with granola, banana, and honey."
+      },
+      {
+        "name": "Smoked Salmon Croissant",
+        "price": "42 TMT",
+        "description": "Warm croissant with smoked salmon, cream cheese, and capers."
+      },
+      {
+        "name": "Lavender Latte",
+        "price": "26 TMT",
+        "description": "Espresso with steamed milk and house lavender syrup."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/on-cafe/gallery-1.jpg",
+      "/images/restaurants/on-cafe/gallery-2.jpg",
+      "/images/restaurants/on-cafe/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 78,
+    "aiSummary": "Stylish brunch destination with photogenic interior; popular with young professionals and creatives."
+  },
+  {
+    "id": "a-coffee",
+    "name": "A-Coffee",
+    "description": "Budget-friendly neighborhood coffee spot known for quick service, consistent quality espresso drinks, and a loyal local following. A reliable everyday coffee stop.",
+    "heroImage": "/images/restaurants/a-coffee/hero.jpg",
+    "cuisines": ["Coffee & Cafe"],
+    "tags": ["Quick Service", "Budget-Friendly", "Everyday"],
+    "dietary": ["Vegetarian Options"],
+    "priceTier": "$",
+    "rating": 4.2,
+    "reviewCount": 380,
+    "location": {
+      "address": "Andalib köçesi 30",
+      "neighborhood": "Howdan",
+      "city": "Ashgabat",
+      "coordinates": { "lat": 37.952, "lng": 58.365 }
+    },
+    "contact": {
+      "phone": "+993 65 12 88 44",
+      "website": null
+    },
+    "schedule": [{ "days": "Daily", "hours": "07:00 – 21:00" }],
+    "amenities": ["Quick Service", "Takeaway", "Budget Prices"],
+    "menuHighlights": [
+      {
+        "name": "Americano",
+        "price": "12 TMT",
+        "description": "Double shot espresso with hot water."
+      },
+      {
+        "name": "Cappuccino",
+        "price": "15 TMT",
+        "description": "Classic cappuccino with thick foam."
+      },
+      {
+        "name": "Chocolate Muffin",
+        "price": "10 TMT",
+        "description": "Freshly baked double chocolate muffin."
+      },
+      {
+        "name": "Iced Americano",
+        "price": "14 TMT",
+        "description": "Chilled espresso over ice with cold water."
+      }
+    ],
+    "gallery": [
+      "/images/restaurants/a-coffee/gallery-1.jpg",
+      "/images/restaurants/a-coffee/gallery-2.jpg",
+      "/images/restaurants/a-coffee/gallery-3.jpg"
+    ],
+    "sustainabilityScore": 79,
+    "aiSummary": "No-frills everyday coffee stop with the best prices in town; loyal local following."
   }
 ]

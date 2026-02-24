@@ -1,4 +1,4 @@
-# Gadam Restaurant Finder
+# Ashgabat Restaurant Finder
 
 Design & implementation template for a diploma project about discovering restaurants in a smart-city context. The repository contains:
 
