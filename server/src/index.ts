@@ -38,6 +38,16 @@ app.use("/api/insights", insightsRouter);
 app.use("/api/ai", aiRouter);
 app.use("/api/admin", adminRouter);
 
+// Serve static frontend in production
+if (process.env.NODE_ENV === "production") {
+  const publicDir = path.resolve(__dirname, "../../public");
+  app.use(express.static(publicDir));
+  // SPA fallback — let React Router handle client routes
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(publicDir, "index.html"));
+  });
+}
+
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.error(err);
   res.status(500).json({ message: "Internal server error" });

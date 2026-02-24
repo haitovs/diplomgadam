@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: gadam-restaurant-finder
+    ports:
+      - "4080:4080"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=4080
