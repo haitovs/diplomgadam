@@ -1,21 +1,24 @@
 # ── Stage 1: Build Frontend ──────────────────────────────
-FROM node:18-alpine AS frontend-builder
+FROM node:20-alpine AS frontend-builder
 WORKDIR /app
 
-# Copy root package.json for workspaces
+# Install build tools for native modules (better-sqlite3)
+RUN apk add --no-cache python3 make g++
+
 COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY server/package.json ./server/
 
 RUN npm ci
 
-# Copy frontend source and build
 COPY frontend/ ./frontend/
 RUN npm run build --prefix frontend
 
 # ── Stage 2: Build Server ───────────────────────────────
-FROM node:18-alpine AS server-builder
+FROM node:20-alpine AS server-builder
 WORKDIR /app
+
+RUN apk add --no-cache python3 make g++
 
 COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
@@ -26,19 +29,19 @@ RUN npm ci
 COPY server/ ./server/
 RUN npm run build --prefix server
 
-# ── Stage 3: Production Runtime ─────────────────────────
-FROM node:18-alpine
+# Prune to production-only deps
+RUN npm prune --omit=dev
 
-# Install build tools for native modules (better-sqlite3)
-RUN apk add --no-cache python3 make g++
+# ── Stage 3: Production Runtime ─────────────────────────
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-COPY server/package.json ./server/
-COPY frontend/package.json ./frontend/
+# Copy production node_modules (with compiled native modules)
+COPY --from=server-builder /app/node_modules ./node_modules
 
-RUN npm ci --omit=dev && apk del python3 make g++
+# Copy server package.json (needed for "type": "module")
+COPY server/package.json ./server/
 
 # Copy compiled server
 COPY --from=server-builder /app/server/dist ./server/dist

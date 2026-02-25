@@ -62,7 +62,7 @@ export default function ShellLayout() {
               <LocateFixed className="w-4.5 h-4.5 text-white" />
             </div>
             <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-              Ashgabat Eats
+              Restaurant Finder
             </span>
           </NavLink>
 
@@ -169,7 +169,7 @@ export default function ShellLayout() {
             <div className="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center">
               <LocateFixed className="w-3 h-3 text-white" />
             </div>
-            <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Ashgabat Eats</span>
+            <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Restaurant Finder</span>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             Design & Implementation Template · Faculty of IT & AI · {new Date().getFullYear()}
