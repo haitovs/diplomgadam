@@ -42,7 +42,7 @@ export default function AdminRestaurantsPage() {
       if (filter !== 'all') params.set('status', filter);
       if (search) params.set('search', search);
 
-      const res = await fetch(`http://localhost:4000/api/admin/restaurants?${params}`);
+      const res = await fetch(`/api/admin/restaurants?${params}`);
       const data = await res.json();
       setRestaurants(data);
     } catch (err) {
@@ -55,7 +55,7 @@ export default function AdminRestaurantsPage() {
   async function handleDelete(id: string) {
     if (!confirm('Delete this restaurant?')) return;
     try {
-      await fetch(`http://localhost:4000/api/admin/restaurants/${id}`, { method: 'DELETE' });
+      await fetch(`/api/admin/restaurants/${id}`, { method: 'DELETE' });
       loadRestaurants();
     } catch (err) {
       console.error('Delete failed', err);
@@ -65,7 +65,7 @@ export default function AdminRestaurantsPage() {
   async function handleStatusChange(id: string, status: string) {
     try {
       const restaurant = restaurants.find(r => r.id === id);
-      await fetch(`http://localhost:4000/api/admin/restaurants/${id}`, {
+      await fetch(`/api/admin/restaurants/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...restaurant, status })
@@ -251,7 +251,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
 
   async function loadRestaurant() {
     try {
-      const res = await fetch(`http://localhost:4000/api/admin/restaurants/${id}`);
+      const res = await fetch(`/api/admin/restaurants/${id}`);
       const data = await res.json();
       setForm({
         name: data.name || '',
@@ -284,8 +284,8 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
 
     try {
       const url = id
-        ? `http://localhost:4000/api/admin/restaurants/${id}`
-        : 'http://localhost:4000/api/admin/restaurants';
+        ? `/api/admin/restaurants/${id}`
+        : '/api/admin/restaurants';
 
       await fetch(url, {
         method: id ? 'PUT' : 'POST',

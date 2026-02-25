@@ -22,14 +22,17 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Serve local restaurant images
-app.use("/images", express.static(path.resolve(__dirname, "../../data/images")));
+app.use(
+  "/images",
+  express.static(path.resolve(__dirname, "../../data/images")),
+);
 
-app.get("/", (_req, res) => {
+app.get("/api/health", (_req, res) => {
   res.json({
     name: "Ashgabat Restaurant Finder API",
     status: "ok",
     version: "0.2.0",
-    location: "Ashgabat, Turkmenistan"
+    location: "Ashgabat, Turkmenistan",
   });
 });
 

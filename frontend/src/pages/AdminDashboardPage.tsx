@@ -29,7 +29,7 @@ export default function AdminDashboardPage() {
 
   async function loadStats() {
     try {
-      const res = await fetch('http://localhost:4000/api/admin/stats');
+      const res = await fetch('/api/admin/stats');
       const data = await res.json();
       setStats(data);
     } catch (err) {

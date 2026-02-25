@@ -40,12 +40,12 @@ export default function AdminRestaurantMenuPage() {
         try {
             setLoading(true);
             // Load restaurant details
-            const resRest = await fetch(`http://localhost:4000/api/admin/restaurants/${id}`);
+            const resRest = await fetch(`/api/admin/restaurants/${id}`);
             const restData = await resRest.json();
             setRestaurant(restData);
 
             // Load menu items
-            const resMenu = await fetch(`http://localhost:4000/api/admin/restaurants/${id}/menu`);
+            const resMenu = await fetch(`/api/admin/restaurants/${id}/menu`);
             const menuData = await resMenu.json();
             setMenuItems(menuData);
         } catch (err) {
@@ -58,7 +58,7 @@ export default function AdminRestaurantMenuPage() {
     async function handleDelete(itemId: number) {
         if (!confirm('Delete this menu item?')) return;
         try {
-            await fetch(`http://localhost:4000/api/admin/menu/${itemId}`, { method: 'DELETE' });
+            await fetch(`/api/admin/menu/${itemId}`, { method: 'DELETE' });
             loadData();
         } catch (err) {
             console.error('Delete failed', err);
@@ -186,8 +186,8 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
 
         try {
             const url = item
-                ? `http://localhost:4000/api/admin/menu/${item.id}`
-                : `http://localhost:4000/api/admin/restaurants/${restaurantId}/menu`;
+                ? `/api/admin/menu/${item.id}`
+                : `/api/admin/restaurants/${restaurantId}/menu`;
 
             await fetch(url, {
                 method: item ? 'PUT' : 'POST',
