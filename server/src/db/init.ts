@@ -90,9 +90,9 @@ db.exec(`
 const adminCount = db.prepare('SELECT COUNT(*) as count FROM admin_users').get() as { count: number };
 if (adminCount.count === 0) {
   db.prepare('INSERT INTO admin_users (username, password, name) VALUES (?, ?, ?)').run(
-    'admin', 'admin123', 'System Administrator'
+    'admin', 'admin', 'System Administrator'
   );
-  console.log('✅ Admin user created (admin / admin123)');
+  console.log('✅ Admin user created (admin / admin)');
 }
 
 import fs from 'fs';
