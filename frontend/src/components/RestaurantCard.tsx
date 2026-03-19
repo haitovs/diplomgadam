@@ -3,12 +3,15 @@ import { motion } from "framer-motion";
 import type { Restaurant } from "../types/restaurant";
 import FavoriteToggle from "./FavoriteToggle";
 import RatingBadge from "./RatingBadge";
+import { useLanguage } from "../i18n/LanguageContext";
 
 interface RestaurantCardProps {
   restaurant: Restaurant;
 }
 
 export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
+  const { t } = useLanguage();
+
   return (
     <motion.article
       className="glass-panel overflow-hidden flex flex-col group hover:shadow-2xl hover:shadow-brand-500/10 dark:hover:shadow-brand-400/10 transition-all duration-300"
@@ -73,7 +76,7 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
           to={`/restaurants/${restaurant.id}`}
           className="mt-auto inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-slate-900 to-slate-700 dark:from-brand-600 dark:to-brand-500 text-white text-sm font-semibold py-2.5 hover:shadow-lg hover:shadow-slate-900/20 dark:hover:shadow-brand-500/30 transition-all duration-200 hover:scale-[1.02]"
         >
-          Profili görmek →
+          {t("card_view")}
         </Link>
       </div>
     </motion.article>

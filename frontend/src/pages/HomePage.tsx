@@ -5,17 +5,19 @@ import MapPanel from "../components/MapPanel";
 import LoadingState from "../components/LoadingState";
 import ErrorState from "../components/ErrorState";
 import { useRestaurants } from "../hooks/useRestaurants";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function HomePage() {
   const { filtered, isLoading, isError, refetch } = useRestaurants();
+  const { t } = useLanguage();
 
   return (
     <div className="space-y-8">
       <HeroBanner />
       <FiltersPanel />
 
-      {isLoading && <LoadingState label="Saýlanan katalog ýüklenýär..." />}
-      {isError && <ErrorState message="Restoranlary ýükläp bolmady." action={refetch} />}
+      {isLoading && <LoadingState label={t("home_loading")} />}
+      {isError && <ErrorState message={t("home_error")} action={refetch} />}
 
       {!isLoading && !isError && (
         <>
@@ -25,7 +27,7 @@ export default function HomePage() {
             ))}
             {!filtered.length && (
               <div className="glass-panel p-10 text-center text-slate-500">
-                Has köp restorany görmek üçin süzgüçleri sazlaň.
+                {t("home_empty")}
               </div>
             )}
           </section>

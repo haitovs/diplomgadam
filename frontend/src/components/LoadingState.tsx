@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
 
 interface LoadingStateProps {
   label?: string;
 }
 
-export default function LoadingState({ label = "Ýüklenýär..." }: LoadingStateProps) {
+export default function LoadingState({ label }: LoadingStateProps) {
+  const { t } = useLanguage();
+  const displayLabel = label ?? t("loading");
+
   return (
     <div className="flex flex-col items-center justify-center py-16 gap-6">
       <div className="relative w-16 h-16">
@@ -24,7 +28,7 @@ export default function LoadingState({ label = "Ýüklenýär..." }: LoadingStat
           🍽️
         </motion.span>
       </div>
-      <p className="text-sm font-medium text-slate-500 dark:text-slate-400 animate-pulse">{label}</p>
+      <p className="text-sm font-medium text-slate-500 dark:text-slate-400 animate-pulse">{displayLabel}</p>
     </div>
   );
 }

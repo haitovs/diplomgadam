@@ -5,6 +5,7 @@ import LoadingState from "../components/LoadingState";
 import ErrorState from "../components/ErrorState";
 import MetricCard from "../components/MetricCard";
 import { fetchCuisineDemand, fetchInsightMetrics, fetchRestaurants } from "../api/restaurants";
+import { useLanguage } from "../i18n/LanguageContext";
 import {
   ResponsiveContainer,
   BarChart,
@@ -22,6 +23,8 @@ import {
 } from "recharts";
 
 export default function InsightsPage() {
+  const { t } = useLanguage();
+
   const metricsQuery = useQuery({
     queryKey: ["insights-metrics"],
     queryFn: fetchInsightMetrics
@@ -77,13 +80,13 @@ export default function InsightsPage() {
   }, [restaurants]);
 
   if (metricsQuery.isLoading || cuisineDemandQuery.isLoading || restaurantsQuery.isLoading) {
-    return <LoadingState label="Nahar maglumatlary işlenýär..." />;
+    return <LoadingState label={t("insights_loading")} />;
   }
 
   if (metricsQuery.isError || cuisineDemandQuery.isError || restaurantsQuery.isError) {
     return (
       <ErrorState
-        message="Analitikany alyp bolmady"
+        message={t("insights_error")}
         action={() => {
           metricsQuery.refetch();
           cuisineDemandQuery.refetch();
@@ -103,9 +106,9 @@ export default function InsightsPage() {
       transition={{ duration: 0.4 }}
     >
       <section className="space-y-3">
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Şäher naharhanasy maglumaty</h1>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">{t("insights_title")}</h1>
         <p className="text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed">
-          Aşgabat ýaşaýjylarynyň etnografik barlaglaryndan, ýygnanan eltip berme platformasy maglumatlaryndan we ýerinde syn gözegçiliklerinden alnan. Maglumatlar diplom şablony üçin statik bolup, ýöne janly analitika akymlary bilen çalşyrylyp bilner.
+          {t("insights_desc")}
         </p>
       </section>
 
@@ -117,9 +120,9 @@ export default function InsightsPage() {
 
       <section className="glass-panel p-6 md:p-8 space-y-4">
         <div>
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Tagam isleginiň ýylylyk kartasy</h2>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("insights_heatmap")}</h2>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Isleg ballary (0-100) agramly duýguny (sosial + soragnamalar + gözleg niýeti) görkezýär. Wagtlaýyn çäreleri meýilleşdirmek üçin ulanyň.
+            {t("insights_heatmap_desc")}
           </p>
         </div>
         <div className="w-full h-72">
@@ -147,8 +150,8 @@ export default function InsightsPage() {
       <section className="grid lg:grid-cols-3 gap-6">
         <div className="glass-panel p-6 space-y-4">
           <div>
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Baha derejesi garyndysy</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Katalog arzan, orta we ýokary hilli ýerleri nähili deňagramlaşdyrýar.</p>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("insights_price")}</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{t("insights_price_desc")}</p>
           </div>
           <div className="w-full h-64">
             <ResponsiveContainer>
@@ -169,8 +172,8 @@ export default function InsightsPage() {
 
         <div className="glass-panel p-6 space-y-4">
           <div>
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Giçlik hyzmaty</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Gije ýarysyndan soň işleýän ýerleri bolan etrapçalar.</p>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("insights_latenight")}</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{t("insights_latenight_desc")}</p>
           </div>
           <div className="w-full h-64">
             <ResponsiveContainer>
@@ -194,8 +197,8 @@ export default function InsightsPage() {
 
         <div className="glass-panel p-6 space-y-4">
           <div>
-            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Ekologiýa we reýtingler</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Ýokary ekologiýa ballary bolan iň oňat ýerler henizem güýçli myhman reýtinglerini saklaýar.</p>
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("insights_sustain")}</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{t("insights_sustain_desc")}</p>
           </div>
           <div className="w-full h-64">
             <ResponsiveContainer>

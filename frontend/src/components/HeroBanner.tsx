@@ -1,17 +1,21 @@
 import { Sparkles, ArrowRight, MapPin, Utensils, Star, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
+import type { TranslationKey } from "../i18n/translations";
 
-const stats = [
-  { icon: Utensils, label: "Tagam görnüşleri", value: "24", sub: "şäher etnografik barlagyndan", gradient: "from-brand-500/20 to-brand-600/10" },
-  { icon: Star, label: "Ekologiýa derejesi", value: "A-", sub: "ort. aşhana yzlary", gradient: "from-amber-500/20 to-amber-600/10" },
-  { icon: Clock, label: "AI jogap wagty", value: "1.3s", sub: "ortaça gijikdirme (şablon)", gradient: "from-emerald-500/20 to-emerald-600/10" },
-  { icon: MapPin, label: "Meýdan söhbetdeşlikleri", value: "42", sub: "persona tagtalaryna maglumat", gradient: "from-indigo-500/20 to-indigo-600/10" },
+const statKeys: { icon: typeof Utensils; labelKey: TranslationKey; value: string; subKey: TranslationKey; gradient: string }[] = [
+  { icon: Utensils, labelKey: "stat_cuisines", value: "24", subKey: "stat_cuisines_sub", gradient: "from-brand-500/20 to-brand-600/10" },
+  { icon: Star, labelKey: "stat_sustainability", value: "A-", subKey: "stat_sustainability_sub", gradient: "from-amber-500/20 to-amber-600/10" },
+  { icon: Clock, labelKey: "stat_ai_response", value: "1.3s", subKey: "stat_ai_response_sub", gradient: "from-emerald-500/20 to-emerald-600/10" },
+  { icon: MapPin, labelKey: "stat_interviews", value: "42", subKey: "stat_interviews_sub", gradient: "from-indigo-500/20 to-indigo-600/10" },
 ];
 
 const floatingEmojis = ["🍜", "🍕", "🥗", "☕", "🥩", "🍣"];
 
 export default function HeroBanner() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative glass-panel p-8 md:p-10 mb-8 overflow-hidden">
       {/* Floating emojis */}
@@ -38,29 +42,29 @@ export default function HeroBanner() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 dark:bg-brand-400/15 text-brand-600 dark:text-brand-300 text-sm font-medium border border-brand-200/50 dark:border-brand-500/30">
             <Sparkles className="w-4 h-4" />
-            AI kömekli gastronomik meýilleşdirme
+            {t("hero_badge")}
           </div>
           <h1 className="text-3xl md:text-4xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-brand-700 to-brand-500 dark:from-white dark:via-brand-200 dark:to-brand-400 bg-clip-text text-transparent">
-              Aşgabadyň restoranlaryny tapmak üçin web platformanyň taslamasy we durmuşa geçirilmegi
+              {t("hero_title")}
             </span>
           </h1>
           <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-            Taýýar diplom taslamasy üçin maglumatlar bazasy, interaktiw wizuallaşdyrma we gizlinligi goraýan AI maslahatçyny birleşdirýän şablon.
+            {t("hero_desc")}
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
             <Link
               to="/concierge"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-white px-6 py-3 shadow-lg shadow-brand-600/30 hover:shadow-brand-500/50 hover:scale-[1.03] transition-all duration-200 font-semibold"
             >
-              TripAI synap göriň
+              {t("hero_try_ai")}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               to="/insights"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 px-6 py-3 text-slate-600 dark:text-slate-300 hover:border-brand-400 dark:hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-300 transition-colors font-semibold"
             >
-              Barlag netijeleri
+              {t("hero_insights")}
             </Link>
           </div>
         </motion.div>
@@ -71,9 +75,9 @@ export default function HeroBanner() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          {stats.map((stat, i) => (
+          {statKeys.map((stat, i) => (
             <motion.div
-              key={stat.label}
+              key={stat.labelKey}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
@@ -81,10 +85,10 @@ export default function HeroBanner() {
             >
               <div className="flex items-center gap-2 mb-1">
                 <stat.icon className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
-                <p className="text-sm text-slate-500 dark:text-slate-400">{stat.label}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">{t(stat.labelKey)}</p>
               </div>
               <p className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
-              <p className="text-xs text-slate-400 dark:text-slate-500">{stat.sub}</p>
+              <p className="text-xs text-slate-400 dark:text-slate-500">{t(stat.subKey)}</p>
             </motion.div>
           ))}
         </motion.div>

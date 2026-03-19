@@ -6,13 +6,15 @@ import ErrorState from "../components/ErrorState";
 import FavoriteToggle from "../components/FavoriteToggle";
 import RatingBadge from "../components/RatingBadge";
 import { useRestaurantDetail } from "../hooks/useRestaurantDetail";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function RestaurantDetailPage() {
   const { id } = useParams();
   const { data, isLoading, isError, refetch } = useRestaurantDetail(id);
+  const { t } = useLanguage();
 
-  if (isLoading) return <LoadingState label="Restoran profili ýüklenýär..." />;
-  if (isError || !data) return <ErrorState message="Restoran tapylmady." action={refetch} />;
+  if (isLoading) return <LoadingState label={t("detail_loading")} />;
+  if (isError || !data) return <ErrorState message={t("detail_not_found")} action={refetch} />;
 
   const sustainColor =
     data.sustainabilityScore >= 80 ? "text-emerald-500" :
@@ -27,7 +29,7 @@ export default function RestaurantDetailPage() {
     >
       <Link to="/" className="inline-flex items-center gap-1 text-sm text-brand-600 dark:text-brand-400 hover:text-brand-500 dark:hover:text-brand-300 transition-colors font-medium">
         <ChevronLeft className="w-4 h-4" />
-        Kataloga gaýdyň
+        {t("detail_back")}
       </Link>
 
       {/* Hero */}
@@ -68,7 +70,7 @@ export default function RestaurantDetailPage() {
             <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700/50 bg-slate-50/80 dark:bg-slate-800/40">
               <div className="flex items-center gap-2 mb-2">
                 <MapPin className="w-4 h-4 text-brand-500" />
-                <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">Ýerleşýän ýeri</p>
+                <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">{t("detail_location")}</p>
               </div>
               <p className="text-sm text-slate-700 dark:text-slate-300">{data.location.address}</p>
               <p className="text-sm text-slate-500 dark:text-slate-400">{data.location.neighborhood}, {data.location.city}</p>
@@ -77,13 +79,13 @@ export default function RestaurantDetailPage() {
             <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700/50 bg-slate-50/80 dark:bg-slate-800/40">
               <div className="flex items-center gap-2 mb-2">
                 <Phone className="w-4 h-4 text-brand-500" />
-                <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">Aragatnaşyk</p>
+                <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">{t("detail_contact")}</p>
               </div>
               <p className="text-sm text-slate-700 dark:text-slate-300">{data.contact.phone}</p>
               {data.contact.website && (
                 <a href={data.contact.website} className="inline-flex items-center gap-1 text-sm text-brand-600 dark:text-brand-400 hover:underline mt-1" target="_blank" rel="noreferrer">
                   <Globe className="w-3.5 h-3.5" />
-                  Web sahypa
+                  {t("detail_website")}
                 </a>
               )}
             </div>
@@ -91,10 +93,10 @@ export default function RestaurantDetailPage() {
             <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700/50 bg-slate-50/80 dark:bg-slate-800/40">
               <div className="flex items-center gap-2 mb-2">
                 <Leaf className="w-4 h-4 text-emerald-500" />
-                <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">Ekologiýa</p>
+                <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">{t("detail_sustainability")}</p>
               </div>
               <div className={`text-3xl font-bold ${sustainColor}`}>{data.sustainabilityScore}%</div>
-              <p className="text-xs text-slate-400 dark:text-slate-500">Ýerli çig mallar we galyndylary yzarlamak esasynda</p>
+              <p className="text-xs text-slate-400 dark:text-slate-500">{t("detail_sustainability_desc")}</p>
             </div>
           </div>
         </div>
@@ -102,7 +104,7 @@ export default function RestaurantDetailPage() {
 
       {/* Signature Menu */}
       <section className="glass-panel p-6 md:p-8 space-y-4">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white">Esasy menýu</h2>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_signature_menu")}</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {data.menuHighlights.map((item) => (
             <motion.div
@@ -123,7 +125,7 @@ export default function RestaurantDetailPage() {
       {/* Full Menu Section */}
       {data.fullMenu && data.fullMenu.length > 0 && (
         <section className="glass-panel p-6 md:p-8 space-y-6">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Doly menýu</h2>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_full_menu")}</h2>
           {Object.entries(
             data.fullMenu.reduce((acc, item) => {
               const category = item.category || 'Other';
@@ -159,7 +161,7 @@ export default function RestaurantDetailPage() {
 
       {/* Schedule */}
       <section className="glass-panel p-6 md:p-8 space-y-4">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white">Iş tertibi</h2>
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_schedule")}</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {data.schedule.map((slot) => (
             <div key={slot.days} className="flex items-center gap-3 p-4 border border-slate-100 dark:border-slate-700/50 rounded-xl bg-white/50 dark:bg-slate-800/40">
@@ -176,7 +178,7 @@ export default function RestaurantDetailPage() {
       {/* Gallery */}
       {data.gallery.length > 0 && (
         <section className="glass-panel p-6 md:p-8 space-y-4">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Galereýa</h2>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_gallery")}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {data.gallery.map((url, i) => (
               <img

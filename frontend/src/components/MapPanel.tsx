@@ -1,6 +1,7 @@
 import { Icon } from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import type { Restaurant } from "../types/restaurant";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const markerIcon = new Icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
@@ -13,6 +14,7 @@ interface MapPanelProps {
 }
 
 export default function MapPanel({ restaurants }: MapPanelProps) {
+  const { t } = useLanguage();
   // Default center: Ashgabat, Turkmenistan
   const center: [number, number] = restaurants.length
     ? [restaurants[0].location.coordinates.lat, restaurants[0].location.coordinates.lng]
@@ -21,8 +23,8 @@ export default function MapPanel({ restaurants }: MapPanelProps) {
   return (
     <section className="glass-panel p-0 overflow-hidden">
       <div className="p-5 border-b border-slate-100">
-        <h2 className="text-lg font-semibold text-slate-900">📍 Restoran kartasy</h2>
-        <p className="text-sm text-slate-500">Aşgabat, Türkmenistan boýunça restoranlary gözden geçiriň.</p>
+        <h2 className="text-lg font-semibold text-slate-900">📍 {t("map_title")}</h2>
+        <p className="text-sm text-slate-500">{t("map_desc")}</p>
       </div>
       <MapContainer center={center} zoom={13} style={{ height: 360, width: "100%" }}>
         <TileLayer

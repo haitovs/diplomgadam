@@ -1,15 +1,9 @@
 import { Outlet, NavLink, useLocation } from "react-router-dom";
-import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home } from "lucide-react";
+import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home, Globe } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
-
-const navItems = [
-  { label: "Gözle", path: "/", icon: Home },
-  { label: "Analitika", path: "/insights", icon: BarChart3 },
-  { label: "Halananlar", path: "/favorites", icon: Heart },
-  { label: "AI Maslahatçy", path: "/concierge", icon: MessageSquare },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 const getInitialTheme = (): "light" | "dark" => {
   if (typeof localStorage !== "undefined") {
@@ -25,6 +19,7 @@ const getInitialTheme = (): "light" | "dark" => {
 export default function ShellLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { t, lang, setLang } = useLanguage();
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     const initial = getInitialTheme();
     if (typeof document !== "undefined" && initial === "dark") {
@@ -32,6 +27,13 @@ export default function ShellLayout() {
     }
     return initial;
   });
+
+  const navItems = [
+    { label: t("nav_discover"), path: "/", icon: Home },
+    { label: t("nav_insights"), path: "/insights", icon: BarChart3 },
+    { label: t("nav_favorites"), path: "/favorites", icon: Heart },
+    { label: t("nav_ai_concierge"), path: "/concierge", icon: MessageSquare },
+  ];
 
   useEffect(() => {
     const root = document.documentElement;
@@ -53,6 +55,8 @@ export default function ShellLayout() {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  const toggleLang = () => setLang(lang === "tk" ? "en" : "tk");
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
       {/* Header */}
@@ -61,7 +65,7 @@ export default function ShellLayout() {
           <NavLink to="/" className="flex items-center gap-2.5 text-xl font-bold group">
             <img src={logo} alt="Gadam" className="w-8 h-8 rounded-lg shadow-md shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow" />
             <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-              Restoran Gözlegçi
+              {t("brand_name")}
             </span>
           </NavLink>
 
@@ -88,8 +92,16 @@ export default function ShellLayout() {
           <div className="hidden md:flex items-center gap-3">
             <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>AI işjeň</span>
+              <span>{t("ai_enabled")}</span>
             </div>
+            <button
+              type="button"
+              onClick={toggleLang}
+              className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              {t("lang_label")}
+            </button>
             <button
               type="button"
               onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
@@ -97,11 +109,11 @@ export default function ShellLayout() {
             >
               {theme === "light" ? (
                 <>
-                  <Moon className="w-3.5 h-3.5" /> Garaňky
+                  <Moon className="w-3.5 h-3.5" /> {t("theme_dark")}
                 </>
               ) : (
                 <>
-                  <Sun className="w-3.5 h-3.5 text-amber-400" /> Ýagty
+                  <Sun className="w-3.5 h-3.5 text-amber-400" /> {t("theme_light")}
                 </>
               )}
             </button>
@@ -146,11 +158,19 @@ export default function ShellLayout() {
                 ))}
                 <button
                   type="button"
+                  onClick={toggleLang}
+                  className="flex items-center gap-3 rounded-xl w-full px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                >
+                  <Globe className="w-4 h-4" />
+                  {t("lang_label")}
+                </button>
+                <button
+                  type="button"
                   onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
                   className="flex items-center gap-3 rounded-xl w-full px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                 >
                   {theme === "light" ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4 text-amber-300" />}
-                  Temany üýtget
+                  {t("theme_toggle")}
                 </button>
               </div>
             </motion.div>
@@ -166,13 +186,13 @@ export default function ShellLayout() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <img src={logo} alt="Gadam" className="w-6 h-6 rounded-md" />
-            <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Restoran Gözlegçi</span>
+            <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">{t("brand_name")}</span>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Taslamanyň dizaýny we durmuşa geçirilmegi · IT we AI fakulteti · {new Date().getFullYear()}
+            {t("footer_text")} · {new Date().getFullYear()}
           </p>
           <div className="flex gap-4 text-xs text-slate-400 dark:text-slate-500">
-            <NavLink to="/admin/login" className="hover:text-brand-500 transition-colors">Admin paneli</NavLink>
+            <NavLink to="/admin/login" className="hover:text-brand-500 transition-colors">{t("admin_panel")}</NavLink>
           </div>
         </div>
       </footer>
