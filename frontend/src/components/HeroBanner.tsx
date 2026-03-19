@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const stats = [
-  { icon: Utensils, label: "Cuisines curated", value: "24", sub: "sourced from city ethnographic study", gradient: "from-brand-500/20 to-brand-600/10" },
-  { icon: Star, label: "Sustainability tier", value: "A-", sub: "avg. kitchen footprint", gradient: "from-amber-500/20 to-amber-600/10" },
-  { icon: Clock, label: "AI response", value: "1.3s", sub: "median latency (template)", gradient: "from-emerald-500/20 to-emerald-600/10" },
-  { icon: MapPin, label: "Field interviews", value: "42", sub: "informing persona boards", gradient: "from-indigo-500/20 to-indigo-600/10" },
+  { icon: Utensils, label: "Tagam görnüşleri", value: "24", sub: "şäher etnografik barlagyndan", gradient: "from-brand-500/20 to-brand-600/10" },
+  { icon: Star, label: "Ekologiýa derejesi", value: "A-", sub: "ort. aşhana yzlary", gradient: "from-amber-500/20 to-amber-600/10" },
+  { icon: Clock, label: "AI jogap wagty", value: "1.3s", sub: "ortaça gijikdirme (şablon)", gradient: "from-emerald-500/20 to-emerald-600/10" },
+  { icon: MapPin, label: "Meýdan söhbetdeşlikleri", value: "42", sub: "persona tagtalaryna maglumat", gradient: "from-indigo-500/20 to-indigo-600/10" },
 ];
 
 const floatingEmojis = ["🍜", "🍕", "🥗", "☕", "🥩", "🍣"];
@@ -38,30 +38,29 @@ export default function HeroBanner() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 dark:bg-brand-400/15 text-brand-600 dark:text-brand-300 text-sm font-medium border border-brand-200/50 dark:border-brand-500/30">
             <Sparkles className="w-4 h-4" />
-            AI-assisted gastronomy planning
+            AI kömekli gastronomik meýilleşdirme
           </div>
           <h1 className="text-3xl md:text-4xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-brand-700 to-brand-500 dark:from-white dark:via-brand-200 dark:to-brand-400 bg-clip-text text-transparent">
-              Design & Implementation of a Web Platform for Discovering Ashgabat's Restaurants
+              Aşgabadyň restoranlaryny tapmak üçin web platformanyň taslamasy we durmuşa geçirilmegi
             </span>
           </h1>
           <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-            A diploma-project-ready template combining curated datasets, interactive visualization, and privacy-first AI
-            concierge to simulate a production-ready experience.
+            Taýýar diplom taslamasy üçin maglumatlar bazasy, interaktiw wizuallaşdyrma we gizlinligi goraýan AI maslahatçyny birleşdirýän şablon.
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
             <Link
               to="/concierge"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-white px-6 py-3 shadow-lg shadow-brand-600/30 hover:shadow-brand-500/50 hover:scale-[1.03] transition-all duration-200 font-semibold"
             >
-              Try TripAI
+              TripAI synap göriň
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               to="/insights"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 px-6 py-3 text-slate-600 dark:text-slate-300 hover:border-brand-400 dark:hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-300 transition-colors font-semibold"
             >
-              Research insights
+              Barlag netijeleri
             </Link>
           </div>
         </motion.div>

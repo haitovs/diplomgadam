@@ -1,38 +1,38 @@
 [
   {
-    "title": "Avg. satisfaction",
+    "title": "Ort. kanagatlanma",
     "value": "4.6 / 5",
     "trend": 3,
-    "description": "Derived from 1,800 qualitative interviews across 12 venues."
+    "description": "12 ýerde geçirilen 1,800 hil söhbetdeşliginden alnan."
   },
   {
-    "title": "Local sourcing",
+    "title": "Ýerli çig mal",
     "value": "78%",
     "trend": 5,
-    "description": "Portion of ingredients traced to farms within 150km radius."
+    "description": "150 km radiusdaky fermalardan yzarlanan önümleriň paýy."
   },
   {
-    "title": "Digital bookings",
+    "title": "Sanly bronlamalar",
     "value": "64%",
     "trend": 7,
-    "description": "Share of reservations completed via mobile-first flows."
+    "description": "Mobil interfeýs arkaly tamamlanan bronlamalaryň paýy."
   },
   {
-    "title": "AI concierge usage",
-    "value": "420 req/day",
+    "title": "AI maslahatçy ulanylyşy",
+    "value": "420 haýyş/gün",
     "trend": 22,
-    "description": "Simulated demand for TripAI sessions during soft launch."
+    "description": "Synag döwründe TripAI sessiýalary üçin simulýasiýa edilen isleg."
   },
   {
-    "title": "Remote-work readiness",
+    "title": "Uzakdan iş taýýarlygy",
     "value": "68%",
     "trend": 9,
-    "description": "Venues offering reliable Wi‑Fi, outlets, and quiet seating during daylight hours."
+    "description": "Ygtybarly Wi-Fi, tok rozetkalary we gündizki asuda oturgyçlary hödürleýän ýerler."
   },
   {
-    "title": "Late-night coverage",
-    "value": "43 venues",
+    "title": "Giçlik hyzmaty",
+    "value": "43 ýer",
     "trend": 6,
-    "description": "Restaurants operating past midnight across ramen labs, smokehouses, and raw bars."
+    "description": "Gije ýarysyndan soň işleýän restoranlar."
   }
 ]

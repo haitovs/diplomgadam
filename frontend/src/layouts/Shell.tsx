@@ -1,13 +1,14 @@
 import { Outlet, NavLink, useLocation } from "react-router-dom";
-import { LocateFixed, Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home } from "lucide-react";
+import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/logo.png";
 
 const navItems = [
-  { label: "Discover", path: "/", icon: Home },
-  { label: "Insights", path: "/insights", icon: BarChart3 },
-  { label: "Favorites", path: "/favorites", icon: Heart },
-  { label: "AI Concierge", path: "/concierge", icon: MessageSquare },
+  { label: "Gözle", path: "/", icon: Home },
+  { label: "Analitika", path: "/insights", icon: BarChart3 },
+  { label: "Halananlar", path: "/favorites", icon: Heart },
+  { label: "AI Maslahatçy", path: "/concierge", icon: MessageSquare },
 ];
 
 const getInitialTheme = (): "light" | "dark" => {
@@ -18,7 +19,7 @@ const getInitialTheme = (): "light" | "dark" => {
   if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     return "dark";
   }
-  return "dark";
+  return "light";
 };
 
 export default function ShellLayout() {
@@ -58,11 +59,9 @@ export default function ShellLayout() {
       <header className="border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl sticky top-0 z-30">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
           <NavLink to="/" className="flex items-center gap-2.5 text-xl font-bold group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-md shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow">
-              <LocateFixed className="w-4.5 h-4.5 text-white" />
-            </div>
+            <img src={logo} alt="Gadam" className="w-8 h-8 rounded-lg shadow-md shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow" />
             <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-              Restaurant Finder
+              Restoran Gözlegçi
             </span>
           </NavLink>
 
@@ -89,7 +88,7 @@ export default function ShellLayout() {
           <div className="hidden md:flex items-center gap-3">
             <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>AI enabled</span>
+              <span>AI işjeň</span>
             </div>
             <button
               type="button"
@@ -98,11 +97,11 @@ export default function ShellLayout() {
             >
               {theme === "light" ? (
                 <>
-                  <Moon className="w-3.5 h-3.5" /> Dark
+                  <Moon className="w-3.5 h-3.5" /> Garaňky
                 </>
               ) : (
                 <>
-                  <Sun className="w-3.5 h-3.5 text-amber-400" /> Light
+                  <Sun className="w-3.5 h-3.5 text-amber-400" /> Ýagty
                 </>
               )}
             </button>
@@ -151,7 +150,7 @@ export default function ShellLayout() {
                   className="flex items-center gap-3 rounded-xl w-full px-4 py-3 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                 >
                   {theme === "light" ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4 text-amber-300" />}
-                  Toggle theme
+                  Temany üýtget
                 </button>
               </div>
             </motion.div>
@@ -166,16 +165,14 @@ export default function ShellLayout() {
       <footer className="border-t border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/70 backdrop-blur py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center">
-              <LocateFixed className="w-3 h-3 text-white" />
-            </div>
-            <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Restaurant Finder</span>
+            <img src={logo} alt="Gadam" className="w-6 h-6 rounded-md" />
+            <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">Restoran Gözlegçi</span>
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Design & Implementation Template · Faculty of IT & AI · {new Date().getFullYear()}
+            Taslamanyň dizaýny we durmuşa geçirilmegi · IT we AI fakulteti · {new Date().getFullYear()}
           </p>
           <div className="flex gap-4 text-xs text-slate-400 dark:text-slate-500">
-            <NavLink to="/admin/login" className="hover:text-brand-500 transition-colors">Admin Panel</NavLink>
+            <NavLink to="/admin/login" className="hover:text-brand-500 transition-colors">Admin paneli</NavLink>
           </div>
         </div>
       </footer>

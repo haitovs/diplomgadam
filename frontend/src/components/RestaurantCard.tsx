@@ -73,7 +73,7 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
           to={`/restaurants/${restaurant.id}`}
           className="mt-auto inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-slate-900 to-slate-700 dark:from-brand-600 dark:to-brand-500 text-white text-sm font-semibold py-2.5 hover:shadow-lg hover:shadow-slate-900/20 dark:hover:shadow-brand-500/30 transition-all duration-200 hover:scale-[1.02]"
         >
-          View profile →
+          Profili görmek →
         </Link>
       </div>
     </motion.article>

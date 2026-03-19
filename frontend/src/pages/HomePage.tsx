@@ -14,8 +14,8 @@ export default function HomePage() {
       <HeroBanner />
       <FiltersPanel />
 
-      {isLoading && <LoadingState label="Syncing curated catalogue..." />}
-      {isError && <ErrorState message="Unable to load restaurants." action={refetch} />}
+      {isLoading && <LoadingState label="Saýlanan katalog ýüklenýär..." />}
+      {isError && <ErrorState message="Restoranlary ýükläp bolmady." action={refetch} />}
 
       {!isLoading && !isError && (
         <>
@@ -25,7 +25,7 @@ export default function HomePage() {
             ))}
             {!filtered.length && (
               <div className="glass-panel p-10 text-center text-slate-500">
-                Adjust filters to reveal more dining experiences.
+                Has köp restorany görmek üçin süzgüçleri sazlaň.
               </div>
             )}
           </section>

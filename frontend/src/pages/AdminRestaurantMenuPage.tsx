@@ -56,7 +56,7 @@ export default function AdminRestaurantMenuPage() {
     }
 
     async function handleDelete(itemId: number) {
-        if (!confirm('Delete this menu item?')) return;
+        if (!confirm('Bu menýu pozisiýasyny pozmak?')) return;
         try {
             await fetch(`/api/admin/menu/${itemId}`, { method: 'DELETE' });
             loadData();
@@ -72,24 +72,24 @@ export default function AdminRestaurantMenuPage() {
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     <div>
                         <h1 className="text-2xl font-bold text-white">
-                            📝 Manage Menu: <span className="text-orange-500">{restaurant?.name}</span>
+                            📝 Menýu dolandyr: <span className="text-orange-500">{restaurant?.name}</span>
                         </h1>
-                        <p className="text-slate-400 text-sm">Add and edit individual menu items</p>
+                        <p className="text-slate-400 text-sm">Aýratyn menýu pozisiýalaryny goşuň we redaktirläň</p>
                     </div>
                     <div className="flex gap-4">
-                        <Link to="/admin/restaurants" className="px-4 py-2 text-slate-300 hover:text-white">← Back to Restaurants</Link>
+                        <Link to="/admin/restaurants" className="px-4 py-2 text-slate-300 hover:text-white">← Restoranlara gaýdyň</Link>
                     </div>
                 </div>
             </header>
 
             <div className="max-w-7xl mx-auto p-6">
                 <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl text-white font-semibold">Menu Items</h2>
+                    <h2 className="text-xl text-white font-semibold">Menýu pozisiýalary</h2>
                     <button
                         onClick={() => { setEditingItem(null); setShowForm(true); }}
                         className="px-6 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90"
                     >
-                        + Add Menu Item
+                        + Menýu goş
                     </button>
                 </div>
 
@@ -98,22 +98,22 @@ export default function AdminRestaurantMenuPage() {
                     <table className="w-full">
                         <thead className="bg-slate-900">
                             <tr>
-                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Image</th>
-                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Name</th>
-                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Category</th>
-                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Price</th>
-                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Status</th>
-                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Actions</th>
+                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Surat</th>
+                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Ady</th>
+                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Kategoriýa</th>
+                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Baha</th>
+                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Ýagdaý</th>
+                                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Hereketler</th>
                             </tr>
                         </thead>
                         <tbody>
                             {loading ? (
                                 <tr>
-                                    <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Loading...</td>
+                                    <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Ýüklenýär...</td>
                                 </tr>
                             ) : menuItems.length === 0 ? (
                                 <tr>
-                                    <td colSpan={6} className="px-4 py-8 text-center text-slate-400">No menu items found. Add one!</td>
+                                    <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Menýu pozisiýasy tapylmady. Birini goşuň!</td>
                                 </tr>
                             ) : (
                                 menuItems.map(item => (
@@ -129,7 +129,7 @@ export default function AdminRestaurantMenuPage() {
                                         <td className="px-4 py-3 text-orange-400 font-bold">{item.price} {item.currency}</td>
                                         <td className="px-4 py-3">
                                             <span className={`px-2 py-1 rounded text-xs ${item.is_available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
-                                                {item.is_available ? 'Available' : 'Unavailable'}
+                                                {item.is_available ? 'Elýeterli' : 'Elýeterli däl'}
                                             </span>
                                         </td>
                                         <td className="px-4 py-3">
@@ -138,13 +138,13 @@ export default function AdminRestaurantMenuPage() {
                                                     onClick={() => { setEditingItem(item); setShowForm(true); }}
                                                     className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded hover:bg-blue-500/30 text-sm"
                                                 >
-                                                    Edit
+                                                    Redaktirle
                                                 </button>
                                                 <button
                                                     onClick={() => handleDelete(item.id)}
                                                     className="px-3 py-1 bg-red-500/20 text-red-400 rounded hover:bg-red-500/30 text-sm"
                                                 >
-                                                    Delete
+                                                    Poz
                                                 </button>
                                             </div>
                                         </td>
@@ -211,11 +211,11 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
             <div className="bg-slate-800 rounded-2xl border border-slate-700 w-full max-w-md">
                 <div className="p-6 border-b border-slate-700">
-                    <h2 className="text-xl font-bold text-white">{item ? 'Edit Item' : 'Add Item'}</h2>
+                    <h2 className="text-xl font-bold text-white">{item ? 'Pozisiýany redaktirle' : 'Pozisiýa goş'}</h2>
                 </div>
                 <form onSubmit={handleSubmit} className="p-6 space-y-4">
                     <div>
-                        <label className="block text-slate-300 mb-1 text-sm">Name *</label>
+                        <label className="block text-slate-300 mb-1 text-sm">Ady *</label>
                         <input
                             type="text"
                             value={form.name}
@@ -225,7 +225,7 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
                         />
                     </div>
                     <div>
-                        <label className="block text-slate-300 mb-1 text-sm">Description</label>
+                        <label className="block text-slate-300 mb-1 text-sm">Düşündiriş</label>
                         <textarea
                             value={form.description}
                             onChange={e => setForm({ ...form, description: e.target.value })}
@@ -235,7 +235,7 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label className="block text-slate-300 mb-1 text-sm">Price (TMT) *</label>
+                            <label className="block text-slate-300 mb-1 text-sm">Baha (TMT) *</label>
                             <input
                                 type="number"
                                 value={form.price}
@@ -245,18 +245,18 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
                             />
                         </div>
                         <div>
-                            <label className="block text-slate-300 mb-1 text-sm">Category</label>
+                            <label className="block text-slate-300 mb-1 text-sm">Kategoriýa</label>
                             <input
                                 type="text"
                                 value={form.category}
                                 onChange={e => setForm({ ...form, category: e.target.value })}
                                 className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
-                                placeholder="Starter, Main..."
+                                placeholder="Başlangyç, Esasy..."
                             />
                         </div>
                     </div>
                     <div>
-                        <label className="block text-slate-300 mb-1 text-sm">Image URL</label>
+                        <label className="block text-slate-300 mb-1 text-sm">Surat URL</label>
                         <input
                             type="text"
                             value={form.image_url}
@@ -272,7 +272,7 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
                             onChange={e => setForm({ ...form, is_available: e.target.checked })}
                             className="w-4 h-4 rounded bg-slate-900 border-slate-600"
                         />
-                        <label htmlFor="is_available" className="text-slate-300 text-sm">Available</label>
+                        <label htmlFor="is_available" className="text-slate-300 text-sm">Elýeterli</label>
                     </div>
 
                     <div className="flex gap-4 pt-4">
@@ -281,14 +281,14 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
                             onClick={onClose}
                             className="flex-1 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600"
                         >
-                            Cancel
+                            Ýatyr
                         </button>
                         <button
                             type="submit"
                             disabled={loading}
                             className="flex-1 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90 disabled:opacity-50"
                         >
-                            {loading ? 'Saving...' : 'Save Item'}
+                            {loading ? 'Saklanýar...' : 'Pozisiýany sakla'}
                         </button>
                     </div>
                 </form>

@@ -6,7 +6,7 @@ interface ErrorStateProps {
   actionLabel?: string;
 }
 
-export default function ErrorState({ message, action, actionLabel = "Retry" }: ErrorStateProps) {
+export default function ErrorState({ message, action, actionLabel = "Gaýtadan synanyşyň" }: ErrorStateProps) {
   return (
     <div className="glass-panel p-8 text-center space-y-4">
       <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-rose-50 dark:bg-rose-500/10">

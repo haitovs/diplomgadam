@@ -8,9 +8,9 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchRestaurants } from "../api/restaurants";
 
 const starterPrompts = [
-  "Need a romantic dinner with vegan options tonight.",
-  "Best spots for remote work brunch near Innovation Hub.",
-  "Family-friendly restaurants with play areas on weekends."
+  "Bu gije wegan saýlawly romantik agşamlyk gerek.",
+  "Innowasiýa merkeziniň golaýynda uzakdan iş üçin iň gowy ýerler.",
+  "Dynç günleri oýun meýdançaly maşgala üçin amatly restoranlar."
 ];
 
 function ThinkingDots() {
@@ -76,13 +76,11 @@ export default function AiConciergePage() {
       <section className="glass-panel p-8 space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 dark:bg-brand-400/15 text-brand-600 dark:text-brand-300 text-sm font-semibold border border-brand-200/50 dark:border-brand-500/30">
           <Sparkles className="w-4 h-4" />
-          TripAI concierge (public API proxy)
+          TripAI maslahatçy (açyk API proksi)
         </div>
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Conversational itinerary planning</h1>
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Söhbetdeşlik arkaly marşrut meýilleşdirmesi</h1>
         <p className="text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed">
-          Responses are generated via a HuggingFace text-generation endpoint when an API key is provided. Otherwise, the
-          backend returns template answers curated with faculty reviewers. Either way, latency metrics and confidence
-          scores are displayed to simulate a live AI service.
+          Jogaplar API açary berilende HuggingFace tekst döredýän nokat arkaly döredilýär. Başga ýagdaýda, backend fakultet barlagçylary bilen düzülen şablon jogaplaryny gaýtarýar. Islendik ýagdaýda, gijikdirme ölçegleri we ynam ballary janly AI hyzmatyny simulýasiýa etmek üçin görkezilýär.
         </p>
       </section>
 
@@ -95,7 +93,7 @@ export default function AiConciergePage() {
               onChange={(event) => setQuestion(event.target.value)}
               rows={4}
               className="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/60 px-4 py-3 text-sm text-slate-900 dark:text-slate-100 focus:border-brand-400 dark:focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-500/20 transition-colors placeholder:text-slate-400 dark:placeholder:text-slate-500"
-              placeholder="Ask TripAI anything about dining in Ashgabat..."
+              placeholder="TripAI-dan Aşgabatda naharlanmak barada islendik zat soraň..."
             />
           </div>
           <div className="flex flex-wrap gap-2">
@@ -118,12 +116,12 @@ export default function AiConciergePage() {
             {mutation.isPending ? (
               <>
                 <Clock className="w-4 h-4 animate-spin" />
-                Thinking
+                Pikir edýär
               </>
             ) : (
               <>
                 <Send className="w-4 h-4" />
-                Send to TripAI
+                TripAI-a iber
               </>
             )}
           </button>
@@ -140,7 +138,7 @@ export default function AiConciergePage() {
             >
               <Bot className="w-5 h-5 text-brand-500 dark:text-brand-400 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="text-sm font-medium text-slate-700 dark:text-slate-300">TripAI is analyzing your request...</p>
+                <p className="text-sm font-medium text-slate-700 dark:text-slate-300">TripAI siziň haýyşyňyzy seljerýär...</p>
                 <ThinkingDots />
               </div>
             </motion.div>
@@ -156,7 +154,7 @@ export default function AiConciergePage() {
           >
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200">
               <ListChecks className="w-4 h-4 text-brand-500" />
-              Suggested restaurants
+              Teklip edilýän restoranlar
             </div>
             <div className="flex flex-wrap gap-2">
               {suggestionRestaurants.map((restaurant) => (
@@ -174,9 +172,9 @@ export default function AiConciergePage() {
 
         {mutation.isError && (
           <ErrorState
-            message="AI service unreachable. Try again or provide a valid API key."
+            message="AI hyzmatyna ýetip bolmaýar. Gaýtadan synanyşyň ýa-da dogry API açaryny beriň."
             action={() => mutation.reset()}
-            actionLabel="Dismiss"
+            actionLabel="Ýap"
           />
         )}
 
@@ -191,13 +189,13 @@ export default function AiConciergePage() {
             {/* Stats bar */}
             <div className="flex flex-wrap gap-4 text-xs">
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                Source: <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.source}</span>
+                Çeşme: <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.source}</span>
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                Tokens: <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.tokensUsed}</span>
+                Tokenler: <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.tokensUsed}</span>
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                Latency: <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.latencyMs}ms</span>
+                Gijikdirme: <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.latencyMs}ms</span>
               </span>
             </div>
 

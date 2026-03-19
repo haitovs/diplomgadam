@@ -37,7 +37,7 @@ db.exec(`
     review_count INTEGER DEFAULT 0,
     address TEXT,
     neighborhood TEXT,
-    city TEXT DEFAULT 'Ashgabat',
+    city TEXT DEFAULT 'Aşgabat',
     lat REAL,
     lng REAL,
     phone TEXT,
@@ -101,21 +101,21 @@ import fs from 'fs';
 const catCount = db.prepare('SELECT COUNT(*) as count FROM categories').get() as { count: number };
 if (catCount.count === 0) {
   const categories = [
-    { name: 'Turkmen Traditional', icon: '🍖' },
-    { name: 'Plov & Rice', icon: '🍚' },
-    { name: 'Turkish', icon: '🥙' },
-    { name: 'International', icon: '🌍' },
-    { name: 'Steakhouse', icon: '🥩' },
-    { name: 'Seafood', icon: '🐟' },
-    { name: 'Italian', icon: '🍝' },
-    { name: 'European', icon: '🍷' },
-    { name: 'Coffee & Cafe', icon: '☕' },
-    { name: 'Bakery', icon: '🥐' },
-    { name: 'Asian Fusion', icon: '🍱' },
-    { name: 'Grill', icon: '🔥' },
-    { name: 'Fine Dining', icon: '🥂' },
-    { name: 'Royal Cuisine', icon: '👑' },
-    { name: 'Turkmen Modern', icon: '✨' }
+    { name: 'Türkmen milli', icon: '🍖' },
+    { name: 'Palaw we tüwi', icon: '🍚' },
+    { name: 'Türk', icon: '🥙' },
+    { name: 'Halkara', icon: '🌍' },
+    { name: 'Steýkhaus', icon: '🥩' },
+    { name: 'Deňiz önümleri', icon: '🐟' },
+    { name: 'Italýan', icon: '🍝' },
+    { name: 'Ýewropa', icon: '🍷' },
+    { name: 'Kofe we kafe', icon: '☕' },
+    { name: 'Çörek öýi', icon: '🥐' },
+    { name: 'Aziýa garyndy', icon: '🍱' },
+    { name: 'Gril', icon: '🔥' },
+    { name: 'Kaşaň nahar', icon: '🥂' },
+    { name: 'Şa tagamlary', icon: '👑' },
+    { name: 'Häzirki zaman türkmen', icon: '✨' }
   ];
 
   const insertCat = db.prepare('INSERT INTO categories (name, icon) VALUES (?, ?)');

@@ -53,7 +53,7 @@ export default function AdminRestaurantsPage() {
   }
 
   async function handleDelete(id: string) {
-    if (!confirm('Delete this restaurant?')) return;
+    if (!confirm('Bu restorany pozmak?')) return;
     try {
       await fetch(`/api/admin/restaurants/${id}`, { method: 'DELETE' });
       loadRestaurants();
@@ -88,13 +88,13 @@ export default function AdminRestaurantsPage() {
       <header className="bg-slate-800 border-b border-slate-700 px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-white">🍽️ Manage Restaurants</h1>
-            <p className="text-slate-400 text-sm">Add, edit, and manage restaurant listings</p>
+            <h1 className="text-2xl font-bold text-white">🍽️ Restoranlary dolandyr</h1>
+            <p className="text-slate-400 text-sm">Restoran sanawyny goşuň, redaktirläň we dolandyryň</p>
           </div>
           <div className="flex gap-4">
-            <Link to="/" className="px-4 py-2 text-slate-300 hover:text-white">View Site</Link>
+            <Link to="/" className="px-4 py-2 text-slate-300 hover:text-white">Sahypany gör</Link>
             <button onClick={handleLogout} className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">
-              Logout
+              Çykyş
             </button>
           </div>
         </div>
@@ -103,16 +103,16 @@ export default function AdminRestaurantsPage() {
       <div className="max-w-7xl mx-auto p-6">
         {/* Navigation */}
         <nav className="flex gap-4 mb-6">
-          <Link to="/admin" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Dashboard</Link>
-          <Link to="/admin/restaurants" className="px-4 py-2 bg-orange-500 text-white rounded-lg">Restaurants</Link>
-          <Link to="/admin/categories" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Categories</Link>
+          <Link to="/admin" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Dolandyryş paneli</Link>
+          <Link to="/admin/restaurants" className="px-4 py-2 bg-orange-500 text-white rounded-lg">Restoranlar</Link>
+          <Link to="/admin/categories" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Kategoriýalar</Link>
         </nav>
 
         {/* Actions Bar */}
         <div className="flex flex-wrap gap-4 mb-6">
           <input
             type="text"
-            placeholder="Search restaurants..."
+            placeholder="Restoranlary gözläň..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="flex-1 min-w-[200px] px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-orange-500"
@@ -122,15 +122,15 @@ export default function AdminRestaurantsPage() {
             onChange={(e) => setFilter(e.target.value)}
             className="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none"
           >
-            <option value="all">All Status</option>
-            <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
+            <option value="all">Ähli ýagdaý</option>
+            <option value="active">Işjeň</option>
+            <option value="inactive">Işjeň däl</option>
           </select>
           <button
             onClick={() => { setEditingId(null); setShowForm(true); }}
             className="px-6 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90"
           >
-            + Add Restaurant
+            + Restoran goş
           </button>
         </div>
 
@@ -139,22 +139,22 @@ export default function AdminRestaurantsPage() {
           <table className="w-full">
             <thead className="bg-slate-900">
               <tr>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Restaurant</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Neighborhood</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Price</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Rating</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Status</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Actions</th>
+                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Restoran</th>
+                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Etrapça</th>
+                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Baha</th>
+                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Reýting</th>
+                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Ýagdaý</th>
+                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Hereketler</th>
               </tr>
             </thead>
             <tbody>
               {loading ? (
                 <tr>
-                  <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Loading...</td>
+                  <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Ýüklenýär...</td>
                 </tr>
               ) : restaurants.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-4 py-8 text-center text-slate-400">No restaurants found</td>
+                  <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Restoran tapylmady</td>
                 </tr>
               ) : (
                 restaurants.map(r => (
@@ -180,8 +180,8 @@ export default function AdminRestaurantsPage() {
                         className={`px-2 py-1 rounded text-sm ${r.status === 'active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                           }`}
                       >
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
+                        <option value="active">Işjeň</option>
+                        <option value="inactive">Işjeň däl</option>
                       </select>
                     </td>
                     <td className="px-4 py-3">
@@ -190,19 +190,19 @@ export default function AdminRestaurantsPage() {
                           to={`/admin/restaurants/${r.id}/menu`}
                           className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded hover:bg-orange-500/30 text-sm flex items-center"
                         >
-                          Menu
+                          Menýu
                         </Link>
                         <button
                           onClick={() => { setEditingId(r.id); setShowForm(true); }}
                           className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded hover:bg-blue-500/30 text-sm"
                         >
-                          Edit
+                          Redaktirle
                         </button>
                         <button
                           onClick={() => handleDelete(r.id)}
                           className="px-3 py-1 bg-red-500/20 text-red-400 rounded hover:bg-red-500/30 text-sm"
                         >
-                          Delete
+                          Poz
                         </button>
                       </div>
                     </td>
@@ -305,12 +305,12 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
       <div className="bg-slate-800 rounded-2xl border border-slate-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="p-6 border-b border-slate-700">
-          <h2 className="text-xl font-bold text-white">{id ? 'Edit Restaurant' : 'Add Restaurant'}</h2>
+          <h2 className="text-xl font-bold text-white">{id ? 'Restorany redaktirle' : 'Restoran goş'}</h2>
         </div>
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
-              <label className="block text-slate-300 mb-1 text-sm">Name *</label>
+              <label className="block text-slate-300 mb-1 text-sm">Ady *</label>
               <input
                 type="text"
                 value={form.name}
@@ -320,7 +320,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div className="col-span-2">
-              <label className="block text-slate-300 mb-1 text-sm">Description</label>
+              <label className="block text-slate-300 mb-1 text-sm">Düşündiriş</label>
               <textarea
                 value={form.description}
                 onChange={e => setForm({ ...form, description: e.target.value })}
@@ -329,7 +329,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Hero Image URL</label>
+              <label className="block text-slate-300 mb-1 text-sm">Baş surat URL</label>
               <input
                 type="text"
                 value={form.hero_image}
@@ -338,7 +338,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Neighborhood</label>
+              <label className="block text-slate-300 mb-1 text-sm">Etrapça</label>
               <input
                 type="text"
                 value={form.neighborhood}
@@ -347,7 +347,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div className="col-span-2">
-              <label className="block text-slate-300 mb-1 text-sm">Address</label>
+              <label className="block text-slate-300 mb-1 text-sm">Salgy</label>
               <input
                 type="text"
                 value={form.address}
@@ -356,7 +356,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Cuisines (comma-separated)</label>
+              <label className="block text-slate-300 mb-1 text-sm">Tagamlar (üteş bilen bölünen)</label>
               <input
                 type="text"
                 value={form.cuisines}
@@ -366,7 +366,7 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Tags (comma-separated)</label>
+              <label className="block text-slate-300 mb-1 text-sm">Bellikler (üteş bilen bölünen)</label>
               <input
                 type="text"
                 value={form.tags}
@@ -376,19 +376,19 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Price Tier</label>
+              <label className="block text-slate-300 mb-1 text-sm">Baha derejesi</label>
               <select
                 value={form.price_tier}
                 onChange={e => setForm({ ...form, price_tier: e.target.value })}
                 className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
               >
-                <option value="$">$ (Budget)</option>
-                <option value="$$">$$ (Moderate)</option>
-                <option value="$$$">$$$ (Premium)</option>
+                <option value="$">$ (Arzan)</option>
+                <option value="$$">$$ (Orta)</option>
+                <option value="$$$">$$$ (Gymmat)</option>
               </select>
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Phone</label>
+              <label className="block text-slate-300 mb-1 text-sm">Telefon</label>
               <input
                 type="text"
                 value={form.phone}
@@ -398,14 +398,14 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Status</label>
+              <label className="block text-slate-300 mb-1 text-sm">Ýagdaý</label>
               <select
                 value={form.status}
                 onChange={e => setForm({ ...form, status: e.target.value })}
                 className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
               >
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
+                <option value="active">Işjeň</option>
+                <option value="inactive">Işjeň däl</option>
               </select>
             </div>
           </div>
@@ -415,14 +415,14 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               onClick={onClose}
               className="flex-1 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600"
             >
-              Cancel
+              Ýatyr
             </button>
             <button
               type="submit"
               disabled={loading}
               className="flex-1 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90 disabled:opacity-50"
             >
-              {loading ? 'Saving...' : 'Save Restaurant'}
+              {loading ? 'Saklanýar...' : 'Restorany sakla'}
             </button>
           </div>
         </form>

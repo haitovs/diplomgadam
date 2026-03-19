@@ -32,8 +32,8 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md">
         <div className="bg-slate-800 rounded-2xl shadow-2xl p-8 border border-slate-700">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-white mb-2">🍽️ Admin Panel</h1>
-            <p className="text-slate-400">Ashgabat Restaurant Finder</p>
+            <h1 className="text-3xl font-bold text-white mb-2">🍽️ Admin paneli</h1>
+            <p className="text-slate-400">Aşgabat Restoran Gözlegçi</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -44,25 +44,25 @@ export default function AdminLoginPage() {
             )}
 
             <div>
-              <label className="block text-slate-300 mb-2 text-sm">Username</label>
+              <label className="block text-slate-300 mb-2 text-sm">Ulanyjy ady</label>
               <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-orange-500"
-                placeholder="Enter username"
+                placeholder="Ulanyjy adyny giriziň"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-slate-300 mb-2 text-sm">Password</label>
+              <label className="block text-slate-300 mb-2 text-sm">Açar sözi</label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-orange-500"
-                placeholder="Enter password"
+                placeholder="Açar sözüni giriziň"
                 required
               />
             </div>
@@ -72,12 +72,12 @@ export default function AdminLoginPage() {
               disabled={loading}
               className="w-full py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90 transition disabled:opacity-50"
             >
-              {loading ? 'Signing in...' : 'Sign In'}
+              {loading ? 'Girilýär...' : 'Giriş'}
             </button>
           </form>
 
           <p className="mt-6 text-center text-slate-500 text-sm">
-            Default: <code className="text-orange-400">admin</code> / <code className="text-orange-400">admin123</code>
+            Deslapky: <code className="text-orange-400">admin</code> / <code className="text-orange-400">admin123</code>
           </p>
         </div>
       </div>

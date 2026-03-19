@@ -2,30 +2,47 @@
   {
     "id": "alpet-steakhouse",
     "name": "AlpEt Steakhouse",
-    "description": "Distinguished steakhouse specializing in 28-day dry-aged meats, served in an elegant setting with a garden backdrop. A premier destination for meat lovers in Ashgabat.",
-    "heroImage": "/images/restaurants/alpet-steakhouse/hero.jpg",
-    "cuisines": ["Steakhouse", "International"],
-    "tags": ["Dry-Aged Meats", "Garden Seating", "Premium"],
-    "dietary": ["Halal"],
+    "description": "28 günlük guradylan etlere ýöriteleşen, bag fonunda owadan gurşawda hyzmat edýän meşhur steýkhaus. Aşgabatda et söýüjiler üçin iň gowy ýer.",
+    "heroImage": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+    "cuisines": [
+      "Steýkhaus",
+      "Halkara"
+    ],
+    "tags": [
+      "Guradylan et",
+      "Bag oturgyçlary",
+      "Premium"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$$",
     "rating": 4.7,
     "reviewCount": 286,
     "location": {
       "address": "9th km, Archabil Highway",
       "neighborhood": "Berzengi",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.918, "lng": 58.359 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.918,
+        "lng": 58.359
+      }
     },
     "contact": {
       "phone": "+993 12 48 72 30",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "12:00 – 23:00"
+      }
+    ],
     "amenities": [
-      "Garden Terrace",
-      "Private Rooms",
-      "Valet Parking",
-      "Full Bar"
+      "Bag terrasy",
+      "Hususy otaglar",
+      "Walet duralgasy",
+      "Doly bar"
     ],
     "menuHighlights": [
       {
@@ -50,36 +67,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/alpet-steakhouse/gallery-1.jpg",
-      "/images/restaurants/alpet-steakhouse/gallery-2.jpg",
-      "/images/restaurants/alpet-steakhouse/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80",
+      "https://images.unsplash.com/photo-1432139509613-5c4255a187b2?w=800&q=80",
+      "https://images.unsplash.com/photo-1529694157872-4e0c0f3b238b?w=800&q=80"
     ],
     "sustainabilityScore": 72,
-    "aiSummary": "Top-tier steakhouse with dry-aging expertise; ideal for business dinners and special occasions."
+    "aiSummary": "Guradylan et ussatlygy bolan ýokary derejeli steýkhaus; iş naharlary we ýörite dabaralar üçin amatly."
   },
   {
     "id": "hezzet",
     "name": "Hezzet Restaurant",
-    "description": "Highly regarded dining complex offering Turkmen and Turkish cuisine in a welcoming atmosphere, with dining available in traditional yurt-like tents surrounded by greenery.",
-    "heroImage": "/images/restaurants/hezzet/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Turkish"],
-    "tags": ["Yurt Dining", "Family-Friendly", "Garden"],
-    "dietary": ["Halal"],
+    "description": "Türkmen we türk tagamlaryny myhmansöýer gurşawda hödürleýän, ýaşyllyk bilen gurşalan adaty öý çadyrlarynda nahar iýmäge mümkinçilik berýän ýokary derejeli nahar toplumy.",
+    "heroImage": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Türk"
+    ],
+    "tags": [
+      "Öý nahary",
+      "Maşgala üçin amatly",
+      "Bag"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$",
     "rating": 4.6,
     "reviewCount": 412,
     "location": {
       "address": "Oguzhan köçesi 5/7",
       "neighborhood": "Parahat",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.932, "lng": 58.387 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.932,
+        "lng": 58.387
+      }
     },
     "contact": {
       "phone": "+993 12 36 55 18",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "11:00 – 23:00" }],
-    "amenities": ["Yurt Seating", "Children's Area", "Parking", "Live Music"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "11:00 – 23:00"
+      }
+    ],
+    "amenities": [
+      "Öý oturgyçlary",
+      "Çagalar meýdançasy",
+      "Duralga",
+      "Janly saz"
+    ],
     "menuHighlights": [
       {
         "name": "Turkmen Plov",
@@ -103,36 +142,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/hezzet/gallery-1.jpg",
-      "/images/restaurants/hezzet/gallery-2.jpg",
-      "/images/restaurants/hezzet/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 78,
-    "aiSummary": "Authentic Turkmen dining experience with yurt seating and generous portions; great for families and groups."
+    "aiSummary": "Öý oturgyçlary we bol porsiýalar bilen hakyky türkmen nahar tejribesi; maşgalalar we toparlar üçin ajaýyp."
   },
   {
     "id": "joshgun-palow-house",
     "name": "Joshgun Palow House",
-    "description": "Beloved traditional restaurant specializing in over 20 varieties of plov (pilaf), from classic lamb to festive Ishlekli, served in a cozy and homey atmosphere.",
-    "heroImage": "/images/restaurants/joshgun-palow-house/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Plov & Rice"],
-    "tags": ["Plov Specialist", "Traditional", "Cozy"],
-    "dietary": ["Halal"],
+    "description": "Adaty guzy palawdan baýramçylyk işleklisine çenli 20-den gowrak görnüşli palawa ýöriteleşen söýgüli adaty restoran.",
+    "heroImage": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Palaw we tüwi"
+    ],
+    "tags": [
+      "Palaw hünärmeni",
+      "Adaty",
+      "Ýyly"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$",
     "rating": 4.8,
     "reviewCount": 534,
     "location": {
       "address": "Andalib köçesi",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.951, "lng": 58.372 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.951,
+        "lng": 58.372
+      }
     },
     "contact": {
       "phone": "+993 65 78 12 40",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "10:00 – 22:00" }],
-    "amenities": ["Family Seating", "Takeaway", "Traditional Decor"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "10:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Maşgala oturgyçlary",
+      "Alyp gitmek",
+      "Adaty bezeg"
+    ],
     "menuHighlights": [
       {
         "name": "Classic Turkmen Palow",
@@ -161,36 +221,59 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/joshgun-palow-house/gallery-1.jpg",
-      "/images/restaurants/joshgun-palow-house/gallery-2.jpg",
-      "/images/restaurants/joshgun-palow-house/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+      "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=800&q=80",
+      "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
     ],
     "sustainabilityScore": 85,
-    "aiSummary": "The definitive plov destination in Ashgabat with 20+ varieties; a must-visit for authentic Turkmen cuisine."
+    "aiSummary": "20+ görnüşli Aşgabadyň iň gowy palaw ýeri; hakyky türkmen tagamlary üçin hökmany baryp görmeli."
   },
   {
     "id": "chatma-lounge",
     "name": "Chatma Restaurant & Lounge",
-    "description": "One of Ashgabat's oldest and most charming restaurants, offering traditional dishes amidst abundant foliage with a well-stocked bar and relaxed atmosphere.",
-    "heroImage": "/images/restaurants/chatma-lounge/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "International"],
-    "tags": ["Historic", "Garden", "Lounge Bar"],
-    "dietary": ["Halal", "Vegetarian Options"],
+    "description": "Aşgabadyň iň gadymy we owadan restoranlarynyň biri, adaty tagamlary köp ýaşyllyk arasynda hödürleýär, doly bar we rahat gurşaw.",
+    "heroImage": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Halkara"
+    ],
+    "tags": [
+      "Taryhy",
+      "Bag",
+      "Dynç alyş bary"
+    ],
+    "dietary": [
+      "Halal",
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.5,
     "reviewCount": 378,
     "location": {
       "address": "Azadi köçesi",
       "neighborhood": "Köpetdag",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.945, "lng": 58.383 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.945,
+        "lng": 58.383
+      }
     },
     "contact": {
       "phone": "+993 12 34 22 10",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "11:00 – 00:00" }],
-    "amenities": ["Outdoor Garden", "Full Bar", "Live Music", "Hookah Lounge"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "11:00 – 00:00"
+      }
+    ],
+    "amenities": [
+      "Açyk bag",
+      "Doly bar",
+      "Janly saz",
+      "Kalýan otagy"
+    ],
     "menuHighlights": [
       {
         "name": "Fried Manty",
@@ -214,36 +297,59 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/chatma-lounge/gallery-1.jpg",
-      "/images/restaurants/chatma-lounge/gallery-2.jpg",
-      "/images/restaurants/chatma-lounge/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1560053608-13721e0d69e8?w=800&q=80",
+      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 70,
-    "aiSummary": "Historic restaurant with lush garden seating and a well-stocked bar; perfect for relaxed evening dining."
+    "aiSummary": "Baý bag oturgyçlary we doly bar bilen taryhy restoran; rahat agşamky nahar üçin amatly."
   },
   {
     "id": "central-park",
     "name": "Central Park Restaurant",
-    "description": "Two-story restaurant offering stunning night views of Ashgabat, serving Turkish and Italian cuisine with live music, chef shows, and a dedicated kids' menu.",
-    "heroImage": "/images/restaurants/central-park/hero.jpg",
-    "cuisines": ["Turkish", "Italian"],
-    "tags": ["City Views", "Live Music", "Family-Friendly"],
-    "dietary": ["Halal", "Vegetarian Options"],
+    "description": "Aşgabadyň gijeki ajaýyp görnüşlerini hödürleýän iki gatly restoran, türk we italýan tagamlaryny janly saz, aşpez şousy we çagalar menýusy bilen hödürleýär.",
+    "heroImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+    "cuisines": [
+      "Türk",
+      "Italýan"
+    ],
+    "tags": [
+      "Şäher görnüşleri",
+      "Janly saz",
+      "Maşgala üçin amatly"
+    ],
+    "dietary": [
+      "Halal",
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.4,
     "reviewCount": 298,
     "location": {
       "address": "Bitarap Turkmenistan şaýoly",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.95, "lng": 58.38 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.95,
+        "lng": 58.38
+      }
     },
     "contact": {
       "phone": "+993 12 46 33 15",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:30" }],
-    "amenities": ["Panoramic Views", "Kids Menu", "Chef Shows", "Banquet Hall"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "12:00 – 23:30"
+      }
+    ],
+    "amenities": [
+      "Panorama görnüşleri",
+      "Çagalar menýusy",
+      "Aşpez şousy",
+      "Dabara zaly"
+    ],
     "menuHighlights": [
       {
         "name": "Margherita Pizza",
@@ -267,43 +373,61 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/central-park/gallery-1.jpg",
-      "/images/restaurants/central-park/gallery-2.jpg",
-      "/images/restaurants/central-park/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
+      "https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=800&q=80",
+      "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?w=800&q=80"
     ],
     "sustainabilityScore": 65,
-    "aiSummary": "Great for families seeking panoramic city views with reliable Turkish-Italian fusion and entertainment."
+    "aiSummary": "Panorama şäher görnüşleri we ygtybarly türk-italýan garyndy tagamlary we güýmenje bilen maşgalalar üçin ajaýyp."
   },
   {
     "id": "miras",
     "name": "Miras Restaurant",
-    "description": "Upscale dining spot offering an elegant interpretation of traditional Turkmen cuisine with a modern interior, known for innovative dishes and artistic presentation.",
-    "heroImage": "/images/restaurants/miras/hero.jpg",
-    "cuisines": ["Turkmen Modern", "Fine Dining"],
-    "tags": ["Upscale", "Modern", "Artistic"],
-    "dietary": ["Halal"],
+    "description": "Häzirki zaman içki bezegi bilen adaty türkmen tagamlaryny kaşaň düşündirişde hödürleýän ýokary derejeli nahar ýeri, innowasion tagamlar we çeperçilik bezegi bilen tanalýar.",
+    "heroImage": "https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80",
+    "cuisines": [
+      "Häzirki zaman türkmen",
+      "Kaşaň nahar"
+    ],
+    "tags": [
+      "Kaşaň",
+      "Häzirki zaman",
+      "Çeperçilik"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$$",
     "rating": 4.7,
     "reviewCount": 195,
     "location": {
       "address": "Magtymguly şaýoly 78",
       "neighborhood": "Berzengi",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.928, "lng": 58.365 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.928,
+        "lng": 58.365
+      }
     },
     "contact": {
       "phone": "+993 12 44 81 22",
       "website": null
     },
     "schedule": [
-      { "days": "Mon–Sat", "hours": "12:00 – 23:00" },
-      { "days": "Sun", "hours": "13:00 – 22:00" }
+      {
+        "days": "Duş–Şen",
+        "hours": "12:00 – 23:00"
+      },
+      {
+        "days": "Ýek",
+        "hours": "13:00 – 22:00"
+      }
     ],
     "amenities": [
-      "Private Dining",
-      "Wine Selection",
-      "Valet Parking",
-      "Air Conditioning"
+      "Hususy naharlanma",
+      "Şerap saýlawy",
+      "Walet duralgasy",
+      "Kondisioner"
     ],
     "menuHighlights": [
       {
@@ -328,40 +452,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/miras/gallery-1.jpg",
-      "/images/restaurants/miras/gallery-2.jpg",
-      "/images/restaurants/miras/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80",
+      "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80"
     ],
     "sustainabilityScore": 80,
-    "aiSummary": "Sophisticated reinterpretation of Turkmen classics with artistic plating; ideal for special occasions."
+    "aiSummary": "Çeperçilik bezegi bilen türkmen nusgalyklarynyň nepis täzeden düşündirilmesi; ýörite dabaralar üçin amatly."
   },
   {
     "id": "nusay",
     "name": "Nusay Restaurant",
-    "description": "Opulent dining experience with a majestic atmosphere inspired by Turkmenistan's regal heritage, featuring royal-style cuisine and exquisite interior craftsmanship.",
-    "heroImage": "/images/restaurants/nusay/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Royal Cuisine"],
-    "tags": ["Opulent", "Heritage", "Banquets"],
-    "dietary": ["Halal"],
+    "description": "Türkmenistanyň şa mirasyna ylham berlen kaşaň nahar tejribesi, şa tagamlary we owadan içki ussatçylygy hödürleýär.",
+    "heroImage": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Şa tagamlary"
+    ],
+    "tags": [
+      "Baý",
+      "Miras",
+      "Dabaralar"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$$",
     "rating": 4.6,
     "reviewCount": 165,
     "location": {
       "address": "Türkmenbaşy şaýoly 12",
       "neighborhood": "Çandybil",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.935, "lng": 58.395 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.935,
+        "lng": 58.395
+      }
     },
     "contact": {
       "phone": "+993 12 39 88 45",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "12:00 – 23:00"
+      }
+    ],
     "amenities": [
-      "Grand Hall",
-      "VIP Rooms",
-      "Parking",
-      "Traditional Entertainment"
+      "Uly zal",
+      "VIP otaglar",
+      "Duralga",
+      "Adaty güýmenje"
     ],
     "menuHighlights": [
       {
@@ -386,40 +527,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/nusay/gallery-1.jpg",
-      "/images/restaurants/nusay/gallery-2.jpg",
-      "/images/restaurants/nusay/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 68,
-    "aiSummary": "Grand venue channeling Turkmen royal heritage; excellent for celebrations and official dinners."
+    "aiSummary": "Türkmen şa mirasyny janlandyrýan kaşaň ýer; dabaralar we resmi naharlar üçin ajaýyp."
   },
   {
     "id": "arzu",
     "name": "Arzu Restaurant",
-    "description": "Known for impeccable service and a menu that blends traditional Turkmen cuisine with contemporary flair, set in a chic modern-designed interior.",
-    "heroImage": "/images/restaurants/arzu/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "International"],
-    "tags": ["Modern Design", "Business Lunch", "Chic"],
-    "dietary": ["Halal", "Vegetarian Options"],
+    "description": "Ajaýyp hyzmat we adaty türkmen tagamlaryny häzirki zaman öwüşginleri bilen birleşdirýän menýusy bilen tanalýan, döwrebap dizaýnly içki bezegde ýerleşýän restoran.",
+    "heroImage": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Halkara"
+    ],
+    "tags": [
+      "Häzirki zaman dizaýn",
+      "Iş nahary",
+      "Owadan"
+    ],
+    "dietary": [
+      "Halal",
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.5,
     "reviewCount": 248,
     "location": {
       "address": "Görogly köçesi 40",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.948, "lng": 58.356 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.948,
+        "lng": 58.356
+      }
     },
     "contact": {
       "phone": "+993 12 47 10 33",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "11:00 – 23:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "11:00 – 23:00"
+      }
+    ],
     "amenities": [
-      "Business Lunches",
+      "Iş naharlary",
       "Wi-Fi",
-      "Private Rooms",
-      "Air Conditioning"
+      "Hususy otaglar",
+      "Kondisioner"
     ],
     "menuHighlights": [
       {
@@ -444,40 +603,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/arzu/gallery-1.jpg",
-      "/images/restaurants/arzu/gallery-2.jpg",
-      "/images/restaurants/arzu/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&q=80",
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
+      "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80"
     ],
     "sustainabilityScore": 74,
-    "aiSummary": "Contemporary Turkmen dining with efficient business lunch service; a reliable choice for expats and locals."
+    "aiSummary": "Netijeli iş nahary hyzmaty bilen häzirki zaman türkmen nahary; daşary ýurtlylar we ýerli ýaşaýjylar üçin ygtybarly saýlaw."
   },
   {
     "id": "altyn-cyray",
     "name": "Altyn Çyraý",
-    "description": "Exquisite restaurant blending local Turkmen dishes with international cuisine, featuring traditional decor, live music performances, and exceptional service.",
-    "heroImage": "/images/restaurants/altyn-cyray/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "International"],
-    "tags": ["Live Music", "Traditional Decor", "Premium"],
-    "dietary": ["Halal"],
+    "description": "Ýerli türkmen tagamlaryny halkara tagamlar bilen birleşdirýän, adaty bezeg, janly saz çykyşlary we ajaýyp hyzmaty bolan restoran.",
+    "heroImage": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Halkara"
+    ],
+    "tags": [
+      "Janly saz",
+      "Adaty bezeg",
+      "Premium"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$$",
     "rating": 4.6,
     "reviewCount": 210,
     "location": {
       "address": "Atamyrat Nyýazow şaýoly 88",
       "neighborhood": "Köpetdag",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.942, "lng": 58.37 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.942,
+        "lng": 58.37
+      }
     },
     "contact": {
       "phone": "+993 12 36 90 14",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "12:00 – 00:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "12:00 – 00:00"
+      }
+    ],
     "amenities": [
-      "Live Music",
-      "VIP Lounge",
-      "Outdoor Terrace",
-      "Valet Parking"
+      "Janly saz",
+      "VIP dynç alyş",
+      "Açyk terrasa",
+      "Walet duralgasy"
     ],
     "menuHighlights": [
       {
@@ -502,36 +678,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/altyn-cyray/gallery-1.jpg",
-      "/images/restaurants/altyn-cyray/gallery-2.jpg",
-      "/images/restaurants/altyn-cyray/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80",
+      "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80"
     ],
     "sustainabilityScore": 71,
-    "aiSummary": "Premium dining with live entertainment and traditional Turkmen ambiance; great for evening celebrations."
+    "aiSummary": "Janly güýmenje we adaty türkmen gurşawy bilen premium nahar; agşamky dabaralar üçin ajaýyp."
   },
   {
     "id": "balykchy",
     "name": "Balykchy Restaurant",
-    "description": "Ashgabat's premier seafood destination featuring fresh Caspian fish preparations, grilled specialties, and a refined maritime-themed interior.",
-    "heroImage": "/images/restaurants/balykchy/hero.jpg",
-    "cuisines": ["Seafood", "International"],
-    "tags": ["Seafood", "Fresh Fish", "Elegant"],
-    "dietary": ["Halal", "Pescatarian"],
+    "description": "Aşgabadyň esasy deňiz önümleri ýeri, täze Hazar balyk taýýarlyklary, gowrulan tagamlar we nepis deňiz temasyndaky içki bezeg.",
+    "heroImage": "https://images.unsplash.com/photo-1535140728325-a4d3707eee61?w=800&q=80",
+    "cuisines": [
+      "Deňiz önümleri",
+      "Halkara"
+    ],
+    "tags": [
+      "Deňiz önümleri",
+      "Täze balyk",
+      "Kaşaň"
+    ],
+    "dietary": [
+      "Halal",
+      "Peşketarian"
+    ],
     "priceTier": "$$",
     "rating": 4.4,
     "reviewCount": 187,
     "location": {
       "address": "2022-nji köçe 15",
       "neighborhood": "Parahat",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.938, "lng": 58.405 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.938,
+        "lng": 58.405
+      }
     },
     "contact": {
       "phone": "+993 12 38 44 70",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "11:00 – 22:30" }],
-    "amenities": ["Aquarium Display", "Private Dining", "Air Conditioning"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "11:00 – 22:30"
+      }
+    ],
+    "amenities": [
+      "Akwarium",
+      "Hususy naharlanma",
+      "Kondisioner"
+    ],
     "menuHighlights": [
       {
         "name": "Grilled Caspian Kutum",
@@ -555,39 +753,62 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/balykchy/gallery-1.jpg",
-      "/images/restaurants/balykchy/gallery-2.jpg",
-      "/images/restaurants/balykchy/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=800&q=80",
+      "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80",
+      "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800&q=80"
     ],
     "sustainabilityScore": 76,
-    "aiSummary": "Top choice for seafood lovers; features Caspian-sourced fish with traditional preparation methods."
+    "aiSummary": "Deňiz önümlerini söýüjiler üçin iň gowy saýlaw; adaty taýýarlama usullary bilen Hazar balyklary."
   },
   {
     "id": "sirin",
     "name": "Şirin Restaurant",
-    "description": "Sophisticated restaurant featuring Eastern European cuisines with Asian influences, ideal for business lunches and special occasions. Renowned for sturgeon dishes and caviar.",
-    "heroImage": "/images/restaurants/sirin/hero.jpg",
-    "cuisines": ["European", "Asian Fusion"],
-    "tags": ["Sophisticated", "Business", "Caviar"],
-    "dietary": ["Halal"],
+    "description": "Aziýa täsirleri bilen Gündogar Ýewropa tagamlaryny hödürleýän nepis restoran, iş naharlary we ýörite dabaralar üçin amatly. Bekre balygy we işbil tagamlary bilen tanalýar.",
+    "heroImage": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80",
+    "cuisines": [
+      "Ýewropa",
+      "Aziýa garyndy"
+    ],
+    "tags": [
+      "Nepis",
+      "Iş",
+      "Işbil"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$$",
     "rating": 4.5,
     "reviewCount": 156,
     "location": {
       "address": "Galkynyş köçesi 22",
       "neighborhood": "Berzengi",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.922, "lng": 58.348 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.922,
+        "lng": 58.348
+      }
     },
     "contact": {
       "phone": "+993 12 45 67 80",
       "website": null
     },
     "schedule": [
-      { "days": "Mon–Sat", "hours": "12:00 – 23:00" },
-      { "days": "Sun", "hours": "13:00 – 22:00" }
+      {
+        "days": "Duş–Şen",
+        "hours": "12:00 – 23:00"
+      },
+      {
+        "days": "Ýek",
+        "hours": "13:00 – 22:00"
+      }
     ],
-    "amenities": ["Wine List", "Business Lunch", "Private Rooms", "Valet"],
+    "amenities": [
+      "Şerap sanawy",
+      "Iş nahary",
+      "Hususy otaglar",
+      "Walet"
+    ],
     "menuHighlights": [
       {
         "name": "Sturgeon with Caviar",
@@ -611,36 +832,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/sirin/gallery-1.jpg",
-      "/images/restaurants/sirin/gallery-2.jpg",
-      "/images/restaurants/sirin/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&q=80",
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
+      "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80"
     ],
     "sustainabilityScore": 67,
-    "aiSummary": "Refined European-Asian crossover with signature sturgeon and caviar; strong business lunch program."
+    "aiSummary": "Aýratyn bekre balygy we işbil bilen nepis ýewropa-aziýa garyndy; güýçli iş nahary maksatnamasy."
   },
   {
     "id": "dag-lezzeti",
     "name": "Dag Lezzeti Restaurant",
-    "description": "Authentic mountain-style Turkmen restaurant offering hearty grilled meats and traditional dishes, providing a culinary journey through the flavors of the Kopet Dag foothills.",
-    "heroImage": "/images/restaurants/dag-lezzeti/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Grill"],
-    "tags": ["Mountain Cuisine", "Hearty", "Traditional"],
-    "dietary": ["Halal"],
+    "description": "Doýgun gowrulan etleri we adaty tagamlary hödürleýän hakyky dag usulyndaky türkmen restorany, Köpetdag dag etekleriniň tagamlaryna aşpezlik syýahatyny üpjün edýär.",
+    "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Gril"
+    ],
+    "tags": [
+      "Dag tagamlary",
+      "Doýgun",
+      "Adaty"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$",
     "rating": 4.3,
     "reviewCount": 312,
     "location": {
       "address": "Andalib köçesi 45",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.954, "lng": 58.361 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.954,
+        "lng": 58.361
+      }
     },
     "contact": {
       "phone": "+993 65 42 18 90",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "10:00 – 22:00" }],
-    "amenities": ["Spacious Hall", "Parking", "Family Rooms"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "10:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Giň zal",
+      "Duralga",
+      "Maşgala otaglary"
+    ],
     "menuHighlights": [
       {
         "name": "Tamdyrlama",
@@ -664,40 +906,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/dag-lezzeti/gallery-1.jpg",
-      "/images/restaurants/dag-lezzeti/gallery-2.jpg",
-      "/images/restaurants/dag-lezzeti/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 82,
-    "aiSummary": "Affordable and hearty Turkmen comfort food with generous portions; authentic mountain dining experience."
+    "aiSummary": "Bol porsiýalar bilen elýeterli we doýgun türkmen tagamlary; hakyky dag nahar tejribesi."
   },
   {
     "id": "sha-coffee",
     "name": "Sha Coffee",
-    "description": "Pioneer of Ashgabat's specialty coffee culture, offering freshly roasted high-quality beans alongside European, American, and Turkmen cuisine in a trendy setting.",
-    "heroImage": "/images/restaurants/sha-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "European"],
-    "tags": ["Specialty Coffee", "Trendy", "Work-Friendly"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Aşgabadyň ýörite kofe medeniýetiniň öňdebaryjysy, döwrebap gurşawda ýewropa, amerikan we türkmen tagamlary bilen bilelikde täze gowrulan ýokary hilli kofe kofelerini hödürleýär.",
+    "heroImage": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Ýewropa"
+    ],
+    "tags": [
+      "Ýörite kofe",
+      "Döwrebap",
+      "Iş üçin amatly"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.6,
     "reviewCount": 445,
     "location": {
       "address": "Alyshir Navoi köçesi",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.946, "lng": 58.377 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.946,
+        "lng": 58.377
+      }
     },
     "contact": {
       "phone": "+993 65 55 12 30",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 23:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 23:00"
+      }
+    ],
     "amenities": [
-      "Free Wi-Fi",
-      "Outdoor Seating",
-      "Laptop-Friendly",
-      "Fresh Roasts"
+      "Mugt Wi-Fi",
+      "Açyk oturgyçlar",
+      "Noutbuk üçin amatly",
+      "Täze gowurmalar"
     ],
     "menuHighlights": [
       {
@@ -722,36 +981,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/sha-coffee/gallery-1.jpg",
-      "/images/restaurants/sha-coffee/gallery-2.jpg",
-      "/images/restaurants/sha-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+      "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
     ],
     "sustainabilityScore": 88,
-    "aiSummary": "The go-to specialty coffee shop in Ashgabat with fresh roasts and a work-friendly atmosphere."
+    "aiSummary": "Täze gowurmalar we iş üçin amatly gurşaw bilen Aşgabadyň iň gowy ýörite kofe dükany."
   },
   {
     "id": "uzum-cafe",
     "name": "Uzum Cafe",
-    "description": "Cozy neighborhood cafe with a diverse international menu including salads, soups, pasta, and hot dishes. Conveniently located across from the Ak Altyn Hotel.",
-    "heroImage": "/images/restaurants/uzum-cafe/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "International"],
-    "tags": ["Cozy", "International Menu", "Central Location"],
-    "dietary": ["Vegetarian Options", "Halal"],
+    "description": "Salatlary, çorbalary, makaron we yssy tagamlary öz içine alýan dürli halkara menýusy bolan ýyly etrapça kafesi. Ak Altyn myhmanhanasynyň garşysynda ýerleşýär.",
+    "heroImage": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Halkara"
+    ],
+    "tags": [
+      "Ýyly",
+      "Halkara menýu",
+      "Merkezi ýerleşiş"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar",
+      "Halal"
+    ],
     "priceTier": "$$",
     "rating": 4.3,
     "reviewCount": 267,
     "location": {
       "address": "Magtymguly şaýoly, near Ak Altyn Hotel",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.949, "lng": 58.385 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.949,
+        "lng": 58.385
+      }
     },
     "contact": {
       "phone": "+993 65 33 44 12",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "09:00 – 22:00" }],
-    "amenities": ["Wi-Fi", "Outdoor Terrace", "Breakfast Menu"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "09:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Wi-Fi",
+      "Açyk terrasa",
+      "Ertirlik menýusy"
+    ],
     "menuHighlights": [
       {
         "name": "Chicken Caesar Salad",
@@ -775,36 +1056,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/uzum-cafe/gallery-1.jpg",
-      "/images/restaurants/uzum-cafe/gallery-2.jpg",
-      "/images/restaurants/uzum-cafe/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
+      "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80",
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
     ],
     "sustainabilityScore": 75,
-    "aiSummary": "Reliable international cafe near major hotels; solid breakfast and lunch spot for visitors."
+    "aiSummary": "Esasy myhmanhanalaryň golaýynda ygtybarly halkara kafe; myhmanlar üçin ygtybarly ertirlik we günortanlyk."
   },
   {
     "id": "frappe-coffee",
     "name": "Frappe Coffee",
-    "description": "Modern coffee shop with classic and creative drink options, including signature Bumblebee coffee, unusual lemonades, milkshakes, and artisan desserts.",
-    "heroImage": "/images/restaurants/frappe-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "Bakery"],
-    "tags": ["Instagram-Worthy", "Creative Drinks", "Desserts"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Aýratyn Bumblebee kofesi, üýtgeşik limonadlar, süýtli kokteyller we senetçi desertleri öz içine alýan nusgawy we döredijilikli içgi saýlawlary bolan häzirki zaman kofe dükany.",
+    "heroImage": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Çörek öýi"
+    ],
+    "tags": [
+      "Instagram üçin owadan",
+      "Döredijilikli içgiler",
+      "Desertler"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.4,
     "reviewCount": 356,
     "location": {
       "address": "Oguzhan köçesi 12",
       "neighborhood": "Parahat",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.934, "lng": 58.392 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.934,
+        "lng": 58.392
+      }
     },
     "contact": {
       "phone": "+993 65 88 14 50",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 22:00" }],
-    "amenities": ["Wi-Fi", "Cozy Interior", "Takeaway"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Wi-Fi",
+      "Ýyly içki bezeg",
+      "Alyp gitmek"
+    ],
     "menuHighlights": [
       {
         "name": "Bumblebee Coffee",
@@ -828,36 +1130,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/frappe-coffee/gallery-1.jpg",
-      "/images/restaurants/frappe-coffee/gallery-2.jpg",
-      "/images/restaurants/frappe-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=800&q=80",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+      "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=800&q=80"
     ],
     "sustainabilityScore": 79,
-    "aiSummary": "Instagram-ready cafe with creative drink menu and excellent pastries; perfect for afternoon visits."
+    "aiSummary": "Döredijilikli içgi menýusy we ajaýyp kökeler bilen Instagram üçin taýýar kafe; günortandan soňky saparlar üçin amatly."
   },
   {
     "id": "talhan-bakery",
     "name": "Talhan Bakery",
-    "description": "Cozy cafe-bakery famous for fresh pastries, delicious desserts, and a menu spanning Turkish and European cuisine. Also offers custom cakes to order.",
-    "heroImage": "/images/restaurants/talhan-bakery/hero.jpg",
-    "cuisines": ["Bakery", "Turkish", "European"],
-    "tags": ["Fresh Pastries", "Custom Cakes", "Breakfast"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Täze kökeleri, süýji desertleri we türk hem ýewropa tagamlaryny hödürleýän, sargyt tortlaryny hem kabul edýän ýyly kafe-çörek öýi.",
+    "heroImage": "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&q=80",
+    "cuisines": [
+      "Çörek öýi",
+      "Türk",
+      "Ýewropa"
+    ],
+    "tags": [
+      "Täze köke",
+      "Sargyt tortlary",
+      "Ertirlik"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.5,
     "reviewCount": 398,
     "location": {
       "address": "Görogly köçesi 55",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.947, "lng": 58.352 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.947,
+        "lng": 58.352
+      }
     },
     "contact": {
       "phone": "+993 65 22 90 44",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "07:30 – 21:00" }],
-    "amenities": ["Custom Cake Orders", "Takeaway", "Morning Pastries"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "07:30 – 21:00"
+      }
+    ],
+    "amenities": [
+      "Sargyt tortlary",
+      "Alyp gitmek",
+      "Ertirlik kökeleri"
+    ],
     "menuHighlights": [
       {
         "name": "Simit with Cheese",
@@ -881,36 +1205,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/talhan-bakery/gallery-1.jpg",
-      "/images/restaurants/talhan-bakery/gallery-2.jpg",
-      "/images/restaurants/talhan-bakery/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=800&q=80",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+      "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=800&q=80"
     ],
     "sustainabilityScore": 83,
-    "aiSummary": "Beloved bakery with fresh morning pastries and custom cakes; ideal for breakfast or a sweet treat."
+    "aiSummary": "Ertirlik täze kökeleri we sargyt tortlary bilen söýgüli çörek öýi; ertirlik ýa-da süýji üçin amatly."
   },
   {
     "id": "kemine-coffee",
     "name": "Kemine Coffee",
-    "description": "Popular neighborhood coffee shop known for early opening hours, delicious fresh pastries, an impressive coffee selection, and consistently friendly service.",
-    "heroImage": "/images/restaurants/kemine-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "Bakery"],
-    "tags": ["Early Opening", "Friendly Staff", "Budget-Friendly"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Ir açylýan sagatlary, süýji täze kökeleri, täsirli kofe saýlawy we hemişe mylaýym hyzmaty bilen tanalýan meşhur etrapça kofe dükany.",
+    "heroImage": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Çörek öýi"
+    ],
+    "tags": [
+      "Ir açylýar",
+      "Mylaýym işgärler",
+      "Arzan"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.5,
     "reviewCount": 423,
     "location": {
       "address": "Kemine köçesi 8",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.953, "lng": 58.368 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.953,
+        "lng": 58.368
+      }
     },
     "contact": {
       "phone": "+993 65 71 33 20",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "06:30 – 21:00" }],
-    "amenities": ["Early Opening", "Takeaway", "Fresh Pastries Daily"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "06:30 – 21:00"
+      }
+    ],
+    "amenities": [
+      "Ir açylýar",
+      "Alyp gitmek",
+      "Her gün täze köke"
+    ],
     "menuHighlights": [
       {
         "name": "Cappuccino",
@@ -934,36 +1279,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/kemine-coffee/gallery-1.jpg",
-      "/images/restaurants/kemine-coffee/gallery-2.jpg",
-      "/images/restaurants/kemine-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+      "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
     ],
     "sustainabilityScore": 86,
-    "aiSummary": "Best early-bird coffee spot in Ashgabat; opens at 6:30 AM with fresh pastries and friendly service."
+    "aiSummary": "Aşgabadyň iň gowy ir ertirki kofe ýeri; 06:30-da açylýar, täze köke we mylaýym hyzmat."
   },
   {
     "id": "tigirli-coffee",
     "name": "Tigirli Coffee",
-    "description": "Stylish cafe offering a wide selection of hot and cold coffee drinks, signature teas, milkshakes, smoothies, and artisan desserts in a trendy atmosphere.",
-    "heroImage": "/images/restaurants/tigirli-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "Bakery"],
-    "tags": ["Trendy", "Smoothies", "Desserts"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Yssy we sowuk kofe içgileriniň giň saýlawyny, aýratyn çaýlary, süýtli kokteyilleri, smoothileri we senetçi desertlerini döwrebap gurşawda hödürleýän owadan kafe.",
+    "heroImage": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Çörek öýi"
+    ],
+    "tags": [
+      "Döwrebap",
+      "Smoothiler",
+      "Desertler"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.4,
     "reviewCount": 289,
     "location": {
       "address": "Bitarap Turkmenistan şaýoly 30",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.948, "lng": 58.381 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.948,
+        "lng": 58.381
+      }
     },
     "contact": {
       "phone": "+993 65 46 88 15",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 22:00" }],
-    "amenities": ["Wi-Fi", "Modern Interior", "Laptop-Friendly", "Takeaway"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Wi-Fi",
+      "Häzirki zaman bezeg",
+      "Noutbuk üçin amatly",
+      "Alyp gitmek"
+    ],
     "menuHighlights": [
       {
         "name": "Matcha Latte",
@@ -987,36 +1354,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/tigirli-coffee/gallery-1.jpg",
-      "/images/restaurants/tigirli-coffee/gallery-2.jpg",
-      "/images/restaurants/tigirli-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
+      "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80",
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
     ],
     "sustainabilityScore": 77,
-    "aiSummary": "Trendy cafe with wide beverage selection and artisan desserts; great for studying or catching up."
+    "aiSummary": "Giň içgi saýlawy we senetçi desertleri bolan döwrebap kafe; okuw ýa-da duşuşyk üçin ajaýyp."
   },
   {
     "id": "uno-coffee",
     "name": "Uno Coffee & Tea",
-    "description": "Specialty tea and coffee house known for classic and iced drinks, signature teas, lemonades, and Chinese tea varieties. Offers alternative milk options.",
-    "heroImage": "/images/restaurants/uno-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe"],
-    "tags": ["Tea Specialist", "Alternative Milk", "Relaxing"],
-    "dietary": ["Vegan Options", "Vegetarian Options"],
+    "description": "Nusgawy we buzly içgileri, aýratyn çaýlary, limonadlary we hytaý çaý görnüşlerini hödürleýän ýörite çaý we kofe öýi. Alternatiw süýt saýlawlaryny hödürleýär.",
+    "heroImage": "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe"
+    ],
+    "tags": [
+      "Çaý hünärmeni",
+      "Alternatiw süýt",
+      "Dynç aldyryjy"
+    ],
+    "dietary": [
+      "Wegan saýlawlar",
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.3,
     "reviewCount": 312,
     "location": {
       "address": "2060-njy köçe 5",
       "neighborhood": "Parahat-7",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.93, "lng": 58.41 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.93,
+        "lng": 58.41
+      }
     },
     "contact": {
       "phone": "+993 65 90 22 18",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 21:00" }],
-    "amenities": ["Tea Selection", "Alternative Milks", "Cozy Seating"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 21:00"
+      }
+    ],
+    "amenities": [
+      "Çaý saýlawy",
+      "Alternatiw süýtler",
+      "Ýyly oturgyçlar"
+    ],
     "menuHighlights": [
       {
         "name": "Chinese Oolong Tea",
@@ -1040,36 +1428,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/uno-coffee/gallery-1.jpg",
-      "/images/restaurants/uno-coffee/gallery-2.jpg",
-      "/images/restaurants/uno-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80",
+      "https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=800&q=80",
+      "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80"
     ],
     "sustainabilityScore": 84,
-    "aiSummary": "Tea-forward cafe with impressive variety including Chinese specialty teas; plant-milk options available."
+    "aiSummary": "Hytaý ýörite çaýlaryny hem öz içine alýan täsirli görnüşler bilen çaýa gönükdirilen kafe; ösümlik süýdi saýlawlary bar."
   },
   {
     "id": "berk-garden",
     "name": "Berk Garden Pub",
-    "description": "Spacious garden pub on Gorogly Street with an outdoor pool, barbecue zone, and relaxed atmosphere — a popular spot for evening gatherings and celebrations.",
-    "heroImage": "/images/restaurants/berk-garden/hero.jpg",
-    "cuisines": ["Grill", "International"],
-    "tags": ["Garden", "Pool", "BBQ Zone"],
-    "dietary": ["Halal"],
+    "description": "Görogly köçesindäki giň bag paby, açyk howuz, mangal zonasy we rahat gurşaw — agşamky ýygnanyşyklar we dabaralar üçin meşhur ýer.",
+    "heroImage": "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=800&q=80",
+    "cuisines": [
+      "Gril",
+      "Halkara"
+    ],
+    "tags": [
+      "Bag",
+      "Howuz",
+      "Mangal meýdançasy"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$",
     "rating": 4.3,
     "reviewCount": 234,
     "location": {
       "address": "Görogly köçesi",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.95, "lng": 58.354 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.95,
+        "lng": 58.354
+      }
     },
     "contact": {
       "phone": "+993 12 49 55 20",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "12:00 – 00:00" }],
-    "amenities": ["Outdoor Pool", "BBQ Grill", "Large Garden", "Live Sports"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "12:00 – 00:00"
+      }
+    ],
+    "amenities": [
+      "Açyk howuz",
+      "Mangal grili",
+      "Uly bag",
+      "Janly sport"
+    ],
     "menuHighlights": [
       {
         "name": "BBQ Ribs",
@@ -1093,41 +1503,59 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/berk-garden/gallery-1.jpg",
-      "/images/restaurants/berk-garden/gallery-2.jpg",
-      "/images/restaurants/berk-garden/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800&q=80",
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=800&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
     ],
     "sustainabilityScore": 63,
-    "aiSummary": "Casual garden pub with pool and BBQ; great for group gatherings and evening entertainment."
+    "aiSummary": "Howuz we mangal bilen ýönekeý bag paby; topar ýygnanyşyklary we agşamky güýmenje üçin ajaýyp."
   },
   {
     "id": "kopetdag-project",
     "name": "Kopetdag Project",
-    "description": "Contemporary restaurant on Magtymguly Avenue blending traditional Turkmen flavors with modern cooking techniques, featuring private yurt-type cabins, a charming garden area, and a diverse menu.",
-    "heroImage": "/images/restaurants/kopetdag-project/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "International"],
-    "tags": ["Contemporary", "Yurt Cabins", "Garden"],
-    "dietary": ["Halal", "Vegetarian Options"],
+    "description": "Magtymguly şaýolundaky adaty türkmen tagamlaryny häzirki zaman bişiriş usullary bilen birleşdirýän döwrebap restoran, hususy öý kabinalary, owadan bag meýdançasy we dürli menýu.",
+    "heroImage": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Halkara"
+    ],
+    "tags": [
+      "Häzirki zaman",
+      "Öý kabinalary",
+      "Bag"
+    ],
+    "dietary": [
+      "Halal",
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.5,
     "reviewCount": 340,
     "location": {
       "address": "Magtymguly şaýoly",
       "neighborhood": "Köpetdag",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.944, "lng": 58.375 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.944,
+        "lng": 58.375
+      }
     },
     "contact": {
       "phone": "+993 12 92 14 55",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "10:00 – 23:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "10:00 – 23:00"
+      }
+    ],
     "amenities": [
-      "Yurt Cabins",
-      "Garden Seating",
-      "Outdoor Terrace",
-      "Delivery",
-      "Takeaway"
+      "Öý kabinalary",
+      "Bag oturgyçlary",
+      "Açyk terrasa",
+      "Eltip bermek",
+      "Alyp gitmek"
     ],
     "menuHighlights": [
       {
@@ -1152,40 +1580,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/kopetdag-project/gallery-1.jpg",
-      "/images/restaurants/kopetdag-project/gallery-2.jpg",
-      "/images/restaurants/kopetdag-project/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1560053608-13721e0d69e8?w=800&q=80",
+      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 76,
-    "aiSummary": "Contemporary Turkmen dining with yurt cabins and garden seating; great blend of tradition and modernity."
+    "aiSummary": "Öý kabinalary we bag oturgyçlary bilen häzirki zaman türkmen nahary; däp we häzirki zamanyň ajaýyp garyndysy."
   },
   {
     "id": "altyn-paradise",
     "name": "Altyn Paradise Garden",
-    "description": "Enchanting garden restaurant with beautiful outdoor gazebos, live music, and water features. Serves traditional Turkmen dishes, steaks, and wood-fired pizza in a lush setting.",
-    "heroImage": "/images/restaurants/altyn-paradise/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Turkish", "Italian"],
-    "tags": ["Garden Paradise", "Live Music", "Gazebos"],
-    "dietary": ["Halal"],
+    "description": "Owadan açyk çardaklar, janly saz we suw bezegi bolan jadyly bag restorany. Adaty türkmen tagamlaryny, steýkleri we agaç ojakda bişirilen pitsa baý gurşawda hödürleýär.",
+    "heroImage": "https://images.unsplash.com/photo-1560053608-13721e0d69e8?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Türk",
+      "Italýan"
+    ],
+    "tags": [
+      "Bag jenneti",
+      "Janly saz",
+      "Çardaklar"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$",
     "rating": 4.4,
     "reviewCount": 275,
     "location": {
       "address": "Berzengi köçesi",
       "neighborhood": "Berzengi",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.92, "lng": 58.355 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.92,
+        "lng": 58.355
+      }
     },
     "contact": {
       "phone": "+993 12 48 33 90",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "11:00 – 00:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "11:00 – 00:00"
+      }
+    ],
     "amenities": [
-      "Garden Gazebos",
-      "Live Music",
-      "Water Features",
-      "Kids Play Area"
+      "Bag çardaklary",
+      "Janly saz",
+      "Suw bezegi",
+      "Çagalar oýun meýdançasy"
     ],
     "menuHighlights": [
       {
@@ -1210,40 +1656,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/altyn-paradise/gallery-1.jpg",
-      "/images/restaurants/altyn-paradise/gallery-2.jpg",
-      "/images/restaurants/altyn-paradise/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1560053608-13721e0d69e8?w=800&q=80",
+      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 73,
-    "aiSummary": "Enchanting garden oasis with gazebos and live music; perfect for outdoor dining and celebrations."
+    "aiSummary": "Çardaklar we janly saz bilen jadyly bag oazisi; açyk nahar we dabaralar üçin amatly."
   },
   {
     "id": "sazak",
     "name": "Sazak Restaurant",
-    "description": "Elegant restaurant skillfully blending Turkmen culinary traditions with modern tastes, offering grilled meats and seafood in a picturesque setting with décor paying homage to ancient Turkmen culture.",
-    "heroImage": "/images/restaurants/sazak/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Seafood", "Grill"],
-    "tags": ["Cultural Décor", "Grilled Meats", "Elegant"],
-    "dietary": ["Halal"],
+    "description": "Türkmen aşpezlik däplerini häzirki zaman tagamlary bilen ussatlyk bilen birleşdirýän kaşaň restoran, gadymy türkmen medeniýetine hormat goýýan bezeg bilen gowrulan etleri we deňiz önümlerini hödürleýär.",
+    "heroImage": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Deňiz önümleri",
+      "Gril"
+    ],
+    "tags": [
+      "Medeni bezeg",
+      "Gowrulan etler",
+      "Kaşaň"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$$$",
     "rating": 4.6,
     "reviewCount": 198,
     "location": {
       "address": "Çandybil şaýoly",
       "neighborhood": "Çandybil",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.931, "lng": 58.39 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.931,
+        "lng": 58.39
+      }
     },
     "contact": {
       "phone": "+993 12 39 45 70",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "12:00 – 23:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "12:00 – 23:00"
+      }
+    ],
     "amenities": [
-      "Traditional Décor",
-      "Private Rooms",
-      "Valet Parking",
-      "Wine List"
+      "Adaty bezeg",
+      "Hususy otaglar",
+      "Walet duralgasy",
+      "Şerap sanawy"
     ],
     "menuHighlights": [
       {
@@ -1268,36 +1732,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/sazak/gallery-1.jpg",
-      "/images/restaurants/sazak/gallery-2.jpg",
-      "/images/restaurants/sazak/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80",
+      "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80"
     ],
     "sustainabilityScore": 74,
-    "aiSummary": "Elegant blend of tradition and modernity with cultural décor; excellent grilled meats and Caspian seafood."
+    "aiSummary": "Medeni bezeg bilen däbiň we häzirki zamanyň kaşaň garyndysy; ajaýyp gowrulan etler we Hazar deňiz önümleri."
   },
   {
     "id": "ashgabat-kafesi",
     "name": "Aşgabat Kafesi",
-    "description": "Cozy café-style restaurant capturing the essence of Turkmen cuisine with timeless recipes, offering a casual and welcoming atmosphere for both locals and visitors.",
-    "heroImage": "/images/restaurants/ashgabat-kafesi/hero.jpg",
-    "cuisines": ["Turkmen Traditional", "Coffee & Cafe"],
-    "tags": ["Cozy", "Timeless Recipes", "Casual"],
-    "dietary": ["Halal"],
+    "description": "Hemişelik tagamlar bilen türkmen tagamlaryny ýyly gurşawda hödürleýän, ýerli ýaşaýjylar we myhmanlar üçin myhmansöýer kafe usulyndaky restoran.",
+    "heroImage": "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80",
+    "cuisines": [
+      "Türkmen milli",
+      "Kofe we kafe"
+    ],
+    "tags": [
+      "Ýyly",
+      "Hemişelik tagamlar",
+      "Adaty"
+    ],
+    "dietary": [
+      "Halal"
+    ],
     "priceTier": "$",
     "rating": 4.3,
     "reviewCount": 265,
     "location": {
       "address": "Magtymguly şaýoly 45",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.9495, "lng": 58.379 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.9495,
+        "lng": 58.379
+      }
     },
     "contact": {
       "phone": "+993 12 35 18 90",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 21:00" }],
-    "amenities": ["Casual Seating", "Takeaway", "Traditional Tea"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 21:00"
+      }
+    ],
+    "amenities": [
+      "Casual Seating",
+      "Alyp gitmek",
+      "Traditional Tea"
+    ],
     "menuHighlights": [
       {
         "name": "Turkmen Breakfast",
@@ -1321,36 +1806,58 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/ashgabat-kafesi/gallery-1.jpg",
-      "/images/restaurants/ashgabat-kafesi/gallery-2.jpg",
-      "/images/restaurants/ashgabat-kafesi/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
     ],
     "sustainabilityScore": 81,
-    "aiSummary": "Authentic casual Turkmen café with timeless recipes and affordable prices; a local favorite."
+    "aiSummary": "Hemişelik türkmen tagamlary bilen ýyly kafe; ertirlik we günortanlyk üçin ygtybarly ýer."
   },
   {
     "id": "coffeechi",
     "name": "Coffee'Chi",
-    "description": "Cozy café offering a wide variety of espresso drinks, cappuccinos, flat whites, raff coffee, hot chocolate, cold drinks, affogatos, frappuccinos, breakfast options, and artisan desserts.",
-    "heroImage": "/images/restaurants/coffeechi/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "Bakery"],
-    "tags": ["Espresso Variety", "Cozy", "Breakfast"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Hünärli baristalar tarapyndan taýýarlanýan ýörite kofe içgilerini we gündelik täze bişirilen kökeleri hödürleýän meşhur etrapça kofe dükany.",
+    "heroImage": "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Çörek öýi"
+    ],
+    "tags": [
+      "Espresso Variety",
+      "Ýyly",
+      "Ertirlik"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.4,
     "reviewCount": 320,
     "location": {
       "address": "Ankara köçesi 10",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.9465, "lng": 58.3835 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.9465,
+        "lng": 58.3835
+      }
     },
     "contact": {
       "phone": "+993 65 44 20 88",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "07:30 – 22:00" }],
-    "amenities": ["Wi-Fi", "Cozy Interior", "Breakfast Menu", "Takeaway"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "07:30 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Wi-Fi",
+      "Ýyly içki bezeg",
+      "Ertirlik menýusy",
+      "Alyp gitmek"
+    ],
     "menuHighlights": [
       {
         "name": "Raff Coffee",
@@ -1374,36 +1881,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/coffeechi/gallery-1.jpg",
-      "/images/restaurants/coffeechi/gallery-2.jpg",
-      "/images/restaurants/coffeechi/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80",
+      "https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=800&q=80",
+      "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80"
     ],
     "sustainabilityScore": 80,
-    "aiSummary": "Charming café with wide espresso variety and breakfast options; cozy spot for morning routines."
+    "aiSummary": "Hünärli baristalar bilen meşhur etrapça kofe dükany; täze köke we rahat gurşaw."
   },
   {
     "id": "bazetti",
     "name": "Bazetti Coffee",
-    "description": "Cozy coffee shop inside the Berkarar Shopping Center known for its home-like atmosphere, great selection of specialty drinks, generously sized cake slices, and relaxing ambiance.",
-    "heroImage": "/images/restaurants/bazetti/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "Bakery"],
-    "tags": ["Shopping Center", "Home-Like", "Large Portions"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Minimalist dizaýnly hem-de ýokary hilli kofe we desertlere ünsi jemleýän häzirki zaman kofe dükany. Okuw we iş üçin asuda gurşaw.",
+    "heroImage": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Çörek öýi"
+    ],
+    "tags": [
+      "Shopping Center",
+      "Home-Like",
+      "Large Portions"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.3,
     "reviewCount": 245,
     "location": {
       "address": "Atatürk köçesi 80, Berkarar Shopping Center",
       "neighborhood": "Berzengi",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.8941, "lng": 58.3697 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.8941,
+        "lng": 58.3697
+      }
     },
     "contact": {
       "phone": "+993 65 30 18 45",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "10:00 – 22:00" }],
-    "amenities": ["Shopping Center Location", "Wi-Fi", "Cozy Atmosphere"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "10:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Shopping Center Location",
+      "Wi-Fi",
+      "Cozy Atmosphere"
+    ],
     "menuHighlights": [
       {
         "name": "Bazetti Signature Latte",
@@ -1427,36 +1955,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/bazetti/gallery-1.jpg",
-      "/images/restaurants/bazetti/gallery-2.jpg",
-      "/images/restaurants/bazetti/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+      "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
     ],
     "sustainabilityScore": 72,
-    "aiSummary": "Cozy café in Berkarar mall with generous cake portions; perfect for a shopping break."
+    "aiSummary": "Ýokary hilli kofe we desertlere ünsi jemleýän minimalist kofe dükany; okuw we iş üçin amatly."
   },
   {
     "id": "melbourne-coffee",
     "name": "Melbourne Coffee",
-    "description": "Trendy specialty coffee shop inside the Berkarar Shopping Center inspired by Melbourne's famous café culture, offering artisan roasts and modern brewing methods.",
-    "heroImage": "/images/restaurants/melbourne-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe"],
-    "tags": ["Specialty Coffee", "Trendy", "Modern Brewing"],
-    "dietary": ["Vegetarian Options", "Vegan Options"],
+    "description": "Awstraliýa kofe medeniýetinden ylham alýan ýörite kofe dükany, el bilen taýýarlanýan içgileri we üýtgeşik menýusy bilen tanalýar.",
+    "heroImage": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe"
+    ],
+    "tags": [
+      "Ýörite kofe",
+      "Döwrebap",
+      "Modern Brewing"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar",
+      "Wegan saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.5,
     "reviewCount": 278,
     "location": {
       "address": "Berkarar Shopping Center, 2nd Floor",
       "neighborhood": "Berzengi",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.8945, "lng": 58.37 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.8945,
+        "lng": 58.37
+      }
     },
     "contact": {
       "phone": "+993 65 55 90 33",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "09:00 – 22:00" }],
-    "amenities": ["Specialty Roasts", "Modern Interior", "Pour-Over Bar"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "09:00 – 22:00"
+      }
+    ],
+    "amenities": [
+      "Specialty Roasts",
+      "Häzirki zaman bezeg",
+      "Pour-Over Bar"
+    ],
     "menuHighlights": [
       {
         "name": "V60 Pour-Over",
@@ -1480,39 +2029,56 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/melbourne-coffee/gallery-1.jpg",
-      "/images/restaurants/melbourne-coffee/gallery-2.jpg",
-      "/images/restaurants/melbourne-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
+      "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80",
+      "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80"
     ],
     "sustainabilityScore": 85,
-    "aiSummary": "Melbourne-inspired specialty coffee with pour-over bar; best third-wave coffee experience in Ashgabat."
+    "aiSummary": "Awstraliýa ylhamly ýörite kofe dükany; el bilen taýýarlanýan üýtgeşik içgiler."
   },
   {
     "id": "aziza-leyla",
     "name": "Bakery Aziza & Leyla",
-    "description": "Popular bakery and dessert shop offering a wide range of fresh pastries, mini cream-filled baskets, fruit pies, baklava, cakes, cupcakes, marshmallows, waffles, and quality coffee drinks.",
-    "heroImage": "/images/restaurants/aziza-leyla/hero.jpg",
-    "cuisines": ["Bakery", "Coffee & Cafe"],
-    "tags": ["Dessert Paradise", "Fresh Pastries", "Cupcakes"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Ýewropa usulyndaky kökeleri we elde ýasalan çörekleri hödürleýän çörek öýi we kafe. Branç we agşam çaýy üçin hem amatly.",
+    "heroImage": "https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=800&q=80",
+    "cuisines": [
+      "Çörek öýi",
+      "Kofe we kafe"
+    ],
+    "tags": [
+      "Dessert Paradise",
+      "Täze köke",
+      "Cupcakes"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.6,
     "reviewCount": 410,
     "location": {
       "address": "Oguzhan köçesi 20",
       "neighborhood": "Parahat",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.9355, "lng": 58.394 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.9355,
+        "lng": 58.394
+      }
     },
     "contact": {
       "phone": "+993 65 88 22 70",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 21:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 21:00"
+      }
+    ],
     "amenities": [
       "Fresh Daily Baking",
       "Custom Orders",
-      "Takeaway",
+      "Alyp gitmek",
       "Coffee Bar"
     ],
     "menuHighlights": [
@@ -1538,40 +2104,57 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/aziza-leyla/gallery-1.jpg",
-      "/images/restaurants/aziza-leyla/gallery-2.jpg",
-      "/images/restaurants/aziza-leyla/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=800&q=80",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+      "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=800&q=80"
     ],
     "sustainabilityScore": 82,
-    "aiSummary": "Dessert paradise with incredible pastry variety; must-visit for baklava and cream basket lovers."
+    "aiSummary": "Ýewropa usulyndaky köke we çörek hünärmenligi; branç we agşam çaýy üçin amatly."
   },
   {
     "id": "on-cafe",
     "name": "On Café",
-    "description": "Stylish and modern café perfect for morning coffee or a leisurely lunch, with a curated menu of specialty coffee, light meals, and a photogenic interior popular on social media.",
-    "heroImage": "/images/restaurants/on-cafe/hero.jpg",
-    "cuisines": ["Coffee & Cafe", "European"],
-    "tags": ["Stylish", "Instagram-Worthy", "Brunch"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Ýewropa usulyndaky tagamlary we aýratyn içgileri kaşaň bezegde hödürleýän döwrebap kafe. Ýörite çaý dabaralary we asuda burçlary bar.",
+    "heroImage": "https://images.unsplash.com/photo-1525610553eeb-9e4b24e6b164?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe",
+      "Ýewropa"
+    ],
+    "tags": [
+      "Stylish",
+      "Instagram üçin owadan",
+      "Branç"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$$",
     "rating": 4.4,
     "reviewCount": 195,
     "location": {
       "address": "Alyshir Navoi köçesi 15",
       "neighborhood": "Central",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.9475, "lng": 58.378 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.9475,
+        "lng": 58.378
+      }
     },
     "contact": {
       "phone": "+993 65 77 10 55",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "08:00 – 22:00" }],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "08:00 – 22:00"
+      }
+    ],
     "amenities": [
       "Photogenic Interior",
       "Wi-Fi",
       "Brunch Menu",
-      "Laptop-Friendly"
+      "Noutbuk üçin amatly"
     ],
     "menuHighlights": [
       {
@@ -1596,36 +2179,56 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/on-cafe/gallery-1.jpg",
-      "/images/restaurants/on-cafe/gallery-2.jpg",
-      "/images/restaurants/on-cafe/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=800&q=80",
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
+      "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80"
     ],
     "sustainabilityScore": 78,
-    "aiSummary": "Stylish brunch destination with photogenic interior; popular with young professionals and creatives."
+    "aiSummary": "Kaşaň bezegde ýewropa usulyndaky nahar; ýörite çaý dabaralary we asuda gurşaw."
   },
   {
     "id": "a-coffee",
     "name": "A-Coffee",
-    "description": "Budget-friendly neighborhood coffee spot known for quick service, consistent quality espresso drinks, and a loyal local following. A reliable everyday coffee stop.",
-    "heroImage": "/images/restaurants/a-coffee/hero.jpg",
-    "cuisines": ["Coffee & Cafe"],
-    "tags": ["Quick Service", "Budget-Friendly", "Everyday"],
-    "dietary": ["Vegetarian Options"],
+    "description": "Ýönekeý we rahat gurşawda ýokary hilli kofe we içgileri çalt hyzmat edýän kofe dükany. Ir ertirden giç agşama çenli açyk.",
+    "heroImage": "https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=800&q=80",
+    "cuisines": [
+      "Kofe we kafe"
+    ],
+    "tags": [
+      "Çalt hyzmat",
+      "Arzan",
+      "Everyday"
+    ],
+    "dietary": [
+      "Wegetarian saýlawlar"
+    ],
     "priceTier": "$",
     "rating": 4.2,
     "reviewCount": 380,
     "location": {
       "address": "Andalib köçesi 30",
       "neighborhood": "Howdan",
-      "city": "Ashgabat",
-      "coordinates": { "lat": 37.952, "lng": 58.365 }
+      "city": "Aşgabat",
+      "coordinates": {
+        "lat": 37.952,
+        "lng": 58.365
+      }
     },
     "contact": {
       "phone": "+993 65 12 88 44",
       "website": null
     },
-    "schedule": [{ "days": "Daily", "hours": "07:00 – 21:00" }],
-    "amenities": ["Quick Service", "Takeaway", "Budget Prices"],
+    "schedule": [
+      {
+        "days": "Her gün",
+        "hours": "07:00 – 21:00"
+      }
+    ],
+    "amenities": [
+      "Quick Service",
+      "Alyp gitmek",
+      "Budget Prices"
+    ],
     "menuHighlights": [
       {
         "name": "Americano",
@@ -1649,11 +2252,11 @@
       }
     ],
     "gallery": [
-      "/images/restaurants/a-coffee/gallery-1.jpg",
-      "/images/restaurants/a-coffee/gallery-2.jpg",
-      "/images/restaurants/a-coffee/gallery-3.jpg"
+      "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800&q=80",
+      "https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=800&q=80",
+      "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80"
     ],
     "sustainabilityScore": 79,
-    "aiSummary": "No-frills everyday coffee stop with the best prices in town; loyal local following."
+    "aiSummary": "Çalt we ýokary hilli kofe hyzmaty; ir ertirden giç agşama çenli açyk, rahat gurşaw."
   }
 ]

@@ -48,7 +48,7 @@ export default function AdminDashboardPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-        <div className="text-white">Loading...</div>
+        <div className="text-white">Ýüklenýär...</div>
       </div>
     );
   }
@@ -59,15 +59,15 @@ export default function AdminDashboardPage() {
       <header className="bg-slate-800 border-b border-slate-700 px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-white">🍽️ Admin Dashboard</h1>
-            <p className="text-slate-400 text-sm">Ashgabat Restaurant Finder</p>
+            <h1 className="text-2xl font-bold text-white">🍽️ Admin paneli</h1>
+            <p className="text-slate-400 text-sm">Aşgabat Restoran Gözlegçi</p>
           </div>
           <div className="flex gap-4">
             <Link to="/" className="px-4 py-2 text-slate-300 hover:text-white">
-              View Site
+              Sahypany gör
             </Link>
             <button onClick={handleLogout} className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">
-              Logout
+              Çykyş
             </button>
           </div>
         </div>
@@ -76,32 +76,32 @@ export default function AdminDashboardPage() {
       <div className="max-w-7xl mx-auto p-6">
         {/* Navigation */}
         <nav className="flex gap-4 mb-8">
-          <Link to="/admin" className="px-4 py-2 bg-orange-500 text-white rounded-lg">Dashboard</Link>
-          <Link to="/admin/restaurants" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Restaurants</Link>
-          <Link to="/admin/categories" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Categories</Link>
+          <Link to="/admin" className="px-4 py-2 bg-orange-500 text-white rounded-lg">Dolandyryş paneli</Link>
+          <Link to="/admin/restaurants" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Restoranlar</Link>
+          <Link to="/admin/categories" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Kategoriýalar</Link>
         </nav>
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
             <div className="text-3xl font-bold text-white">{stats?.totalRestaurants}</div>
-            <div className="text-slate-400 text-sm">Total Restaurants</div>
+            <div className="text-slate-400 text-sm">Jemi restoranlar</div>
           </div>
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
             <div className="text-3xl font-bold text-green-400">{stats?.activeRestaurants}</div>
-            <div className="text-slate-400 text-sm">Active</div>
+            <div className="text-slate-400 text-sm">Işjeň</div>
           </div>
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
             <div className="text-3xl font-bold text-orange-400">{stats?.totalCategories}</div>
-            <div className="text-slate-400 text-sm">Categories</div>
+            <div className="text-slate-400 text-sm">Kategoriýalar</div>
           </div>
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
             <div className="text-3xl font-bold text-blue-400">{stats?.totalViews}</div>
-            <div className="text-slate-400 text-sm">Total Views</div>
+            <div className="text-slate-400 text-sm">Jemi görülmeler</div>
           </div>
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
             <div className="text-3xl font-bold text-yellow-400">⭐ {stats?.avgRating}</div>
-            <div className="text-slate-400 text-sm">Avg Rating</div>
+            <div className="text-slate-400 text-sm">Ortaça reýting</div>
           </div>
         </div>
 
@@ -109,7 +109,7 @@ export default function AdminDashboardPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* By Neighborhood */}
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-            <h3 className="text-lg font-semibold text-white mb-4">📍 By Neighborhood</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">📍 Etrapça boýunça</h3>
             <div className="space-y-3">
               {stats?.byNeighborhood.map(n => (
                 <div key={n.neighborhood} className="flex items-center gap-3">
@@ -128,7 +128,7 @@ export default function AdminDashboardPage() {
 
           {/* By Price Tier */}
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-            <h3 className="text-lg font-semibold text-white mb-4">💰 By Price Tier</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">💰 Baha derejesi boýunça</h3>
             <div className="space-y-3">
               {stats?.byPriceTier.map(p => (
                 <div key={p.price_tier} className="flex items-center gap-3">
@@ -150,7 +150,7 @@ export default function AdminDashboardPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Top Rated */}
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-            <h3 className="text-lg font-semibold text-white mb-4">⭐ Top Rated</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">⭐ Iň ýokary reýtingli</h3>
             <div className="space-y-3">
               {stats?.topRated.map((r, i) => (
                 <div key={r.id} className="flex items-center gap-3 p-3 bg-slate-900 rounded-lg">
@@ -159,7 +159,7 @@ export default function AdminDashboardPage() {
                   </span>
                   <div className="flex-1">
                     <div className="text-white font-medium">{r.name}</div>
-                    <div className="text-slate-400 text-sm">{r.review_count} reviews</div>
+                    <div className="text-slate-400 text-sm">{r.review_count} syn</div>
                   </div>
                   <span className="text-yellow-400 font-semibold">⭐ {r.rating}</span>
                 </div>
@@ -169,7 +169,7 @@ export default function AdminDashboardPage() {
 
           {/* Recently Added */}
           <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-            <h3 className="text-lg font-semibold text-white mb-4">🕐 Recently Added</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">🕐 Ýaňy goşulan</h3>
             <div className="space-y-3">
               {stats?.recentlyAdded.map(r => (
                 <div key={r.id} className="flex items-center gap-3 p-3 bg-slate-900 rounded-lg">

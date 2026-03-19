@@ -4,7 +4,7 @@ interface LoadingStateProps {
   label?: string;
 }
 
-export default function LoadingState({ label = "Loading..." }: LoadingStateProps) {
+export default function LoadingState({ label = "Ýüklenýär..." }: LoadingStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 gap-6">
       <div className="relative w-16 h-16">

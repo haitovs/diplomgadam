@@ -21,8 +21,8 @@ export default function MapPanel({ restaurants }: MapPanelProps) {
   return (
     <section className="glass-panel p-0 overflow-hidden">
       <div className="p-5 border-b border-slate-100">
-        <h2 className="text-lg font-semibold text-slate-900">📍 Restaurant Map</h2>
-        <p className="text-sm text-slate-500">Explore restaurants across Ashgabat, Turkmenistan.</p>
+        <h2 className="text-lg font-semibold text-slate-900">📍 Restoran kartasy</h2>
+        <p className="text-sm text-slate-500">Aşgabat, Türkmenistan boýunça restoranlary gözden geçiriň.</p>
       </div>
       <MapContainer center={center} zoom={13} style={{ height: 360, width: "100%" }}>
         <TileLayer

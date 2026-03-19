@@ -1,14 +1,14 @@
 [
-  { "cuisine": "Modern Georgian", "demandScore": 92 },
-  { "cuisine": "Plant-based", "demandScore": 78 },
-  { "cuisine": "Pan-Asian", "demandScore": 83 },
-  { "cuisine": "Seafood", "demandScore": 74 },
-  { "cuisine": "Middle Eastern", "demandScore": 69 },
-  { "cuisine": "Cafe", "demandScore": 65 },
-  { "cuisine": "Experimental", "demandScore": 58 },
-  { "cuisine": "Smokehouse BBQ", "demandScore": 76 },
-  { "cuisine": "Ramen & Noodles", "demandScore": 71 },
-  { "cuisine": "Raw Bar", "demandScore": 68 },
-  { "cuisine": "Brunch & Bakery", "demandScore": 73 },
-  { "cuisine": "Cowork Cafes", "demandScore": 62 }
+  { "cuisine": "Häzirki zaman Gruzin", "demandScore": 92 },
+  { "cuisine": "Ösümlik esasly", "demandScore": 78 },
+  { "cuisine": "Pan-Aziýa", "demandScore": 83 },
+  { "cuisine": "Deňiz önümleri", "demandScore": 74 },
+  { "cuisine": "Ýakyn Gündogar", "demandScore": 69 },
+  { "cuisine": "Kafe", "demandScore": 65 },
+  { "cuisine": "Tejribe", "demandScore": 58 },
+  { "cuisine": "Tüsseli mangal", "demandScore": 76 },
+  { "cuisine": "Ramen we erişte", "demandScore": 71 },
+  { "cuisine": "Çig bar", "demandScore": 68 },
+  { "cuisine": "Ertirlik we çörek öýi", "demandScore": 73 },
+  { "cuisine": "Iş kafesi", "demandScore": 62 }
 ]

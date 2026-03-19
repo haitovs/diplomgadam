@@ -186,7 +186,7 @@ router.post('/restaurants', (req: Request, res: Response) => {
       data.review_count || 0,
       data.address || '',
       data.neighborhood || '',
-      data.city || 'Ashgabat',
+      data.city || 'Aşgabat',
       data.lat || 37.95,
       data.lng || 58.38,
       data.phone || '',
