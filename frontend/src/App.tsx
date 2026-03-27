@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import InsightsPage from "./pages/InsightsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import RestaurantDetailPage from "./pages/RestaurantDetailPage";
+import MapPage from "./pages/MapPage";
 
 // Admin pages
 import AdminDashboardPage from "./pages/AdminDashboardPage";
@@ -21,6 +22,7 @@ export default function App() {
       <Route element={<ShellLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
+        <Route path="/map" element={<MapPage />} />
         <Route path="/insights" element={<InsightsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/concierge" element={<AiConciergePage />} />

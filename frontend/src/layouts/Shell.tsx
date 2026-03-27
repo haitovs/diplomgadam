@@ -1,5 +1,5 @@
 import { Outlet, NavLink, useLocation } from "react-router-dom";
-import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home, Globe } from "lucide-react";
+import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home, Globe, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
@@ -30,6 +30,7 @@ export default function ShellLayout() {
 
   const navItems = [
     { label: t("nav_discover"), path: "/", icon: Home },
+    { label: t("nav_map"), path: "/map", icon: MapPin },
     { label: t("nav_insights"), path: "/insights", icon: BarChart3 },
     { label: t("nav_favorites"), path: "/favorites", icon: Heart },
     { label: t("nav_ai_concierge"), path: "/concierge", icon: MessageSquare },

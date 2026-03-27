@@ -2,6 +2,7 @@ export const translations = {
   tk: {
     // Navigation
     nav_discover: "Gözle",
+    nav_map: "Karta",
     nav_insights: "Analitika",
     nav_favorites: "Halananlar",
     nav_ai_concierge: "AI Maslahatçy",
@@ -136,9 +137,24 @@ export const translations = {
     not_found_text: "Siz soran sahypa ýok.",
     not_found_link: "Baş sahypa gaýdyň",
 
-    // Map
+    // Map page
     map_title: "Restoran kartasy",
     map_desc: "Aşgabat, Türkmenistan boýunça restoranlary gözden geçiriň.",
+    map_all_cuisines: "Ähli tagamlar",
+    map_all_prices: "Ähli bahalar",
+    map_search: "Restoran gözle...",
+    map_restaurants_found: "restoran tapyldy",
+    map_open_now: "Häzir açyk",
+    map_directions: "Ugur",
+    map_view_profile: "Profili gör",
+    map_rating: "Reýting",
+    map_neighborhood: "Etrapça",
+    map_cluster_info: "restoran bu sebitde",
+    map_reset_view: "Karany täzele",
+    map_satellite: "Hemra",
+    map_street: "Köçe",
+    map_nearby: "Golaýdaky restoranlar",
+    map_distance: "Aralyk",
 
     // Admin
     admin_login_title: "Admin paneli",
@@ -221,6 +237,7 @@ export const translations = {
   en: {
     // Navigation
     nav_discover: "Discover",
+    nav_map: "Map",
     nav_insights: "Insights",
     nav_favorites: "Favorites",
     nav_ai_concierge: "AI Concierge",
@@ -355,9 +372,24 @@ export const translations = {
     not_found_text: "The page you requested does not exist.",
     not_found_link: "Return home",
 
-    // Map
+    // Map page
     map_title: "Restaurant Map",
     map_desc: "Explore restaurants across Ashgabat, Turkmenistan.",
+    map_all_cuisines: "All cuisines",
+    map_all_prices: "All prices",
+    map_search: "Search restaurants...",
+    map_restaurants_found: "restaurants found",
+    map_open_now: "Open now",
+    map_directions: "Directions",
+    map_view_profile: "View profile",
+    map_rating: "Rating",
+    map_neighborhood: "Neighborhood",
+    map_cluster_info: "restaurants in this area",
+    map_reset_view: "Reset view",
+    map_satellite: "Satellite",
+    map_street: "Street",
+    map_nearby: "Nearby restaurants",
+    map_distance: "Distance",
 
     // Admin
     admin_login_title: "Admin Panel",

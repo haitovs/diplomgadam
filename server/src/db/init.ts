@@ -152,6 +152,25 @@ if (restCount.count === 0) {
   console.log('✅ Restaurants seeded');
 }
 
+// Seed menu items if empty
+const menuCount = db.prepare('SELECT COUNT(*) as count FROM menu_items').get() as { count: number };
+if (menuCount.count === 0) {
+  const menuPath = join(__dirname, '../../../data/menu-items.json');
+  if (fs.existsSync(menuPath)) {
+    console.log('📝 Seeding menu items...');
+    const menuJson = fs.readFileSync(menuPath, 'utf-8');
+    const menuItems = JSON.parse(menuJson);
+    const insertMenu = db.prepare(`
+      INSERT INTO menu_items (restaurant_id, name, description, price, currency, category, is_available)
+      VALUES (?, ?, ?, ?, 'TMT', ?, 1)
+    `);
+    menuItems.forEach((m: any) => {
+      insertMenu.run(m.restaurant_id, m.name, m.description, m.price, m.category);
+    });
+    console.log(`✅ ${menuItems.length} menu items seeded`);
+  }
+}
+
 console.log('🚀 Database initialized successfully');
 
 export default db;

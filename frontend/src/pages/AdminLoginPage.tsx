@@ -77,7 +77,7 @@ export default function AdminLoginPage() {
           </form>
 
           <p className="mt-6 text-center text-slate-500 text-sm">
-            Deslapky: <code className="text-orange-400">admin</code> / <code className="text-orange-400">admin123</code>
+            Deslapky: <code className="text-orange-400">admin</code> / <code className="text-orange-400">admin</code>
           </p>
         </div>
       </div>

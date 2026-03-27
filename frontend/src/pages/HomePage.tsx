@@ -1,7 +1,6 @@
 import HeroBanner from "../components/HeroBanner";
 import FiltersPanel from "../components/FiltersPanel";
 import RestaurantCard from "../components/RestaurantCard";
-import MapPanel from "../components/MapPanel";
 import LoadingState from "../components/LoadingState";
 import ErrorState from "../components/ErrorState";
 import { useRestaurants } from "../hooks/useRestaurants";
@@ -20,20 +19,16 @@ export default function HomePage() {
       {isError && <ErrorState message={t("home_error")} action={refetch} />}
 
       {!isLoading && !isError && (
-        <>
-          <section className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-            {filtered.map((restaurant) => (
-              <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-            ))}
-            {!filtered.length && (
-              <div className="glass-panel p-10 text-center text-slate-500">
-                {t("home_empty")}
-              </div>
-            )}
-          </section>
-
-          <MapPanel restaurants={filtered} />
-        </>
+        <section className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {filtered.map((restaurant) => (
+            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+          ))}
+          {!filtered.length && (
+            <div className="glass-panel p-10 text-center text-slate-500">
+              {t("home_empty")}
+            </div>
+          )}
+        </section>
       )}
     </div>
   );

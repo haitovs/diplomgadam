@@ -1,0 +1,2522 @@
+[
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Ribeye Steýk",
+    "description": "Premium guradylan ribeye, ýerli otlar bilen",
+    "price": 280,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Filet Minýon",
+    "description": "Iň ýumşak et kesimi, ýag sousy bilen",
+    "price": 320,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "T-Bone Steýk",
+    "description": "Klassik T-bone, gril gök önümler bilen",
+    "price": 260,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Steýk Tatarça",
+    "description": "Çig et, ýumurtga sarysy, kapersler",
+    "price": 180,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Sezar salat",
+    "description": "Romaine salat, parmezan, kruton",
+    "price": 85,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Gril krewetkalar",
+    "description": "Sarymsak ýagynda gowrulan",
+    "price": 150,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Kartof pýure",
+    "description": "Kremli, ýag bilen",
+    "price": 45,
+    "category": "Goşmaça"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Gril gök önümler",
+    "description": "Möwsümleýin gök önümler",
+    "price": 55,
+    "category": "Goşmaça"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Tiramisu",
+    "description": "Italýan klassik deserti",
+    "price": 75,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Şokoladly fondan",
+    "description": "Ýyly şokoladly kek",
+    "price": 85,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Espresso",
+    "description": "Goşa espresso",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "alpet-steakhouse",
+    "name": "Limonad",
+    "description": "Täze sykylan limon",
+    "price": 30,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "hezzet",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Guzy palawý",
+    "description": "Klassik guzy eti bilen palaw",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Towuk palawý",
+    "description": "Towuk eti bilen palaw",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Balyk palawý",
+    "description": "Balyk bilen palaw",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Noýba palawý",
+    "description": "Wegetarian, noýba bilen",
+    "price": 45,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Baýramçylyk palawý",
+    "description": "Guradylan miweler bilen",
+    "price": 80,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Şurpa",
+    "description": "Adaty etli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Somsa",
+    "description": "Hamyrda bişirilen et",
+    "price": 30,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Turşi",
+    "description": "Duzlanan gök önümler",
+    "price": 20,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Tamdyr çörek",
+    "description": "Täze bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Gök çaý",
+    "description": "Demlenýän gök çaý",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Kompot",
+    "description": "Miweli içgi",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "joshgun-palow-house",
+    "name": "Halwa",
+    "description": "Adaty halwa",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "chatma-lounge",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Lahmajun",
+    "description": "Türk pitsasy, etli",
+    "price": 45,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Iskender kebab",
+    "description": "Döner, pomidor sousy, gatyk",
+    "price": 85,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Adana kebab",
+    "description": "Ýiti gowrulan et",
+    "price": 90,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Pide",
+    "description": "Türk çörek gaýygy, peýnirli",
+    "price": 60,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Margarita pitsa",
+    "description": "Pomidor, mosarella, rýhan",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Karbonar pasta",
+    "description": "Kremli, bekon, parmezan",
+    "price": 75,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Mercimek çorba",
+    "description": "Merjimek çorbasy",
+    "price": 35,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Çoban salat",
+    "description": "Pomidor, hyýar, sogan",
+    "price": 30,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Baklawa",
+    "description": "Bal bilen, pisse hozly",
+    "price": 40,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Künefe",
+    "description": "Peýnirli, şerbetli desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Türk çaýy",
+    "description": "Adaty demlenýän çaý",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "central-park",
+    "name": "Aýran",
+    "description": "Duzly gatyk içgisi",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Foie gras",
+    "description": "Ördek bagry, briosh çörek",
+    "price": 160,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Bekre işbili",
+    "description": "Hazar işbili, blini",
+    "price": 250,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Somon filesi",
+    "description": "Gril somon, asparagus",
+    "price": 180,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Guzy pirzolasy",
+    "description": "Ot sousy bilen",
+    "price": 200,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Ördek döşi",
+    "description": "Apelsin glazury bilen",
+    "price": 190,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Risotto",
+    "description": "Kömelekli risotto, parmezan",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Gazpaço",
+    "description": "Sowuk pomidor çorbasy",
+    "price": 55,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Sezar salat",
+    "description": "Premium, anşous sousy",
+    "price": 70,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Krem brýule",
+    "description": "Wanilli, karamel gabygy",
+    "price": 65,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Şokolad sufle",
+    "description": "Ýyly şokolad buludy",
+    "price": 75,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Espresso",
+    "description": "Goşa espresso",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "miras",
+    "name": "Miweli çaý",
+    "description": "Aýratyn garyndy",
+    "price": 20,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Foie gras",
+    "description": "Ördek bagry, briosh çörek",
+    "price": 160,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Bekre işbili",
+    "description": "Hazar işbili, blini",
+    "price": 250,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Somon filesi",
+    "description": "Gril somon, asparagus",
+    "price": 180,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Guzy pirzolasy",
+    "description": "Ot sousy bilen",
+    "price": 200,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Ördek döşi",
+    "description": "Apelsin glazury bilen",
+    "price": 190,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Risotto",
+    "description": "Kömelekli risotto, parmezan",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Gazpaço",
+    "description": "Sowuk pomidor çorbasy",
+    "price": 55,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Sezar salat",
+    "description": "Premium, anşous sousy",
+    "price": 70,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Krem brýule",
+    "description": "Wanilli, karamel gabygy",
+    "price": 65,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Şokolad sufle",
+    "description": "Ýyly şokolad buludy",
+    "price": 75,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Espresso",
+    "description": "Goşa espresso",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "nusay",
+    "name": "Miweli çaý",
+    "description": "Aýratyn garyndy",
+    "price": 20,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "arzu",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "altyn-cyray",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Gowrulan bekre",
+    "description": "Hazar bekre balygy, ýerli otlar",
+    "price": 180,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Krewetkaly makaron",
+    "description": "Sarymsak sousy bilen",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Balyk kebab",
+    "description": "Gril edilen balyk, limon",
+    "price": 110,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Balyk çorbasy",
+    "description": "Gündelik täze balyk bilen",
+    "price": 60,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Karidess güweç",
+    "description": "Krewetkaly güweç",
+    "price": 140,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Balyk filesi",
+    "description": "Gowrulan, tartar sousy",
+    "price": 130,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Kalmar halkalary",
+    "description": "Çuňňur gowrulan",
+    "price": 65,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Deňiz önümli salat",
+    "description": "Garyndy deňiz önümleri",
+    "price": 75,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Midýe dolma",
+    "description": "Tüwüli midýe",
+    "price": 55,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Baklažan salat",
+    "description": "Gowrulan baklažan",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Limonad",
+    "description": "Täze limon şerbeti",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "balykchy",
+    "name": "Mango smoothi",
+    "description": "Täze mango içgisi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Foie gras",
+    "description": "Ördek bagry, briosh çörek",
+    "price": 160,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Bekre işbili",
+    "description": "Hazar işbili, blini",
+    "price": 250,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Somon filesi",
+    "description": "Gril somon, asparagus",
+    "price": 180,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Guzy pirzolasy",
+    "description": "Ot sousy bilen",
+    "price": 200,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Ördek döşi",
+    "description": "Apelsin glazury bilen",
+    "price": 190,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Risotto",
+    "description": "Kömelekli risotto, parmezan",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Gazpaço",
+    "description": "Sowuk pomidor çorbasy",
+    "price": 55,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Sezar salat",
+    "description": "Premium, anşous sousy",
+    "price": 70,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Krem brýule",
+    "description": "Wanilli, karamel gabygy",
+    "price": 65,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Şokolad sufle",
+    "description": "Ýyly şokolad buludy",
+    "price": 75,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Espresso",
+    "description": "Goşa espresso",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "sirin",
+    "name": "Miweli çaý",
+    "description": "Aýratyn garyndy",
+    "price": 20,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "dag-lezzeti",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "sha-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "uzum-cafe",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "frappe-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Kruassan",
+    "description": "Ýagly, gatly hamyr",
+    "price": 20,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Şokoladly kruassan",
+    "description": "Şokolad bilen",
+    "price": 25,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Bagel",
+    "description": "Klassik, krem peýnir",
+    "price": 30,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Banan çörek",
+    "description": "Hozy bilen",
+    "price": 35,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Tort dilimi",
+    "description": "Günüň torty",
+    "price": 40,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Ekler",
+    "description": "Kremli, şokoladly",
+    "price": 30,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Makaron",
+    "description": "Fransuz makaronlary",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Amerikan kuki",
+    "description": "Şokoladly kuki",
+    "price": 15,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Kapuçino",
+    "description": "Köpükli süýt bilen",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Ýyly şokolad",
+    "description": "Kremli kakao",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "talhan-bakery",
+    "name": "Limonad",
+    "description": "Täze miweli",
+    "price": 20,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "kemine-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "tigirli-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "uno-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "BBQ gapyrga",
+    "description": "Ýuwaş bişirilen, sously",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Gril towuk",
+    "description": "Bütin towuk, ýerli otlar",
+    "price": 90,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Burger",
+    "description": "Klassik sygyr burger",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Şaşlyk",
+    "description": "Guzy eti şaşlygy",
+    "price": 80,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Lýula kebab",
+    "description": "Etden ýasalan, gril",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Gril gök önüm",
+    "description": "Möwsümleýin gök önümler",
+    "price": 40,
+    "category": "Goşmaça"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Kartof fri",
+    "description": "Duzly, kruspi",
+    "price": 30,
+    "category": "Goşmaça"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Kola salat",
+    "description": "Kelem salat",
+    "price": 25,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Gyzdyrylan peýnir",
+    "description": "Sülgüni peýnir, gril",
+    "price": 45,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Buzgaýmak",
+    "description": "3 tagam",
+    "price": 35,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Limonad",
+    "description": "1 litrlik, miweli",
+    "price": 30,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "berk-garden",
+    "name": "Çaý",
+    "description": "Gök ýa-da gara",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "kopetdag-project",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "BBQ gapyrga",
+    "description": "Ýuwaş bişirilen, sously",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Gril towuk",
+    "description": "Bütin towuk, ýerli otlar",
+    "price": 90,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Burger",
+    "description": "Klassik sygyr burger",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Şaşlyk",
+    "description": "Guzy eti şaşlygy",
+    "price": 80,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Lýula kebab",
+    "description": "Etden ýasalan, gril",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Gril gök önüm",
+    "description": "Möwsümleýin gök önümler",
+    "price": 40,
+    "category": "Goşmaça"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Kartof fri",
+    "description": "Duzly, kruspi",
+    "price": 30,
+    "category": "Goşmaça"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Kola salat",
+    "description": "Kelem salat",
+    "price": 25,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Gyzdyrylan peýnir",
+    "description": "Sülgüni peýnir, gril",
+    "price": 45,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Buzgaýmak",
+    "description": "3 tagam",
+    "price": 35,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Limonad",
+    "description": "1 litrlik, miweli",
+    "price": 30,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "altyn-paradise",
+    "name": "Çaý",
+    "description": "Gök ýa-da gara",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Gowrulan bekre",
+    "description": "Hazar bekre balygy, ýerli otlar",
+    "price": 180,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Krewetkaly makaron",
+    "description": "Sarymsak sousy bilen",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Balyk kebab",
+    "description": "Gril edilen balyk, limon",
+    "price": 110,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Balyk çorbasy",
+    "description": "Gündelik täze balyk bilen",
+    "price": 60,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Karidess güweç",
+    "description": "Krewetkaly güweç",
+    "price": 140,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Balyk filesi",
+    "description": "Gowrulan, tartar sousy",
+    "price": 130,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Kalmar halkalary",
+    "description": "Çuňňur gowrulan",
+    "price": 65,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Deňiz önümli salat",
+    "description": "Garyndy deňiz önümleri",
+    "price": 75,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Midýe dolma",
+    "description": "Tüwüli midýe",
+    "price": 55,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Baklažan salat",
+    "description": "Gowrulan baklažan",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Limonad",
+    "description": "Täze limon şerbeti",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "sazak",
+    "name": "Mango smoothi",
+    "description": "Täze mango içgisi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Palaw",
+    "description": "Adaty guzy palawý, nohut bilen",
+    "price": 65,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Işlekli",
+    "description": "Ýukajyk hamyrda et, soganly",
+    "price": 55,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Manty",
+    "description": "Bugda bişirilen, etli hamyr",
+    "price": 50,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Dograma",
+    "description": "Adaty türkmen çorbasy",
+    "price": 45,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Şurpa",
+    "description": "Etli gök önümli çorba",
+    "price": 40,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Gutap",
+    "description": "Ýukajyk hamyrda et ýa-da gök önüm",
+    "price": 35,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Çekdirme",
+    "description": "Gowrulan et, pomidor sousy",
+    "price": 70,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Tamdyr çörek",
+    "description": "Adaty tamdyrda bişirilen çörek",
+    "price": 10,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Gatyk",
+    "description": "Ýerli gatyk",
+    "price": 15,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Gök çaý",
+    "description": "Adaty türkmen gök çaýy",
+    "price": 10,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Pişme",
+    "description": "Çuňňur ýagda bişirilen hamyr",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "ashgabat-kafesi",
+    "name": "Gawun",
+    "description": "Türkmen gawuny",
+    "price": 20,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "coffeechi",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "bazetti",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "melbourne-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Kruassan",
+    "description": "Ýagly, gatly hamyr",
+    "price": 20,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Şokoladly kruassan",
+    "description": "Şokolad bilen",
+    "price": 25,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Bagel",
+    "description": "Klassik, krem peýnir",
+    "price": 30,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Banan çörek",
+    "description": "Hozy bilen",
+    "price": 35,
+    "category": "Çörek"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Tort dilimi",
+    "description": "Günüň torty",
+    "price": 40,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Ekler",
+    "description": "Kremli, şokoladly",
+    "price": 30,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Makaron",
+    "description": "Fransuz makaronlary",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Amerikan kuki",
+    "description": "Şokoladly kuki",
+    "price": 15,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Kapuçino",
+    "description": "Köpükli süýt bilen",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Ýyly şokolad",
+    "description": "Kremli kakao",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "aziza-leyla",
+    "name": "Limonad",
+    "description": "Täze miweli",
+    "price": 20,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Foie gras",
+    "description": "Ördek bagry, briosh çörek",
+    "price": 160,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Bekre işbili",
+    "description": "Hazar işbili, blini",
+    "price": 250,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Somon filesi",
+    "description": "Gril somon, asparagus",
+    "price": 180,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Guzy pirzolasy",
+    "description": "Ot sousy bilen",
+    "price": 200,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Ördek döşi",
+    "description": "Apelsin glazury bilen",
+    "price": 190,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Risotto",
+    "description": "Kömelekli risotto, parmezan",
+    "price": 120,
+    "category": "Esasy"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Gazpaço",
+    "description": "Sowuk pomidor çorbasy",
+    "price": 55,
+    "category": "Çorba"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Sezar salat",
+    "description": "Premium, anşous sousy",
+    "price": 70,
+    "category": "Başlangyç"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Krem brýule",
+    "description": "Wanilli, karamel gabygy",
+    "price": 65,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Şokolad sufle",
+    "description": "Ýyly şokolad buludy",
+    "price": 75,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Espresso",
+    "description": "Goşa espresso",
+    "price": 25,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "on-cafe",
+    "name": "Miweli çaý",
+    "description": "Aýratyn garyndy",
+    "price": 20,
+    "category": "Içgi"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Amerikano",
+    "description": "Klassik gara kofe",
+    "price": 20,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Kapuçino",
+    "description": "Espresso, köpükli süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Latte",
+    "description": "Espresso, süýt",
+    "price": 25,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Moçça",
+    "description": "Şokoladly kofe",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Buzly kofe",
+    "description": "Sowuk kofe, buz",
+    "price": 30,
+    "category": "Kofe"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Gök çaý",
+    "description": "Adaty gök çaý",
+    "price": 10,
+    "category": "Çaý"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Çizkek",
+    "description": "Nusgawy çizkek",
+    "price": 45,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Kruassan",
+    "description": "Ýagly, täze bişirilen",
+    "price": 25,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Tiramisu",
+    "description": "Kofe tagamly desert",
+    "price": 50,
+    "category": "Desert"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Sendwiç",
+    "description": "Towuk, salat, çörek",
+    "price": 40,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Sezar salat",
+    "description": "Towukly Sezar salat",
+    "price": 55,
+    "category": "Nahar"
+  },
+  {
+    "restaurant_id": "a-coffee",
+    "name": "Smoothi",
+    "description": "Miweli smoothi",
+    "price": 35,
+    "category": "Içgi"
+  }
+]
