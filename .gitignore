@@ -5,3 +5,5 @@ server/node_modules
 .env
 .DS_Store
 *.log
+data/uploads/*
+!data/uploads/.gitkeep

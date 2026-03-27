@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import ImageUpload from '../components/ImageUpload';
 
 interface MenuItem {
     id: number;
@@ -256,12 +257,10 @@ function MenuForm({ restaurantId, item, onClose, onSaved }: { restaurantId: stri
                         </div>
                     </div>
                     <div>
-                        <label className="block text-slate-300 mb-1 text-sm">Surat URL</label>
-                        <input
-                            type="text"
+                        <ImageUpload
+                            label="Surat"
                             value={form.image_url}
-                            onChange={e => setForm({ ...form, image_url: e.target.value })}
-                            className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                            onChange={(url) => setForm({ ...form, image_url: url })}
                         />
                     </div>
                     <div className="flex items-center gap-2">

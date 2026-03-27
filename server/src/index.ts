@@ -8,6 +8,7 @@ import adminRouter from "./routes/admin.js";
 import aiRouter from "./routes/ai.js";
 import insightsRouter from "./routes/insights.js";
 import restaurantsRouter from "./routes/restaurants.js";
+import uploadRouter from "./routes/upload.js";
 
 // Initialize database (imports will configure it)
 import "./db/init.js";
@@ -27,6 +28,12 @@ app.use(
   express.static(path.resolve(__dirname, "../../data/images")),
 );
 
+// Serve uploaded images
+app.use(
+  "/uploads",
+  express.static(path.resolve(__dirname, "../../data/uploads")),
+);
+
 app.get("/api/health", (_req, res) => {
   res.json({
     name: "Ashgabat Restaurant Finder API",
@@ -40,6 +47,7 @@ app.use("/api/restaurants", restaurantsRouter);
 app.use("/api/insights", insightsRouter);
 app.use("/api/ai", aiRouter);
 app.use("/api/admin", adminRouter);
+app.use("/api/upload", uploadRouter);
 
 // Serve static frontend in production
 if (process.env.NODE_ENV === "production") {

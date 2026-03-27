@@ -49,6 +49,7 @@ COPY --from=frontend-builder /app/frontend/dist ./public
 
 # Copy data (restaurant images + seed JSON)
 COPY data/ ./data/
+RUN mkdir -p ./data/uploads
 
 ENV NODE_ENV=production
 ENV PORT=4080
