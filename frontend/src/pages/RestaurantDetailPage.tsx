@@ -81,7 +81,16 @@ export default function RestaurantDetailPage() {
                 <Phone className="w-4 h-4 text-brand-500" />
                 <p className="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 font-semibold">{t("detail_contact")}</p>
               </div>
-              <p className="text-sm text-slate-700 dark:text-slate-300">{data.contact.phone}</p>
+              {data.contact.phone ? (
+                <a
+                  href={`tel:${data.contact.phone.replace(/\s+/g, "")}`}
+                  className="text-sm text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                >
+                  {data.contact.phone}
+                </a>
+              ) : (
+                <p className="text-sm text-slate-400">—</p>
+              )}
               {data.contact.website && (
                 <a href={data.contact.website} className="inline-flex items-center gap-1 text-sm text-brand-600 dark:text-brand-400 hover:underline mt-1" target="_blank" rel="noreferrer">
                   <Globe className="w-3.5 h-3.5" />
@@ -141,8 +150,20 @@ export default function RestaurantDetailPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 {items.map((item) => (
                   <div key={item.id} className="flex gap-4 p-4 border border-slate-100 dark:border-slate-700/50 rounded-xl bg-white/50 dark:bg-slate-800/40 hover:bg-white/80 dark:hover:bg-slate-800/60 transition-colors">
-                    {item.image_url && (
-                      <img src={item.image_url} alt={`${item.name}`} className="w-20 h-20 object-cover rounded-lg flex-shrink-0" loading="lazy" />
+                    {item.image_url ? (
+                      <img
+                        src={item.image_url}
+                        alt={`${item.name}`}
+                        className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
+                        loading="lazy"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).style.display = "none";
+                        }}
+                      />
+                    ) : (
+                      <div className="w-20 h-20 rounded-lg flex-shrink-0 bg-gradient-to-br from-amber-100 to-rose-100 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center text-2xl">
+                        🍽️
+                      </div>
                     )}
                     <div className="flex-1">
                       <div className="flex justify-between items-start mb-1">

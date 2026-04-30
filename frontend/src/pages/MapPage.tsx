@@ -2,7 +2,7 @@ import { useState, useMemo, useRef, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup, useMap, CircleMarker } from "react-leaflet";
-import { Icon } from "leaflet";
+import { Icon, latLngBounds } from "leaflet";
 import { fetchRestaurants } from "../api/restaurants";
 import { useLanguage } from "../i18n/LanguageContext";
 import type { Restaurant } from "../types/restaurant";
@@ -33,7 +33,7 @@ function FlyToMarker({ position }: { position: [number, number] | null }) {
   const map = useMap();
   useEffect(() => {
     if (position) {
-      (map as any).flyTo(position, 16, { duration: 0.8 });
+      map.flyTo(position, 16, { duration: 0.8 });
     }
   }, [position, map]);
   return null;
@@ -44,7 +44,7 @@ function ResetViewButton() {
   const { t } = useLanguage();
   return (
     <button
-      onClick={() => (map as any).flyTo(ASHGABAT_CENTER, 13, { duration: 0.8 })}
+      onClick={() => map.flyTo(ASHGABAT_CENTER, 13, { duration: 0.8 })}
       className="absolute top-3 right-3 z-[1000] flex items-center gap-1.5 px-3 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-600"
     >
       <RotateCcw className="w-3.5 h-3.5" />
@@ -57,13 +57,10 @@ function FitBounds({ restaurants }: { restaurants: Restaurant[] }) {
   const map = useMap();
   useEffect(() => {
     if (restaurants.length > 1) {
-      const L = (window as any).L;
-      if (L) {
-        const bounds = L.latLngBounds(
-          restaurants.map((r: Restaurant) => [r.location.coordinates.lat, r.location.coordinates.lng])
-        );
-        (map as any).fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
-      }
+      const bounds = latLngBounds(
+        restaurants.map((r) => [r.location.coordinates.lat, r.location.coordinates.lng])
+      );
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
     }
   }, [restaurants, map]);
   return null;
@@ -310,7 +307,13 @@ export default function MapPage() {
 
           {/* User location */}
           {userLocation && (
-            <CircleMarker center={userLocation} pathOptions={{ color: "#3b82f6", fillColor: "#3b82f6", fillOpacity: 0.3 }} />
+            <CircleMarker
+              center={userLocation}
+              radius={8}
+              pathOptions={{ color: "#3b82f6", fillColor: "#3b82f6", fillOpacity: 0.55, weight: 2 }}
+            >
+              <Popup>📍 You are here</Popup>
+            </CircleMarker>
           )}
 
           {/* Restaurant markers */}

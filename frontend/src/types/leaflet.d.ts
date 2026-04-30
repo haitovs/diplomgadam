@@ -23,8 +23,16 @@ declare module "leaflet" {
     [key: string]: unknown;
   }
 
+  export interface CircleMarkerOptions extends PathOptions {
+    radius?: number;
+  }
+
+  export class Circle<T = any> {}
+  export class CircleMarker<T = any> {}
+
   export interface FitBoundsOptions {
     padding?: [number, number];
+    maxZoom?: number;
   }
 
   export type LatLngBoundsExpression = [LatLngTuple, LatLngTuple] | LatLngLiteral[];
@@ -47,8 +55,25 @@ declare module "leaflet" {
     constructor(options?: T);
   }
 
+  export class LatLngBounds {
+    constructor(
+      southWest?: LatLngExpression,
+      northEast?: LatLngExpression
+    );
+  }
+
+  export function latLngBounds(
+    points: LatLngExpression[]
+  ): LatLngBounds;
+
   export class Map {
     constructor(element?: HTMLElement | string, options?: MapOptions);
+    flyTo(
+      latlng: LatLngExpression,
+      zoom?: number,
+      options?: { duration?: number; [key: string]: unknown }
+    ): this;
+    fitBounds(bounds: LatLngBounds, options?: FitBoundsOptions): this;
   }
 
   export class Layer {}

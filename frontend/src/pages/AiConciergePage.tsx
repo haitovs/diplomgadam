@@ -221,15 +221,21 @@ export default function AiConciergePage() {
                   <p className="text-sm text-slate-600 dark:text-slate-300">{suggestion.recommendation}</p>
                   <p className="text-xs text-slate-400 dark:text-slate-500 italic">{suggestion.reasoning}</p>
                   <div className="flex flex-wrap gap-2">
-                    {suggestion.restaurants.map((rid) => (
-                      <Link
-                        key={rid}
-                        to={`/restaurants/${rid}`}
-                        className="px-2 py-1 rounded-full bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300 text-xs font-semibold hover:bg-brand-100 dark:hover:bg-brand-500/20 transition-colors"
-                      >
-                        #{rid}
-                      </Link>
-                    ))}
+                    {suggestion.restaurants.map((rid) => {
+                      const r = restaurantsQuery.data?.find((x) => x.id === rid);
+                      return (
+                        <Link
+                          key={rid}
+                          to={`/restaurants/${rid}`}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300 text-xs font-semibold hover:bg-brand-100 dark:hover:bg-brand-500/20 transition-colors"
+                        >
+                          {r?.heroImage && (
+                            <img src={r.heroImage} alt="" className="w-4 h-4 rounded-full object-cover" />
+                          )}
+                          {r?.name ?? rid}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </motion.div>
               ))}

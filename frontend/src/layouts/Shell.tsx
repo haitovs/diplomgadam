@@ -59,7 +59,7 @@ export default function ShellLayout() {
   const toggleLang = () => setLang(lang === "tk" ? "en" : "tk");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
       {/* Header */}
       <header className="border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl sticky top-0 z-30">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">

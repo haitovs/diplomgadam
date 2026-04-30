@@ -84,17 +84,17 @@ export default function AdminRestaurantsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors">
       {/* Header */}
-      <header className="bg-slate-800 border-b border-slate-700 px-6 py-4">
+      <header className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-white">🍽️ Restoranlary dolandyr</h1>
-            <p className="text-slate-400 text-sm">Restoran sanawyny goşuň, redaktirläň we dolandyryň</p>
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-white">🍽️ Restoranlary dolandyr</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-sm">Restoran sanawyny goşuň, redaktirläň we dolandyryň</p>
           </div>
           <div className="flex gap-4">
-            <Link to="/" className="px-4 py-2 text-slate-300 hover:text-white">Sahypany gör</Link>
-            <button onClick={handleLogout} className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">
+            <Link to="/" className="px-4 py-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Sahypany gör</Link>
+            <button onClick={handleLogout} className="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
               Çykyş
             </button>
           </div>
@@ -104,9 +104,9 @@ export default function AdminRestaurantsPage() {
       <div className="max-w-7xl mx-auto p-6">
         {/* Navigation */}
         <nav className="flex gap-4 mb-6">
-          <Link to="/admin" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Dolandyryş paneli</Link>
-          <Link to="/admin/restaurants" className="px-4 py-2 bg-orange-500 text-white rounded-lg">Restoranlar</Link>
-          <Link to="/admin/categories" className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600">Kategoriýalar</Link>
+          <Link to="/admin" className="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Dolandyryş paneli</Link>
+          <Link to="/admin/restaurants" className="px-4 py-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white rounded-lg shadow-md shadow-brand-500/30">Restoranlar</Link>
+          <Link to="/admin/categories" className="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Kategoriýalar</Link>
         </nav>
 
         {/* Actions Bar */}
@@ -116,12 +116,12 @@ export default function AdminRestaurantsPage() {
             placeholder="Restoranlary gözläň..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="flex-1 min-w-[200px] px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-orange-500"
+            className="flex-1 min-w-[200px] px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
           />
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none"
+            className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
           >
             <option value="all">Ähli ýagdaý</option>
             <option value="active">Işjeň</option>
@@ -129,57 +129,60 @@ export default function AdminRestaurantsPage() {
           </select>
           <button
             onClick={() => { setEditingId(null); setShowForm(true); }}
-            className="px-6 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90"
+            className="px-6 py-2 bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold rounded-lg hover:opacity-90"
           >
             + Restoran goş
           </button>
         </div>
 
         {/* Table */}
-        <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
           <table className="w-full">
-            <thead className="bg-slate-900">
+            <thead className="bg-slate-50 dark:bg-slate-900">
               <tr>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Restoran</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Etrapça</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Baha</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Reýting</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Ýagdaý</th>
-                <th className="px-4 py-3 text-left text-slate-400 text-sm font-medium">Hereketler</th>
+                <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Restoran</th>
+                <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Etrapça</th>
+                <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Baha</th>
+                <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Reýting</th>
+                <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Ýagdaý</th>
+                <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Hereketler</th>
               </tr>
             </thead>
             <tbody>
               {loading ? (
                 <tr>
-                  <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Ýüklenýär...</td>
+                  <td colSpan={6} className="px-4 py-8 text-center text-slate-500 dark:text-slate-400">Ýüklenýär...</td>
                 </tr>
               ) : restaurants.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-4 py-8 text-center text-slate-400">Restoran tapylmady</td>
+                  <td colSpan={6} className="px-4 py-8 text-center text-slate-500 dark:text-slate-400">Restoran tapylmady</td>
                 </tr>
               ) : (
                 restaurants.map(r => (
-                  <tr key={r.id} className="border-t border-slate-700 hover:bg-slate-700/30">
+                  <tr key={r.id} className="border-t border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-3">
                         {r.hero_image && (
                           <img src={r.hero_image} alt="" className="w-12 h-8 object-cover rounded" />
                         )}
                         <div>
-                          <div className="text-white font-medium">{r.name}</div>
-                          <div className="text-slate-400 text-sm truncate max-w-[200px]">{r.cuisines?.join(', ')}</div>
+                          <div className="text-slate-900 dark:text-white font-medium">{r.name}</div>
+                          <div className="text-slate-500 dark:text-slate-400 text-sm truncate max-w-[200px]">{r.cuisines?.join(', ')}</div>
                         </div>
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-slate-300">{r.neighborhood}</td>
-                    <td className="px-4 py-3 text-slate-300">{r.price_tier}</td>
-                    <td className="px-4 py-3 text-yellow-400">⭐ {r.rating}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-slate-300">{r.neighborhood}</td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-slate-300">{r.price_tier}</td>
+                    <td className="px-4 py-3 text-amber-500 dark:text-amber-400 font-semibold">⭐ {r.rating}</td>
                     <td className="px-4 py-3">
                       <select
                         value={r.status}
                         onChange={(e) => handleStatusChange(r.id, e.target.value)}
-                        className={`px-2 py-1 rounded text-sm ${r.status === 'active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                          }`}
+                        className={`px-2 py-1 rounded text-sm border ${
+                          r.status === 'active'
+                            ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/30'
+                            : 'bg-rose-50 dark:bg-rose-500/20 text-rose-700 dark:text-rose-400 border-rose-200 dark:border-rose-500/30'
+                        }`}
                       >
                         <option value="active">Işjeň</option>
                         <option value="inactive">Işjeň däl</option>
@@ -189,19 +192,19 @@ export default function AdminRestaurantsPage() {
                       <div className="flex gap-2">
                         <Link
                           to={`/admin/restaurants/${r.id}/menu`}
-                          className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded hover:bg-orange-500/30 text-sm flex items-center"
+                          className="px-3 py-1 bg-brand-500/15 text-brand-600 dark:text-brand-400 rounded hover:bg-brand-500/25 text-sm flex items-center transition-colors"
                         >
                           Menýu
                         </Link>
                         <button
                           onClick={() => { setEditingId(r.id); setShowForm(true); }}
-                          className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded hover:bg-blue-500/30 text-sm"
+                          className="px-3 py-1 bg-sky-100 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 rounded hover:bg-sky-200 dark:hover:bg-sky-500/30 transition-colors text-sm"
                         >
                           Redaktirle
                         </button>
                         <button
                           onClick={() => handleDelete(r.id)}
-                          className="px-3 py-1 bg-red-500/20 text-red-400 rounded hover:bg-red-500/30 text-sm"
+                          className="px-3 py-1 bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 rounded hover:bg-rose-200 dark:hover:bg-rose-500/30 transition-colors text-sm"
                         >
                           Poz
                         </button>
@@ -304,28 +307,28 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
 
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
-      <div className="bg-slate-800 rounded-2xl border border-slate-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-        <div className="p-6 border-b border-slate-700">
-          <h2 className="text-xl font-bold text-white">{id ? 'Restorany redaktirle' : 'Restoran goş'}</h2>
+      <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">{id ? 'Restorany redaktirle' : 'Restoran goş'}</h2>
         </div>
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
-              <label className="block text-slate-300 mb-1 text-sm">Ady *</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Ady *</label>
               <input
                 type="text"
                 value={form.name}
                 onChange={e => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
                 required
               />
             </div>
             <div className="col-span-2">
-              <label className="block text-slate-300 mb-1 text-sm">Düşündiriş</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Düşündiriş</label>
               <textarea
                 value={form.description}
                 onChange={e => setForm({ ...form, description: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
                 rows={3}
               />
             </div>
@@ -337,49 +340,49 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Etrapça</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Etrapça</label>
               <input
                 type="text"
                 value={form.neighborhood}
                 onChange={e => setForm({ ...form, neighborhood: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               />
             </div>
             <div className="col-span-2">
-              <label className="block text-slate-300 mb-1 text-sm">Salgy</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Salgy</label>
               <input
                 type="text"
                 value={form.address}
                 onChange={e => setForm({ ...form, address: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Tagamlar (üteş bilen bölünen)</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Tagamlar (üteş bilen bölünen)</label>
               <input
                 type="text"
                 value={form.cuisines}
                 onChange={e => setForm({ ...form, cuisines: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
                 placeholder="Turkmen, International..."
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Bellikler (üteş bilen bölünen)</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Bellikler (üteş bilen bölünen)</label>
               <input
                 type="text"
                 value={form.tags}
                 onChange={e => setForm({ ...form, tags: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
                 placeholder="Family, Fine Dining..."
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Baha derejesi</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Baha derejesi</label>
               <select
                 value={form.price_tier}
                 onChange={e => setForm({ ...form, price_tier: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               >
                 <option value="$">$ (Arzan)</option>
                 <option value="$$">$$ (Orta)</option>
@@ -387,21 +390,21 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
               </select>
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Telefon</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Telefon</label>
               <input
                 type="text"
                 value={form.phone}
                 onChange={e => setForm({ ...form, phone: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
                 placeholder="+993 12 XX XX XX"
               />
             </div>
             <div>
-              <label className="block text-slate-300 mb-1 text-sm">Ýagdaý</label>
+              <label className="block text-slate-700 dark:text-slate-300 mb-1 text-sm font-medium">Ýagdaý</label>
               <select
                 value={form.status}
                 onChange={e => setForm({ ...form, status: e.target.value })}
-                className="w-full px-4 py-2 bg-slate-900 border border-slate-600 rounded-lg text-white"
+                className="w-full px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-brand-500"
               >
                 <option value="active">Işjeň</option>
                 <option value="inactive">Işjeň däl</option>
@@ -412,14 +415,14 @@ function RestaurantForm({ id, onClose, onSaved }: { id: string | null; onClose: 
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600"
+              className="flex-1 py-3 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
             >
               Ýatyr
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-lg hover:opacity-90 disabled:opacity-50"
+              className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold rounded-lg hover:opacity-90 disabled:opacity-50"
             >
               {loading ? 'Saklanýar...' : 'Restorany sakla'}
             </button>

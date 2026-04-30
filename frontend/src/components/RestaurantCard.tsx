@@ -24,8 +24,16 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
         <img
           src={restaurant.heroImage}
           alt={`Photo of ${restaurant.name}`}
-          className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-110 bg-gradient-to-br from-amber-100 to-rose-100 dark:from-slate-700 dark:to-slate-800"
           loading="lazy"
+          onError={(e) => {
+            const img = e.currentTarget as HTMLImageElement;
+            img.src =
+              "data:image/svg+xml;utf8," +
+              encodeURIComponent(
+                `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 176'><rect width='320' height='176' fill='%23fef3c7'/><text x='50%' y='50%' font-size='64' text-anchor='middle' dominant-baseline='central'>🍽️</text></svg>`
+              );
+          }}
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

@@ -125,9 +125,9 @@ export default function InsightsPage() {
             {t("insights_heatmap_desc")}
           </p>
         </div>
-        <div className="w-full h-72">
+        <div className="w-full h-80">
           <ResponsiveContainer>
-            <BarChart data={cuisineDemand}>
+            <BarChart data={cuisineDemand} margin={{ left: 0, right: 10, top: 10, bottom: 60 }}>
               <defs>
                 <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#35b9ff" stopOpacity={0.9} />
@@ -135,7 +135,15 @@ export default function InsightsPage() {
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(148,163,184,0.15)" />
-              <XAxis dataKey="cuisine" stroke={chartTextColor} tick={{ fontSize: 11 }} />
+              <XAxis
+                dataKey="cuisine"
+                stroke={chartTextColor}
+                tick={{ fontSize: 10, fill: chartTextColor }}
+                interval={0}
+                angle={-30}
+                textAnchor="end"
+                height={70}
+              />
               <YAxis stroke={chartTextColor} tick={{ fontSize: 11 }} />
               <Tooltip
                 cursor={{ fill: "rgba(148,163,184,0.1)" }}
