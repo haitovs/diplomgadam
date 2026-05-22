@@ -5,7 +5,7 @@
     "description": "Premium guradylan ribeye, ýerli otlar bilen",
     "price": 280,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -13,7 +13,7 @@
     "description": "Iň ýumşak et kesimi, ýag sousy bilen",
     "price": 320,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -21,7 +21,7 @@
     "description": "Klassik T-bone, gril gök önümler bilen",
     "price": 260,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -29,7 +29,7 @@
     "description": "Çig et, ýumurtga sarysy, kapersler",
     "price": 180,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -37,7 +37,7 @@
     "description": "Romaine salat, parmezan, kruton",
     "price": 85,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -45,7 +45,7 @@
     "description": "Sarymsak ýagynda gowrulan",
     "price": 150,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1625944525200-4d4f1d29c9c1?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -53,7 +53,7 @@
     "description": "Kremli, ýag bilen",
     "price": 45,
     "category": "Goşmaça",
-    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -61,7 +61,7 @@
     "description": "Möwsümleýin gök önümler",
     "price": 55,
     "category": "Goşmaça",
-    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -69,7 +69,7 @@
     "description": "Italýan klassik deserti",
     "price": 75,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -77,7 +77,7 @@
     "description": "Ýyly şokoladly kek",
     "price": 85,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -85,7 +85,7 @@
     "description": "Goşa espresso",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "alpet-steakhouse",
@@ -93,7 +93,7 @@
     "description": "Täze sykylan limon",
     "price": 30,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -101,7 +101,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -109,7 +109,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626844131082-256783844137?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -117,7 +117,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626777553635-5f0f1d4ae2c4?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -125,7 +125,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -133,7 +133,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -141,7 +141,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -149,7 +149,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -157,7 +157,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1597314213421-fd2c5b87b0a4?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -165,7 +165,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -173,7 +173,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -181,7 +181,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "hezzet",
@@ -189,7 +189,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -197,7 +197,7 @@
     "description": "Klassik guzy eti bilen palaw",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -205,7 +205,7 @@
     "description": "Towuk eti bilen palaw",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1547928576-b822bcced286?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -213,7 +213,7 @@
     "description": "Balyk bilen palaw",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -221,7 +221,7 @@
     "description": "Wegetarian, noýba bilen",
     "price": 45,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -229,7 +229,7 @@
     "description": "Guradylan miweler bilen",
     "price": 80,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -237,7 +237,7 @@
     "description": "Adaty etli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -245,7 +245,7 @@
     "description": "Hamyrda bişirilen et",
     "price": 30,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -253,7 +253,7 @@
     "description": "Duzlanan gök önümler",
     "price": 20,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -261,7 +261,7 @@
     "description": "Täze bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -269,7 +269,7 @@
     "description": "Demlenýän gök çaý",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1597318236837-46f99b3a5dfd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -277,7 +277,7 @@
     "description": "Miweli içgi",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "joshgun-palow-house",
@@ -285,7 +285,7 @@
     "description": "Adaty halwa",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1505253213348-cd54c92b37ef?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -293,7 +293,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -301,7 +301,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626777553635-5f0f1d4ae2c4?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -309,7 +309,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1614545006005-e3b2fa5d4f50?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -317,7 +317,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -325,7 +325,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -333,7 +333,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -341,7 +341,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -349,7 +349,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1567593810070-7a3d471af022?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -357,7 +357,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1571212515416-fef01fc43637?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -365,7 +365,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -373,7 +373,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "chatma-lounge",
@@ -381,7 +381,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -389,7 +389,7 @@
     "description": "Türk pitsasy, etli",
     "price": 45,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -397,7 +397,7 @@
     "description": "Döner, pomidor sousy, gatyk",
     "price": 85,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -405,7 +405,7 @@
     "description": "Ýiti gowrulan et",
     "price": 90,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -413,7 +413,7 @@
     "description": "Türk çörek gaýygy, peýnirli",
     "price": 60,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -421,7 +421,7 @@
     "description": "Pomidor, mosarella, rýhan",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -429,7 +429,7 @@
     "description": "Kremli, bekon, parmezan",
     "price": 75,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -437,7 +437,7 @@
     "description": "Merjimek çorbasy",
     "price": 35,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -445,7 +445,7 @@
     "description": "Pomidor, hyýar, sogan",
     "price": 30,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -453,7 +453,7 @@
     "description": "Bal bilen, pisse hozly",
     "price": 40,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1598110750624-207050c4f28c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1598110750624-207050c4f28c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -461,7 +461,7 @@
     "description": "Peýnirli, şerbetli desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -469,7 +469,7 @@
     "description": "Adaty demlenýän çaý",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "central-park",
@@ -477,7 +477,7 @@
     "description": "Duzly gatyk içgisi",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -485,7 +485,7 @@
     "description": "Ördek bagry, briosh çörek",
     "price": 160,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -493,7 +493,7 @@
     "description": "Hazar işbili, blini",
     "price": 250,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -501,7 +501,7 @@
     "description": "Gril somon, asparagus",
     "price": 180,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -509,7 +509,7 @@
     "description": "Ot sousy bilen",
     "price": 200,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -517,7 +517,7 @@
     "description": "Apelsin glazury bilen",
     "price": 190,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -525,7 +525,7 @@
     "description": "Kömelekli risotto, parmezan",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -533,7 +533,7 @@
     "description": "Sowuk pomidor çorbasy",
     "price": 55,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606756790138-261d2b21cd75?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -541,7 +541,7 @@
     "description": "Premium, anşous sousy",
     "price": 70,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -549,7 +549,7 @@
     "description": "Wanilli, karamel gabygy",
     "price": 65,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -557,7 +557,7 @@
     "description": "Ýyly şokolad buludy",
     "price": 75,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -565,7 +565,7 @@
     "description": "Goşa espresso",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "miras",
@@ -573,7 +573,7 @@
     "description": "Aýratyn garyndy",
     "price": 20,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546630392-7adbbed9c5e1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -581,7 +581,7 @@
     "description": "Ördek bagry, briosh çörek",
     "price": 160,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -589,7 +589,7 @@
     "description": "Hazar işbili, blini",
     "price": 250,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -597,7 +597,7 @@
     "description": "Gril somon, asparagus",
     "price": 180,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -605,7 +605,7 @@
     "description": "Ot sousy bilen",
     "price": 200,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -613,7 +613,7 @@
     "description": "Apelsin glazury bilen",
     "price": 190,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -621,7 +621,7 @@
     "description": "Kömelekli risotto, parmezan",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -629,7 +629,7 @@
     "description": "Sowuk pomidor çorbasy",
     "price": 55,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -637,7 +637,7 @@
     "description": "Premium, anşous sousy",
     "price": 70,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -645,7 +645,7 @@
     "description": "Wanilli, karamel gabygy",
     "price": 65,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -653,7 +653,7 @@
     "description": "Ýyly şokolad buludy",
     "price": 75,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -661,7 +661,7 @@
     "description": "Goşa espresso",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "nusay",
@@ -669,7 +669,7 @@
     "description": "Aýratyn garyndy",
     "price": 20,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -677,7 +677,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -685,7 +685,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -693,7 +693,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -701,7 +701,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -709,7 +709,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -717,7 +717,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -725,7 +725,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574484184081-afea8a62f9d6?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -733,7 +733,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -741,7 +741,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1571212515416-fef01fc43637?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -749,7 +749,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -757,7 +757,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "arzu",
@@ -765,7 +765,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -773,7 +773,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -781,7 +781,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -789,7 +789,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -797,7 +797,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -805,7 +805,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -813,7 +813,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -821,7 +821,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -829,7 +829,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -837,7 +837,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -845,7 +845,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -853,7 +853,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-cyray",
@@ -861,7 +861,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546630392-7adbbed9c5e1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -869,7 +869,7 @@
     "description": "Hazar bekre balygy, ýerli otlar",
     "price": 180,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -877,7 +877,7 @@
     "description": "Sarymsak sousy bilen",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -885,7 +885,7 @@
     "description": "Gril edilen balyk, limon",
     "price": 110,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1633237308525-cd587cf71926?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -893,7 +893,7 @@
     "description": "Gündelik täze balyk bilen",
     "price": 60,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1535140728325-a4d3707eee94?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -901,7 +901,7 @@
     "description": "Krewetkaly güweç",
     "price": 140,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -909,7 +909,7 @@
     "description": "Gowrulan, tartar sousy",
     "price": 130,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1580959375944-abd7e991f971?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -917,7 +917,7 @@
     "description": "Çuňňur gowrulan",
     "price": 65,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1625944525200-4d4f1d29c9c1?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1611599538835-b52a8c2af7fe?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -925,7 +925,7 @@
     "description": "Garyndy deňiz önümleri",
     "price": 75,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -933,7 +933,7 @@
     "description": "Tüwüli midýe",
     "price": 55,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -941,7 +941,7 @@
     "description": "Gowrulan baklažan",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -949,7 +949,7 @@
     "description": "Täze limon şerbeti",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "balykchy",
@@ -957,7 +957,7 @@
     "description": "Täze mango içgisi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -965,7 +965,7 @@
     "description": "Ördek bagry, briosh çörek",
     "price": 160,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -973,7 +973,7 @@
     "description": "Hazar işbili, blini",
     "price": 250,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -981,7 +981,7 @@
     "description": "Gril somon, asparagus",
     "price": 180,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -989,7 +989,7 @@
     "description": "Ot sousy bilen",
     "price": 200,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551028150-64b9f398f678?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -997,7 +997,7 @@
     "description": "Apelsin glazury bilen",
     "price": 190,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574484184081-afea8a62f9d6?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1005,7 +1005,7 @@
     "description": "Kömelekli risotto, parmezan",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1013,7 +1013,7 @@
     "description": "Sowuk pomidor çorbasy",
     "price": 55,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1021,7 +1021,7 @@
     "description": "Premium, anşous sousy",
     "price": 70,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1029,7 +1029,7 @@
     "description": "Wanilli, karamel gabygy",
     "price": 65,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1037,7 +1037,7 @@
     "description": "Ýyly şokolad buludy",
     "price": 75,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1045,7 +1045,7 @@
     "description": "Goşa espresso",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sirin",
@@ -1053,7 +1053,7 @@
     "description": "Aýratyn garyndy",
     "price": 20,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1490474504059-bf2db5ab2348?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1061,7 +1061,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1069,7 +1069,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1077,7 +1077,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1085,7 +1085,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1093,7 +1093,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1101,7 +1101,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1109,7 +1109,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1117,7 +1117,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1125,7 +1125,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1571212515416-fef01fc43637?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1133,7 +1133,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1141,7 +1141,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "dag-lezzeti",
@@ -1149,7 +1149,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1490474504059-bf2db5ab2348?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1157,7 +1157,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1165,7 +1165,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1173,7 +1173,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1181,7 +1181,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1189,7 +1189,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1197,7 +1197,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1205,7 +1205,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1213,7 +1213,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1505253213348-cd54c92b37ef?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1221,7 +1221,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1229,7 +1229,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1521986329282-0436c1f1e212?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1237,7 +1237,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551248429-40975aa4de74?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sha-coffee",
@@ -1245,7 +1245,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1253,7 +1253,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1261,7 +1261,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1269,7 +1269,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1277,7 +1277,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1285,7 +1285,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1293,7 +1293,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1301,7 +1301,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1309,7 +1309,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1317,7 +1317,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1325,7 +1325,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1333,7 +1333,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uzum-cafe",
@@ -1341,7 +1341,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1349,7 +1349,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1357,7 +1357,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1365,7 +1365,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1373,7 +1373,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1381,7 +1381,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1389,7 +1389,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1397,7 +1397,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1405,7 +1405,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1413,7 +1413,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1421,7 +1421,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1429,7 +1429,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "frappe-coffee",
@@ -1437,7 +1437,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1445,7 +1445,7 @@
     "description": "Ýagly, gatly hamyr",
     "price": 20,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1453,7 +1453,7 @@
     "description": "Şokolad bilen",
     "price": 25,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1461,7 +1461,7 @@
     "description": "Klassik, krem peýnir",
     "price": 30,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1469,7 +1469,7 @@
     "description": "Hozy bilen",
     "price": 35,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1477,7 +1477,7 @@
     "description": "Günüň torty",
     "price": 40,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1602080858427-90fee736dde0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1485,7 +1485,7 @@
     "description": "Kremli, şokoladly",
     "price": 30,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1493,7 +1493,7 @@
     "description": "Fransuz makaronlary",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572441713132-51c75654db73?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1501,7 +1501,7 @@
     "description": "Şokoladly kuki",
     "price": 15,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1509,7 +1509,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1517,7 +1517,7 @@
     "description": "Köpükli süýt bilen",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1525,7 +1525,7 @@
     "description": "Kremli kakao",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "talhan-bakery",
@@ -1533,7 +1533,7 @@
     "description": "Täze miweli",
     "price": 20,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1541,7 +1541,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1549,7 +1549,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1557,7 +1557,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1565,7 +1565,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1573,7 +1573,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1581,7 +1581,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1589,7 +1589,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1597,7 +1597,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1599785209707-a456fc1337c1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1605,7 +1605,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1613,7 +1613,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1621,7 +1621,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kemine-coffee",
@@ -1629,7 +1629,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1637,7 +1637,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1645,7 +1645,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1653,7 +1653,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1661,7 +1661,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1669,7 +1669,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1677,7 +1677,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1685,7 +1685,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1693,7 +1693,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1701,7 +1701,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1709,7 +1709,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1717,7 +1717,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "tigirli-coffee",
@@ -1725,7 +1725,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1733,7 +1733,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1741,7 +1741,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1749,7 +1749,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1757,7 +1757,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1765,7 +1765,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1773,7 +1773,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1597318236837-46f99b3a5dfd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1781,7 +1781,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1789,7 +1789,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1797,7 +1797,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1805,7 +1805,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1813,7 +1813,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "uno-coffee",
@@ -1821,7 +1821,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1829,7 +1829,7 @@
     "description": "Ýuwaş bişirilen, sously",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1837,7 +1837,7 @@
     "description": "Bütin towuk, ýerli otlar",
     "price": 90,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1845,7 +1845,7 @@
     "description": "Klassik sygyr burger",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1853,7 +1853,7 @@
     "description": "Guzy eti şaşlygy",
     "price": 80,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1861,7 +1861,7 @@
     "description": "Etden ýasalan, gril",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1633237308525-cd587cf71926?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574484184081-afea8a62f9d6?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1869,7 +1869,7 @@
     "description": "Möwsümleýin gök önümler",
     "price": 40,
     "category": "Goşmaça",
-    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1877,7 +1877,7 @@
     "description": "Duzly, kruspi",
     "price": 30,
     "category": "Goşmaça",
-    "image_url": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1607013284055-92cd6ad2c8b9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1885,7 +1885,7 @@
     "description": "Kelem salat",
     "price": 25,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1893,7 +1893,7 @@
     "description": "Sülgüni peýnir, gril",
     "price": 45,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1901,7 +1901,7 @@
     "description": "3 tagam",
     "price": 35,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1909,7 +1909,7 @@
     "description": "1 litrlik, miweli",
     "price": 30,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546630392-7adbbed9c5e1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "berk-garden",
@@ -1917,7 +1917,7 @@
     "description": "Gök ýa-da gara",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1597318236837-46f99b3a5dfd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1925,7 +1925,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1933,7 +1933,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626777553635-5f0f1d4ae2c4?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1941,7 +1941,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1614545006005-e3b2fa5d4f50?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1949,7 +1949,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1957,7 +1957,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1965,7 +1965,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1973,7 +1973,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1981,7 +1981,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1567593810070-7a3d471af022?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1989,7 +1989,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571212515416-fef01fc43637?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -1997,7 +1997,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -2005,7 +2005,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "kopetdag-project",
@@ -2013,7 +2013,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1490474504059-bf2db5ab2348?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2021,7 +2021,7 @@
     "description": "Ýuwaş bişirilen, sously",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2029,7 +2029,7 @@
     "description": "Bütin towuk, ýerli otlar",
     "price": 90,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2037,7 +2037,7 @@
     "description": "Klassik sygyr burger",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606131731446-5568d87113aa?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2045,7 +2045,7 @@
     "description": "Guzy eti şaşlygy",
     "price": 80,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574484184081-afea8a62f9d6?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2053,7 +2053,7 @@
     "description": "Etden ýasalan, gril",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1633237308525-cd587cf71926?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2061,7 +2061,7 @@
     "description": "Möwsümleýin gök önümler",
     "price": 40,
     "category": "Goşmaça",
-    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2069,7 +2069,7 @@
     "description": "Duzly, kruspi",
     "price": 30,
     "category": "Goşmaça",
-    "image_url": "https://images.unsplash.com/photo-1630431341973-02e1b662ec35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2077,7 +2077,7 @@
     "description": "Kelem salat",
     "price": 25,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551248429-40975aa4de74?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2085,7 +2085,7 @@
     "description": "Sülgüni peýnir, gril",
     "price": 45,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2093,7 +2093,7 @@
     "description": "3 tagam",
     "price": 35,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2101,7 +2101,7 @@
     "description": "1 litrlik, miweli",
     "price": 30,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "altyn-paradise",
@@ -2109,7 +2109,7 @@
     "description": "Gök ýa-da gara",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2117,7 +2117,7 @@
     "description": "Hazar bekre balygy, ýerli otlar",
     "price": 180,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2125,7 +2125,7 @@
     "description": "Sarymsak sousy bilen",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2133,7 +2133,7 @@
     "description": "Gril edilen balyk, limon",
     "price": 110,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2141,7 +2141,7 @@
     "description": "Gündelik täze balyk bilen",
     "price": 60,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1535140728325-a4d3707eee94?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1535140728325-a4d3707eee94?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2149,7 +2149,7 @@
     "description": "Krewetkaly güweç",
     "price": 140,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2157,7 +2157,7 @@
     "description": "Gowrulan, tartar sousy",
     "price": 130,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2165,7 +2165,7 @@
     "description": "Çuňňur gowrulan",
     "price": 65,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1625944525200-4d4f1d29c9c1?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2173,7 +2173,7 @@
     "description": "Garyndy deňiz önümleri",
     "price": 75,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2181,7 +2181,7 @@
     "description": "Tüwüli midýe",
     "price": 55,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2189,7 +2189,7 @@
     "description": "Gowrulan baklažan",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2197,7 +2197,7 @@
     "description": "Täze limon şerbeti",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "sazak",
@@ -2205,7 +2205,7 @@
     "description": "Täze mango içgisi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2213,7 +2213,7 @@
     "description": "Adaty guzy palawý, nohut bilen",
     "price": 65,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2221,7 +2221,7 @@
     "description": "Ýukajyk hamyrda et, soganly",
     "price": 55,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1625938145744-533e82c4eb35?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2229,7 +2229,7 @@
     "description": "Bugda bişirilen, etli hamyr",
     "price": 50,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2237,7 +2237,7 @@
     "description": "Adaty türkmen çorbasy",
     "price": 45,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547308283-b75f6a9a3296?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604908554175-2a05f8a85ea3?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2245,7 +2245,7 @@
     "description": "Etli gök önümli çorba",
     "price": 40,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2253,7 +2253,7 @@
     "description": "Ýukajyk hamyrda et ýa-da gök önüm",
     "price": 35,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2261,7 +2261,7 @@
     "description": "Gowrulan et, pomidor sousy",
     "price": 70,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2269,7 +2269,7 @@
     "description": "Adaty tamdyrda bişirilen çörek",
     "price": 10,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2277,7 +2277,7 @@
     "description": "Ýerli gatyk",
     "price": 15,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1571212515416-fef01fc43637?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2285,7 +2285,7 @@
     "description": "Adaty türkmen gök çaýy",
     "price": 10,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1597318236837-46f99b3a5dfd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2293,7 +2293,7 @@
     "description": "Çuňňur ýagda bişirilen hamyr",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1567593810070-7a3d471af022?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "ashgabat-kafesi",
@@ -2301,7 +2301,7 @@
     "description": "Türkmen gawuny",
     "price": 20,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546630392-7adbbed9c5e1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2309,7 +2309,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2317,7 +2317,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2325,7 +2325,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2333,7 +2333,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2341,7 +2341,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2349,7 +2349,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1597318236837-46f99b3a5dfd?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2357,7 +2357,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2365,7 +2365,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1599785209707-a456fc1337c1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2373,7 +2373,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2381,7 +2381,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1481070414801-51fd732d7184?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2389,7 +2389,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "coffeechi",
@@ -2397,7 +2397,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2405,7 +2405,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2413,7 +2413,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2421,7 +2421,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2429,7 +2429,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2437,7 +2437,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2445,7 +2445,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2453,7 +2453,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2461,7 +2461,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2469,7 +2469,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2477,7 +2477,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1481070414801-51fd732d7184?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2485,7 +2485,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "bazetti",
@@ -2493,7 +2493,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2501,7 +2501,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2509,7 +2509,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2517,7 +2517,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2525,7 +2525,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2533,7 +2533,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2541,7 +2541,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2549,7 +2549,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2557,7 +2557,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2565,7 +2565,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2573,7 +2573,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1481070414801-51fd732d7184?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2581,7 +2581,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "melbourne-coffee",
@@ -2589,7 +2589,7 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546630392-7adbbed9c5e1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2597,7 +2597,7 @@
     "description": "Ýagly, gatly hamyr",
     "price": 20,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1567593810070-7a3d471af022?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2605,7 +2605,7 @@
     "description": "Şokolad bilen",
     "price": 25,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1591985666643-1ecc67616216?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2613,7 +2613,7 @@
     "description": "Klassik, krem peýnir",
     "price": 30,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1568471173242-461f0a730452?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2621,7 +2621,7 @@
     "description": "Hozy bilen",
     "price": 35,
     "category": "Çörek",
-    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2629,7 +2629,7 @@
     "description": "Günüň torty",
     "price": 40,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1602080858427-90fee736dde0?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2637,7 +2637,7 @@
     "description": "Kremli, şokoladly",
     "price": 30,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2645,7 +2645,7 @@
     "description": "Fransuz makaronlary",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2653,7 +2653,7 @@
     "description": "Şokoladly kuki",
     "price": 15,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2661,7 +2661,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2669,7 +2669,7 @@
     "description": "Köpükli süýt bilen",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2677,7 +2677,7 @@
     "description": "Kremli kakao",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "aziza-leyla",
@@ -2685,7 +2685,7 @@
     "description": "Täze miweli",
     "price": 20,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546630392-7adbbed9c5e1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2693,7 +2693,7 @@
     "description": "Ördek bagry, briosh çörek",
     "price": 160,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2701,7 +2701,7 @@
     "description": "Hazar işbili, blini",
     "price": 250,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2709,7 +2709,7 @@
     "description": "Gril somon, asparagus",
     "price": 180,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2717,7 +2717,7 @@
     "description": "Ot sousy bilen",
     "price": 200,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2725,7 +2725,7 @@
     "description": "Apelsin glazury bilen",
     "price": 190,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1559054663-e8d23213f55c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2733,7 +2733,7 @@
     "description": "Kömelekli risotto, parmezan",
     "price": 120,
     "category": "Esasy",
-    "image_url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2741,7 +2741,7 @@
     "description": "Sowuk pomidor çorbasy",
     "price": 55,
     "category": "Çorba",
-    "image_url": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2749,7 +2749,7 @@
     "description": "Premium, anşous sousy",
     "price": 70,
     "category": "Başlangyç",
-    "image_url": "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2757,7 +2757,7 @@
     "description": "Wanilli, karamel gabygy",
     "price": 65,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1599785209707-a456fc1337c1?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2765,7 +2765,7 @@
     "description": "Ýyly şokolad buludy",
     "price": 75,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2773,7 +2773,7 @@
     "description": "Goşa espresso",
     "price": 25,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "on-cafe",
@@ -2781,7 +2781,7 @@
     "description": "Aýratyn garyndy",
     "price": 20,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1610917040803-1fccf9623064?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2789,7 +2789,7 @@
     "description": "Klassik gara kofe",
     "price": 20,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517663154410-bb1ea4910dba?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2797,7 +2797,7 @@
     "description": "Espresso, köpükli süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2805,7 +2805,7 @@
     "description": "Espresso, süýt",
     "price": 25,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2813,7 +2813,7 @@
     "description": "Şokoladly kofe",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1561047029-3000c68339ca?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2821,7 +2821,7 @@
     "description": "Sowuk kofe, buz",
     "price": 30,
     "category": "Kofe",
-    "image_url": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2829,7 +2829,7 @@
     "description": "Adaty gök çaý",
     "price": 10,
     "category": "Çaý",
-    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2837,7 +2837,7 @@
     "description": "Nusgawy çizkek",
     "price": 45,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2845,7 +2845,7 @@
     "description": "Ýagly, täze bişirilen",
     "price": 25,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2853,7 +2853,7 @@
     "description": "Kofe tagamly desert",
     "price": 50,
     "category": "Desert",
-    "image_url": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2861,7 +2861,7 @@
     "description": "Towuk, salat, çörek",
     "price": 40,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1539252554935-80c8cb1fb0d5?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2869,7 +2869,7 @@
     "description": "Towukly Sezar salat",
     "price": 55,
     "category": "Nahar",
-    "image_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop"
   },
   {
     "restaurant_id": "a-coffee",
@@ -2877,6 +2877,6 @@
     "description": "Miweli smoothi",
     "price": 35,
     "category": "Içgi",
-    "image_url": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=800&q=80"
+    "image_url": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&q=80&auto=format&fit=crop"
   }
 ]
