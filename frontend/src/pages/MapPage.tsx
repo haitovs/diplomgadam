@@ -89,6 +89,8 @@ export default function MapPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [flyTarget, setFlyTarget] = useState<[number, number] | null>(null);
   const [showSidebar, setShowSidebar] = useState(true);
+  // Mobile-only: show either map or list. Defaults to map so the map is always visible first.
+  const [mobileView, setMobileView] = useState<"map" | "list">("map");
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
   const [tileStyle, setTileStyle] = useState<"street" | "satellite">("street");
   const listRef = useRef<HTMLDivElement>(null);
@@ -139,6 +141,8 @@ export default function MapPage() {
   function handleSelectRestaurant(r: Restaurant) {
     setSelectedId(r.id);
     setFlyTarget([r.location.coordinates.lat, r.location.coordinates.lng]);
+    // On mobile, picking from the list should swap back to the map view
+    setMobileView("map");
     // Scroll list item into view
     setTimeout(() => {
       const el = document.getElementById(`map-list-${r.id}`);
@@ -165,10 +169,39 @@ export default function MapPage() {
       : '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>';
 
   return (
-    <div className="flex flex-col lg:flex-row gap-0 -mx-6 -mt-10 -mb-10" style={{ height: "calc(100vh - 73px)" }}>
+    <div
+      className="flex flex-col lg:flex-row gap-0 -mx-4 sm:-mx-6 -mt-6 sm:-mt-10 -mb-6 sm:-mb-10"
+      style={{ height: "calc(100dvh - 56px)" }}
+    >
+      {/* Mobile segmented control: switch between Map and List */}
+      <div className="lg:hidden flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <button
+          onClick={() => setMobileView("map")}
+          className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
+            mobileView === "map"
+              ? "bg-brand-500 text-white shadow"
+              : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200"
+          }`}
+        >
+          {t("nav_map") || "Map"}
+        </button>
+        <button
+          onClick={() => setMobileView("list")}
+          className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
+            mobileView === "list"
+              ? "bg-brand-500 text-white shadow"
+              : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200"
+          }`}
+        >
+          {sortedFiltered.length} {t("map_restaurants_found") || "restaurants"}
+        </button>
+      </div>
+
       {/* Sidebar */}
       <div
-        className={`${showSidebar ? "w-full lg:w-[420px]" : "w-0"} shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col overflow-hidden transition-all duration-300`}
+        className={`${
+          showSidebar ? "lg:w-[420px]" : "lg:w-0"
+        } ${mobileView === "list" ? "flex" : "hidden"} lg:flex w-full shrink-0 flex-1 lg:flex-none bg-white dark:bg-slate-900 lg:border-r border-slate-200 dark:border-slate-800 flex-col overflow-hidden transition-all duration-300 min-h-0`}
       >
         {/* Filters */}
         <div className="p-4 space-y-3 border-b border-slate-200 dark:border-slate-800">
@@ -266,11 +299,13 @@ export default function MapPage() {
       </div>
 
       {/* Map area */}
-      <div className="flex-1 relative">
-        {/* Toggle sidebar on mobile */}
+      <div
+        className={`${mobileView === "map" ? "flex" : "hidden"} lg:flex flex-1 relative min-h-0`}
+      >
+        {/* Toggle sidebar (desktop only — mobile uses segmented control) */}
         <button
           onClick={() => setShowSidebar(!showSidebar)}
-          className="lg:hidden absolute top-3 left-3 z-[1000] px-3 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-lg text-sm font-medium text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600"
+          className="hidden lg:inline-flex absolute top-3 left-3 z-[1000] px-3 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-lg text-sm font-medium text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600"
         >
           {showSidebar ? "✕" : "☰"}
         </button>

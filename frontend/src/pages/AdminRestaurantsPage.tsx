@@ -86,27 +86,27 @@ export default function AdminRestaurantsPage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors">
       {/* Header */}
-      <header className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <header className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-4 sm:px-6 py-3 sm:py-4">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
           <div>
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-white">🍽️ Restoranlary dolandyr</h1>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">Restoran sanawyny goşuň, redaktirläň we dolandyryň</p>
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">🍽️ Restoranlary dolandyr</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">Restoran sanawyny goşuň, redaktirläň we dolandyryň</p>
           </div>
-          <div className="flex gap-4">
-            <Link to="/" className="px-4 py-2 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Sahypany gör</Link>
-            <button onClick={handleLogout} className="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+          <div className="flex gap-2 sm:gap-4">
+            <Link to="/" className="px-3 sm:px-4 py-2 text-sm sm:text-base text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Sahypany gör</Link>
+            <button onClick={handleLogout} className="px-3 sm:px-4 py-2 text-sm sm:text-base bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
               Çykyş
             </button>
           </div>
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="max-w-7xl mx-auto p-4 sm:p-6">
         {/* Navigation */}
-        <nav className="flex gap-4 mb-6">
-          <Link to="/admin" className="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Dolandyryş paneli</Link>
-          <Link to="/admin/restaurants" className="px-4 py-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white rounded-lg shadow-md shadow-brand-500/30">Restoranlar</Link>
-          <Link to="/admin/categories" className="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Kategoriýalar</Link>
+        <nav className="flex gap-2 sm:gap-4 mb-6 overflow-x-auto pb-1 -mx-1 px-1">
+          <Link to="/admin" className="whitespace-nowrap px-3 sm:px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white text-sm sm:text-base rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Dolandyryş paneli</Link>
+          <Link to="/admin/restaurants" className="whitespace-nowrap px-3 sm:px-4 py-2 bg-gradient-to-r from-brand-600 to-brand-500 text-white text-sm sm:text-base rounded-lg shadow-md shadow-brand-500/30">Restoranlar</Link>
+          <Link to="/admin/categories" className="whitespace-nowrap px-3 sm:px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white text-sm sm:text-base rounded-lg hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Kategoriýalar</Link>
         </nav>
 
         {/* Actions Bar */}
@@ -136,8 +136,8 @@ export default function AdminRestaurantsPage() {
         </div>
 
         {/* Table */}
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
-          <table className="w-full">
+        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-x-auto">
+          <table className="w-full min-w-[640px]">
             <thead className="bg-slate-50 dark:bg-slate-900">
               <tr>
                 <th className="px-4 py-3 text-left text-slate-500 dark:text-slate-400 text-sm font-medium">Restoran</th>

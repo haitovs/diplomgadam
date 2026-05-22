@@ -106,26 +106,26 @@ export default function InsightsPage() {
       transition={{ duration: 0.4 }}
     >
       <section className="space-y-3">
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">{t("insights_title")}</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{t("insights_title")}</h1>
         <p className="text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed">
           {t("insights_desc")}
         </p>
       </section>
 
-      <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {metrics.map((metric) => (
           <MetricCard key={metric.title} {...metric} />
         ))}
       </section>
 
-      <section className="glass-panel p-6 md:p-8 space-y-4">
+      <section className="glass-panel p-4 sm:p-6 md:p-8 space-y-4">
         <div>
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("insights_heatmap")}</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{t("insights_heatmap")}</h2>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             {t("insights_heatmap_desc")}
           </p>
         </div>
-        <div className="w-full h-80">
+        <div className="w-full h-64 sm:h-80">
           <ResponsiveContainer>
             <BarChart data={cuisineDemand} margin={{ left: 0, right: 10, top: 10, bottom: 60 }}>
               <defs>
@@ -156,7 +156,7 @@ export default function InsightsPage() {
       </section>
 
       <section className="grid lg:grid-cols-3 gap-6">
-        <div className="glass-panel p-6 space-y-4">
+        <div className="glass-panel p-4 sm:p-6 space-y-4">
           <div>
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("insights_price")}</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">{t("insights_price_desc")}</p>
@@ -178,7 +178,7 @@ export default function InsightsPage() {
           </div>
         </div>
 
-        <div className="glass-panel p-6 space-y-4">
+        <div className="glass-panel p-4 sm:p-6 space-y-4">
           <div>
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("insights_latenight")}</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">{t("insights_latenight_desc")}</p>
@@ -203,7 +203,7 @@ export default function InsightsPage() {
           </div>
         </div>
 
-        <div className="glass-panel p-6 space-y-4">
+        <div className="glass-panel p-4 sm:p-6 space-y-4">
           <div>
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">{t("insights_sustain")}</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">{t("insights_sustain_desc")}</p>

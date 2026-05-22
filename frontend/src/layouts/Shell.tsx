@@ -1,5 +1,5 @@
-import { Outlet, NavLink, useLocation } from "react-router-dom";
-import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home, Globe, MapPin } from "lucide-react";
+import { Outlet, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Sparkles, Menu, Sun, Moon, X, Heart, BarChart3, MessageSquare, Home, Globe, MapPin, KeyRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo.png";
@@ -10,15 +10,13 @@ const getInitialTheme = (): "light" | "dark" => {
     const stored = localStorage.getItem("ashgabat-theme") as "light" | "dark" | null;
     if (stored) return stored;
   }
-  if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
   return "light";
 };
 
 export default function ShellLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const { t, lang, setLang } = useLanguage();
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     const initial = getInitialTheme();
@@ -56,13 +54,25 @@ export default function ShellLayout() {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  // Hidden admin shortcut: Alt+Shift+A opens admin login from anywhere
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.altKey && e.shiftKey && (e.key === "A" || e.key === "a")) {
+        e.preventDefault();
+        navigate("/admin/login");
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [navigate]);
+
   const toggleLang = () => setLang(lang === "tk" ? "en" : "tk");
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-slate-100 transition-colors overflow-x-hidden">
       {/* Header */}
       <header className="border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl sticky top-0 z-30">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
           <NavLink to="/" className="flex items-center gap-2.5 text-xl font-bold group">
             <img src={logo} alt="Gadam" className="w-8 h-8 rounded-lg shadow-md shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-shadow" />
             <span className="bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
@@ -179,12 +189,12 @@ export default function ShellLayout() {
         </AnimatePresence>
       </header>
 
-      <main className="max-w-6xl mx-auto w-full px-6 py-10 flex-1">
+      <main className="max-w-6xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-10 flex-1">
         <Outlet />
       </main>
 
-      <footer className="border-t border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/70 backdrop-blur py-8">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="border-t border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/70 backdrop-blur py-6 sm:py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="flex items-center gap-2">
             <img src={logo} alt="Gadam" className="w-6 h-6 rounded-md" />
             <span className="text-sm font-semibold text-slate-600 dark:text-slate-400">{t("brand_name")}</span>
@@ -192,11 +202,19 @@ export default function ShellLayout() {
           <p className="text-sm text-slate-500 dark:text-slate-400">
             {t("footer_text")} · {new Date().getFullYear()}
           </p>
-          <div className="flex gap-4 text-xs text-slate-400 dark:text-slate-500">
-            <NavLink to="/admin/login" className="hover:text-brand-500 transition-colors">{t("admin_panel")}</NavLink>
-          </div>
         </div>
       </footer>
+
+      {/* Discreet admin access — small key icon in the bottom-right corner.
+          Low-opacity until hovered; tooltip shows the keyboard shortcut hint. */}
+      <NavLink
+        to="/admin/login"
+        title={`${t("admin_panel")} · Alt+Shift+A`}
+        aria-label={t("admin_panel")}
+        className="fixed bottom-3 right-3 z-40 inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/40 dark:bg-slate-900/40 backdrop-blur border border-slate-200/60 dark:border-slate-700/60 text-slate-400 dark:text-slate-500 opacity-30 hover:opacity-100 hover:text-brand-500 transition-opacity duration-200 shadow-sm"
+      >
+        <KeyRound className="w-3.5 h-3.5" />
+      </NavLink>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function HeroBanner() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative glass-panel p-8 md:p-10 mb-8 overflow-hidden">
+    <section className="relative glass-panel p-5 sm:p-8 md:p-10 mb-6 sm:mb-8 overflow-hidden">
       {/* Floating emojis */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
         {floatingEmojis.map((emoji, i) => (
@@ -33,7 +33,7 @@ export default function HeroBanner() {
         ))}
       </div>
 
-      <div className="relative flex flex-col md:flex-row gap-8 items-center">
+      <div className="relative flex flex-col md:flex-row gap-6 sm:gap-8 items-center">
         <motion.div
           className="flex-1 space-y-5"
           initial={{ opacity: 0, x: -30 }}
@@ -44,12 +44,12 @@ export default function HeroBanner() {
             <Sparkles className="w-4 h-4" />
             {t("hero_badge")}
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-brand-700 to-brand-500 dark:from-white dark:via-brand-200 dark:to-brand-400 bg-clip-text text-transparent">
               {t("hero_title")}
             </span>
           </h1>
-          <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
             {t("hero_desc")}
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
@@ -70,7 +70,7 @@ export default function HeroBanner() {
         </motion.div>
 
         <motion.div
-          className="flex-1 grid grid-cols-2 gap-4 w-full"
+          className="flex-1 grid grid-cols-2 gap-3 sm:gap-4 w-full"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -81,13 +81,13 @@ export default function HeroBanner() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-              className={`group p-4 rounded-2xl bg-gradient-to-br ${stat.gradient} dark:from-slate-800/80 dark:to-slate-800/40 border border-slate-100/80 dark:border-slate-700/50 hover:shadow-lg hover:scale-[1.02] transition-all duration-200 cursor-default`}
+              className={`group p-3 sm:p-4 rounded-2xl bg-gradient-to-br ${stat.gradient} dark:from-slate-800/80 dark:to-slate-800/40 border border-slate-100/80 dark:border-slate-700/50 hover:shadow-lg hover:scale-[1.02] transition-all duration-200 cursor-default`}
             >
               <div className="flex items-center gap-2 mb-1">
                 <stat.icon className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
                 <p className="text-sm text-slate-500 dark:text-slate-400">{t(stat.labelKey)}</p>
               </div>
-              <p className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
               <p className="text-xs text-slate-400 dark:text-slate-500">{t(stat.subKey)}</p>
             </motion.div>
           ))}

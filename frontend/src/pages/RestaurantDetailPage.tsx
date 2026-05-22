@@ -35,14 +35,14 @@ export default function RestaurantDetailPage() {
       {/* Hero */}
       <section className="glass-panel overflow-hidden">
         <div className="relative">
-          <img src={data.heroImage} alt={`Photo of ${data.name}`} className="h-80 md:h-96 w-full object-cover" />
+          <img src={data.heroImage} alt={`Photo of ${data.name}`} className="h-56 sm:h-80 md:h-96 w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-          <div className="absolute top-6 right-6 flex gap-3">
+          <div className="absolute top-3 right-3 sm:top-6 sm:right-6 flex gap-2 sm:gap-3">
             <FavoriteToggle id={data.id} />
             <RatingBadge rating={data.rating} reviews={data.reviewCount} />
           </div>
-          <div className="absolute bottom-6 left-6 right-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">{data.name}</h1>
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white drop-shadow-lg">{data.name}</h1>
             <div className="flex flex-wrap gap-2 mt-3">
               {data.cuisines.map((c) => (
                 <span key={c} className="px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm border border-white/20">
@@ -53,7 +53,7 @@ export default function RestaurantDetailPage() {
           </div>
         </div>
 
-        <div className="p-6 md:p-8 space-y-6">
+        <div className="p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-6">
           <p className="text-slate-600 dark:text-slate-300 text-lg max-w-3xl leading-relaxed">{data.description}</p>
 
           {data.dietary.length > 0 && (
@@ -112,9 +112,9 @@ export default function RestaurantDetailPage() {
       </section>
 
       {/* Signature Menu */}
-      <section className="glass-panel p-6 md:p-8 space-y-4">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_signature_menu")}</h2>
-        <div className="grid md:grid-cols-2 gap-4">
+      <section className="glass-panel p-4 sm:p-6 md:p-8 space-y-4">
+        <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{t("detail_signature_menu")}</h2>
+        <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
           {data.menuHighlights.map((item) => (
             <motion.div
               key={item.name}
@@ -133,8 +133,8 @@ export default function RestaurantDetailPage() {
 
       {/* Full Menu Section */}
       {data.fullMenu && data.fullMenu.length > 0 && (
-        <section className="glass-panel p-6 md:p-8 space-y-6">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_full_menu")}</h2>
+        <section className="glass-panel p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-6">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{t("detail_full_menu")}</h2>
           {Object.entries(
             data.fullMenu.reduce((acc, item) => {
               const category = item.category || 'Other';
@@ -147,21 +147,21 @@ export default function RestaurantDetailPage() {
               <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 border-b border-slate-100 dark:border-slate-700 pb-2">
                 {category}
               </h3>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 {items.map((item) => (
-                  <div key={item.id} className="flex gap-4 p-4 border border-slate-100 dark:border-slate-700/50 rounded-xl bg-white/50 dark:bg-slate-800/40 hover:bg-white/80 dark:hover:bg-slate-800/60 transition-colors">
+                  <div key={item.id} className="flex gap-3 sm:gap-4 p-3 sm:p-4 border border-slate-100 dark:border-slate-700/50 rounded-xl bg-white/50 dark:bg-slate-800/40 hover:bg-white/80 dark:hover:bg-slate-800/60 transition-colors">
                     {item.image_url ? (
                       <img
                         src={item.image_url}
                         alt={`${item.name}`}
-                        className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg flex-shrink-0"
                         loading="lazy"
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).style.display = "none";
                         }}
                       />
                     ) : (
-                      <div className="w-20 h-20 rounded-lg flex-shrink-0 bg-gradient-to-br from-amber-100 to-rose-100 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center text-2xl">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg flex-shrink-0 bg-gradient-to-br from-amber-100 to-rose-100 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center text-2xl">
                         🍽️
                       </div>
                     )}
@@ -181,7 +181,7 @@ export default function RestaurantDetailPage() {
       )}
 
       {/* Schedule */}
-      <section className="glass-panel p-6 md:p-8 space-y-4">
+      <section className="glass-panel p-4 sm:p-6 md:p-8 space-y-4">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_schedule")}</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {data.schedule.map((slot) => (
@@ -198,7 +198,7 @@ export default function RestaurantDetailPage() {
 
       {/* Gallery */}
       {data.gallery.length > 0 && (
-        <section className="glass-panel p-6 md:p-8 space-y-4">
+        <section className="glass-panel p-4 sm:p-6 md:p-8 space-y-4">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">{t("detail_gallery")}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {data.gallery.map((url, i) => (

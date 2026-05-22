@@ -161,13 +161,42 @@ if (menuCount.count === 0) {
     const menuJson = fs.readFileSync(menuPath, 'utf-8');
     const menuItems = JSON.parse(menuJson);
     const insertMenu = db.prepare(`
-      INSERT INTO menu_items (restaurant_id, name, description, price, currency, category, is_available)
-      VALUES (?, ?, ?, ?, 'TMT', ?, 1)
+      INSERT INTO menu_items (restaurant_id, name, description, price, currency, category, image_url, is_available)
+      VALUES (?, ?, ?, ?, 'TMT', ?, ?, 1)
     `);
     menuItems.forEach((m: any) => {
-      insertMenu.run(m.restaurant_id, m.name, m.description, m.price, m.category);
+      insertMenu.run(m.restaurant_id, m.name, m.description, m.price, m.category, m.image_url || null);
     });
     console.log(`✅ ${menuItems.length} menu items seeded`);
+  }
+}
+
+// Backfill image_url on menu_items if any are missing (one-time migration)
+const missingImageCount = db
+  .prepare("SELECT COUNT(*) as count FROM menu_items WHERE image_url IS NULL OR image_url = ''")
+  .get() as { count: number };
+if (missingImageCount.count > 0) {
+  const menuPath = join(__dirname, '../../../data/menu-items.json');
+  if (fs.existsSync(menuPath)) {
+    console.log(`🖼  Backfilling images for ${missingImageCount.count} menu items...`);
+    const menuJson = fs.readFileSync(menuPath, 'utf-8');
+    const menuItems = JSON.parse(menuJson) as Array<{
+      restaurant_id: string;
+      name: string;
+      category: string;
+      image_url?: string;
+    }>;
+    const updateImg = db.prepare(`
+      UPDATE menu_items SET image_url = ?
+      WHERE restaurant_id = ? AND name = ? AND category = ? AND (image_url IS NULL OR image_url = '')
+    `);
+    let updated = 0;
+    menuItems.forEach((m) => {
+      if (!m.image_url) return;
+      const res = updateImg.run(m.image_url, m.restaurant_id, m.name, m.category);
+      updated += res.changes;
+    });
+    console.log(`✅ Backfilled ${updated} menu item images`);
   }
 }
 

@@ -76,19 +76,19 @@ export default function AiConciergePage() {
       transition={{ duration: 0.4 }}
     >
       {/* Header */}
-      <section className="glass-panel p-8 space-y-4">
+      <section className="glass-panel p-5 sm:p-8 space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 dark:bg-brand-400/15 text-brand-600 dark:text-brand-300 text-sm font-semibold border border-brand-200/50 dark:border-brand-500/30">
           <Sparkles className="w-4 h-4" />
           {t("ai_badge")}
         </div>
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-white">{t("ai_title")}</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{t("ai_title")}</h1>
         <p className="text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed">
           {t("ai_desc")}
         </p>
       </section>
 
       {/* Chat area */}
-      <section className="glass-panel p-6 space-y-6">
+      <section className="glass-panel p-4 sm:p-6 space-y-6">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <textarea
