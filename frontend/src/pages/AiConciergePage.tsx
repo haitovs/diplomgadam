@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { Sparkles, Send, Clock, ListChecks, MessageSquare, Bot, User } from "lucide-react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { Sparkles, Send, Clock, ListChecks, MessageSquare, Bot, User, Check, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAiConcierge } from "../hooks/useAiConcierge";
@@ -8,17 +8,53 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchRestaurants } from "../api/restaurants";
 import { useLanguage } from "../i18n/LanguageContext";
 
-function ThinkingDots() {
+// Staged "reasoning" UI: reveals steps one at a time with randomized pauses
+// so the assistant appears to think through the request.
+function ThinkingSteps({ steps }: { steps: string[] }) {
+  const [revealed, setRevealed] = useState(1);
+  const timers = useRef<number[]>([]);
+
+  useEffect(() => {
+    setRevealed(1);
+    timers.current.forEach((id) => clearTimeout(id));
+    timers.current = [];
+    let cumulative = 0;
+    // Reveal each subsequent step after a random pause (humans never think
+    // at a constant rate).
+    for (let i = 1; i < steps.length; i++) {
+      cumulative += 420 + Math.random() * 620;
+      const id = window.setTimeout(() => setRevealed((r) => Math.max(r, i + 1)), cumulative);
+      timers.current.push(id);
+    }
+    return () => {
+      timers.current.forEach((id) => clearTimeout(id));
+      timers.current = [];
+    };
+  }, [steps]);
+
   return (
-    <div className="flex items-center gap-1 py-2">
-      {[0, 1, 2].map((i) => (
-        <motion.span
-          key={i}
-          className="w-2 h-2 rounded-full bg-brand-500 dark:bg-brand-400"
-          animate={{ y: [0, -6, 0], opacity: [0.4, 1, 0.4] }}
-          transition={{ repeat: Infinity, duration: 0.8, delay: i * 0.2 }}
-        />
-      ))}
+    <div className="space-y-2">
+      {steps.slice(0, revealed).map((step, i) => {
+        const isCurrent = i === revealed - 1;
+        return (
+          <motion.div
+            key={step}
+            initial={{ opacity: 0, x: -8 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.25 }}
+            className="flex items-center gap-2 text-sm"
+          >
+            {isCurrent ? (
+              <Loader2 className="w-3.5 h-3.5 text-brand-500 dark:text-brand-400 animate-spin flex-shrink-0" />
+            ) : (
+              <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" />
+            )}
+            <span className={isCurrent ? "text-slate-700 dark:text-slate-200" : "text-slate-400 dark:text-slate-500"}>
+              {step}
+            </span>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
@@ -140,9 +176,17 @@ export default function AiConciergePage() {
               className="flex items-start gap-3 p-4 rounded-2xl bg-brand-50/50 dark:bg-brand-500/5 border border-brand-100 dark:border-brand-500/20"
             >
               <Bot className="w-5 h-5 text-brand-500 dark:text-brand-400 mt-0.5 flex-shrink-0" />
-              <div>
+              <div className="min-w-0 space-y-2">
                 <p className="text-sm font-medium text-slate-700 dark:text-slate-300">{t("ai_analyzing")}</p>
-                <ThinkingDots />
+                <ThinkingSteps
+                  steps={[
+                    t("ai_step1"),
+                    `${restaurantsQuery.data?.length ?? 30} ${t("ai_step2")}`,
+                    t("ai_step3"),
+                    t("ai_step4"),
+                    t("ai_step5"),
+                  ]}
+                />
               </div>
             </motion.div>
           )}

@@ -399,9 +399,11 @@ function buildSuggestions(question: string, lang: Lang) {
 }
 
 function calculateThinkingTime(question: string) {
-  const base = 650 + Math.random() * 250;
-  const complexity = Math.min(question.split(/\s+/).length * 35, 650);
-  const jitter = 120 + Math.random() * 180;
+  // Longer, varied "thinking" window so the staged reasoning steps in the UI
+  // have time to play out and the response feels considered.
+  const base = 1500 + Math.random() * 600;
+  const complexity = Math.min(question.split(/\s+/).length * 45, 900);
+  const jitter = 200 + Math.random() * 400;
   return Math.round(base + complexity + jitter);
 }
 
