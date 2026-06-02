@@ -42,7 +42,7 @@ function ConfidenceBar({ value }: { value: number }) {
 }
 
 export default function AiConciergePage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const starterPrompts = [
     t("ai_starter1"),
@@ -57,7 +57,7 @@ export default function AiConciergePage() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (!question.trim()) return;
-    mutation.mutate({ question });
+    mutation.mutate({ question, lang });
   };
 
   const suggestionRestaurants = useMemo(() => {
@@ -189,17 +189,25 @@ export default function AiConciergePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            {/* Stats bar */}
-            <div className="flex flex-wrap gap-4 text-xs">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                {t("ai_source")} <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.source}</span>
-              </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                {t("ai_tokens")} <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.tokensUsed}</span>
-              </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-medium">
-                {t("ai_latency")} <span className="font-semibold text-slate-700 dark:text-slate-300">{mutation.data.latencyMs}ms</span>
-              </span>
+            {/* AI answer + understood intent */}
+            <div className="flex items-start gap-3 p-4 rounded-2xl bg-brand-50/60 dark:bg-brand-500/5 border border-brand-100 dark:border-brand-500/20">
+              <Bot className="w-5 h-5 text-brand-500 dark:text-brand-400 mt-0.5 flex-shrink-0" />
+              <div className="space-y-2 min-w-0">
+                <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">{mutation.data.answer}</p>
+                {mutation.data.understood.length > 0 && (
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <span className="text-xs text-slate-400 dark:text-slate-500">{t("ai_understood")}</span>
+                    {mutation.data.understood.map((chip) => (
+                      <span
+                        key={chip}
+                        className="px-2 py-0.5 rounded-full bg-white dark:bg-slate-800 text-brand-600 dark:text-brand-300 text-xs font-semibold border border-brand-100 dark:border-brand-500/20"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Suggestion cards */}
@@ -219,7 +227,19 @@ export default function AiConciergePage() {
                     </div>
                   </div>
                   <p className="text-sm text-slate-600 dark:text-slate-300">{suggestion.recommendation}</p>
-                  <p className="text-xs text-slate-400 dark:text-slate-500 italic">{suggestion.reasoning}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">{suggestion.reasoning}</p>
+                  {suggestion.matchTags && suggestion.matchTags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {suggestion.matchTags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[11px] font-medium border border-emerald-100 dark:border-emerald-500/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <div className="flex flex-wrap gap-2">
                     {suggestion.restaurants.map((rid) => {
                       const r = restaurantsQuery.data?.find((x) => x.id === rid);

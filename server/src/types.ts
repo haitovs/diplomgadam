@@ -58,9 +58,12 @@ export interface AiSuggestion {
   confidence: number;
   restaurants: string[];
   reasoning: string;
+  matchTags: string[];
 }
 
 export interface AiResponse {
+  answer: string;
+  understood: string[];
   suggestions: AiSuggestion[];
   tokensUsed: number;
   latencyMs: number;
