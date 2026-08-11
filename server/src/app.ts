@@ -9,6 +9,11 @@ import authRouter from "./auth/auth.routes.js";
 import { loadAuth } from "./auth/context.js";
 import { config } from "./config/index.js";
 import { errorHandler, notFoundHandler } from "./lib/http.js";
+import {
+  mediaFileRouter,
+  mediaOwnerRouter,
+} from "./modules/media/media.routes.js";
+import { PUBLIC_ROOT } from "./modules/media/media.service.js";
 import menusRouter from "./modules/menus/menus.routes.js";
 import storesRouter from "./modules/stores/stores.routes.js";
 
@@ -62,6 +67,22 @@ export function createApp(): Express {
     app.use(morgan(config.isProduction ? "combined" : "dev"));
   }
 
+  /**
+   * Public store photos. Only the `public` subtree is exposed; venue-proof
+   * images live under `private` and are served by an authenticated route.
+   * Filenames are random and never reused, so they cache indefinitely.
+   */
+  app.use(
+    "/uploads/public",
+    express.static(path.join(config.uploadDir, PUBLIC_ROOT), {
+      index: false,
+      dotfiles: "ignore",
+      maxAge: "1y",
+      immutable: true,
+      fallthrough: false,
+    }),
+  );
+
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", version: process.env.APP_VERSION ?? "1.0.0" });
   });
@@ -72,6 +93,8 @@ export function createApp(): Express {
   app.use("/api/auth", authRouter);
   app.use("/api/store", storesRouter);
   app.use("/api/store/me/menu", menusRouter);
+  app.use("/api/store/me/media", mediaOwnerRouter);
+  app.use("/api/media", mediaFileRouter);
 
   app.use("/api", notFoundHandler);
 
