@@ -1,5 +1,4 @@
 import maplibregl, {
-  type LngLatLike,
   type Map as MapLibreMap,
   type StyleSpecification,
 } from "maplibre-gl";
@@ -8,6 +7,10 @@ import { useLanguage } from "../i18n/LanguageContext";
 
 /** Central Ashgabat, used when nothing else determines the view. */
 export const ASHGABAT_CENTER: [number, number] = [58.3833, 37.95];
+
+const SOURCE_ID = "tagam-stores";
+const HALO_LAYER = "tagam-store-halo";
+const DOT_LAYER = "tagam-store-dot";
 
 export interface MapMarker {
   id: string;
@@ -45,17 +48,23 @@ export default function MapView({
 }: MapViewProps) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<MapLibreMap | null>(null);
-  const markerRefs = useRef<maplibregl.Marker[]>([]);
+  const markerHandlers = useRef(new Map<string, () => void>());
   const clickHandler = useRef(onMapClick);
   const [style, setStyle] = useState<StyleSpecification | null>(null);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const { t } = useLanguage();
 
-  // Keep the latest handler without re-creating the map on every render.
+  // Keep the latest handlers without re-creating the map on every render.
   useEffect(() => {
     clickHandler.current = onMapClick;
   }, [onMapClick]);
+
+  useEffect(() => {
+    markerHandlers.current = new Map(
+      markers.filter((m) => m.onClick).map((m) => [m.id, m.onClick!]),
+    );
+  }, [markers]);
 
   /**
    * The style is fetched before the map is created rather than handed to
@@ -149,40 +158,81 @@ export default function MapView({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [style]);
 
+  /**
+   * Points are drawn as a GeoJSON layer inside the map rather than as DOM
+   * markers.
+   *
+   * A `maplibregl.Marker` is an absolutely positioned element that the library
+   * repositions in response to move events, so with a few dozen of them the
+   * points visibly trail the map while it is being panned. A circle layer is
+   * rendered by the same WebGL frame as the tiles, so the points are locked to
+   * the map at any pan speed.
+   */
   useEffect(() => {
     const instance = map.current;
-    if (!instance) return;
+    if (!instance || !ready) return;
 
-    for (const marker of markerRefs.current) marker.remove();
-    markerRefs.current = [];
+    const data: GeoJSON.FeatureCollection = {
+      type: "FeatureCollection",
+      features: markers.map((marker) => ({
+        type: "Feature",
+        geometry: { type: "Point", coordinates: [marker.lng, marker.lat] },
+        properties: {
+          id: marker.id,
+          label: marker.label ?? "",
+          active: marker.active ? 1 : 0,
+        },
+      })),
+    };
 
-    for (const marker of markers) {
-      const el = document.createElement("button");
-      el.type = "button";
-      el.className = [
-        "grid place-items-center rounded-full border-2 border-white shadow-lg transition-transform",
-        marker.active
-          ? "w-9 h-9 bg-brand-600 scale-110"
-          : "w-7 h-7 bg-brand-500 hover:scale-110",
-      ].join(" ");
-      el.setAttribute("aria-label", marker.label ?? "");
-      el.innerHTML =
-        '<span style="display:block;width:8px;height:8px;border-radius:9999px;background:white"></span>';
-      if (marker.onClick) el.addEventListener("click", marker.onClick);
+    const source = instance.getSource(SOURCE_ID) as maplibregl.GeoJSONSource | undefined;
+    if (source) {
+      source.setData(data);
+    } else {
+      instance.addSource(SOURCE_ID, { type: "geojson", data });
 
-      const instanceMarker = new maplibregl.Marker({ element: el })
-        .setLngLat([marker.lng, marker.lat] as LngLatLike)
-        .addTo(instance);
+      // A white ring under the dot keeps it readable over dark photography
+      // and over the pale streets alike.
+      instance.addLayer({
+        id: HALO_LAYER,
+        type: "circle",
+        source: SOURCE_ID,
+        paint: {
+          "circle-radius": ["case", ["==", ["get", "active"], 1], 11, 8.5],
+          "circle-color": "#ffffff",
+          "circle-opacity": 0.95,
+        },
+      });
 
-      if (marker.label) {
-        instanceMarker.setPopup(
-          new maplibregl.Popup({ offset: 18, closeButton: false }).setText(
-            marker.label,
-          ),
-        );
-      }
+      instance.addLayer({
+        id: DOT_LAYER,
+        type: "circle",
+        source: SOURCE_ID,
+        paint: {
+          "circle-radius": ["case", ["==", ["get", "active"], 1], 7.5, 5.5],
+          // clay-700 when selected, clay-500 otherwise.
+          "circle-color": [
+            "case",
+            ["==", ["get", "active"], 1],
+            "#8A3618",
+            "#C85C2A",
+          ],
+          "circle-stroke-width": ["case", ["==", ["get", "active"], 1], 2, 0],
+          "circle-stroke-color": "#ffffff",
+        },
+      });
 
-      markerRefs.current.push(instanceMarker);
+      instance.on("mouseenter", DOT_LAYER, () => {
+        instance.getCanvas().style.cursor = "pointer";
+      });
+      instance.on("mouseleave", DOT_LAYER, () => {
+        instance.getCanvas().style.cursor = "";
+      });
+      instance.on("click", DOT_LAYER, (event) => {
+        const feature = event.features?.[0];
+        const id = feature?.properties?.id as string | undefined;
+        if (id) markerHandlers.current.get(id)?.();
+      });
     }
 
     if (fitToMarkers && markers.length > 0) {

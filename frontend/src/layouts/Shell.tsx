@@ -18,6 +18,7 @@ import logo from "../assets/logo.svg";
 import { useLanguage } from "../i18n/LanguageContext";
 import { LANGS, LANG_LABELS, LANG_SHORT } from "../i18n/translations";
 import { useTheme } from "../lib/useTheme";
+import { useFavorites } from "../store/useFavorites";
 
 export default function ShellLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,11 +27,31 @@ export default function ShellLayout() {
   const { t, lang, setLang } = useLanguage();
   const { theme, toggleTheme } = useTheme();
 
+  /**
+   * Favourites only appears once something has been saved.
+   *
+   * There are no visitor accounts by design, so favourites live in this
+   * browser. A permanent nav item that is empty for every first-time visitor
+   * is an invitation to a dead end; the heart on each card is what teaches the
+   * feature, and the tab appears the moment it has something to show. The
+   * route still works if someone navigates to it directly.
+   */
+  const savedCount = useFavorites((state) => state.slugs.length);
+
   const navItems = [
     { label: t("nav_discover"), path: "/", icon: Home },
     { label: t("nav_map"), path: "/map", icon: MapPin },
     { label: t("nav_insights"), path: "/insights", icon: BarChart3 },
-    { label: t("nav_favorites"), path: "/favorites", icon: Heart },
+    ...(savedCount > 0
+      ? [
+          {
+            label: t("nav_favorites"),
+            path: "/favorites",
+            icon: Heart,
+            count: savedCount,
+          },
+        ]
+      : []),
   ];
 
   useEffect(() => {
