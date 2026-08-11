@@ -17,9 +17,9 @@ export interface BarDatum {
  * so identity and magnitude are never carried by colour alone, and the markup is
  * already a list a screen reader can walk.
  *
- * The fill uses one hue from the brand ramp, stepped per mode: brand-600 on the
- * light surface (4.45:1) and brand-400 on dark (8.11:1), both above the 3:1 floor
- * for graphical objects.
+ * The fill uses one hue from the clay ramp, stepped per mode: clay-600 on the
+ * cream surface (5.45:1) and clay-400 on dark (6.36:1), both above the 3:1
+ * floor for graphical objects.
  */
 export default function BarRows({
   data,
@@ -36,7 +36,7 @@ export default function BarRows({
 
   if (rows.length === 0) {
     return (
-      <p className="py-4 text-sm text-slate-500 dark:text-slate-400">{emptyLabel}</p>
+      <p className="py-4 text-sm text-sand-600 dark:text-sand-500">{emptyLabel}</p>
     );
   }
 
@@ -49,17 +49,17 @@ export default function BarRows({
         return (
           <li key={row.key} className="group">
             <div className="mb-1 flex items-baseline justify-between gap-3 text-sm">
-              <span className="truncate text-slate-600 dark:text-slate-300">
+              <span className="truncate text-sand-600 dark:text-sand-300">
                 {row.prefix} {row.label}
               </span>
-              <span className="shrink-0 font-semibold tabular-nums text-slate-900 dark:text-white">
+              <span className="shrink-0 font-semibold tabular-nums text-sand-900 dark:text-white">
                 {formatValue(row.value)}
               </span>
             </div>
             {/* Track is recessive; the fill carries the magnitude. */}
-            <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+            <div className="h-2 w-full overflow-hidden rounded-full bg-sand-200 dark:bg-sand-800">
               <div
-                className="h-full rounded-full bg-[#0b78db] dark:bg-[#35b9ff] transition-[width] duration-500"
+                className="h-full rounded-full bg-clay-600 transition-[width] duration-700 ease-out-soft dark:bg-clay-400"
                 style={{ width: `${pct}%` }}
               />
             </div>
@@ -84,16 +84,16 @@ export function StatTile({
   return (
     <div className="glass-panel p-4 sm:p-5">
       <div className="flex items-start justify-between gap-2">
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-sand-600 dark:text-sand-500">
           {label}
         </p>
-        {icon && <span className="text-slate-400 dark:text-slate-500">{icon}</span>}
+        {icon && <span className="text-sand-500 dark:text-sand-600">{icon}</span>}
       </div>
-      <p className="mt-2 text-2xl sm:text-3xl font-bold tabular-nums text-slate-900 dark:text-white">
+      <p className="mt-2 text-2xl sm:text-3xl font-bold tabular-nums text-sand-900 dark:text-white">
         {value}
       </p>
       {hint && (
-        <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{hint}</p>
+        <p className="mt-0.5 text-xs text-sand-600 dark:text-sand-500">{hint}</p>
       )}
     </div>
   );

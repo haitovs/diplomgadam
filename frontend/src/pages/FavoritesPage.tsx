@@ -56,7 +56,7 @@ export default function FavoritesPage() {
   return (
     <div className="space-y-5">
       <header>
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+        <h1 className="text-2xl sm:text-3xl font-bold text-sand-900 dark:text-white">
           {t("favorites_title")}
         </h1>
       </header>

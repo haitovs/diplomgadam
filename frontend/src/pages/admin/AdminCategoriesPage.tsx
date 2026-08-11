@@ -120,7 +120,7 @@ export default function AdminCategoriesPage() {
           </div>
         )}
 
-        <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+        <ul className="divide-y divide-sand-100 dark:divide-sand-800">
           {categories.data?.map((category) => (
             <li key={category.id} className="py-3">
               {editing?.id === category.id ? (
@@ -156,10 +156,10 @@ export default function AdminCategoriesPage() {
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="text-lg">{category.icon}</span>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-medium text-slate-800 dark:text-slate-100">
+                    <p className="truncate font-medium text-sand-800 dark:text-sand-100">
                       {pickLocalized(category.name, lang, "en")}
                     </p>
-                    <p className="truncate text-xs text-slate-400">{category.slug}</p>
+                    <p className="truncate text-xs text-sand-500">{category.slug}</p>
                   </div>
                   <Badge>{category.storeCount}</Badge>
                   <Button
@@ -184,7 +184,7 @@ export default function AdminCategoriesPage() {
                         ? `${category.storeCount} ${t("admin_stores")}`
                         : t("action_delete")
                     }
-                    className="rounded-lg p-1.5 text-slate-400 transition hover:bg-rose-50 hover:text-rose-600 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:bg-rose-500/10"
+                    className="rounded-lg p-1.5 text-sand-500 transition hover:bg-rose-50 hover:text-rose-600 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:bg-rose-500/10"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>

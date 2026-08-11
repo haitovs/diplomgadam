@@ -159,21 +159,21 @@ export default function AdminAdminsPage() {
         </div>
       )}
 
-      <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+      <ul className="divide-y divide-sand-100 dark:divide-sand-800">
         {admins.data?.map((admin) => {
           const isSelf = admin.id === session.data?.id;
           return (
             <li key={admin.id} className="flex flex-wrap items-center gap-3 py-3">
               <div className="min-w-0 flex-1">
-                <p className="truncate font-medium text-slate-800 dark:text-slate-100">
+                <p className="truncate font-medium text-sand-800 dark:text-sand-100">
                   {admin.name}
                   {isSelf && (
-                    <span className="ml-1.5 text-xs font-normal text-slate-400">
+                    <span className="ml-1.5 text-xs font-normal text-sand-500">
                       ({t("portal_account")})
                     </span>
                   )}
                 </p>
-                <p className="truncate text-xs text-slate-500 dark:text-slate-400">
+                <p className="truncate text-xs text-sand-600 dark:text-sand-500">
                   {admin.username} · {formatDateTime(admin.lastLoginAt, lang)}
                 </p>
               </div>
@@ -203,7 +203,7 @@ export default function AdminAdminsPage() {
                 type="button"
                 onClick={() => remove.mutate(admin.id)}
                 disabled={isSelf}
-                className="rounded-lg p-1.5 text-slate-400 transition hover:bg-rose-50 hover:text-rose-600 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:bg-rose-500/10"
+                className="rounded-lg p-1.5 text-sand-500 transition hover:bg-rose-50 hover:text-rose-600 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:bg-rose-500/10"
                 aria-label={t("action_delete")}
               >
                 <Trash2 className="w-4 h-4" />

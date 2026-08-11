@@ -73,8 +73,8 @@ function PhotoGroup({
 
         {!full && (
           <label
-            className={`grid h-24 w-24 cursor-pointer place-items-center rounded-xl border border-dashed text-slate-400 transition hover:border-brand-400 hover:text-brand-500 dark:border-slate-600 ${
-              uploading ? "opacity-50" : "border-slate-300"
+            className={`grid h-24 w-24 cursor-pointer place-items-center rounded-xl border border-dashed text-sand-500 transition hover:border-brand-400 hover:text-brand-500 dark:border-sand-600 ${
+              uploading ? "opacity-50" : "border-sand-300"
             }`}
           >
             <ImagePlus className="w-6 h-6" />
@@ -93,7 +93,7 @@ function PhotoGroup({
         )}
       </div>
 
-      <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">
+      <p className="mt-3 text-xs text-sand-600 dark:text-sand-500">
         {full ? t("media_limit_reached") : t("media_upload_hint")}
       </p>
     </Card>

@@ -33,24 +33,24 @@ export default function AdminAuditPage() {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
-              <thead className="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500 dark:bg-slate-800/60">
+              <thead className="bg-sand-50 text-left text-xs uppercase tracking-wide text-sand-600 dark:bg-sand-800/60">
                 <tr>
                   <th className="px-4 py-2.5 font-semibold">{t("admin_when")}</th>
                   <th className="px-4 py-2.5 font-semibold">{t("admin_actor")}</th>
                   <th className="px-4 py-2.5 font-semibold">{t("admin_action")}</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+              <tbody className="divide-y divide-sand-100 dark:divide-sand-800">
                 {data.entries.map((entry) => (
                   <tr key={entry.id}>
-                    <td className="whitespace-nowrap px-4 py-2.5 text-slate-500 dark:text-slate-400">
+                    <td className="whitespace-nowrap px-4 py-2.5 text-sand-600 dark:text-sand-500">
                       {formatDateTime(entry.createdAt, lang)}
                     </td>
                     <td className="px-4 py-2.5">
-                      <span className="font-medium text-slate-700 dark:text-slate-200">
+                      <span className="font-medium text-sand-700 dark:text-sand-200">
                         {entry.actorLabel ?? "—"}
                       </span>
-                      <span className="ml-1.5 text-xs text-slate-400">
+                      <span className="ml-1.5 text-xs text-sand-500">
                         {entry.actorType}
                       </span>
                       {entry.impersonatedByAdminId && (
@@ -60,7 +60,7 @@ export default function AdminAuditPage() {
                       )}
                     </td>
                     <td className="px-4 py-2.5">
-                      <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                      <code className="rounded bg-sand-100 px-1.5 py-0.5 text-xs text-sand-700 dark:bg-sand-800 dark:text-sand-300">
                         {entry.action}
                       </code>
                     </td>
@@ -82,7 +82,7 @@ export default function AdminAuditPage() {
           >
             ‹
           </Button>
-          <span className="text-sm text-slate-500 dark:text-slate-400">
+          <span className="text-sm text-sand-600 dark:text-sand-500">
             {page} / {pageCount}
           </span>
           <Button

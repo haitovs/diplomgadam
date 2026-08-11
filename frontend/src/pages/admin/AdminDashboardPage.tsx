@@ -66,11 +66,11 @@ export default function AdminDashboardPage() {
         <div className="flex flex-wrap gap-2">
           {STATUS_ORDER.map((status) => (
             <Link key={status} to={`/admin/stores?status=${status}`}>
-              <span className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-3.5 py-2 transition hover:border-brand-300 dark:border-slate-700">
+              <span className="inline-flex items-center gap-2 rounded-xl border border-sand-200 px-3.5 py-2 transition hover:border-brand-300 dark:border-sand-700">
                 <Badge tone={STATUS_TONE[status]}>
                   {t(`status_${status}` as TranslationKey)}
                 </Badge>
-                <span className="text-lg font-bold tabular-nums text-slate-900 dark:text-white">
+                <span className="text-lg font-bold tabular-nums text-sand-900 dark:text-white">
                   {statusCounts[status] ?? 0}
                 </span>
               </span>
@@ -82,11 +82,11 @@ export default function AdminDashboardPage() {
       <Card>
         <SectionTitle title={t("insights_newest")} />
         {recent.length === 0 ? (
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-sand-600 dark:text-sand-500">
             {t("insights_empty")}
           </p>
         ) : (
-          <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+          <ul className="divide-y divide-sand-100 dark:divide-sand-800">
             {recent.map((store) => (
               <li
                 key={store.id}
@@ -94,7 +94,7 @@ export default function AdminDashboardPage() {
               >
                 <Link
                   to={`/admin/stores/${store.id}`}
-                  className="truncate font-medium text-slate-700 hover:text-brand-600 dark:text-slate-200 dark:hover:text-brand-300"
+                  className="truncate font-medium text-sand-700 hover:text-brand-600 dark:text-sand-200 dark:hover:text-brand-300"
                 >
                   {pickLocalized(store.name, lang)}
                 </Link>
@@ -102,7 +102,7 @@ export default function AdminDashboardPage() {
                   <Badge tone={STATUS_TONE[store.status]}>
                     {t(`status_${store.status}` as TranslationKey)}
                   </Badge>
-                  <span className="text-sm text-slate-500 dark:text-slate-400">
+                  <span className="text-sm text-sand-600 dark:text-sand-500">
                     {formatDate(store.createdAt, lang)}
                   </span>
                 </div>

@@ -199,7 +199,7 @@ export default function MapView({
   if (failed) {
     return (
       <div
-        className={`${className} grid place-items-center rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-sm text-slate-500 dark:text-slate-400`}
+        className={`${className} grid place-items-center rounded-2xl border border-dashed border-sand-300 dark:border-sand-700 text-sm text-sand-600 dark:text-sand-500`}
       >
         {t("map_unavailable")}
       </div>
@@ -210,8 +210,8 @@ export default function MapView({
     <div className={`${className} relative rounded-2xl overflow-hidden`}>
       <div ref={container} className="absolute inset-0" />
       {!style && (
-        <div className="absolute inset-0 grid place-items-center bg-slate-100 dark:bg-slate-800">
-          <span className="text-sm text-slate-400">{t("loading")}</span>
+        <div className="absolute inset-0 grid place-items-center bg-sand-100 dark:bg-sand-800">
+          <span className="text-sm text-sand-500">{t("loading")}</span>
         </div>
       )}
     </div>

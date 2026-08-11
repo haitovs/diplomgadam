@@ -61,7 +61,7 @@ export default function AdminStoresPage({
     <div className="space-y-4">
       <div className="flex flex-col gap-2 sm:flex-row">
         <div className="relative flex-1">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-sand-500" />
           <input
             type="search"
             value={search}
@@ -102,24 +102,24 @@ export default function AdminStoresPage({
         />
       ) : (
         <Card className="!p-0 overflow-hidden">
-          <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+          <ul className="divide-y divide-sand-100 dark:divide-sand-800">
             {data.stores.map((store) => (
               <li key={store.id}>
                 <Link
                   to={`/admin/stores/${store.id}`}
-                  className="flex flex-wrap items-center gap-3 px-4 py-3.5 transition hover:bg-slate-50 dark:hover:bg-slate-800/60"
+                  className="flex flex-wrap items-center gap-3 px-4 py-3.5 transition hover:bg-sand-50 dark:hover:bg-sand-800/60"
                 >
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-semibold text-slate-800 dark:text-slate-100">
+                    <p className="truncate font-semibold text-sand-800 dark:text-sand-100">
                       {pickLocalized(store.name, lang, store.primaryLang)}
                     </p>
-                    <p className="truncate text-xs text-slate-500 dark:text-slate-400">
+                    <p className="truncate text-xs text-sand-600 dark:text-sand-500">
                       {store.neighborhood ?? "—"}
                       {store.phone && ` · ${formatPhone(store.phone)}`}
                     </p>
                   </div>
 
-                  <span className="text-xs text-slate-500 dark:text-slate-400">
+                  <span className="text-xs text-sand-600 dark:text-sand-500">
                     {store.submittedAt
                       ? formatDate(store.submittedAt, lang)
                       : formatDate(store.createdAt, lang)}
@@ -145,7 +145,7 @@ export default function AdminStoresPage({
           >
             ‹
           </Button>
-          <span className="text-sm text-slate-500 dark:text-slate-400">
+          <span className="text-sm text-sand-600 dark:text-sand-500">
             {page} / {pageCount}
           </span>
           <Button

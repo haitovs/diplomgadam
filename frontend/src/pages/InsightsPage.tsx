@@ -23,10 +23,10 @@ export default function InsightsPage() {
   return (
     <div className="space-y-6">
       <header>
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+        <h1 className="text-2xl sm:text-3xl font-bold text-sand-900 dark:text-white">
           {t("insights_title")}
         </h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-sm text-sand-600 dark:text-sand-500">
           {t("insights_subtitle")}
         </p>
       </header>
@@ -120,7 +120,7 @@ export default function InsightsPage() {
           {data.newest.length > 0 && (
             <Card>
               <SectionTitle title={t("insights_newest")} />
-              <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+              <ul className="divide-y divide-sand-100 dark:divide-sand-800">
                 {data.newest.map((store) => (
                   <li
                     key={store.slug}
@@ -128,11 +128,11 @@ export default function InsightsPage() {
                   >
                     <Link
                       to={`/restaurants/${store.slug}`}
-                      className="truncate font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-brand-300"
+                      className="truncate font-medium text-sand-700 dark:text-sand-200 hover:text-brand-600 dark:hover:text-brand-300"
                     >
                       {store.name}
                     </Link>
-                    <span className="shrink-0 text-slate-500 dark:text-slate-400">
+                    <span className="shrink-0 text-sand-600 dark:text-sand-500">
                       {formatDate(store.createdAt, lang)}
                     </span>
                   </li>

@@ -8,7 +8,7 @@ export default function NotFoundPage() {
   const { t } = useLanguage();
 
   return (
-    <div className="grid min-h-screen place-items-center bg-gradient-to-b from-slate-50 to-indigo-50 p-6 dark:from-slate-950 dark:to-slate-900">
+    <div className="grid min-h-screen place-items-center bg-gradient-to-b from-sand-50 to-clay-50 p-6 dark:from-sand-950 dark:to-sand-900">
       <motion.div
         className="glass-panel mx-auto max-w-lg space-y-5 p-10 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -24,10 +24,10 @@ export default function NotFoundPage() {
         </motion.div>
 
         <div className="space-y-2">
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+          <h1 className="text-2xl font-bold text-sand-900 dark:text-white">
             {t("error_404_title")}
           </h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-sand-600 dark:text-sand-500">
             {t("error_404_text")}
           </p>
         </div>

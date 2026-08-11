@@ -101,7 +101,7 @@ export default function StoreOverviewPage() {
 
         {blockers.length > 0 ? (
           <div className="space-y-2">
-            <p className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 dark:text-slate-200">
+            <p className="flex items-center gap-1.5 text-sm font-semibold text-sand-700 dark:text-sand-200">
               <AlertTriangle className="w-4 h-4 text-amber-500" />
               {t("submit_blocked")}
             </p>
@@ -164,7 +164,7 @@ export default function StoreOverviewPage() {
       <Card>
         <SectionTitle title={t("portal_menu")} />
         {itemCount === 0 ? (
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-sand-600 dark:text-sand-500">
             {t("menu_empty_hint")}{" "}
             <Link
               to="/store/dashboard/menu"
@@ -177,10 +177,10 @@ export default function StoreOverviewPage() {
           <ul className="space-y-1.5 text-sm">
             {(menu.data ?? []).map((section) => (
               <li key={section.id} className="flex justify-between gap-3">
-                <span className="truncate text-slate-600 dark:text-slate-300">
+                <span className="truncate text-sand-600 dark:text-sand-300">
                   {section.name[lang] ?? section.name[store.primaryLang] ?? "—"}
                 </span>
-                <span className="shrink-0 tabular-nums text-slate-500">
+                <span className="shrink-0 tabular-nums text-sand-600">
                   {section.items.length}
                 </span>
               </li>

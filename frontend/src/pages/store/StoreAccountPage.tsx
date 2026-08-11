@@ -44,17 +44,17 @@ export default function StoreAccountPage() {
     <div className="space-y-5">
       <Card>
         <SectionTitle title={t("admin_owner_accounts")} />
-        <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+        <ul className="divide-y divide-sand-100 dark:divide-sand-800">
           {detail.data.owners.map((owner) => (
             <li key={owner.id} className="py-3">
-              <p className="font-semibold text-slate-800 dark:text-slate-100">
+              <p className="font-semibold text-sand-800 dark:text-sand-100">
                 {owner.fullName}
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-sand-600 dark:text-sand-500">
                 {formatPhone(owner.phone)}
                 {owner.position && ` · ${owner.position}`}
               </p>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-sand-500">
                 {t("admin_when")}: {formatDateTime(owner.lastLoginAt, lang)}
               </p>
             </li>

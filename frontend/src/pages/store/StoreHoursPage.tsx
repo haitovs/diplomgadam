@@ -116,10 +116,10 @@ export default function StoreHoursPage() {
           {week.map((day, index) => (
             <div
               key={index}
-              className="rounded-xl border border-slate-200 p-3.5 dark:border-slate-700"
+              className="rounded-xl border border-sand-200 p-3.5 dark:border-sand-700"
             >
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <span className="font-semibold text-slate-800 dark:text-slate-100">
+                <span className="font-semibold text-sand-800 dark:text-sand-100">
                   {t(`day_${index}` as TranslationKey)}
                 </span>
                 <div className="flex items-center gap-3">
@@ -140,7 +140,7 @@ export default function StoreHoursPage() {
                     type="button"
                     onClick={() => copyToAll(index)}
                     title={t("hours_copy_to_all")}
-                    className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800"
+                    className="rounded-lg p-1.5 text-sand-500 hover:bg-sand-100 hover:text-sand-600 dark:hover:bg-sand-800"
                   >
                     <Copy className="w-4 h-4" />
                   </button>
@@ -164,7 +164,7 @@ export default function StoreHoursPage() {
                         className="w-32"
                         aria-label={t("hours_opens")}
                       />
-                      <span className="text-slate-400">–</span>
+                      <span className="text-sand-500">–</span>
                       <Input
                         type="time"
                         value={interval.closes}
@@ -185,7 +185,7 @@ export default function StoreHoursPage() {
                             intervals: day.intervals.filter((_, vi) => vi !== i),
                           })
                         }
-                        className="rounded-lg p-1.5 text-slate-400 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
+                        className="rounded-lg p-1.5 text-sand-500 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
                         aria-label={t("action_delete")}
                       >
                         <Trash2 className="w-4 h-4" />
@@ -243,7 +243,7 @@ export default function StoreHoursPage() {
         />
 
         {special.length === 0 ? (
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-sand-600 dark:text-sand-500">
             {t("empty_none")}
           </p>
         ) : (
@@ -251,7 +251,7 @@ export default function StoreHoursPage() {
             {special.map((entry, index) => (
               <div
                 key={index}
-                className="flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 p-3 dark:border-slate-700"
+                className="flex flex-wrap items-center gap-2 rounded-xl border border-sand-200 p-3 dark:border-sand-700"
               >
                 <Input
                   type="date"
@@ -309,7 +309,7 @@ export default function StoreHoursPage() {
                   onClick={() =>
                     setSpecial((prev) => prev.filter((_, i) => i !== index))
                   }
-                  className="ml-auto rounded-lg p-1.5 text-slate-400 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
+                  className="ml-auto rounded-lg p-1.5 text-sand-500 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
                   aria-label={t("action_delete")}
                 >
                   <Trash2 className="w-4 h-4" />

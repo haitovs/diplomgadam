@@ -220,7 +220,7 @@ export default function StoreListingPage() {
             }
             onMapClick={({ lng, lat }) => set({ lat, lng })}
           />
-          <p className="text-xs text-slate-500 dark:text-slate-400">
+          <p className="text-xs text-sand-600 dark:text-sand-500">
             {coords
               ? `${coords[1].toFixed(5)}, ${coords[0].toFixed(5)}`
               : t("form_location_pick")}
@@ -342,7 +342,7 @@ export default function StoreListingPage() {
           ))}
         </div>
 
-        <h3 className="mb-2 mt-5 text-sm font-semibold text-slate-700 dark:text-slate-200">
+        <h3 className="mb-2 mt-5 text-sm font-semibold text-sand-700 dark:text-sand-200">
           {t("detail_payment")}
         </h3>
         <div className="flex flex-wrap gap-2">

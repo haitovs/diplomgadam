@@ -74,11 +74,11 @@ export default function StoreAuthPage({ mode }: { mode: "signin" | "register" })
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-brand-50 dark:from-slate-950 dark:via-slate-900 dark:to-brand-950 px-4 py-10">
+    <div className="min-h-screen bg-gradient-to-br from-sand-50 via-clay-50 to-brand-50 dark:from-sand-950 dark:via-sand-900 dark:to-brand-950 px-4 py-10">
       <div className="mx-auto w-full max-w-lg space-y-4">
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-600"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-sand-600 dark:text-sand-500 hover:text-brand-600"
         >
           <ArrowLeft className="w-4 h-4" />
           {t("action_back")}
@@ -91,10 +91,10 @@ export default function StoreAuthPage({ mode }: { mode: "signin" | "register" })
               <Store className="w-3.5 h-3.5" />
               {t("for_business")}
             </div>
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+            <h1 className="text-2xl font-bold text-sand-900 dark:text-white">
               {isRegister ? t("store_signup_title") : t("store_signin_title")}
             </h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
+            <p className="text-sm text-sand-600 dark:text-sand-500">
               {isRegister ? t("store_signup_subtitle") : t("store_signin_subtitle")}
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function StoreAuthPage({ mode }: { mode: "signin" | "register" })
             </Button>
           </form>
 
-          <p className="text-center text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-center text-sm text-sand-600 dark:text-sand-500">
             {isRegister ? t("store_have_account") : t("store_no_account")}{" "}
             <Link
               to={isRegister ? "/store" : "/store/register"}

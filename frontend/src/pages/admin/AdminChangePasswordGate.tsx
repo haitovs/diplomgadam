@@ -27,16 +27,16 @@ export default function AdminChangePasswordGate() {
   });
 
   return (
-    <div className="grid min-h-screen place-items-center bg-slate-50 p-4 dark:bg-slate-950">
+    <div className="grid min-h-screen place-items-center bg-sand-50 p-4 dark:bg-sand-950">
       <div className="glass-panel w-full max-w-sm space-y-5 p-7">
         <div className="space-y-2 text-center">
           <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-amber-100 text-amber-600 dark:bg-amber-500/15 dark:text-amber-400">
             <ShieldAlert className="w-6 h-6" />
           </div>
-          <h1 className="text-lg font-bold text-slate-900 dark:text-white">
+          <h1 className="text-lg font-bold text-sand-900 dark:text-white">
             {t("auth_change_password")}
           </h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-sand-600 dark:text-sand-500">
             {t("auth_must_change_password")}
           </p>
         </div>

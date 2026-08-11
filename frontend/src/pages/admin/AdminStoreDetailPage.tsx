@@ -118,7 +118,7 @@ export default function AdminStoreDetailPage() {
     <div className="space-y-5">
       <Link
         to="/admin/stores"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400"
+        className="inline-flex items-center gap-1.5 text-sm font-medium text-sand-600 hover:text-brand-600 dark:text-sand-500"
       >
         <ArrowLeft className="w-4 h-4" />
         {t("admin_stores")}
@@ -137,10 +137,10 @@ export default function AdminStoreDetailPage() {
                 </Badge>
               ))}
             </div>
-            <h1 className="text-xl font-bold text-slate-900 dark:text-white">
+            <h1 className="text-xl font-bold text-sand-900 dark:text-white">
               {pickLocalized(store.name, lang, store.primaryLang)}
             </h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
+            <p className="text-sm text-sand-600 dark:text-sand-500">
               {pickLocalized(store.address, lang, store.primaryLang)}
               {store.neighborhood && ` · ${store.neighborhood}`}
             </p>
@@ -178,7 +178,7 @@ export default function AdminStoreDetailPage() {
         )}
 
         {blockers.length > 0 && (
-          <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+          <p className="mt-3 text-sm text-sand-600 dark:text-sand-500">
             {t("submit_blocked")}:{" "}
             {blockers.map((b) => t(`blocker_${b}` as TranslationKey)).join(", ")}
           </p>
@@ -246,7 +246,7 @@ export default function AdminStoreDetailPage() {
         </div>
 
         {action && (
-          <div className="mt-4 space-y-3 rounded-xl border border-slate-200 p-4 dark:border-slate-700">
+          <div className="mt-4 space-y-3 rounded-xl border border-sand-200 p-4 dark:border-sand-700">
             <Field
               label={
                 action === "reject" ? t("admin_reject_reason") : t("admin_suspend_reason")
@@ -284,7 +284,7 @@ export default function AdminStoreDetailPage() {
             {t("media_venue_proof_hint")}
           </p>
           {venueProof.length === 0 ? (
-            <p className="text-sm text-slate-500 dark:text-slate-400">{t("empty_none")}</p>
+            <p className="text-sm text-sand-600 dark:text-sand-500">{t("empty_none")}</p>
           ) : (
             <div className="flex flex-wrap gap-2">
               {venueProof.map((image) => (
@@ -306,17 +306,17 @@ export default function AdminStoreDetailPage() {
             {owners.map((owner) => (
               <li
                 key={owner.id}
-                className="rounded-xl border border-slate-200 p-3.5 dark:border-slate-700"
+                className="rounded-xl border border-sand-200 p-3.5 dark:border-sand-700"
               >
-                <p className="font-semibold text-slate-800 dark:text-slate-100">
+                <p className="font-semibold text-sand-800 dark:text-sand-100">
                   {owner.fullName}
                   {owner.position && (
-                    <span className="ml-1.5 text-xs font-normal text-slate-500">
+                    <span className="ml-1.5 text-xs font-normal text-sand-600">
                       {owner.position}
                     </span>
                   )}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300">
+                <p className="text-sm text-sand-600 dark:text-sand-300">
                   <a href={`tel:${owner.phone}`} className="hover:text-brand-600">
                     {formatPhone(owner.phone)}
                   </a>
@@ -332,7 +332,7 @@ export default function AdminStoreDetailPage() {
                     </>
                   )}
                 </p>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-sand-500">
                   {t("admin_when")}: {formatDateTime(owner.lastLoginAt, lang)}
                 </p>
                 <Button
@@ -350,7 +350,7 @@ export default function AdminStoreDetailPage() {
           </ul>
 
           {store.businessRegNo && (
-            <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            <p className="mt-3 text-sm text-sand-600 dark:text-sand-300">
               {t("form_business_reg")}:{" "}
               <span className="font-mono">{store.businessRegNo}</span>
             </p>
@@ -378,19 +378,19 @@ export default function AdminStoreDetailPage() {
           <dl className="space-y-2 text-sm">
             {LANGS.map((code) => (
               <div key={code} className="flex gap-2">
-                <dt className="w-8 shrink-0 font-mono text-xs text-slate-400">
+                <dt className="w-8 shrink-0 font-mono text-xs text-sand-500">
                   {LANG_SHORT[code]}
                 </dt>
-                <dd className="text-slate-600 dark:text-slate-300">
+                <dd className="text-sand-600 dark:text-sand-300">
                   {store.description[code] ?? (
-                    <span className="text-slate-400">{t("translation_missing")}</span>
+                    <span className="text-sand-500">{t("translation_missing")}</span>
                   )}
                 </dd>
               </div>
             ))}
           </dl>
 
-          <div className="mt-4 space-y-1 text-sm text-slate-600 dark:text-slate-300">
+          <div className="mt-4 space-y-1 text-sm text-sand-600 dark:text-sand-300">
             <p>
               {t("store_phone")}: {formatPhone(store.phone)}
             </p>
@@ -416,7 +416,7 @@ export default function AdminStoreDetailPage() {
               markers={[{ id: store.id, lng: store.lng, lat: store.lat }]}
             />
           ) : (
-            <p className="text-sm text-slate-500 dark:text-slate-400">
+            <p className="text-sm text-sand-600 dark:text-sand-500">
               {t("map_no_location")}
             </p>
           )}

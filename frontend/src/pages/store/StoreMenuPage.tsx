@@ -173,10 +173,10 @@ export default function StoreMenuPage() {
             {list.map((section, index) => (
               <div
                 key={section.id}
-                className="rounded-xl border border-slate-200 dark:border-slate-700"
+                className="rounded-xl border border-sand-200 dark:border-sand-700"
               >
-                <div className="flex items-center justify-between gap-2 border-b border-slate-100 px-4 py-3 dark:border-slate-800">
-                  <h3 className="font-semibold text-slate-800 dark:text-slate-100">
+                <div className="flex items-center justify-between gap-2 border-b border-sand-100 px-4 py-3 dark:border-sand-800">
+                  <h3 className="font-semibold text-sand-800 dark:text-sand-100">
                     {pickLocalized(section.name, lang, primaryLang)}
                   </h3>
                   <div className="flex items-center gap-0.5">
@@ -184,7 +184,7 @@ export default function StoreMenuPage() {
                       type="button"
                       onClick={() => moveSection(index, -1)}
                       disabled={index === 0}
-                      className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 disabled:opacity-30 dark:hover:bg-slate-800"
+                      className="rounded-lg p-1.5 text-sand-500 hover:bg-sand-100 disabled:opacity-30 dark:hover:bg-sand-800"
                       aria-label="Move up"
                     >
                       <ChevronUp className="w-4 h-4" />
@@ -193,7 +193,7 @@ export default function StoreMenuPage() {
                       type="button"
                       onClick={() => moveSection(index, 1)}
                       disabled={index === list.length - 1}
-                      className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 disabled:opacity-30 dark:hover:bg-slate-800"
+                      className="rounded-lg p-1.5 text-sand-500 hover:bg-sand-100 disabled:opacity-30 dark:hover:bg-sand-800"
                       aria-label="Move down"
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -205,7 +205,7 @@ export default function StoreMenuPage() {
                           removeSection.mutate(section.id);
                         }
                       }}
-                      className="rounded-lg p-1.5 text-slate-400 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
+                      className="rounded-lg p-1.5 text-sand-500 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
                       aria-label={t("action_delete")}
                     >
                       <Trash2 className="w-4 h-4" />
@@ -213,7 +213,7 @@ export default function StoreMenuPage() {
                   </div>
                 </div>
 
-                <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+                <ul className="divide-y divide-sand-100 dark:divide-sand-800">
                   {section.items.map((item) => {
                     const image = item.mediaId ? imageById.get(item.mediaId) : undefined;
                     return (
@@ -225,23 +225,23 @@ export default function StoreMenuPage() {
                             className="h-12 w-12 shrink-0 rounded-lg object-cover"
                           />
                         ) : (
-                          <div className="h-12 w-12 shrink-0 rounded-lg bg-slate-100 dark:bg-slate-800" />
+                          <div className="h-12 w-12 shrink-0 rounded-lg bg-sand-100 dark:bg-sand-800" />
                         )}
                         <div className="min-w-0 flex-1">
                           <p
                             className={`truncate font-medium ${
                               item.isAvailable
-                                ? "text-slate-800 dark:text-slate-100"
-                                : "text-slate-400 line-through"
+                                ? "text-sand-800 dark:text-sand-100"
+                                : "text-sand-500 line-through"
                             }`}
                           >
                             {pickLocalized(item.name, lang, primaryLang)}
                           </p>
-                          <p className="truncate text-xs text-slate-500 dark:text-slate-400">
+                          <p className="truncate text-xs text-sand-600 dark:text-sand-500">
                             {pickLocalized(item.description, lang, primaryLang)}
                           </p>
                         </div>
-                        <span className="shrink-0 font-semibold tabular-nums text-slate-700 dark:text-slate-200">
+                        <span className="shrink-0 font-semibold tabular-nums text-sand-700 dark:text-sand-200">
                           {formatPrice(item.priceMinor, lang)} {item.currency}
                         </span>
                         <div className="flex shrink-0 gap-0.5">
@@ -255,7 +255,7 @@ export default function StoreMenuPage() {
                           <button
                             type="button"
                             onClick={() => removeItem.mutate(item.id)}
-                            className="rounded-lg p-1.5 text-slate-400 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
+                            className="rounded-lg p-1.5 text-sand-500 hover:bg-rose-50 hover:text-rose-600 dark:hover:bg-rose-500/10"
                             aria-label={t("action_delete")}
                           >
                             <Trash2 className="w-4 h-4" />
@@ -291,16 +291,16 @@ export default function StoreMenuPage() {
       </Card>
 
       {editingItem && (
-        <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/50 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 grid place-items-center bg-sand-950/50 p-4 backdrop-blur-sm">
           <div className="glass-panel max-h-[90vh] w-full max-w-lg space-y-4 overflow-y-auto p-5">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+              <h3 className="text-lg font-bold text-sand-900 dark:text-white">
                 {editingItem.id ? t("action_edit") : t("menu_add_item")}
               </h3>
               <button
                 type="button"
                 onClick={() => setEditingItem(null)}
-                className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="rounded-lg p-1.5 text-sand-500 hover:bg-sand-100 dark:hover:bg-sand-800"
                 aria-label={t("action_close")}
               >
                 <X className="w-4 h-4" />
@@ -346,11 +346,11 @@ export default function StoreMenuPage() {
             </Field>
 
             <div className="space-y-2">
-              <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+              <span className="text-sm font-semibold text-sand-700 dark:text-sand-200">
                 {t("menu_item_photo")}
               </span>
               <div className="flex flex-wrap gap-2">
-                <label className="grid h-16 w-16 cursor-pointer place-items-center rounded-lg border border-dashed border-slate-300 text-slate-400 hover:border-brand-400 hover:text-brand-500 dark:border-slate-600">
+                <label className="grid h-16 w-16 cursor-pointer place-items-center rounded-lg border border-dashed border-sand-300 text-sand-500 hover:border-brand-400 hover:text-brand-500 dark:border-sand-600">
                   <ImagePlus className="w-5 h-5" />
                   <input
                     type="file"
