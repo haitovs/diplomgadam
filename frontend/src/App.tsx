@@ -5,7 +5,6 @@ import StorePortalLayout from "./layouts/StorePortalLayout";
 
 import FavoritesPage from "./pages/FavoritesPage";
 import HomePage from "./pages/HomePage";
-import InsightsPage from "./pages/InsightsPage";
 import MapPage from "./pages/MapPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import StoreDetailPage from "./pages/StoreDetailPage";
@@ -34,7 +33,6 @@ export default function App() {
         <Route index element={<HomePage />} />
         <Route path="/restaurants/:slug" element={<StoreDetailPage />} />
         <Route path="/map" element={<MapPage />} />
-        <Route path="/insights" element={<InsightsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
       </Route>
 

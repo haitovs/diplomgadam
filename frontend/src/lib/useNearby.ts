@@ -115,3 +115,63 @@ export function greetingKey(): "morning" | "afternoon" | "evening" | "night" {
   if (hour < 22) return "evening";
   return "night";
 }
+
+const VIEW_KEY = "tagam-map-view";
+
+export interface MapView {
+  lng: number;
+  lat: number;
+  zoom: number;
+}
+
+/**
+ * Remembers where the map was left.
+ *
+ * Returning to the map and being thrown back to the whole city loses whatever
+ * the visitor had framed. Stored in this browser only, and discarded if it is
+ * ever unreadable rather than being allowed to break the map.
+ */
+export function loadMapView(): MapView | null {
+  try {
+    const raw = localStorage.getItem(VIEW_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<MapView>;
+    if (
+      typeof parsed.lng !== "number" ||
+      typeof parsed.lat !== "number" ||
+      typeof parsed.zoom !== "number"
+    ) {
+      return null;
+    }
+    return { lng: parsed.lng, lat: parsed.lat, zoom: parsed.zoom };
+  } catch {
+    return null;
+  }
+}
+
+export function saveMapView(view: MapView): void {
+  try {
+    localStorage.setItem(VIEW_KEY, JSON.stringify(view));
+  } catch {
+    // A full or disabled storage is not worth interrupting the map for.
+  }
+}
+
+/**
+ * A directions link for whichever map app the visitor has.
+ *
+ * Apple devices get an Apple Maps URL and everything else a Google Maps one.
+ * Both open the native app when it is installed and fall back to the website
+ * when it is not, which a bare geo: URI does not do reliably on desktop.
+ */
+export function directionsUrl(lat: number, lng: number, label?: string): string {
+  const isApple =
+    typeof navigator !== "undefined" &&
+    /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+
+  if (isApple) {
+    const query = label ? `&q=${encodeURIComponent(label)}` : "";
+    return `https://maps.apple.com/?daddr=${lat},${lng}${query}`;
+  }
+  return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+}

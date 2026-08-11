@@ -3,6 +3,7 @@ import { Search, SlidersHorizontal, Store, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { publicApi, type StoreQuery } from "../api/public";
+import DiscoveryRails from "../components/DiscoveryRails";
 import StoreCard, { StoreCardSkeleton } from "../components/StoreCard";
 import { Button, CheckboxPill, EmptyState, Select } from "../components/ui";
 import { useLanguage } from "../i18n/LanguageContext";
@@ -106,6 +107,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Suggestions come first, but only until the visitor narrows things
+          down; after that their own criteria are the better guide. */}
+      {!search && activeCount === 0 && (stores.data?.stores.length ?? 0) > 0 && (
+        <DiscoveryRails stores={stores.data!.stores} />
+      )}
 
       {/* Cuisine shortcuts. Faster than opening the filter panel for the most
           common way people narrow a search. */}

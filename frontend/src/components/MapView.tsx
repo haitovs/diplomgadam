@@ -36,6 +36,8 @@ interface MapViewProps {
   /** Report clicks on the map itself, used by the location picker. */
   onMapClick?: (coords: { lng: number; lat: number }) => void;
   interactive?: boolean;
+  /** Called after the visitor stops panning, so a page can remember the view. */
+  onViewChange?: (view: { lng: number; lat: number; zoom: number }) => void;
 }
 
 /**
@@ -50,11 +52,13 @@ export default function MapView({
   fitToMarkers = false,
   onMapClick,
   interactive = true,
+  onViewChange,
 }: MapViewProps) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<MapLibreMap | null>(null);
   const markerHandlers = useRef(new Map<string, () => void>());
   const clickHandler = useRef(onMapClick);
+  const viewHandler = useRef(onViewChange);
   const [style, setStyle] = useState<StyleSpecification | null>(null);
   const [satellite, setSatellite] = useState<{ url: string; attribution: string } | null>(
     null,
@@ -68,7 +72,8 @@ export default function MapView({
   // Keep the latest handlers without re-creating the map on every render.
   useEffect(() => {
     clickHandler.current = onMapClick;
-  }, [onMapClick]);
+    viewHandler.current = onViewChange;
+  }, [onMapClick, onViewChange]);
 
   useEffect(() => {
     markerHandlers.current = new Map(
@@ -167,6 +172,17 @@ export default function MapView({
 
     instance.on("click", (event) => {
       clickHandler.current?.({ lng: event.lngLat.lng, lat: event.lngLat.lat });
+    });
+
+    // Reported on moveend rather than on every frame: this exists to persist a
+    // position, and writing storage during a pan would be wasteful.
+    instance.on("moveend", () => {
+      const centre = instance.getCenter();
+      viewHandler.current?.({
+        lng: centre.lng,
+        lat: centre.lat,
+        zoom: instance.getZoom(),
+      });
     });
 
     map.current = instance;

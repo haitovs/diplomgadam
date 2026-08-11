@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  BarChart3,
   Check,
   ChevronDown,
   Heart,
@@ -41,7 +40,6 @@ export default function ShellLayout() {
   const navItems = [
     { label: t("nav_discover"), path: "/", icon: Home },
     { label: t("nav_map"), path: "/map", icon: MapPin },
-    { label: t("nav_insights"), path: "/insights", icon: BarChart3 },
     ...(savedCount > 0
       ? [
           {

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   Maximize2,
   MapPin,
+  Navigation2,
   Minimize2,
   Search,
   SlidersHorizontal,
@@ -12,8 +13,9 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { publicApi } from "../api/public";
+import { directionsUrl, loadMapView, saveMapView } from "../lib/useNearby";
 import MapView, { ASHGABAT_CENTER, type MapMarker } from "../components/MapView";
-import { Button, Spinner, inputClass } from "../components/ui";
+import { Button, Select, Spinner, inputClass } from "../components/ui";
 import { useLanguage } from "../i18n/LanguageContext";
 
 /**
@@ -22,6 +24,8 @@ import { useLanguage } from "../i18n/LanguageContext";
  * away from someone who wanted to glance at the map and carry on reading;
  * offering it as a control leaves both options open. Escape returns.
  */
+const PRICE_TIERS = ["$", "$$", "$$$", "$$$$"];
+
 export default function MapPage() {
   const { t, lang } = useLanguage();
   const [selected, setSelected] = useState<string | null>(null);
@@ -29,6 +33,11 @@ export default function MapPage() {
   const [openOnly, setOpenOnly] = useState(false);
   const [listOpen, setListOpen] = useState(true);
   const [fullscreen, setFullscreen] = useState(false);
+  const [cuisine, setCuisine] = useState<string | null>(null);
+  const [price, setPrice] = useState<string | null>(null);
+
+  // Restored once, on mount: after that the visitor's panning owns the view.
+  const [initialView] = useState(() => loadMapView());
 
   // Escape is what people reach for to leave a fullscreen view, and the page
   // behind must not scroll while the map covers it.
@@ -50,6 +59,11 @@ export default function MapPage() {
     queryFn: () => publicApi.listStores({ lang, perPage: 60, sort: "name" }),
   });
 
+  const cuisines = useQuery({
+    queryKey: ["public-categories", lang],
+    queryFn: () => publicApi.categories(lang),
+  });
+
   const located = useMemo(
     () => (data?.stores ?? []).filter((store) => store.coordinates !== null),
     [data],
@@ -59,13 +73,15 @@ export default function MapPage() {
     const term = search.trim().toLocaleLowerCase(lang);
     return located.filter((store) => {
       if (openOnly && !store.openNow) return false;
+      if (price && store.priceTier !== price) return false;
+      if (cuisine && !store.categories.some((c) => c.slug === cuisine)) return false;
       if (!term) return true;
       return (
         store.name.toLocaleLowerCase(lang).includes(term) ||
         (store.neighborhood ?? "").toLocaleLowerCase(lang).includes(term)
       );
     });
-  }, [located, search, openOnly, lang]);
+  }, [located, search, openOnly, price, cuisine, lang]);
 
   const markers: MapMarker[] = useMemo(
     () =>
@@ -97,13 +113,16 @@ export default function MapPage() {
       <MapView
         className="h-full w-full !rounded-none"
         markers={markers}
-        fitToMarkers={!selected}
+        fitToMarkers={!selected && !initialView}
         center={
           selectedStore
             ? [selectedStore.coordinates!.lng, selectedStore.coordinates!.lat]
-            : ASHGABAT_CENTER
+            : initialView
+              ? [initialView.lng, initialView.lat]
+              : ASHGABAT_CENTER
         }
-        zoom={selectedStore ? 16 : 12}
+        zoom={selectedStore ? 16 : (initialView?.zoom ?? 12)}
+        onViewChange={saveMapView}
       />
 
       {/* Sidebar floats over the map so the map keeps the full width beneath. */}
@@ -142,6 +161,42 @@ export default function MapPage() {
                   className={`${inputClass} py-2 pl-9 text-sm`}
                 />
               </div>
+
+              <div className="flex flex-wrap items-center gap-1.5">
+                {PRICE_TIERS.map((tier) => (
+                  <button
+                    key={tier}
+                    type="button"
+                    onClick={() => setPrice((p) => (p === tier ? null : tier))}
+                    aria-pressed={price === tier}
+                    className={`rounded-full border px-2.5 py-1 text-xs font-semibold transition-all duration-200 ease-out-soft active:scale-95 ${
+                      price === tier
+                        ? "border-clay-600 bg-clay-600 text-white"
+                        : "border-[var(--border-subtle)] text-sand-700 hover:border-clay-300 dark:text-sand-300"
+                    }`}
+                  >
+                    {tier}
+                  </button>
+                ))}
+              </div>
+
+              {/* Cuisine is a select rather than chips: there are sixteen of
+                  them and a panel this narrow cannot show them as pills. */}
+              <Select
+                value={cuisine ?? ""}
+                onChange={(e) => setCuisine(e.target.value || null)}
+                className="py-2 text-sm"
+                aria-label={t("filter_category")}
+              >
+                <option value="">{t("filter_category")}</option>
+                {(cuisines.data ?? [])
+                  .filter((c) => (c.storeCount ?? 0) > 0)
+                  .map((c) => (
+                    <option key={c.slug} value={c.slug}>
+                      {c.icon} {c.name}
+                    </option>
+                  ))}
+              </Select>
 
               <div className="flex items-center justify-between gap-2">
                 <button
@@ -308,11 +363,28 @@ export default function MapPage() {
                 <MapPin className="h-3.5 w-3.5 shrink-0" />
                 <span className="truncate">{selectedStore.address}</span>
               </p>
-              <Link to={`/restaurants/${selectedStore.slug}`} className="block pt-1">
-                <Button size="sm" className="w-full">
-                  {t("action_view")}
-                </Button>
-              </Link>
+              <div className="flex gap-2 pt-1">
+                <Link to={`/restaurants/${selectedStore.slug}`} className="flex-1">
+                  <Button size="sm" className="w-full">
+                    {t("action_view")}
+                  </Button>
+                </Link>
+                <a
+                  href={directionsUrl(
+                    selectedStore.coordinates!.lat,
+                    selectedStore.coordinates!.lng,
+                    selectedStore.name,
+                  )}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1"
+                >
+                  <Button size="sm" variant="secondary" className="w-full"
+                    icon={<Navigation2 className="h-3.5 w-3.5" />}>
+                    {t("detail_directions")}
+                  </Button>
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
