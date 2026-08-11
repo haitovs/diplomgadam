@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
   BarChart3,
-  Globe,
+  Check,
+  ChevronDown,
   Heart,
   Home,
   MapPin,
@@ -38,87 +39,135 @@ export default function ShellLayout() {
     setLangOpen(false);
   }, [location.pathname]);
 
+  // Escape closes the language menu, as a menu is expected to.
+  useEffect(() => {
+    if (!langOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLangOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [langOpen]);
+
+  /** The one prominent action in the header: shared by desktop and drawer. */
+  const businessLinkClass =
+    "inline-flex items-center justify-center gap-1.5 rounded-full border border-clay-200 bg-clay-50 font-semibold text-clay-700 transition-colors duration-200 hover:border-clay-300 hover:bg-clay-100 dark:border-clay-500/30 dark:bg-clay-500/10 dark:text-clay-300 dark:hover:bg-clay-500/20";
+
+  const controlClass =
+    "inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--surface-card)] px-3 py-1.5 text-xs font-semibold text-sand-700 transition-colors duration-200 hover:border-sand-400 hover:text-sand-900 dark:text-sand-300 dark:hover:bg-sand-800 dark:hover:text-sand-100";
+
+  const footerLinkClass =
+    "text-sm text-sand-600 transition-colors duration-200 hover:text-clay-700 dark:text-sand-400 dark:hover:text-clay-300";
+
+  const footerHeadingClass =
+    "text-xs font-bold uppercase tracking-[0.14em] text-sand-500 dark:text-sand-500";
+
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-sand-50 to-clay-50 dark:from-sand-950 dark:via-sand-950 dark:to-sand-900 text-sand-900 dark:text-sand-100 transition-colors overflow-x-hidden">
-      <header className="sticky top-0 z-30 border-b border-sand-200/80 dark:border-sand-800/80 bg-white/80 dark:bg-sand-900/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
-          <NavLink to="/" className="group flex items-center gap-2.5 text-xl font-bold">
+    <div className="flex min-h-screen flex-col overflow-x-hidden bg-[var(--surface-page)] text-sand-900 transition-colors dark:text-sand-100">
+      <header className="sticky top-0 z-30 border-b border-[var(--border-subtle)] bg-[var(--surface-page)]/85 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-4">
+          {/* Logo lockup: mark, serif wordmark, and the tagline set small and
+              spaced beneath it — a masthead rather than a logo dropped in. */}
+          <NavLink to="/" end className="group flex min-w-0 items-center gap-2.5">
             <img
               src={logo}
               alt=""
-              className="w-8 h-8 rounded-lg shadow-md shadow-brand-500/20"
+              className="h-9 w-9 shrink-0 rounded-xl shadow-soft transition-transform duration-300 ease-out-soft group-hover:-translate-y-0.5"
             />
-            <span className="bg-gradient-to-r from-sand-900 to-sand-600 dark:from-white dark:to-sand-300 bg-clip-text text-transparent">
-              {t("brand_name")}
+            <span className="min-w-0">
+              <span className="block truncate font-display text-xl font-semibold leading-none tracking-tight text-sand-900 transition-colors duration-200 group-hover:text-clay-700 dark:text-sand-50 dark:group-hover:text-clay-300">
+                {t("brand_name")}
+              </span>
+              <span className="mt-1 hidden truncate text-[10px] font-semibold uppercase tracking-[0.16em] text-sand-500 sm:block">
+                {t("brand_tagline")}
+              </span>
             </span>
           </NavLink>
 
-          <nav className="hidden md:flex gap-1 rounded-full bg-sand-100/80 dark:bg-sand-800/60 px-1.5 py-1">
+          {/* Desktop navigation. Text with a quiet accent rule under the current
+              page, instead of a pill set that competes with the content. */}
+          <nav className="mx-auto hidden items-center gap-0.5 md:flex">
             {navItems.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 end={item.path === "/"}
                 className={({ isActive }) =>
-                  `flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                  `relative rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     isActive
-                      ? "bg-white dark:bg-sand-700 text-brand-600 dark:text-brand-300 shadow-sm"
-                      : "text-sand-600 dark:text-sand-500 hover:text-sand-800 dark:hover:text-sand-200"
+                      ? "text-clay-700 dark:text-clay-300"
+                      : "text-sand-600 hover:text-sand-900 dark:text-sand-400 dark:hover:text-sand-100"
                   }`
                 }
               >
-                <item.icon className="w-4 h-4" />
-                {item.label}
+                {({ isActive }) => (
+                  <>
+                    {item.label}
+                    <span
+                      aria-hidden
+                      className={`absolute inset-x-3 bottom-0.5 h-0.5 rounded-full bg-clay-500 transition-opacity duration-200 ${
+                        isActive ? "opacity-100" : "opacity-0"
+                      }`}
+                    />
+                  </>
+                )}
               </NavLink>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-2">
-            <NavLink
-              to="/store"
-              className="inline-flex items-center gap-1.5 rounded-full border border-sand-200 dark:border-sand-700 px-3 py-1.5 text-xs font-semibold text-sand-600 dark:text-sand-200 hover:bg-sand-50 dark:hover:bg-sand-800 transition-colors"
-            >
-              <Store className="w-3.5 h-3.5" />
-              {t("for_business")}
-            </NavLink>
-
+          <div className="hidden items-center gap-2 md:flex">
             <div className="relative">
               <button
                 type="button"
                 onClick={() => setLangOpen((v) => !v)}
                 aria-haspopup="listbox"
                 aria-expanded={langOpen}
-                className="inline-flex items-center gap-1.5 rounded-full border border-sand-200 dark:border-sand-700 px-3 py-1.5 text-xs font-semibold text-sand-600 dark:text-sand-200 hover:bg-sand-50 dark:hover:bg-sand-800 transition-colors"
+                aria-label={`${t("language")}: ${LANG_LABELS[lang]}`}
+                className={controlClass}
               >
-                <Globe className="w-3.5 h-3.5" />
                 {LANG_SHORT[lang]}
+                <ChevronDown
+                  className={`h-3.5 w-3.5 text-sand-500 transition-transform duration-200 ${
+                    langOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
+
               {langOpen && (
-                <ul
-                  role="listbox"
-                  className="absolute right-0 z-40 mt-1.5 w-36 overflow-hidden rounded-xl border border-sand-200 dark:border-sand-700 bg-white dark:bg-sand-800 shadow-lg"
-                >
-                  {LANGS.map((code) => (
-                    <li key={code}>
-                      <button
-                        type="button"
-                        role="option"
-                        aria-selected={lang === code}
-                        onClick={() => {
-                          setLang(code);
-                          setLangOpen(false);
-                        }}
-                        className={`block w-full px-3.5 py-2 text-left text-sm transition-colors ${
-                          lang === code
-                            ? "bg-brand-50 dark:bg-brand-500/10 font-semibold text-brand-700 dark:text-brand-300"
-                            : "text-sand-600 dark:text-sand-300 hover:bg-sand-50 dark:hover:bg-sand-700"
-                        }`}
-                      >
-                        {LANG_LABELS[code]}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+                <>
+                  <div
+                    className="fixed inset-0 z-30"
+                    aria-hidden
+                    onClick={() => setLangOpen(false)}
+                  />
+                  <ul
+                    role="listbox"
+                    aria-label={t("language")}
+                    className="absolute right-0 z-40 mt-2 w-40 overflow-hidden rounded-card border border-[var(--border-subtle)] bg-[var(--surface-card)] p-1 shadow-lifted"
+                  >
+                    {LANGS.map((code) => (
+                      <li key={code}>
+                        <button
+                          type="button"
+                          role="option"
+                          aria-selected={lang === code}
+                          onClick={() => {
+                            setLang(code);
+                            setLangOpen(false);
+                          }}
+                          className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors duration-200 ${
+                            lang === code
+                              ? "bg-clay-50 font-semibold text-clay-700 dark:bg-clay-500/10 dark:text-clay-300"
+                              : "text-sand-700 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-sand-800"
+                          }`}
+                        >
+                          {LANG_LABELS[code]}
+                          {lang === code && <Check className="h-3.5 w-3.5 shrink-0" />}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </>
               )}
             </div>
 
@@ -126,90 +175,115 @@ export default function ShellLayout() {
               type="button"
               onClick={toggleTheme}
               aria-label={t("theme_toggle")}
-              className="inline-flex items-center gap-1.5 rounded-full border border-sand-200 dark:border-sand-700 px-3 py-1.5 text-xs font-semibold text-sand-600 dark:text-sand-200 hover:bg-sand-50 dark:hover:bg-sand-800 transition-colors"
+              title={theme === "light" ? t("theme_dark") : t("theme_light")}
+              className={`${controlClass} px-2.5`}
             >
               {theme === "light" ? (
-                <Moon className="w-3.5 h-3.5" />
+                <Moon className="h-3.5 w-3.5" />
               ) : (
-                <Sun className="w-3.5 h-3.5 text-amber-400" />
+                <Sun className="h-3.5 w-3.5 text-clay-300" />
               )}
             </button>
+
+            <span
+              aria-hidden
+              className="h-5 w-px bg-[var(--border-subtle)] lg:mx-1"
+            />
+
+            <NavLink to="/store" className={`${businessLinkClass} px-3.5 py-1.5 text-xs`}>
+              <Store className="h-3.5 w-3.5" />
+              {t("for_business")}
+            </NavLink>
           </div>
 
           <button
-            className="md:hidden rounded-lg p-2 hover:bg-sand-100 dark:hover:bg-sand-800 transition-colors"
+            type="button"
+            className="ml-auto rounded-xl p-2 text-sand-700 transition-colors duration-200 hover:bg-sand-200/70 md:hidden dark:text-sand-300 dark:hover:bg-sand-800/70"
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label={t("nav_discover")}
+            aria-expanded={menuOpen}
+            aria-controls="shell-mobile-nav"
+            /* "Menu" is the right word for this control in all three
+               languages; the dictionary has no separate navigation-menu key. */
+            aria-label={menuOpen ? t("action_close") : t("portal_menu")}
           >
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
         <AnimatePresence>
           {menuOpen && (
             <motion.div
+              id="shell-mobile-nav"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden overflow-hidden border-t border-sand-100 dark:border-sand-800"
+              className="overflow-hidden border-t border-[var(--border-subtle)] bg-[var(--surface-card)] md:hidden"
             >
-              <div className="space-y-1.5 px-4 py-4">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    end={item.path === "/"}
-                    className={({ isActive }) =>
-                      `flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
-                        isActive
-                          ? "bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-300"
-                          : "text-sand-600 dark:text-sand-300 hover:bg-sand-50 dark:hover:bg-sand-800"
-                      }`
-                    }
-                  >
-                    <item.icon className="w-4 h-4" />
-                    {item.label}
-                  </NavLink>
-                ))}
-
-                <NavLink
-                  to="/store"
-                  className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-sand-600 dark:text-sand-300 hover:bg-sand-50 dark:hover:bg-sand-800"
-                >
-                  <Store className="w-4 h-4" />
-                  {t("for_business")}
-                </NavLink>
-
-                <div className="flex gap-1.5 px-4 pt-2">
-                  {LANGS.map((code) => (
-                    <button
-                      key={code}
-                      type="button"
-                      onClick={() => setLang(code)}
-                      className={`flex-1 rounded-lg px-2 py-2 text-xs font-semibold transition-colors ${
-                        lang === code
-                          ? "bg-brand-500 text-white"
-                          : "bg-sand-100 dark:bg-sand-800 text-sand-600 dark:text-sand-300"
-                      }`}
+              <div className="px-4 py-4">
+                <div className="space-y-1">
+                  {navItems.map((item) => (
+                    <NavLink
+                      key={item.path}
+                      to={item.path}
+                      end={item.path === "/"}
+                      className={({ isActive }) =>
+                        `flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                          isActive
+                            ? "bg-clay-50 text-clay-700 dark:bg-clay-500/10 dark:text-clay-300"
+                            : "text-sand-700 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-sand-800"
+                        }`
+                      }
                     >
-                      {LANG_SHORT[code]}
-                    </button>
+                      <item.icon className="h-4 w-4 shrink-0" />
+                      {item.label}
+                    </NavLink>
                   ))}
                 </div>
 
-                <button
-                  type="button"
-                  onClick={toggleTheme}
-                  className="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-sand-600 dark:text-sand-300 hover:bg-sand-50 dark:hover:bg-sand-800"
-                >
-                  {theme === "light" ? (
-                    <Moon className="w-4 h-4" />
-                  ) : (
-                    <Sun className="w-4 h-4 text-amber-300" />
-                  )}
-                  {t("theme_toggle")}
-                </button>
+                <div className="mt-5 space-y-5 border-t border-[var(--border-subtle)] pt-5">
+                  <NavLink
+                    to="/store"
+                    className={`${businessLinkClass} w-full px-4 py-2.5 text-sm`}
+                  >
+                    <Store className="h-4 w-4" />
+                    {t("for_business")}
+                  </NavLink>
+
+                  <div className="space-y-2">
+                    <span className={`block ${footerHeadingClass}`}>{t("language")}</span>
+                    <div className="flex gap-1.5">
+                      {LANGS.map((code) => (
+                        <button
+                          key={code}
+                          type="button"
+                          onClick={() => setLang(code)}
+                          aria-pressed={lang === code}
+                          className={`flex-1 rounded-lg border px-2 py-2 text-xs font-semibold transition-colors duration-200 ${
+                            lang === code
+                              ? "border-clay-600 bg-clay-600 text-white"
+                              : "border-[var(--border-subtle)] bg-[var(--surface-card)] text-sand-700 dark:text-sand-300"
+                          }`}
+                        >
+                          {LANG_SHORT[code]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={toggleTheme}
+                    className="flex w-full items-center gap-3 rounded-xl border border-[var(--border-subtle)] px-4 py-3 text-sm font-medium text-sand-700 transition-colors duration-200 hover:bg-sand-100 dark:text-sand-300 dark:hover:bg-sand-800"
+                  >
+                    {theme === "light" ? (
+                      <Moon className="h-4 w-4" />
+                    ) : (
+                      <Sun className="h-4 w-4 text-clay-300" />
+                    )}
+                    {theme === "light" ? t("theme_dark") : t("theme_light")}
+                  </button>
+                </div>
               </div>
             </motion.div>
           )}
@@ -220,23 +294,59 @@ export default function ShellLayout() {
         <Outlet />
       </main>
 
-      <footer className="border-t border-sand-200/80 dark:border-sand-800/80 bg-white/60 dark:bg-sand-900/70 py-6 backdrop-blur sm:py-8">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-center sm:px-6 md:flex-row md:text-left">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="" className="w-6 h-6 rounded-md" />
-            <span className="text-sm font-semibold text-sand-600 dark:text-sand-500">
-              {t("brand_name")}
-            </span>
+      {/* Footer as a small masthead plus two link columns, so it reads as the
+          end of a publication rather than a leftover strip. */}
+      <footer className="mt-8 border-t border-[var(--border-subtle)] surface-sunken">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.6fr,1fr,1fr] lg:gap-10">
+            <div className="max-w-sm">
+              <NavLink to="/" end className="group inline-flex items-center gap-2.5">
+                <img src={logo} alt="" className="h-8 w-8 rounded-lg shadow-soft" />
+                <span className="font-display text-lg font-semibold text-sand-900 transition-colors duration-200 group-hover:text-clay-700 dark:text-sand-50 dark:group-hover:text-clay-300">
+                  {t("brand_name")}
+                </span>
+              </NavLink>
+              <p className="mt-3 text-sm leading-relaxed text-sand-600 dark:text-sand-400">
+                {t("footer_text")}
+              </p>
+            </div>
+
+            <nav aria-label={t("nav_discover")} className="space-y-3">
+              <h2 className={footerHeadingClass}>{t("nav_discover")}</h2>
+              <ul className="space-y-2.5">
+                {navItems.map((item) => (
+                  <li key={item.path}>
+                    <NavLink to={item.path} end={item.path === "/"} className={footerLinkClass}>
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-label={t("for_business")} className="space-y-3">
+              <h2 className={footerHeadingClass}>{t("for_business")}</h2>
+              <ul className="space-y-2.5">
+                <li>
+                  <NavLink to="/store" className={footerLinkClass}>
+                    {t("action_signin")}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/store/register" className={footerLinkClass}>
+                    {t("store_signup_title")}
+                  </NavLink>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <p className="text-sm text-sand-600 dark:text-sand-500">
-            {t("footer_text")} · {new Date().getFullYear()}
-          </p>
-          <NavLink
-            to="/store"
-            className="text-sm font-medium text-sand-600 hover:text-brand-600 dark:text-sand-500 dark:hover:text-brand-300"
-          >
-            {t("for_business")}
-          </NavLink>
+
+          <div className="mt-10 flex flex-col gap-2 border-t border-[var(--border-subtle)] pt-6 text-xs text-sand-600 sm:flex-row sm:items-center sm:justify-between dark:text-sand-500">
+            <p className="tabular-nums">
+              © {new Date().getFullYear()} {t("brand_name")}
+            </p>
+            <p>{t("brand_tagline")}</p>
+          </div>
         </div>
       </footer>
     </div>

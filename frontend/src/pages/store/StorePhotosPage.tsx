@@ -3,8 +3,15 @@ import { ImagePlus, Lock, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { ApiError } from "../../api/client";
 import { storeApi } from "../../api/store";
-import { Badge, Card, ErrorNote, SectionTitle, Spinner } from "../../components/ui";
+import {
+  Card,
+  ErrorNote,
+  PageHeader,
+  SectionTitle,
+  Skeleton,
+} from "../../components/ui";
 import { useLanguage } from "../../i18n/LanguageContext";
+import { formatBytes } from "../../lib/format";
 import type { MediaItem, MediaKind } from "../../types/api";
 
 function PhotoGroup({
@@ -33,51 +40,75 @@ function PhotoGroup({
 
   return (
     <Card>
-      <SectionTitle
-        title={title}
-        description={description}
-        action={
-          <Badge tone={full ? "warning" : "neutral"}>
-            {images.length}/{quota} {t("media_used")}
-          </Badge>
-        }
-      />
+      <SectionTitle title={title} description={description || undefined} />
+
+      {/* The quota is stated plainly and drawn once, rather than shouted with
+          a warning colour the moment the last slot is taken. */}
+      <div className="mb-5 flex items-center gap-3">
+        <div
+          className="h-1.5 w-24 shrink-0 overflow-hidden rounded-full surface-sunken"
+          aria-hidden
+        >
+          <div
+            className={`h-full rounded-full transition-all duration-500 ease-out-soft ${
+              full ? "bg-sand-500" : "bg-clay-500"
+            }`}
+            style={{ width: `${Math.min(100, (images.length / quota) * 100)}%` }}
+          />
+        </div>
+        <p className="text-xs font-medium text-sand-600 tabular-nums dark:text-sand-500">
+          {images.length}/{quota} {t("media_used")}
+        </p>
+      </div>
 
       {isPrivate && (
-        <p className="mb-3 flex items-center gap-1.5 text-xs font-medium text-amber-700 dark:text-amber-300">
-          <Lock className="w-3.5 h-3.5" />
-          {t("media_venue_proof_hint")}
+        <p className="mb-5 flex items-start gap-2 rounded-card border border-amber-200 bg-amber-50 px-3.5 py-2.5 text-xs font-medium text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
+          <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+          <span>{t("media_venue_proof_hint")}</span>
         </p>
       )}
 
-      <div className="flex flex-wrap gap-3">
+      <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5">
         {images.map((image) => (
-          <div key={image.id} className="group relative">
-            <img
-              src={image.thumbUrlJpeg}
-              alt=""
-              className="h-24 w-24 rounded-xl object-cover"
-            />
+          <figure key={image.id} className="group relative">
+            <div className="photo-frame aspect-square w-full overflow-hidden rounded-card">
+              <img
+                src={image.thumbUrlJpeg}
+                alt=""
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 ease-out-soft group-hover:scale-105"
+              />
+            </div>
+
+            {/* The scrim only appears on hover or keyboard focus, so the delete
+                control is reachable without a pointer. */}
+            <div className="pointer-events-none absolute inset-0 rounded-card bg-gradient-to-t from-black/55 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" />
+
             <button
               type="button"
               onClick={() => {
                 if (confirm(t("media_delete_confirm"))) onDelete(image.id);
               }}
-              className="absolute -right-1.5 -top-1.5 grid h-6 w-6 place-items-center rounded-full bg-rose-500 text-white opacity-0 shadow transition group-hover:opacity-100"
+              className="absolute right-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-[var(--surface-card)]/90 text-sand-700 opacity-0 shadow-soft backdrop-blur transition-all duration-200 ease-out-soft hover:bg-red-700 hover:text-white focus-visible:opacity-100 group-hover:opacity-100 dark:text-sand-200"
               aria-label={t("action_delete")}
             >
-              <Trash2 className="w-3 h-3" />
+              <Trash2 className="h-3.5 w-3.5" />
             </button>
-          </div>
+
+            <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 truncate px-2 pb-1.5 text-[11px] font-medium tabular-nums text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
+              {image.width}×{image.height} · {formatBytes(image.bytes)}
+            </figcaption>
+          </figure>
         ))}
 
         {!full && (
           <label
-            className={`grid h-24 w-24 cursor-pointer place-items-center rounded-xl border border-dashed text-sand-500 transition hover:border-brand-400 hover:text-brand-500 dark:border-sand-600 ${
-              uploading ? "opacity-50" : "border-sand-300"
+            className={`grid aspect-square w-full cursor-pointer place-items-center gap-1.5 rounded-card border border-dashed border-sand-300 text-sand-500 transition-colors duration-200 hover:border-clay-400 hover:bg-clay-50/60 hover:text-clay-700 dark:border-sand-700 dark:hover:bg-clay-500/5 dark:hover:text-clay-300 ${
+              uploading ? "pointer-events-none opacity-50" : ""
             }`}
           >
-            <ImagePlus className="w-6 h-6" />
+            <ImagePlus className="h-5 w-5" />
+            <span className="text-xs font-semibold">{t("action_upload")}</span>
             <input
               type="file"
               accept="image/jpeg,image/png,image/webp"
@@ -93,7 +124,7 @@ function PhotoGroup({
         )}
       </div>
 
-      <p className="mt-3 text-xs text-sand-600 dark:text-sand-500">
+      <p className="mt-4 text-xs text-sand-600 dark:text-sand-500">
         {full ? t("media_limit_reached") : t("media_upload_hint")}
       </p>
     </Card>
@@ -134,7 +165,16 @@ export default function StorePhotosPage() {
     onError: fail,
   });
 
-  if (media.isLoading || !media.data) return <Spinner />;
+  if (media.isLoading) return <PhotosSkeleton />;
+
+  if (media.isError || !media.data) {
+    return (
+      <div className="space-y-5">
+        <PageHeader title={t("portal_photos")} description={t("media_upload_hint")} />
+        <ErrorNote message={t("error_network")} />
+      </div>
+    );
+  }
 
   const byKind = (kind: MediaKind) =>
     media.data!.media.filter((image) => image.kind === kind);
@@ -143,7 +183,9 @@ export default function StorePhotosPage() {
     upload.mutate({ kind, file });
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6 pb-4">
+      <PageHeader title={t("portal_photos")} description={t("media_upload_hint")} />
+
       {error && <ErrorNote message={error} />}
 
       <PhotoGroup
@@ -179,6 +221,29 @@ export default function StorePhotosPage() {
         uploading={upload.isPending}
         isPrivate
       />
+    </div>
+  );
+}
+
+/** Keeps the three galleries' footprint while the media list loads. */
+function PhotosSkeleton() {
+  return (
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <Skeleton className="h-9 w-44" />
+        <Skeleton className="h-4 w-64" />
+      </div>
+      {Array.from({ length: 3 }, (_, group) => (
+        <Card key={group}>
+          <Skeleton className="mb-2 h-6 w-40" />
+          <Skeleton className="mb-5 h-4 w-56" />
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5">
+            {Array.from({ length: 4 }, (_, tile) => (
+              <Skeleton key={tile} className="aspect-square w-full rounded-card" />
+            ))}
+          </div>
+        </Card>
+      ))}
     </div>
   );
 }
