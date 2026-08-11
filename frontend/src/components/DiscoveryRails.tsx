@@ -80,7 +80,7 @@ export default function DiscoveryRails({
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--surface-card)] px-3 py-1.5 font-medium text-sand-800 dark:text-sand-200">
           <MapPin className="h-3.5 w-3.5 text-clay-600 dark:text-clay-400" />
           {located && neighbourhood
-            ? `${t("foryou_you_are_in")} ${neighbourhood}`
+            ? `${t("nearby_you_are_in")} ${neighbourhood}`
             : "Aşgabat"}
         </span>
 
@@ -97,13 +97,13 @@ export default function DiscoveryRails({
             icon={<Navigation className="h-3.5 w-3.5" />}
             onClick={request}
           >
-            {t("insights_enable_location")}
+            {t("nearby_enable")}
           </Button>
         )}
         {state === "locating" && (
           <span className="inline-flex items-center gap-1.5 text-sand-600 dark:text-sand-400">
             <Navigation className="h-3.5 w-3.5 animate-pulse" />
-            {t("insights_locating")}
+            {t("nearby_locating")}
           </span>
         )}
         {state === "granted" && (
@@ -112,14 +112,14 @@ export default function DiscoveryRails({
             onClick={request}
             className="text-sand-600 underline-offset-2 hover:underline dark:text-sand-400"
           >
-            {t("foryou_not_right")}
+            {t("nearby_not_right")}
           </button>
         )}
       </div>
 
       <StoreRail
         title={t("rail_open_now")}
-        subtitle={located ? t("insights_near_subtitle") : undefined}
+        subtitle={located ? t("nearby_subtitle") : undefined}
         entries={openRail.slice(0, 12)}
       />
 

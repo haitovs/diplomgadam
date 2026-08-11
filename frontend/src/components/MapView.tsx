@@ -3,6 +3,7 @@ import maplibregl, {
   type Map as MapLibreMap,
   type StyleSpecification,
 } from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
 

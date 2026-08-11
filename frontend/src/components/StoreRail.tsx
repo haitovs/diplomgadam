@@ -116,7 +116,7 @@ function RailCard({
   metres: number | null;
 }) {
   const { t } = useLanguage();
-  const distanceLabels = { m: t("insights_m"), km: t("insights_km") };
+  const distanceLabels = { m: t("nearby_m"), km: t("nearby_km") };
 
   const facts = [
     store.categories[0]?.name,
@@ -150,7 +150,7 @@ function RailCard({
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/92 px-2.5 py-1 text-[11px] font-semibold text-sand-900 backdrop-blur-sm">
             <MapPin className="h-3 w-3" />
             {formatDistance(metres, distanceLabels)} · {walkingMinutes(metres)}{" "}
-            {t("insights_min")}
+            {t("nearby_min")}
           </span>
         )}
 

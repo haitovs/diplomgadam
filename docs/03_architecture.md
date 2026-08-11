@@ -25,6 +25,25 @@ Serving the SPA from the same process as the API removes cross-origin
 configuration entirely: cookies are same-site, and CORS is closed in production
 because a cross-origin request is never legitimate.
 
+## What the browser downloads
+
+The application is one bundle for the public site and separate ones for
+everything else, split at the router.
+
+The public pages — discover, a restaurant, favourites — are what a visitor
+lands on, so they ship together. The map is not: MapLibre and its stylesheet
+are larger than the whole rest of the application, and most visits never open a
+map. The owner portal and the admin panel are used by a few dozen people and by
+no ordinary visitor, so they are fetched only when somebody navigates to them.
+
+The restaurant page splits again internally. Its location map is one card below
+the menu, so it loads after the page rather than with it and nothing above it
+waits on a download.
+
+The effect is that the first page costs about 175 kB compressed instead of
+about 430 kB. On the mobile connections this is built for, that difference is
+the difference between a page that appears and a page that is waited for.
+
 ## Server structure
 
 ```
@@ -38,7 +57,7 @@ server/src/
     menus/     sections and items
     media/     upload pipeline, quotas, delivery
     admin/     moderation, roles, categories, audit
-    public/    search, detail, categories, statistics, opening hours
+    public/    search, detail, categories, filters, opening hours
     maps/      tiles, glyphs, sprites, style
 ```
 

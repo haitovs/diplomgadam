@@ -17,7 +17,7 @@ const STORAGE_KEY = "tagam-location-consent";
  * costs nothing here and does not drift if the platform ever covers more than
  * one city.
  */
-export function distanceMetres(a: Coords, b: Coords): number {
+function distanceMetres(a: Coords, b: Coords): number {
   const R = 6_371_000;
   const toRad = (deg: number) => (deg * Math.PI) / 180;
   const dLat = toRad(b.lat - a.lat);
@@ -98,22 +98,6 @@ export function formatDistance(
 ): string {
   if (metres < 950) return `${Math.round(metres / 10) * 10} ${labels.m}`;
   return `${(metres / 1000).toFixed(metres < 9500 ? 1 : 0)} ${labels.km}`;
-}
-
-/** Time-of-day greeting, in Ashgabat's own clock. */
-export function greetingKey(): "morning" | "afternoon" | "evening" | "night" {
-  const hour = Number(
-    new Intl.DateTimeFormat("en-GB", {
-      hour: "numeric",
-      hour12: false,
-      timeZone: "Asia/Ashgabat",
-    }).format(new Date()),
-  );
-
-  if (hour < 11) return "morning";
-  if (hour < 17) return "afternoon";
-  if (hour < 22) return "evening";
-  return "night";
 }
 
 const VIEW_KEY = "tagam-map-view";

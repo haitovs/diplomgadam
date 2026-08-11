@@ -243,12 +243,12 @@ export default function StoreOverviewPage() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <StatTile
-            label={t("insights_total_views")}
+            label={t("stats_total_views")}
             value={store.views}
             icon={<Eye className="h-4 w-4" />}
           />
           <StatTile
-            label={t("insights_menu_items")}
+            label={t("stats_menu_items")}
             value={itemCount}
             icon={<UtensilsCrossed className="h-4 w-4" />}
           />

@@ -2,7 +2,6 @@ import type { Lang } from "../i18n/translations";
 import type {
   CategorySummary,
   FilterOptions,
-  Insights,
   PublicStoreDetail,
   PublicStoreList,
 } from "../types/api";
@@ -54,5 +53,4 @@ export const publicApi = {
 
   filters: () => get<FilterOptions>("/public/filters"),
 
-  insights: (lang: Lang) => get<Insights>("/public/insights", { lang }),
 };

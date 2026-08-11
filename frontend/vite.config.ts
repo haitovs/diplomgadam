@@ -19,15 +19,10 @@ export default defineConfig({
     ),
   },
   build: {
-    // MapLibre is large and only needed on map views; splitting it keeps the
-    // initial bundle small on slow connections.
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          maplibre: ["maplibre-gl"],
-        },
-      },
-    },
+    // MapLibre is split out by the lazy /map route rather than by a manual
+    // chunk. Naming it manually put it in the entry graph, which had Vite
+    // preload all 800 kB of it from index.html for visitors who never opened
+    // the map — the opposite of what the split was for.
     chunkSizeWarningLimit: 900,
   },
 });

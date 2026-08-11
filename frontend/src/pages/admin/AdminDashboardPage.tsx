@@ -119,7 +119,7 @@ export default function AdminDashboardPage() {
     <div className="space-y-6">
       <PageHeader
         title={t("admin_dashboard")}
-        description={t("insights_subtitle")}
+        description={t("stats_subtitle")}
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -130,12 +130,12 @@ export default function AdminDashboardPage() {
           icon={<Store className="h-4 w-4" />}
         />
         <Tile
-          label={t("insights_menu_items")}
+          label={t("stats_menu_items")}
           value={totals.menuItems}
           icon={<UtensilsCrossed className="h-4 w-4" />}
         />
         <Tile
-          label={t("insights_total_views")}
+          label={t("stats_total_views")}
           value={totals.totalViews}
           icon={<Eye className="h-4 w-4" />}
         />
@@ -204,10 +204,10 @@ export default function AdminDashboardPage() {
       </Card>
 
       <Card>
-        <SectionTitle title={t("insights_newest")} />
+        <SectionTitle title={t("stats_newest")} />
         {recent.length === 0 ? (
           <p className="text-sm text-sand-600 dark:text-sand-500">
-            {t("insights_empty")}
+            {t("stats_empty")}
           </p>
         ) : (
           <ul className="-mx-2 divide-y divide-[var(--border-subtle)]">

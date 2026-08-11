@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Suspense, lazy } from "react";
 import {
   ArrowLeft,
   Clock,
@@ -15,12 +16,23 @@ import {
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { publicApi } from "../api/public";
-import MapView from "../components/MapView";
 import { Badge, Button, Card, EmptyState, Spinner } from "../components/ui";
 import { useLanguage } from "../i18n/LanguageContext";
 import type { TranslationKey } from "../i18n/translations";
 import { formatDate, formatPhone, formatPrice, socialUrl } from "../lib/format";
 import { useFavorites } from "../store/useFavorites";
+
+/*
+ * The map arrives after the page rather than with it.
+ *
+ * A restaurant page is read for its photos, hours and menu; the location map is
+ * one card near the bottom. MapLibre is larger than everything else on the page
+ * put together, and importing it here statically pulled it into the bundle
+ * served to every visitor of every page — including people who never scrolled
+ * that far. Loaded on demand, the card fills in a moment later and nothing
+ * above it waits.
+ */
+const MapView = lazy(() => import("../components/MapView"));
 
 export default function StoreDetailPage() {
   const { slug = "" } = useParams();
@@ -392,14 +404,25 @@ export default function StoreDetailPage() {
             </h2>
             {coords ? (
               <>
-                <MapView
-                  className="h-52"
-                  center={[coords.lng, coords.lat]}
-                  zoom={15}
-                  markers={[
-                    { id: store.id, lng: coords.lng, lat: coords.lat, label: store.name },
-                  ]}
-                />
+                <Suspense
+                  fallback={
+                    <div className="h-52 animate-pulse rounded-xl bg-sand-200 dark:bg-sand-800" />
+                  }
+                >
+                  <MapView
+                    className="h-52"
+                    center={[coords.lng, coords.lat]}
+                    zoom={15}
+                    markers={[
+                      {
+                        id: store.id,
+                        lng: coords.lng,
+                        lat: coords.lat,
+                        label: store.name,
+                      },
+                    ]}
+                  />
+                </Suspense>
                 <p className="mt-3 text-sm text-sand-700 dark:text-sand-300">
                   {store.location.address}
                 </p>

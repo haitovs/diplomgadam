@@ -5,7 +5,6 @@ import { langSchema } from "../../lib/i18n.js";
 import { AMENITIES, PRICE_TIERS } from "../stores/constants.js";
 import {
   getFilterOptions,
-  getInsights,
   getPublicStore,
   listPublicCategories,
   listPublicStores,
@@ -76,14 +75,6 @@ router.get(
   "/filters",
   asyncHandler(async (_req, res) => {
     res.json({ ...(await getFilterOptions()), amenities: AMENITIES, priceTiers: PRICE_TIERS });
-  }),
-);
-
-router.get(
-  "/insights",
-  asyncHandler(async (req, res) => {
-    const { lang } = parseQuery(langQuery, req.query);
-    res.json(await getInsights(lang));
   }),
 );
 

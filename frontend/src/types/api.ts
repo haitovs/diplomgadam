@@ -159,22 +159,6 @@ export interface FilterOptions {
   amenities: string[];
 }
 
-export interface Insights {
-  totals: {
-    stores: number;
-    withDelivery: number;
-    withBanquet: number;
-    totalViews: number;
-    menuItems: number;
-  };
-  menuPrices: { avgMinor: number; minMinor: number; maxMinor: number };
-  byCategory: { slug: string; name: string; icon: string | null; count: number }[];
-  byNeighborhood: { neighborhood: string; count: number }[];
-  byPriceTier: { priceTier: string; count: number }[];
-  mostViewed: { slug: string; name: string; views: number }[];
-  newest: { slug: string; name: string; createdAt: string }[];
-}
-
 // ── Owner portal shapes (raw, multilingual) ──────────────────────────────────
 
 export interface StoreRecord {

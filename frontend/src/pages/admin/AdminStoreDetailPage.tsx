@@ -579,7 +579,7 @@ export default function AdminStoreDetailPage() {
             <Fact label={t("form_price_tier")} value={store.priceTier} />
             <Fact label={t("detail_hours")} value={hours.length} />
             <Fact label={t("detail_gallery")} value={publicImages.length} />
-            <Fact label={t("insights_total_views")} value={store.views} />
+            <Fact label={t("stats_total_views")} value={store.views} />
             <Fact
               label={t("admin_when")}
               value={formatDateTime(store.submittedAt ?? store.createdAt, lang)}
