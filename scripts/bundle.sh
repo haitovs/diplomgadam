@@ -39,12 +39,15 @@ OUT_DIR="$ROOT/dist-bundle"
 STAGE="$OUT_DIR/gadam-${TAG}"
 
 # The map bundle is not in git; without it the image would ship a working site
-# with a dead map, which is worse than failing here.
-if [[ ! -f "$ROOT/data/maps/turkmenistan.mbtiles" ]]; then
-  echo "Map assets are missing from data/maps." >&2
-  echo "Run scripts/prepare-map-assets.sh first." >&2
-  exit 1
-fi
+# with a dead map, which is worse than failing here. These are the files the
+# server actually reads at runtime.
+for required in tiles.bin tiles.idx style.json fonts; do
+  if [[ ! -e "$ROOT/data/maps/$required" ]]; then
+    echo "Map assets are incomplete: data/maps/$required is missing." >&2
+    echo "Run scripts/prepare-map-assets.sh first." >&2
+    exit 1
+  fi
+done
 
 echo "==> Building $APP_IMAGE for $PLATFORM"
 docker build --platform "$PLATFORM" -t "$APP_IMAGE" .
