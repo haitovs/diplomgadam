@@ -18,3 +18,4 @@ data/maps/
 dist-bundle/
 backups/
 frontend/tsconfig.tsbuildinfo
+data/seed-images/

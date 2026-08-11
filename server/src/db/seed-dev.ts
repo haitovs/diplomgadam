@@ -9,9 +9,9 @@
  *   npm run db:seed
  *
  * It creates approved restaurants from data/restaurants.json with their menus,
- * opening hours, categories and owner accounts. Photos are not seeded — the
- * demo data references stock images that are not ours to publish, and listings
- * render a placeholder without them.
+ * opening hours, categories and owner accounts, and attaches the photographs
+ * fetched by scripts/fetch-seed-images.mjs if they are present. Without them it
+ * still runs; listings simply show a placeholder.
  */
 import { sql } from "drizzle-orm";
 import fs from "fs";
@@ -31,6 +31,7 @@ import {
   stores,
 } from "./schema.js";
 import { slugify } from "../lib/slug.js";
+import { storeUpload } from "../modules/media/media.service.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.resolve(here, "../../../data");
@@ -41,6 +42,8 @@ interface DemoRestaurant {
   id: string;
   name: string;
   description: string;
+  heroImage?: string;
+  gallery?: string[];
   cuisines: string[];
   priceTier: string;
   location: {
@@ -59,6 +62,51 @@ interface DemoMenuItem {
   description: string;
   price: number;
   category: string;
+  image_url?: string;
+}
+
+const seedImagesDir = path.join(dataDir, "seed-images");
+
+/**
+ * Maps the demo data's original photo URLs to files on disk. Absent until
+ * scripts/fetch-seed-images.mjs has been run, which is why every use of it is
+ * optional.
+ */
+function loadImageManifest(): Record<string, string> {
+  const manifestPath = path.join(seedImagesDir, "manifest.json");
+  if (!fs.existsSync(manifestPath)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(manifestPath, "utf-8")) as Record<string, string>;
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Pushes a demo photograph through the real upload pipeline, so seeded images
+ * are processed, resized and recorded exactly like an owner's own upload
+ * rather than being special-cased.
+ */
+async function attachImage(
+  storeId: string,
+  kind: "cover" | "gallery" | "menu_item",
+  url: string | undefined,
+  manifest: Record<string, string>,
+): Promise<string | null> {
+  if (!url) return null;
+  const filename = manifest[url];
+  if (!filename) return null;
+
+  const file = path.join(seedImagesDir, filename);
+  if (!fs.existsSync(file)) return null;
+
+  try {
+    const row = await storeUpload(storeId, kind, fs.readFileSync(file), filename);
+    return row.id;
+  } catch {
+    // A single unreadable download must not abort the whole seed.
+    return null;
+  }
 }
 
 async function main(): Promise<void> {
@@ -79,6 +127,14 @@ async function main(): Promise<void> {
   }
 
   await ensureDefaultCategories();
+
+  const imageManifest = loadImageManifest();
+  const imageCount = Object.keys(imageManifest).length;
+  console.log(
+    imageCount > 0
+      ? `Found ${imageCount} demo photographs to attach.`
+      : "No demo photographs found; run scripts/fetch-seed-images.mjs for images.",
+  );
 
   const restaurants: DemoRestaurant[] = JSON.parse(
     fs.readFileSync(path.join(dataDir, "restaurants.json"), "utf-8"),
@@ -121,6 +177,11 @@ async function main(): Promise<void> {
       })
       .returning();
 
+    await attachImage(store.id, "cover", demo.heroImage, imageManifest);
+    for (const galleryUrl of (demo.gallery ?? []).slice(0, 4)) {
+      await attachImage(store.id, "gallery", galleryUrl, imageManifest);
+    }
+
     await db.insert(storeUsers).values({
       storeId: store.id,
       phone: `+993${phoneCounter++}`,
@@ -162,23 +223,30 @@ async function main(): Promise<void> {
       const sectionItems = items.filter((m) => m.category === sectionName);
       if (sectionItems.length === 0) continue;
 
-      await db.insert(menuItems).values(
-        sectionItems.map((item, itemIndex) => ({
+      for (const [itemIndex, item] of sectionItems.entries()) {
+        const mediaId = await attachImage(
+          store.id,
+          "menu_item",
+          item.image_url,
+          imageManifest,
+        );
+
+        await db.insert(menuItems).values({
           storeId: store.id,
           sectionId: section.id,
           name: { tk: item.name },
           description: { tk: item.description ?? "" },
           // The demo data holds whole manat; the column is integer tenge.
           priceMinor: Math.round(item.price * 100),
+          mediaId,
           sortOrder: itemIndex,
-        })),
-      );
+        });
+      }
     }
   }
 
   console.log(`Seeded ${restaurants.length} restaurants with menus and hours.`);
   console.log(`Owner accounts use the password: ${SEED_PASSWORD}`);
-  console.log("Photos are not seeded; listings show a placeholder image.");
 }
 
 main()
