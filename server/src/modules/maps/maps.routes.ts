@@ -72,9 +72,10 @@ router.get(
 
     const tile = await readTile(z, x, y);
     if (!tile) {
-      // Empty areas legitimately have no tile. 204 keeps MapLibre quiet,
-      // whereas a 404 makes it log an error for every blank tile.
-      res.status(204).end();
+      // Empty areas legitimately have no tile, and 404 is what a tile client
+      // expects for one. Answering 204 instead hands MapLibre an empty body
+      // that it then tries to parse as protobuf, which throws.
+      res.status(404).end();
       return;
     }
 
