@@ -16,6 +16,7 @@ import {
 } from "./modules/media/media.routes.js";
 import { PUBLIC_ROOT } from "./modules/media/media.service.js";
 import menusRouter from "./modules/menus/menus.routes.js";
+import publicRouter from "./modules/public/public.routes.js";
 import storesRouter from "./modules/stores/stores.routes.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -93,6 +94,7 @@ export function createApp(): Express {
 
   app.use("/api/auth", authRouter);
   app.use("/api/admin", adminRouter);
+  app.use("/api/public", publicRouter);
   app.use("/api/store", storesRouter);
   app.use("/api/store/me/menu", menusRouter);
   app.use("/api/store/me/media", mediaOwnerRouter);
