@@ -22,13 +22,15 @@ prove the mock behaves as written.
  ✓ src/modules/public/opening-hours.test.ts (17 tests)
  ✓ src/lib/lib.test.ts              (17 tests)
  ✓ src/auth/password.test.ts         (9 tests)
+ ✓ src/test/public.test.ts           (7 tests)
  ✓ src/test/migrations.test.ts       (4 tests)
 
- Test Files  7 passed (7)
-      Tests  103 passed (103)
+ Test Files  8 passed (8)
+      Tests  110 passed (110)
 ```
 
-Plus 15 frontend unit tests covering money formatting and parsing.
+Plus 15 frontend unit tests covering money formatting and parsing, and 20
+browser tests described below.
 
 ### Tenancy
 
@@ -120,6 +122,38 @@ a deployment installed from the offline bundle on a machine with the application
 image deleted locally first — which is the closest available simulation of the
 target environment.
 
+## Browser tests
+
+The interface was verified by hand for most of the project, on the argument
+quoted above: a rendering mistake is obvious. That argument turned out to be
+wrong in one specific way, and the exception is worth stating because it is the
+reason this section exists.
+
+Some interface faults are not obvious at all. The map went blank in the built
+application while every tile request returned 200 and the console logged
+nothing — MapLibre's own stylesheet sets `position: relative` on the container,
+which beat the `absolute` the layout depended on as soon as that stylesheet
+began arriving in a separate chunk, and the element collapsed to no height.
+Nothing failed. There was simply no map. A person has to look, and a person who
+has looked at the same page fifty times stops seeing it.
+
+So there are now twenty browser tests, run on a desktop and a phone viewport
+against a real deployment. They cover what the server suite is structurally
+unable to reach:
+
+| Checked | Why it cannot be checked from the API |
+| --- | --- |
+| The map element has height and its tiles return 200 | A blank map and a working map make identical requests |
+| The first page does not download MapLibre | Chunking is a property of the build, not of any response |
+| Every lazily loaded area resolves | A missing chunk shows a spinner for ever and logs nothing |
+| A card's photograph actually decoded | A broken image is present in the DOM and has a URL |
+| The map panel has a real background colour | Tailwind silently emits nothing for an opacity modifier on a `var()` colour |
+| Fullscreen fills the viewport and Escape leaves it | Geometry has no API representation |
+| Changing language changes the restaurants, not just the chrome | The API returns the right thing; the question is whether the page asked for it |
+
+They use the browser already installed on the machine rather than downloading
+one, for the same reason the rest of the project avoids downloads.
+
 ## Defects found during verification
 
 Recorded because they show what the process caught, not to pad the chapter.
@@ -134,6 +168,11 @@ Recorded because they show what the process caught, not to pad the chapter.
 | `formatPrice` emitted a thousands separator that `parsePrice` then rejected | Frontend unit test |
 | Drizzle expanded an array parameter into a row constructor, so category assignment failed | Manual API exercise |
 | `better-sqlite3` segfaulted opening the tile database inside the container | Running the container |
+| The lockfile recorded only the build machine's native binaries, so the image could not be built on Linux at all | Building the image for release |
+| `restore.sh` selected the uploads volume by substring match across the whole Docker host, then ran `rm -rf` in it — on a server with any second Compose project it could destroy an unrelated application's photos | Restore drill |
+| Every shell script was committed non-executable, so the documented `scripts/restore.sh …` failed on a fresh clone | Restore drill |
+| The map rendered nothing while every tile returned 200, after its stylesheet moved into a lazily loaded chunk | Browser test |
+| Cross-building for amd64 failed on an arm64 machine: esbuild's install script runs the binary it has just written, which QEMU refuses with ETXTBSY | Building the release bundle |
 
 The last one changed the design: rather than debug a native module, the runtime
 dependency on SQLite was removed entirely, which also removed the compiler
@@ -150,14 +189,27 @@ retried:
 - Vitest setup files run once per *test file*, so closing the database pool in
   `afterAll` tore it down while later files were still using it.
 
-After both fixes the full suite passed eight consecutive runs.
+After both fixes the suite passed eight consecutive runs, and has since passed
+sixteen more.
+
+One further failure has been seen once — a category-count assertion in
+`public.test.ts` receiving a 404 — and has not reproduced in the twenty-four
+runs since, including six deliberate attempts to provoke it. It is recorded
+here as unexplained rather than fixed, because a flake that stops appearing has
+not been shown to be gone.
 
 ## Not covered
 
-No load or penetration testing has been done. Browser coverage is manual, on
-recent Chrome, Safari and Firefox. There are no automated end-to-end browser
-tests; the smoke test exercises the API rather than the interface.
+No load testing and no penetration testing have been done. Neither would be
+hard to arrange and both would be the obvious next step before the platform
+carries real traffic.
 
-The offline bundle was verified on `linux/arm64`. The default build target is
-`linux/amd64` and uses the same Dockerfile, but has not been run on real
-hardware.
+The browser tests run on Chrome only, at two viewport sizes. Safari and Firefox
+are checked by hand. The tests also assume a seeded database: they assert that
+restaurants and photographs are present, so they cannot be run against the
+empty database a real deployment starts with.
+
+The `linux/amd64` image is built and its architecture confirmed, but it has not
+been run on x86 hardware — only cross-built under emulation on an arm64
+machine. The restore drill, the smoke test and the browser suite were all run
+against `linux/arm64`.

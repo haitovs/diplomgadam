@@ -88,10 +88,20 @@ work.
 Include the defects found during verification. A validation chapter that reports
 only successes reads as though little was verified; the table in
 `docs/05_validation.md` shows the process doing its job, including the case that
-changed the architecture.
+changed the architecture and the several faults that only appeared when the
+thing was built for release and restored from a backup rather than read.
+
+The browser tests are worth a paragraph of their own, because the argument for
+adding them is more interesting than the tests. The project deliberately
+verified the interface by hand, on the grounds that a rendering mistake is
+obvious. It then shipped a blank map that requested every tile successfully and
+logged nothing — a rendering mistake that was not obvious at all. That is a
+specific, defensible reason for automating a specific kind of check, which is a
+better answer than "tests are good".
 
 Be explicit about what was not tested: no load testing, no penetration testing,
-no automated browser tests, and one architecture verified rather than two.
+browser coverage on one engine at two viewport sizes, and one architecture
+actually run rather than two.
 
 Source: `docs/05_validation.md`.
 
