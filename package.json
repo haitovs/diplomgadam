@@ -1,8 +1,8 @@
 {
   "name": "gadam-restaurant-finder",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Diploma template for the design & implementation of a restaurant discovery platform.",
+  "description": "Multi-tenant restaurant discovery platform for Ashgabat, with a store-owner portal and admin moderation.",
   "type": "module",
   "workspaces": [
     "frontend",
@@ -15,13 +15,15 @@
     "build": "npm run build --prefix frontend && npm run build --prefix server",
     "start": "npm run start --prefix server",
     "lint": "npm run lint --prefix frontend && npm run lint --prefix server",
-    "format": "echo \"Formatting handled by IDE / Tailwind preflight\"",
-    "test": "npm run test --prefix frontend"
+    "test": "npm run test --prefix server && npm run test --prefix frontend",
+    "db:generate": "npm run db:generate --prefix server",
+    "db:seed": "npm run db:seed --prefix server"
   },
   "directories": {
     "doc": "docs"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "drizzle-orm": "^0.45.2"
   }
 }

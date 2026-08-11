@@ -1,31 +1,30 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
-type FavoriteState = {
-  ids: string[];
-  toggle: (id: string) => void;
-};
+interface FavoritesState {
+  slugs: string[];
+  toggle: (slug: string) => void;
+  has: (slug: string) => boolean;
+  clear: () => void;
+}
 
-const storageKey = "ashgabat-favorites";
-
-const getInitial = (): string[] => {
-  if (typeof window === "undefined") return [];
-  try {
-    const stored = localStorage.getItem(storageKey);
-    return stored ? JSON.parse(stored) : [];
-  } catch {
-    return [];
-  }
-};
-
-export const useFavorites = create<FavoriteState>((set, get) => ({
-  ids: getInitial(),
-  toggle: (id) =>
-    set((state) => {
-      const exists = state.ids.includes(id);
-      const next = exists ? state.ids.filter((item) => item !== id) : [...state.ids, id];
-      if (typeof window !== "undefined") {
-        localStorage.setItem(storageKey, JSON.stringify(next));
-      }
-      return { ids: next };
-    })
-}));
+/**
+ * Favourites are kept in the browser. The platform has no visitor accounts by
+ * design, so there is nothing to sync them to and no personal data to hold.
+ */
+export const useFavorites = create<FavoritesState>()(
+  persist(
+    (set, get) => ({
+      slugs: [],
+      toggle: (slug) =>
+        set((state) => ({
+          slugs: state.slugs.includes(slug)
+            ? state.slugs.filter((s) => s !== slug)
+            : [...state.slugs, slug],
+        })),
+      has: (slug) => get().slugs.includes(slug),
+      clear: () => set({ slugs: [] }),
+    }),
+    { name: "gadam-favorites" },
+  ),
+);

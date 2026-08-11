@@ -1,31 +1,134 @@
-CONTENT
-INTRODUCTION 7
-CHAPTER I. USED PROGRAMMING LANGUAGES AND WEB TECHNOLOGIES 11
-1.1 What is React (SPA architecture)? 11
-1.2 What is TypeScript? 18
-1.3 State management with TanStack Query and Zustand in “Ashgabat Eats” 24
-1.4 Tailwind theming and design system choices 31
-CHAPTER II. INTRODUCING THE “ASHGABAT EATS” URBAN DINING PLATFORM 38
-2.1 Key features of the “Ashgabat Eats” application 38
-2.2 System requirements, hosting topology, and target clients 40
-2.3 Restaurant discovery, favorites, and AI concierge motivation 43
-2.4 Data sourcing strategy and mock datasets for demonstrations 47
-CHAPTER III. DEVELOPMENT AND FEATURES OF THE “ASHGABAT EATS” APPLICATION 53
-3.1 Project structure, monorepo layout, and core data models 53
-3.2 API layer, dataset loaders, and heuristic AI responder 59
-3.3 Frontend views, routing, and interactive components 66
-3.4 Observability, loading states, and graceful error UX 72
-CONCLUSION 78
-RECOMMENDATION 80
-REFERENCES 82
+# 6. Thesis outline
 
+A chapter plan for the written work, mapped onto the system that was actually
+built. Each entry names what to argue and which artefacts support it.
 
-ABSTRACT
+## Chapter 1 — Introduction
 
-The application is delivered as a full-stack monorepo with a React + TypeScript single-page frontend and an Express-based API backend. The entry point on the web (main.tsx) mounts a Router wrapped in a QueryClientProvider and Zustand stores, while the backend entry (src/index.ts) wires Express middleware, route mounts, and a pluggable AI proxy. This separation allows restaurant data, AI suggestions, and user state (filters, favorites) to evolve independently while still sharing a consistent contract.
+The problem: restaurant information in Ashgabat exists but is not published
+anywhere searchable. Menus live on social media posts that scroll away; prices
+are hearsay.
 
-Core experiences — Discover, Restaurant Detail, Insights, Favorites, and TripAI — are built from reusable layout primitives (Shell, HeroBanner, Glass panels) and domain components (RestaurantCard, MapPanel, FilterChip, RatingBadge). Favorites persist locally via a lightweight Zustand store, while server data is cached and kept fresh via TanStack Query. Filters combine client-side search, cuisine and dietary selection, price tiers, and minimum rating thresholds to demonstrate multi-dimensional querying over static JSON assets.
+State the central design decision early, because everything follows from it: the
+restaurants maintain their own entries rather than an editor maintaining a
+directory. Then draw out the consequences — multi-tenancy, moderation, and the
+tension between reviewing content and letting owners keep prices current.
 
-On the backend, dataset loaders read curated JSON files for restaurants, insight metrics, and cuisine demand. An AI concierge proxy runs a deterministic heuristic scorer: it derives intent flags (budget, cuisines, neighborhoods, dietary needs, late-night preference) and scores restaurants to produce suggestions with confidence, reasoning, and simulated latency. This approach keeps the prototype fully offline-ready while illustrating how external AI services could be integrated later through the same interface.
+Set out the three environmental constraints that shaped the work more than any
+feature: three working languages, unreliable access to the wider internet, and
+no dependable email or SMS.
 
-The Insights module aggregates mock analytics into charts for cuisine demand, price tier distribution, late-night coverage, and sustainability versus ratings, highlighting how data storytelling complements discovery. UI theming uses Tailwind with a default dark mode and a toggle for light mode, showcasing modern theming practices. By combining declarative UI, typed API contracts, modular state management, and believable mock datasets, the “Ashgabat Eats” project demonstrates end-to-end web application design for urban dining discovery and AI-augmented decision support.
+Source: `docs/01_project_overview.md`.
+
+## Chapter 2 — Background and comparable systems
+
+Review directory sites and self-service listing platforms. The useful axis is
+who owns the data: editorially maintained directories go stale, self-service
+platforms stay current but need moderation.
+
+Justify the exclusions here rather than in passing. Ratings are the interesting
+one: they are the feature a reviewer will ask about, and the argument against
+them at launch — that a handful of listings and no traffic produce numbers that
+look authoritative and mean nothing — is worth making properly.
+
+Cover the multilingual question: per-language storage with fallback, versus
+machine translation, versus requiring every language. Requiring all three is the
+option that fails in practice, because owners abandon the form.
+
+## Chapter 3 — Requirements
+
+Functional requirements by actor; non-functional requirements with the mechanism
+that satisfies each, not just an assertion. The tables in
+`docs/02_requirements.md` are written to be reproduced.
+
+Include the out-of-scope list. Recording what was considered and set aside is
+part of the analysis.
+
+## Chapter 4 — Design
+
+System topology and why the API and the single-page application share a process:
+same-site cookies and no cross-origin configuration.
+
+Then the parts worth defending at length:
+
+- **Tenancy in two independent layers** — a single guard for authority, and
+  store-scoped predicates in every query so a guessed identifier is useless.
+  Explain why one layer would not be enough.
+- **Sessions rather than self-contained tokens**, decided by revocation:
+  suspending a restaurant must sign its owners out immediately.
+- **The status machine**, including why `draft` exists at all.
+- **Data modelling choices**: JSONB per language, money as an integer, opening
+  hours as interval rows so split days and past-midnight closing are ordinary
+  data rather than parsing special cases.
+
+Source: `docs/03_architecture.md`.
+
+## Chapter 5 — Implementation
+
+Select depth over breadth. Four topics carry a chapter:
+
+1. **Tenancy** — the guard and a representative service query, with the
+   reasoning that the store id is never read from a request body.
+2. **Offline maps** — converting MBTiles to a flat blob and binary index, the
+   key packing and its 53-bit limit, and the fact that this was forced by a
+   native binding that crashed in the container. A design driven by a real
+   failure is more interesting than one driven by preference.
+3. **The image pipeline** — validating by decoding, metadata stripping, and the
+   public/private split for verification photos.
+4. **Opening hours** — the fixed UTC+5 offset and past-midnight evaluation.
+
+Source: `docs/04_implementation.md`.
+
+## Chapter 6 — Validation
+
+Testing strategy and why the suite runs against a real database rather than a
+mock. Summarise the tenancy matrix — it is the most persuasive table in the
+work.
+
+Include the defects found during verification. A validation chapter that reports
+only successes reads as though little was verified; the table in
+`docs/05_validation.md` shows the process doing its job, including the case that
+changed the architecture.
+
+Be explicit about what was not tested: no load testing, no penetration testing,
+no automated browser tests, and one architecture verified rather than two.
+
+Source: `docs/05_validation.md`.
+
+## Chapter 7 — Deployment
+
+The offline installation requirement and how it is met: one tarball, three
+images, no downloads at any point. Cover the operational surface — migrations at
+startup, healthchecks, backups and a tested restore — and the switchable TLS
+arrangement that anticipates hosting without outbound access.
+
+Source: `docs/deployment.md`.
+
+## Chapter 8 — Evaluation and further work
+
+Evaluate against the requirements table honestly. Where a requirement is met by
+a mechanism with a known limitation, say so: "open now" is computed in
+application code and assumes a city-sized dataset; verification rests on an
+administrator making a phone call; the platform launches empty and is only as
+useful as the restaurants that join.
+
+Further work, in the order it would matter: reviews with the moderation they
+require, visitor accounts, additional cities, and an ordering or reservation
+integration. Each is a project, which is why each was excluded.
+
+## Appendices
+
+- Entity-relationship diagram, from the schema in `server/src/db/schema.ts`
+- API endpoint summary
+- Screenshots: public listing, owner portal with the completeness checklist,
+  admin review queue showing verification photos beside owner contact
+- Test output
+- Deployment bundle contents and installation transcript
+
+## A note on writing it
+
+The strongest material is where a decision was forced by something concrete: the
+native SQLite binding that crashed, the environment variable Compose renders as
+an empty string, the price formatter whose output its own parser rejected. These
+are more convincing than a list of features, because they show the system was
+built and run rather than described.

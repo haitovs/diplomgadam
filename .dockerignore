@@ -1,9 +1,32 @@
 node_modules
+**/node_modules
 .git
+.github
+.claude
 .DS_Store
-*.md
-docs
-frontend/node_modules
-server/node_modules
-server/dist
+**/.DS_Store
+*.log
+
+# Build outputs are produced inside the image, not copied in.
 frontend/dist
+server/dist
+dist-bundle
+
+# Local-only
+.env
+**/.env
+docker-compose.dev.yml
+backups
+
+# Uploaded media lives on a volume, never in the image.
+data/uploads
+
+# The runtime reads tiles.bin/tiles.idx, so the source SQLite tileset must not
+# be baked in as well.
+data/maps/*.mbtiles
+
+# Docs are not needed at runtime. The rest of data/maps is deliberately NOT
+# ignored: the offline tile bundle has to be baked in.
+docs
+*.md
+!INSTALL.md

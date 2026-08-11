@@ -1,41 +1,67 @@
 import { Route, Routes } from "react-router-dom";
+import AdminLayout from "./layouts/AdminLayout";
 import ShellLayout from "./layouts/Shell";
-import AiConciergePage from "./pages/AiConciergePage";
+import StorePortalLayout from "./layouts/StorePortalLayout";
+
 import FavoritesPage from "./pages/FavoritesPage";
 import HomePage from "./pages/HomePage";
 import InsightsPage from "./pages/InsightsPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import RestaurantDetailPage from "./pages/RestaurantDetailPage";
 import MapPage from "./pages/MapPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import StoreDetailPage from "./pages/StoreDetailPage";
 
-// Admin pages
-import AdminDashboardPage from "./pages/AdminDashboardPage";
-import AdminLoginPage from "./pages/AdminLoginPage";
-import AdminRestaurantsPage from "./pages/AdminRestaurantsPage";
-import AdminRestaurantMenuPage from "./pages/AdminRestaurantMenuPage";
-import AdminCategoriesPage from "./pages/AdminCategoriesPage";
+import StoreAccountPage from "./pages/store/StoreAccountPage";
+import StoreAuthPage from "./pages/store/StoreAuthPage";
+import StoreHoursPage from "./pages/store/StoreHoursPage";
+import StoreListingPage from "./pages/store/StoreListingPage";
+import StoreMenuPage from "./pages/store/StoreMenuPage";
+import StoreOverviewPage from "./pages/store/StoreOverviewPage";
+import StorePhotosPage from "./pages/store/StorePhotosPage";
+
+import AdminAdminsPage from "./pages/admin/AdminAdminsPage";
+import AdminAuditPage from "./pages/admin/AdminAuditPage";
+import AdminCategoriesPage from "./pages/admin/AdminCategoriesPage";
+import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
+import AdminLoginPage from "./pages/admin/AdminLoginPage";
+import AdminStoreDetailPage from "./pages/admin/AdminStoreDetailPage";
+import AdminStoresPage from "./pages/admin/AdminStoresPage";
 
 export default function App() {
   return (
     <Routes>
-      {/* Public routes */}
+      {/* Public site */}
       <Route element={<ShellLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/restaurants/:id" element={<RestaurantDetailPage />} />
+        <Route path="/restaurants/:slug" element={<StoreDetailPage />} />
         <Route path="/map" element={<MapPage />} />
         <Route path="/insights" element={<InsightsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/concierge" element={<AiConciergePage />} />
       </Route>
 
-      {/* Admin routes */}
-      <Route path="/admin/login" element={<AdminLoginPage />} />
-      <Route path="/admin" element={<AdminDashboardPage />} />
-      <Route path="/admin/restaurants" element={<AdminRestaurantsPage />} />
-      <Route path="/admin/restaurants/:id/menu" element={<AdminRestaurantMenuPage />} />
-      <Route path="/admin/categories" element={<AdminCategoriesPage />} />
+      {/* Store owner portal */}
+      <Route path="/store" element={<StoreAuthPage mode="signin" />} />
+      <Route path="/store/register" element={<StoreAuthPage mode="register" />} />
+      <Route path="/store/dashboard" element={<StorePortalLayout />}>
+        <Route index element={<StoreOverviewPage />} />
+        <Route path="listing" element={<StoreListingPage />} />
+        <Route path="hours" element={<StoreHoursPage />} />
+        <Route path="menu" element={<StoreMenuPage />} />
+        <Route path="photos" element={<StorePhotosPage />} />
+        <Route path="account" element={<StoreAccountPage />} />
+      </Route>
 
-      {/* 404 */}
+      {/* Admin panel */}
+      <Route path="/admin/login" element={<AdminLoginPage />} />
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<AdminDashboardPage />} />
+        <Route path="queue" element={<AdminStoresPage queueOnly />} />
+        <Route path="stores" element={<AdminStoresPage />} />
+        <Route path="stores/:storeId" element={<AdminStoreDetailPage />} />
+        <Route path="categories" element={<AdminCategoriesPage />} />
+        <Route path="admins" element={<AdminAdminsPage />} />
+        <Route path="audit" element={<AdminAuditPage />} />
+      </Route>
+
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

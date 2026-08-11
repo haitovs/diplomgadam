@@ -1,72 +1,151 @@
-# Ashgabat Restaurant Finder
+# Gadam — restaurant platform for Ashgabat
 
-Design & implementation template for a diploma project about discovering restaurants in a smart-city context. The repository contains:
+A restaurant discovery site where the restaurants maintain their own listings.
+Owners register, describe their venue, build a menu and submit it; an
+administrator reviews and publishes it. Visitors browse in Turkmen, English or
+Russian.
 
-- **Frontend** – React + Vite SPA with smart filters, detail pages, faux map integration, TripAI concierge UI, and accessibility-first components.
-- **Backend** – Express API serving curated static datasets plus an optional proxy to the HuggingFace Inference API for public LLM suggestions.
-- **Docs** – Sequential chapters that describe the research motivation, requirements, architecture, implementation, and validation strategy.
+The whole thing runs from a single Docker bundle with **no internet access at
+all** — including the map.
 
-> The experience is intentionally “finished-looking” while relying on static JSON assets so it can be demonstrated without private data sources. Plug in real APIs when you are ready to extend it.
+## What it does
 
-## Key features
+**For visitors.** Search and filter approved restaurants by cuisine,
+neighbourhood, price and amenities, or by whether they are open right now. Each
+listing has a menu with prices, opening hours, contact details, photos and a map
+location. Favourites are kept in the browser; there are no visitor accounts and
+no personal data is collected.
 
-- Hero discover page with multi-dimensional filters, favorites, and call-to-action blocks for AI exploration.
-- Restaurant profile pages with schedules, sustainability indicators, and gallery placeholders.
-- Insight dashboard powered by precomputed metrics, Recharts visualizations, and narrative copy.
-- TripAI concierge that hits the backend proxy; works with static intent-matching templates or a HuggingFace API key.
-- Clean architecture monorepo (`frontend` + `server`) with shared datasets and type parity.
+**For restaurant owners.** Register with a phone number, fill in the listing
+across three languages, set opening hours (including split days and past-midnight
+closing), build a menu of owner-ordered sections, upload photos, and submit for
+review. Once approved, edits go live immediately — prices change weekly and
+should not wait in a queue.
 
-## Tech stack
+**For administrators.** A review queue showing each applicant's venue photos and
+owner contact side by side, approve/reject with a reason, suspend and reinstate,
+a category manager, administrator accounts with owner and moderator roles, owner
+password resets, "view as store" for support, and an audit log of who changed
+what.
+
+## Stack
 
 | Layer | Technology |
 | --- | --- |
-| Frontend | React 18, TypeScript, Vite, TailwindCSS, React Router 6, TanStack Query, Zustand, React-Leaflet, Recharts |
-| Backend | Node 18+, Express 4, TypeScript, Zod validation, optional HuggingFace integration |
-| Tooling | Vitest, Testing Library, MSW for mocks, tsx for dev server, concurrently for orchestration |
+| Frontend | React 18, TypeScript, Vite, Tailwind, React Router, TanStack Query, Zustand, MapLibre GL |
+| Backend | Node 20, Express 4, TypeScript, Drizzle ORM, Zod, sharp |
+| Database | PostgreSQL 16 |
+| Maps | OpenMapTiles vector tiles built with Planetiler, served from the container |
+| Deployment | Docker Compose, optional Caddy for TLS |
 
-## Getting started
+## Running it locally
 
-> Commands assume you are in the repo root. Network access is required for installing dependencies the first time.
+You need Node 20+ and a PostgreSQL 16 server.
 
-1. **Install dependencies**
-   ```bash
-   npm install
-   npm install --prefix frontend
-   npm install --prefix server
-   ```
-   Or leverage npm workspaces:
-   ```bash
-   npm install --workspaces
-   ```
-2. **Environment variables (optional)**
-   - Copy `.env.sample` to `.env` inside `server/` and add `HUGGINGFACE_API_KEY` if you want live LLM responses.
-3. **Run both apps**
-   ```bash
-   npm run dev
-   ```
-   - Frontend: http://localhost:5173
-   - API: http://localhost:4000
-4. **Production build**
-   ```bash
-   npm run build
-   npm run start   # serves API (deploy SPA separately)
-   ```
+```bash
+npm install
+
+# A database for development
+createdb gadam_dev
+
+cp server/.env.sample server/.env
+# Edit DATABASE_URL if your Postgres is not on port 5433
+
+npm run dev
+```
+
+- Frontend: http://localhost:5173
+- API: http://localhost:4080
+
+On first start the server creates an administrator and prints its password
+**once**:
+
+```
+════════════════════════════════════════════════════════════════
+  FIRST RUN — administrator account created
+  username: admin
+  password: ....-....-....-....
+════════════════════════════════════════════════════════════════
+```
+
+You must change it at first sign-in.
+
+### The map
+
+Map assets are large (~100 MB) and are not in git. Populate them once:
+
+```bash
+scripts/prepare-map-assets.sh [path/to/mbtiles/directory]
+```
+
+This copies the tiles, glyphs, sprites and style into `data/maps/` and converts
+the MBTiles into a flat blob plus a binary index, which is what the server reads.
+Without it everything works except the map, which reports that its data is
+missing.
 
 ## Testing
 
-- `npm run test --prefix frontend` → Vitest + React Testing Library.
-- Backend routes can be extended with supertest; see `docs/05_validation.md` for scenarios.
+```bash
+npm test          # server suite (needs a database) plus frontend unit tests
+```
 
-## Project documentation
+The server suite runs against a real PostgreSQL database — create `gadam_test`
+first, or point `TEST_DATABASE_URL` at one. It covers password hashing, session
+lifecycle, cross-tenant access, the approval state machine, validation and
+migrations.
 
-| Chapter | Description |
+There is also an end-to-end check against a running deployment:
+
+```bash
+scripts/smoke-test.sh http://localhost:4080 admin 'your-admin-password'
+```
+
+## Deploying
+
+```bash
+scripts/prepare-map-assets.sh     # once, if you haven't already
+scripts/bundle.sh --tag v1.0.0    # produces dist-bundle/gadam-v1.0.0.tar.gz
+```
+
+Copy the tarball to the server and follow the `INSTALL.md` inside it. In short:
+`docker load -i images.tar`, fill in `.env`, `docker compose up -d`.
+
+Full details, including HTTPS and backups, are in
+[`docs/deployment.md`](docs/deployment.md).
+
+## Documentation
+
+| Document | What it covers |
 | --- | --- |
-| `docs/01_project_overview.md` | Context, stakeholders, features, and milestone roadmap. |
-| `docs/02_requirements.md` | Research insights, personas, functional and non-functional requirements. |
-| `docs/03_architecture.md` | System design, data contracts, deployment diagrams, AI integration strategy. |
-| `docs/04_implementation.md` | Detailed walkthrough of frontend, backend, datasets, and AI concierge flows. |
-| `docs/05_validation.md` | Testing strategy, demo scripts, and future research extensions. |
+| [`docs/deployment.md`](docs/deployment.md) | Installing, upgrading, TLS, backups and restores |
+| [`docs/admin-guide.md`](docs/admin-guide.md) | Reviewing applications and running the platform |
+| [`docs/store-owner-guide.md`](docs/store-owner-guide.md) | What a restaurant owner needs to do |
+| [`docs/01_project_overview.md`](docs/01_project_overview.md) | Context, users and scope |
+| [`docs/02_requirements.md`](docs/02_requirements.md) | Functional and non-functional requirements |
+| [`docs/03_architecture.md`](docs/03_architecture.md) | System design and data model |
+| [`docs/04_implementation.md`](docs/04_implementation.md) | How the significant parts are built |
+| [`docs/05_validation.md`](docs/05_validation.md) | Testing strategy and results |
+| [`docs/06_diploma_outline.md`](docs/06_diploma_outline.md) | Chapter plan for the written thesis |
 
----
+## Repository layout
 
-Feel free to adapt branding, dataset size, and tonal elements to fit your thesis narrative. The current setup favors clarity, modularity, and demonstrable AI augmentation. Pull requests are welcome if you expand the static data or wire up real data feeds.
+```
+frontend/          React SPA — public site, owner portal, admin panel
+server/            Express API
+  src/config/      environment parsing, validated at boot
+  src/db/          Drizzle schema and SQL migrations
+  src/auth/        passwords, sessions, guards, rate limiting
+  src/modules/     stores, menus, media, admin, public, maps
+  src/test/        integration tests
+data/maps/         offline map bundle (not in git)
+data/uploads/      uploaded photos (not in git; a volume in production)
+deploy/            Caddyfile
+scripts/           asset preparation, bundling, backup, restore, smoke test
+docs/              documentation
+```
+
+## Licensing and attribution
+
+Map data is © OpenStreetMap contributors, ODbL, rendered through the
+OpenMapTiles schema. The attribution is displayed on every map, as the licences
+require.

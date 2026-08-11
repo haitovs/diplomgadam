@@ -232,3 +232,34 @@ UI is verified manually.
 Reviews and ratings, visitor accounts, online ordering, table reservations, payments, SMS or
 email delivery, multi-city launch, and a public API for third parties. Each can be added later as
 its own project.
+
+---
+
+## Changes made during implementation
+
+Recorded for accuracy; the design above is otherwise as approved.
+
+**A `draft` status was added ahead of `pending`.** Uploads need a store to
+attach to, so an owner must have a store before a moderator sees anything, and
+the review queue should contain only listings the owner considers finished. The
+state machine is therefore `draft → pending → approved / rejected`, plus
+`suspended`.
+
+**SQLite was removed from the runtime.** The plan was to read the MBTiles file
+directly. The native binding needed a compiler to install and then segfaulted
+inside the container. Since reading a tile is a key/value lookup, the tileset is
+converted on the build machine to a flat blob plus a binary index, using Node's
+built-in `node:sqlite`. This removed the last native dependency and, by reusing
+the deduplication Planetiler had already done, made the bundle smaller than the
+source file.
+
+**Recharts was dropped.** Every figure on the statistics page is single-series
+magnitude, which reads better as labelled bar rows and saves roughly 100 KB
+compressed on a slow connection.
+
+**Category identifiers were added to the public categories endpoint.** The owner
+portal needs them to submit a selection, and they are not sensitive.
+
+**Display and input price formatting were split.** A displayed price carries a
+thousands separator that an input must not, because grouped and decimal forms
+are ambiguous to a parser and guessing wrong is a thousand-fold error.

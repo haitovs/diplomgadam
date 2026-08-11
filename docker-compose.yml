@@ -1,10 +1,103 @@
+# Production stack. Copy .env.example to .env and edit it before starting.
+#
+#   docker compose up -d                      # app + database, HTTP on :4080
+#   docker compose --profile caddy up -d      # add Caddy with automatic TLS
+#   docker compose --profile backup up -d     # add the nightly backup sidecar
+#
+# For a machine that cannot reach Docker Hub, build the bundle first with
+# scripts/bundle.sh and load it there with `docker load`.
+
 services:
-  app:
-    build: .
-    container_name: gadam-restaurant-finder
-    ports:
-      - "4080:4080"
+  postgres:
+    image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      - NODE_ENV=production
-      - PORT=4080
+      POSTGRES_USER: ${POSTGRES_USER:-gadam}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-gadam}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-gadam} -d ${POSTGRES_DB:-gadam}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    # Not published to the host: only the app needs to reach it.
+    expose:
+      - "5432"
+
+  app:
+    image: ${APP_IMAGE:-gadam-restaurant:latest}
+    build: .
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4080
+      DATABASE_URL: postgres://${POSTGRES_USER:-gadam}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-gadam}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN}
+      TRUST_PROXY: ${TRUST_PROXY:-true}
+      SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-30}
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-8}
+      MAX_GALLERY_IMAGES: ${MAX_GALLERY_IMAGES:-12}
+      MIN_VENUE_PROOF_IMAGES: ${MIN_VENUE_PROOF_IMAGES:-2}
+      BOOTSTRAP_ADMIN_USERNAME: ${BOOTSTRAP_ADMIN_USERNAME:-admin}
+      BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
+      LOGIN_MAX_ATTEMPTS: ${LOGIN_MAX_ATTEMPTS:-8}
+      LOGIN_LOCKOUT_MINUTES: ${LOGIN_LOCKOUT_MINUTES:-15}
+    volumes:
+      - uploads:/data/uploads
+    ports:
+      # Bound to localhost when Caddy is in front; expose directly otherwise.
+      - "${APP_BIND:-0.0.0.0}:${APP_PORT:-4080}:4080"
+
+  # Reverse proxy with automatic TLS. Optional so the stack still runs on a
+  # machine that cannot reach Let's Encrypt — see docs/deployment.md for the
+  # supplied-certificate and HTTP-only variants.
+  caddy:
+    image: caddy:2-alpine
+    profiles: ["caddy"]
+    restart: unless-stopped
+    depends_on:
+      - app
+    environment:
+      # Compose interpolates every service even when its profile is inactive,
+      # so this cannot be a hard-required variable without breaking the default
+      # (proxy-less) stack. Set it in .env before enabling the caddy profile.
+      SITE_ADDRESS: ${SITE_ADDRESS:-localhost}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+  # Nightly pg_dump plus an archive of the uploads volume, written to the host
+  # directory given by BACKUP_DIR.
+  backup:
+    image: postgres:16-alpine
+    profiles: ["backup"]
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGUSER: ${POSTGRES_USER:-gadam}
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: ${POSTGRES_DB:-gadam}
+      PGHOST: postgres
+      RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-14}
+    volumes:
+      - uploads:/data/uploads:ro
+      - ${BACKUP_DIR:-./backups}:/backups
+      - ./scripts/backup-loop.sh:/backup-loop.sh:ro
+    entrypoint: ["/bin/sh", "/backup-loop.sh"]
+
+volumes:
+  db-data:
+  uploads:
+  caddy-data:
+  caddy-config:
