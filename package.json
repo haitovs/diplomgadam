@@ -17,12 +17,14 @@
     "lint": "npm run lint --prefix frontend && npm run lint --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix frontend",
     "db:generate": "npm run db:generate --prefix server",
-    "db:seed": "npm run db:seed --prefix server"
+    "db:seed": "npm run db:seed --prefix server",
+    "test:e2e": "playwright test -c e2e/playwright.config.ts"
   },
   "directories": {
     "doc": "docs"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.1",
     "concurrently": "^8.2.2",
     "drizzle-orm": "^0.45.2"
   }

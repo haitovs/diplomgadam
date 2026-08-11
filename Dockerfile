@@ -22,7 +22,19 @@ ENV npm_config_fetch_retries=5 \
 COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY server/package.json ./server/
-RUN --mount=type=cache,target=/root/.npm npm ci
+
+# --ignore-scripts, for a specific reason rather than as a blanket policy.
+#
+# Nothing in this tree has an install script of its own, and the only
+# dependency that does is esbuild, whose script copies its prebuilt binary into
+# place and then runs it to check the version. That last step fails with
+# ETXTBSY when the image is cross-built for another architecture — the binary
+# has just been written and QEMU cannot execute it yet — which made it
+# impossible to produce an amd64 image on an arm64 machine, and that is exactly
+# how this project is delivered. The copy is an optimisation esbuild names as
+# such; without it esbuild resolves the same binary from its platform package
+# at run time, which is why the frontend build below still works.
+RUN --mount=type=cache,target=/root/.npm npm ci --ignore-scripts
 
 # ── Build the frontend ───────────────────────────────────────────────────────
 FROM deps AS frontend-build
@@ -49,7 +61,8 @@ COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY server/package.json ./server/
 RUN --mount=type=cache,target=/root/.npm \
-    npm ci --omit=dev --workspace tagam-restaurant-server --include-workspace-root
+    npm ci --omit=dev --ignore-scripts \
+    --workspace tagam-restaurant-server --include-workspace-root
 
 # npm hoists workspace dependencies to the root, so this directory usually ends
 # up empty. Creating it keeps the runtime COPY valid either way, and still

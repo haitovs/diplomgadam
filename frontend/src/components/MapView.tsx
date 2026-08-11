@@ -394,7 +394,22 @@ export default function MapView({
 
   return (
     <div className={`${className} relative rounded-2xl overflow-hidden`}>
-      <div ref={container} className="absolute inset-0" />
+      {/*
+        Sized with height rather than by pinning its edges.
+
+        MapLibre puts its own `maplibregl-map` class on this element, and its
+        stylesheet sets `position: relative` on it. That is the same specificity
+        as Tailwind's `absolute`, so which one wins comes down to which
+        stylesheet the browser saw last — and that changed the moment the map
+        moved into a lazily loaded chunk, whose CSS arrives after Tailwind's.
+        The element then kept its inset-0 offsets, which do nothing without
+        absolute positioning, collapsed to no height, and the map went blank
+        while every tile still loaded perfectly.
+
+        Height does not depend on the position property, so this holds whatever
+        order the stylesheets arrive in.
+      */}
+      <div ref={container} className="h-full w-full" />
 
       {/* Right-hand side, clear of the zoom controls above and of any panel a
           page overlays on the left. */}

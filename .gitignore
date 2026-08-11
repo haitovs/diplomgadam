@@ -19,3 +19,7 @@ dist-bundle/
 backups/
 frontend/tsconfig.tsbuildinfo
 data/seed-images/
+
+# Playwright output
+test-results/
+playwright-report/
