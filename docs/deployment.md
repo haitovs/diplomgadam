@@ -159,6 +159,28 @@ overwrites live data. The uploads archive is optional.
 Check a restore works **before** you need it. Restore into a scratch deployment
 and sign in.
 
+### Test the restore before you need it
+
+Do this once, on the day you deploy, and then whenever the stack changes. A
+backup nobody has restored from is a guess.
+
+Restoring into the live deployment to check it works is not a test, it is the
+disaster. Bring up a second, throwaway stack instead:
+
+```bash
+mkdir /tmp/restore-drill && cd /tmp/restore-drill
+cp -r /path/to/tagam/{docker-compose.yml,deploy,scripts} .
+cp /path/to/tagam/.env .            # then change APP_PORT to a free one
+docker compose -p drill up -d
+echo restore | COMPOSE_PROJECT_NAME=drill ./scripts/restore.sh \
+    /path/to/backups/db-YYYYMMDD-HHMMSS.dump \
+    /path/to/backups/uploads-YYYYMMDD-HHMMSS.tar.gz
+```
+
+Then open it and check that the restaurants are there and their photos load —
+not merely that the script printed "Restore complete". Tear it down with
+`docker compose -p drill down -v` when you are satisfied.
+
 ## 6. Upgrading
 
 Build a new bundle, copy it over, then:

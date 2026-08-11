@@ -49,12 +49,23 @@ if [[ -n "$UPLOADS_ARCHIVE" ]]; then
     exit 1
   fi
   echo "Restoring uploads..."
-  # Runs inside a throwaway container so the volume can be written while the
-  # app container is stopped.
-  docker run --rm \
-    -v "$(docker volume ls -q --filter name=uploads | head -1)":/data/uploads \
+  # Runs as a one-off container built from the app service, so Compose resolves
+  # the uploads volume itself.
+  #
+  # This used to pick the volume with `docker volume ls --filter name=uploads`,
+  # which matches by substring across the whole Docker host. On a machine
+  # running any second Compose project the first match is not necessarily ours,
+  # and the next line deletes everything in it — so the old version could wipe
+  # an unrelated application's photos and restore ours into the wrong place.
+  # Never name a volume by pattern in a command that begins with rm -rf.
+  #
+  # --no-deps keeps this from starting Postgres again behind our back.
+  docker compose run --rm --no-deps --user root \
     -v "$(cd "$(dirname "$UPLOADS_ARCHIVE")" && pwd)":/restore:ro \
-    alpine:3 sh -c "rm -rf /data/uploads/* && tar -xzf /restore/$(basename "$UPLOADS_ARCHIVE") -C /data --strip-components=0"
+    --entrypoint sh app -c \
+    "rm -rf /data/uploads/* /data/uploads/.[!.]* 2>/dev/null; \
+     tar -xzf /restore/$(basename "$UPLOADS_ARCHIVE") -C /data && \
+     chown -R node:node /data/uploads"
 fi
 
 echo "Starting the application..."

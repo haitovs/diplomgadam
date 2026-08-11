@@ -1,24 +1,28 @@
 # syntax=docker/dockerfile:1
 #
-# Debian slim rather than Alpine on purpose: sharp ships prebuilt glibc
-# binaries, and better-sqlite3 compiles cleanly against glibc. The compiler is
-# installed only in the build stages, never in the runtime image.
+# Debian slim rather than Alpine, because sharp ships prebuilt binaries against
+# glibc and would otherwise have to be compiled. Nothing in the tree needs a
+# compiler: the only packages with install scripts are esbuild's, which are
+# prebuilt too, so no build toolchain is installed in any stage.
 
 # ── Dependencies ─────────────────────────────────────────────────────────────
 FROM node:20-bookworm-slim AS deps
 WORKDIR /app
 
-# better-sqlite3 is a devDependency (it builds the tile index) and has no
-# prebuilt binary for Node 20, so it compiles from source. The toolchain stays
-# in this build stage and never reaches the runtime image.
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends python3 make g++ \
-  && rm -rf /var/lib/apt/lists/*
+# This project is built for somewhere with unreliable international bandwidth,
+# and a default `npm ci` gives up on the first dropped connection part-way
+# through several hundred packages. The cache mount keeps whatever a failed
+# attempt did manage to fetch, so a retry resumes instead of starting over, and
+# the retry settings ride out a drop rather than aborting the build.
+ENV npm_config_fetch_retries=5 \
+    npm_config_fetch_retry_mintimeout=20000 \
+    npm_config_fetch_retry_maxtimeout=120000 \
+    npm_config_fetch_timeout=600000
 
 COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY server/package.json ./server/
-RUN npm ci
+RUN --mount=type=cache,target=/root/.npm npm ci
 
 # ── Build the frontend ───────────────────────────────────────────────────────
 FROM deps AS frontend-build
@@ -36,12 +40,16 @@ RUN npm run build --prefix server
 FROM node:20-bookworm-slim AS prod-deps
 WORKDIR /app
 
-# No toolchain needed here: sharp ships prebuilt binaries and better-sqlite3 is
-# a devDependency used only to build the tile index on the build machine.
+ENV npm_config_fetch_retries=5 \
+    npm_config_fetch_retry_mintimeout=20000 \
+    npm_config_fetch_retry_maxtimeout=120000 \
+    npm_config_fetch_timeout=600000
+
 COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY server/package.json ./server/
-RUN npm ci --omit=dev --workspace tagam-restaurant-server --include-workspace-root
+RUN --mount=type=cache,target=/root/.npm \
+    npm ci --omit=dev --workspace tagam-restaurant-server --include-workspace-root
 
 # npm hoists workspace dependencies to the root, so this directory usually ends
 # up empty. Creating it keeps the runtime COPY valid either way, and still
