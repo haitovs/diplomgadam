@@ -17,3 +17,4 @@ data/maps/
 # Deployment bundles produced by scripts/bundle.sh.
 dist-bundle/
 backups/
+frontend/tsconfig.tsbuildinfo
