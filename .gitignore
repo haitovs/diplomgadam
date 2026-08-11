@@ -5,5 +5,11 @@ server/node_modules
 .env
 .DS_Store
 *.log
+
+# Uploaded store media lives on a volume, not in the repo.
 data/uploads/*
 !data/uploads/.gitkeep
+
+# Offline map bundle (~100 MB: vector tiles, glyphs, sprites).
+# Populate it with scripts/prepare-map-assets.sh before building the image.
+data/maps/

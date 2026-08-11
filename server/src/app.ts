@@ -15,6 +15,7 @@ import {
   mediaOwnerRouter,
 } from "./modules/media/media.routes.js";
 import { PUBLIC_ROOT } from "./modules/media/media.service.js";
+import mapsRouter from "./modules/maps/maps.routes.js";
 import menusRouter from "./modules/menus/menus.routes.js";
 import publicRouter from "./modules/public/public.routes.js";
 import storesRouter from "./modules/stores/stores.routes.js";
@@ -84,6 +85,9 @@ export function createApp(): Express {
       fallthrough: false,
     }),
   );
+
+  // Map bundle: tiles, glyphs, sprites and style, all served locally.
+  app.use("/maps", mapsRouter);
 
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", version: process.env.APP_VERSION ?? "1.0.0" });

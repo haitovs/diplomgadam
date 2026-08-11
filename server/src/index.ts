@@ -8,6 +8,7 @@ import {
 import { purgeOldLoginAttempts } from "./auth/rate-limit.js";
 import { purgeExpiredSessions } from "./auth/sessions.js";
 import { config } from "./config/index.js";
+import { closeMaps, initMaps } from "./modules/maps/maps.service.js";
 import { closeDb } from "./db/client.js";
 import { runMigrations } from "./db/migrate.js";
 
@@ -19,6 +20,8 @@ async function main(): Promise<void> {
 
   await ensureBootstrapAdmin();
   await ensureDefaultCategories();
+
+  initMaps();
 
   const app = createApp();
 
@@ -46,6 +49,7 @@ async function main(): Promise<void> {
   const shutdown = (signal: string) => {
     console.log(`${signal} received, shutting down.`);
     server.close(() => {
+      closeMaps();
       void closeDb().finally(() => process.exit(0));
     });
     // Don't let a hung connection keep the container alive forever.
