@@ -6,6 +6,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import authRouter from "./auth/auth.routes.js";
+import adminRouter from "./modules/admin/admin.routes.js";
 import { loadAuth } from "./auth/context.js";
 import { config } from "./config/index.js";
 import { errorHandler, notFoundHandler } from "./lib/http.js";
@@ -91,6 +92,7 @@ export function createApp(): Express {
   app.use("/api", loadAuth);
 
   app.use("/api/auth", authRouter);
+  app.use("/api/admin", adminRouter);
   app.use("/api/store", storesRouter);
   app.use("/api/store/me/menu", menusRouter);
   app.use("/api/store/me/media", mediaOwnerRouter);
