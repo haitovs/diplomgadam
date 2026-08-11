@@ -83,6 +83,20 @@ the MBTiles into a flat blob plus a binary index, which is what the server reads
 Without it everything works except the map, which reports that its data is
 missing.
 
+### Demo data
+
+Production ships with an empty database. For a populated site to develop or
+demonstrate against:
+
+```bash
+node scripts/fetch-seed-images.mjs   # once: downloads the demo photographs
+npm run db:seed                      # 30 restaurants, menus, hours, photos
+```
+
+The fetch script needs internet and runs on your machine only; the images are
+gitignored and never reach a deployment. Seeded owner accounts sign in with
+`+993 65900000` (and upward) and the password printed by the seed.
+
 ## Testing
 
 ```bash

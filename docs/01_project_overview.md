@@ -76,7 +76,9 @@ listings and no users would produce numbers that look authoritative and mean
 nothing.
 
 The database ships empty. Every restaurant on the site is there because its
-owner put it there and an administrator approved it.
+owner put it there and an administrator approved it. A separate development
+seed populates a local instance for demonstration; it never runs in a
+deployment.
 
 ## Outcome
 
