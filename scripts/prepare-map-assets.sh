@@ -39,6 +39,14 @@ mkdir -p "$DEST"
 echo "Copying vector tiles (this is the large one)..."
 cp "$SOURCE/turkmenistan-detail.mbtiles" "$DEST/turkmenistan.mbtiles"
 
+echo "Building the flat tile index..."
+# The runtime reads a blob plus a binary index rather than the SQLite file, so
+# no native SQLite binding has to ship in the image. See build-tile-index.mjs.
+node "$ROOT/scripts/build-tile-index.mjs" "$DEST/turkmenistan.mbtiles"
+
+echo "Removing the source .mbtiles (not needed at runtime)..."
+rm -f "$DEST/turkmenistan.mbtiles"
+
 echo "Copying glyphs..."
 rm -rf "$DEST/fonts"
 cp -R "$SOURCE/fonts" "$DEST/fonts"

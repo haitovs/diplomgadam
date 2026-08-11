@@ -21,7 +21,7 @@ async function main(): Promise<void> {
   await ensureBootstrapAdmin();
   await ensureDefaultCategories();
 
-  initMaps();
+  await initMaps();
 
   const app = createApp();
 
@@ -49,8 +49,9 @@ async function main(): Promise<void> {
   const shutdown = (signal: string) => {
     console.log(`${signal} received, shutting down.`);
     server.close(() => {
-      closeMaps();
-      void closeDb().finally(() => process.exit(0));
+      void closeMaps()
+        .then(() => closeDb())
+        .finally(() => process.exit(0));
     });
     // Don't let a hung connection keep the container alive forever.
     setTimeout(() => process.exit(1), 10_000).unref();

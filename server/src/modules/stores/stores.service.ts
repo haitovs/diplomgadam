@@ -17,6 +17,7 @@ import {
 import { badRequest, conflict, notFound } from "../../lib/errors.js";
 import { normaliseLocalized } from "../../lib/i18n.js";
 import { uniqueSlug } from "../../lib/slug.js";
+import { serialiseMedia } from "../media/media.service.js";
 import type {
   HoursInput,
   RegisterInput,
@@ -144,7 +145,16 @@ export async function getStoreDetail(storeId: string) {
       .orderBy(asc(storeUsers.createdAt)),
   ]);
 
-  return { store, hours, specialHours, categories: cats, media: images, owners };
+  return {
+    store,
+    hours,
+    specialHours,
+    categories: cats,
+    // Serialised rather than returned raw: consumers need the variant URLs,
+    // and a private venue photo must resolve to its authenticated route.
+    media: images.map(serialiseMedia),
+    owners,
+  };
 }
 
 export async function updateStore(storeId: string, input: UpdateStoreInput) {

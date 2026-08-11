@@ -27,8 +27,11 @@ const schema = z.object({
 
   /** Writable volume for uploaded media. */
   UPLOAD_DIR: z.string().default("/data/uploads"),
-  /** Read-only volume holding mbtiles, glyphs and sprites. */
-  MAPS_DIR: z.string().default("/data/maps"),
+  /**
+   * Map bundle location. Baked into the image under /app rather than /data,
+   * so mounting a volume at /data/uploads cannot shadow it.
+   */
+  MAPS_DIR: z.string().default("/app/maps"),
 
   MAX_UPLOAD_MB: z.coerce.number().positive().default(8),
   MAX_GALLERY_IMAGES: z.coerce.number().int().positive().default(12),
@@ -47,7 +50,17 @@ const schema = z.object({
   LOGIN_LOCKOUT_MINUTES: z.coerce.number().int().positive().default(15),
 });
 
-const parsed = schema.safeParse(process.env);
+/**
+ * Docker Compose renders an unset variable as an empty string rather than
+ * omitting it, so `${BOOTSTRAP_ADMIN_PASSWORD:-}` arrives as "" and would fail
+ * an optional field's own validation. Treating empty as absent is what the
+ * compose file actually means.
+ */
+const presentEnv = Object.fromEntries(
+  Object.entries(process.env).filter(([, value]) => value !== ""),
+);
+
+const parsed = schema.safeParse(presentEnv);
 
 if (!parsed.success) {
   const issues = parsed.error.issues

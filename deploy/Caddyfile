@@ -1,0 +1,30 @@
+# Automatic TLS from Let's Encrypt. SITE_ADDRESS comes from .env and must be a
+# domain pointing at this machine.
+#
+# Moving to hosting with no outbound access? Replace the site block with one of
+# these and restart Caddy — nothing else in the stack changes.
+#
+#   Supplied certificate:
+#     {$SITE_ADDRESS} {
+#       tls /etc/caddy/cert.pem /etc/caddy/key.pem
+#       ...
+#     }
+#     (mount the files in via the caddy service's volumes)
+#
+#   Plain HTTP, TLS terminated elsewhere:
+#     :80 {
+#       ...
+#     }
+
+{$SITE_ADDRESS} {
+	encode zstd gzip
+
+	# Uploaded photos and map tiles are immutable and content-addressed, so
+	# they can be cached hard by any proxy in front of this one.
+	@static path /uploads/* /maps/* /assets/*
+	header @static Cache-Control "public, max-age=31536000, immutable"
+
+	reverse_proxy app:4080 {
+		header_up X-Real-IP {remote_host}
+	}
+}

@@ -70,7 +70,7 @@ router.get(
     const max = 2 ** z;
     if (x >= max || y >= max) throw notFound("Tile not found");
 
-    const tile = readTile(z, x, y);
+    const tile = await readTile(z, x, y);
     if (!tile) {
       // Empty areas legitimately have no tile. 204 keeps MapLibre quiet,
       // whereas a 404 makes it log an error for every blank tile.

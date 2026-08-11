@@ -93,6 +93,32 @@ export function errorHandler(
     return;
   }
 
+  /**
+   * body-parser and other http-errors users mark client mistakes — malformed
+   * JSON, an oversized body — with a 4xx statusCode and `expose: true`. Without
+   * this, a client sending broken JSON gets a 500 and the log fills with
+   * "Unhandled error" for what is entirely the caller's fault.
+   */
+  if (typeof err === "object" && err !== null) {
+    const httpError = err as {
+      status?: number;
+      statusCode?: number;
+      expose?: boolean;
+      type?: string;
+      message?: string;
+    };
+    const status = httpError.status ?? httpError.statusCode;
+    if (httpError.expose === true && status && status >= 400 && status < 500) {
+      res.status(status).json({
+        error: {
+          code: httpError.type ?? "bad_request",
+          message: httpError.message ?? "Invalid request",
+        },
+      });
+      return;
+    }
+  }
+
   console.error("Unhandled error:", err);
   res.status(500).json({
     error: { code: "internal_error", message: "Internal server error" },
