@@ -144,8 +144,18 @@ async function main(): Promise<void> {
   );
 
   const categoryRows = await db
-    .select({ id: categories.id, slug: categories.slug })
+    .select({ id: categories.id, slug: categories.slug, name: categories.name })
     .from(categories);
+
+  // The demo data names cuisines in Turkmen, exactly as the seeded categories
+  // are named, so matching on that is precise. Slugifying the Turkmen name
+  // would not match the English-derived category slug, which previously
+  // dumped every restaurant into a single cuisine.
+  const categoryByTurkmenName = new Map(
+    categoryRows
+      .filter((c) => c.name?.tk)
+      .map((c) => [c.name.tk!.toLocaleLowerCase("tk"), c.id]),
+  );
   const categoryBySlug = new Map(categoryRows.map((c) => [c.slug, c.id]));
 
   const passwordHash = await hashPassword(SEED_PASSWORD);
@@ -202,9 +212,12 @@ async function main(): Promise<void> {
       })),
     );
 
-    // Map the demo cuisine names onto seeded categories where they line up.
     const matched = demo.cuisines
-      .map((name) => categoryBySlug.get(slugify(name)))
+      .map(
+        (name) =>
+          categoryByTurkmenName.get(name.toLocaleLowerCase("tk")) ??
+          categoryBySlug.get(slugify(name)),
+      )
       .filter((id): id is string => Boolean(id));
     const chosen = matched.length > 0 ? matched : [categoryRows[0].id];
     await db

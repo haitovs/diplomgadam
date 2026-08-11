@@ -191,20 +191,35 @@ export async function primaryOwnerFor(storeId: string) {
 // ── Categories ───────────────────────────────────────────────────────────────
 
 export async function listCategoriesWithCounts() {
-  return db
-    .select({
-      id: categories.id,
-      slug: categories.slug,
-      name: categories.name,
-      icon: categories.icon,
-      sortOrder: categories.sortOrder,
-      storeCount: sql<number>`(
-        select count(*)::int from ${storeCategories}
-        where ${storeCategories.categoryId} = ${categories.id}
-      )`,
-    })
-    .from(categories)
-    .orderBy(categories.sortOrder, categories.slug);
+  // Counted with a grouped query rather than a correlated subquery: Drizzle
+  // renders columns unqualified inside a raw `sql` template, which silently
+  // broke the correlation and reported zero for every category.
+  const [rows, counts] = await Promise.all([
+    db
+      .select({
+        id: categories.id,
+        slug: categories.slug,
+        name: categories.name,
+        icon: categories.icon,
+        sortOrder: categories.sortOrder,
+      })
+      .from(categories)
+      .orderBy(categories.sortOrder, categories.slug),
+    db
+      .select({
+        categoryId: storeCategories.categoryId,
+        count: sql<number>`count(*)::int`,
+      })
+      .from(storeCategories)
+      .groupBy(storeCategories.categoryId),
+  ]);
+
+  const countByCategory = new Map(counts.map((c) => [c.categoryId, c.count]));
+
+  return rows.map((row) => ({
+    ...row,
+    storeCount: countByCategory.get(row.id) ?? 0,
+  }));
 }
 
 export async function createCategory(input: {

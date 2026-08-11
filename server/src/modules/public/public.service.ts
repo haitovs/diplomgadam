@@ -332,28 +332,41 @@ export async function recordStoreView(slug: string): Promise<void> {
 }
 
 export async function listPublicCategories(lang: Lang) {
-  const rows = await db
-    .select({
-      id: categories.id,
-      slug: categories.slug,
-      name: categories.name,
-      icon: categories.icon,
-      storeCount: sql<number>`(
-        select count(*)::int from ${storeCategories}
-        join ${stores} on ${stores.id} = ${storeCategories.storeId}
-        where ${storeCategories.categoryId} = ${categories.id}
-          and ${stores.status} = 'approved'
-      )`,
-    })
-    .from(categories)
-    .orderBy(asc(categories.sortOrder));
+  /**
+   * The counts are a separate aggregate rather than a correlated subquery.
+   * Drizzle renders columns unqualified inside a raw `sql` template, so
+   * `where category_id = id` lost its correlation to the outer row and every
+   * category reported zero. A grouped query is both correct and one round trip.
+   */
+  const [rows, counts] = await Promise.all([
+    db
+      .select({
+        id: categories.id,
+        slug: categories.slug,
+        name: categories.name,
+        icon: categories.icon,
+      })
+      .from(categories)
+      .orderBy(asc(categories.sortOrder)),
+    db
+      .select({
+        categoryId: storeCategories.categoryId,
+        count: sql<number>`count(*)::int`,
+      })
+      .from(storeCategories)
+      .innerJoin(stores, eq(stores.id, storeCategories.storeId))
+      .where(publiclyVisible())
+      .groupBy(storeCategories.categoryId),
+  ]);
+
+  const countByCategory = new Map(counts.map((c) => [c.categoryId, c.count]));
 
   return rows.map((r) => ({
     id: r.id,
     slug: r.slug,
     name: pickLocalized(r.name, lang, lang),
     icon: r.icon,
-    storeCount: r.storeCount,
+    storeCount: countByCategory.get(r.id) ?? 0,
   }));
 }
 
