@@ -1,0 +1,22 @@
+# Local development dependencies only. The application itself runs on the host
+# via `npm run dev`. For the production stack see docker-compose.yml.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: gadam-postgres-dev
+    environment:
+      POSTGRES_USER: gadam
+      POSTGRES_PASSWORD: gadam
+      POSTGRES_DB: gadam_dev
+    ports:
+      - "5433:5432"
+    volumes:
+      - gadam-dev-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gadam -d gadam_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  gadam-dev-db:
