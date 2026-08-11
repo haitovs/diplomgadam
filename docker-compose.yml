@@ -12,13 +12,13 @@ services:
     image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-gadam}
+      POSTGRES_USER: ${POSTGRES_USER:-tagam}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
-      POSTGRES_DB: ${POSTGRES_DB:-gadam}
+      POSTGRES_DB: ${POSTGRES_DB:-tagam}
     volumes:
       - db-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-gadam} -d ${POSTGRES_DB:-gadam}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tagam} -d ${POSTGRES_DB:-tagam}"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -27,7 +27,7 @@ services:
       - "5432"
 
   app:
-    image: ${APP_IMAGE:-gadam-restaurant:latest}
+    image: ${APP_IMAGE:-tagam-restaurant:latest}
     build: .
     restart: unless-stopped
     depends_on:
@@ -36,7 +36,7 @@ services:
     environment:
       NODE_ENV: production
       PORT: 4080
-      DATABASE_URL: postgres://${POSTGRES_USER:-gadam}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-gadam}
+      DATABASE_URL: postgres://${POSTGRES_USER:-tagam}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-tagam}
       PUBLIC_ORIGIN: ${PUBLIC_ORIGIN}
       TRUST_PROXY: ${TRUST_PROXY:-true}
       SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-30}
@@ -85,9 +85,9 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      PGUSER: ${POSTGRES_USER:-gadam}
+      PGUSER: ${POSTGRES_USER:-tagam}
       PGPASSWORD: ${POSTGRES_PASSWORD}
-      PGDATABASE: ${POSTGRES_DB:-gadam}
+      PGDATABASE: ${POSTGRES_DB:-tagam}
       PGHOST: postgres
       RETENTION_DAYS: ${BACKUP_RETENTION_DAYS:-14}
     volumes:

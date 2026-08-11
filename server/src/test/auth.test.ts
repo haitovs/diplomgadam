@@ -20,7 +20,7 @@ describe("session cookies", () => {
       .expect(200);
 
     const cookies = response.headers["set-cookie"] as unknown as string[];
-    const session = cookies.find((c) => c.startsWith("gadam_admin="));
+    const session = cookies.find((c) => c.startsWith("tagam_admin="));
     expect(session).toBeDefined();
     expect(session).toMatch(/HttpOnly/i);
     expect(session).toMatch(/SameSite=Lax/i);
@@ -46,7 +46,7 @@ describe("session cookies", () => {
   it("reject a forged token", async () => {
     await request(server)
       .get("/api/auth/admin/me")
-      .set("Cookie", "gadam_admin=not-a-real-token")
+      .set("Cookie", "tagam_admin=not-a-real-token")
       .expect(401);
   });
 });

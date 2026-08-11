@@ -16,7 +16,7 @@ scripts/bundle.sh --tag v1.0.0
 By default this builds for `linux/amd64`, which is what most servers run. On
 Apple Silicon targeting an ARM server, pass `--platform linux/arm64`.
 
-The result is `dist-bundle/gadam-v1.0.0.tar.gz`, roughly 290 MB. It contains:
+The result is `dist-bundle/tagam-v1.0.0.tar.gz`, roughly 290 MB. It contains:
 
 ```
 images.tar            app, postgres:16-alpine, caddy:2-alpine
@@ -30,8 +30,8 @@ INSTALL.md
 ## 2. Install on the server
 
 ```bash
-tar -xzf gadam-v1.0.0.tar.gz
-cd gadam-v1.0.0
+tar -xzf tagam-v1.0.0.tar.gz
+cd tagam-v1.0.0
 
 docker load -i images.tar
 
@@ -166,8 +166,8 @@ migration that changed the schema needs a database restore too.
 | --- | --- | --- |
 | `POSTGRES_PASSWORD` | — | Required. Database password |
 | `PUBLIC_ORIGIN` | — | Public URL; `https://` enables `Secure` cookies |
-| `POSTGRES_USER` / `POSTGRES_DB` | `gadam` | Database credentials |
-| `APP_IMAGE` | `gadam-restaurant:latest` | Image tag compose runs |
+| `POSTGRES_USER` / `POSTGRES_DB` | `tagam` | Database credentials |
+| `APP_IMAGE` | `tagam-restaurant:latest` | Image tag compose runs |
 | `APP_BIND` / `APP_PORT` | `0.0.0.0` / `4080` | Where the app is published |
 | `TRUST_PROXY` | `true` | Read client IPs from proxy headers |
 | `SITE_ADDRESS` | `localhost` | Domain Caddy requests a certificate for |
@@ -214,7 +214,7 @@ restaurant.
 also written to the audit log, visible in the admin panel.
 
 **The database is not published to the host.** Only the application can reach
-it. To inspect it: `docker compose exec postgres psql -U gadam -d gadam`.
+it. To inspect it: `docker compose exec postgres psql -U tagam -d tagam`.
 
 **Sessions are server-side.** Suspending a store or resetting a password signs
 the affected accounts out immediately rather than waiting for expiry.

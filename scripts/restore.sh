@@ -27,8 +27,8 @@ cd "$ROOT"
 # shellcheck disable=SC1091
 [[ -f .env ]] && set -a && . ./.env && set +a
 
-POSTGRES_USER="${POSTGRES_USER:-gadam}"
-POSTGRES_DB="${POSTGRES_DB:-gadam}"
+POSTGRES_USER="${POSTGRES_USER:-tagam}"
+POSTGRES_DB="${POSTGRES_DB:-tagam}"
 
 echo "This will REPLACE the contents of database '$POSTGRES_DB'."
 [[ -n "$UPLOADS_ARCHIVE" ]] && echo "It will also replace every uploaded image."

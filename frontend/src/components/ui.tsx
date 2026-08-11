@@ -4,33 +4,40 @@ import type {
   InputHTMLAttributes,
   ReactNode,
   SelectHTMLAttributes,
+  TextareaHTMLAttributes,
 } from "react";
 
-/* Shared primitives. Pages compose these rather than repeating Tailwind
-   strings, so the design language stays consistent across the public site,
-   the owner portal and the admin panel. */
+/* Shared primitives. Pages compose these rather than repeating utility
+   strings, so a change to the design language happens in one file. */
 
 type Variant = "primary" | "secondary" | "ghost" | "danger" | "success";
 
 const VARIANTS: Record<Variant, string> = {
+  // clay-600 with white text measures 5.83:1.
   primary:
-    "bg-brand-500 hover:bg-brand-600 text-white shadow-sm shadow-brand-500/25 disabled:bg-brand-300",
+    "bg-clay-600 text-white shadow-soft hover:bg-clay-700 active:bg-clay-800 disabled:bg-clay-300 disabled:text-white/80",
   secondary:
-    "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700",
+    "bg-[var(--surface-card)] text-sand-800 border border-[var(--border-subtle)] hover:bg-sand-100 hover:border-sand-400 dark:text-sand-100 dark:hover:bg-sand-800",
   ghost:
-    "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800",
+    "text-sand-700 hover:bg-sand-200/70 dark:text-sand-300 dark:hover:bg-sand-800/70",
   danger:
-    "bg-rose-500 hover:bg-rose-600 text-white shadow-sm shadow-rose-500/25 disabled:bg-rose-300",
+    "bg-red-700 text-white shadow-soft hover:bg-red-800 active:bg-red-900 disabled:bg-red-300",
   success:
-    "bg-emerald-500 hover:bg-emerald-600 text-white shadow-sm shadow-emerald-500/25 disabled:bg-emerald-300",
+    "bg-emerald-700 text-white shadow-soft hover:bg-emerald-800 active:bg-emerald-900 disabled:bg-emerald-300",
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   loading?: boolean;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
   icon?: ReactNode;
 }
+
+const SIZES = {
+  sm: "px-3 py-1.5 text-xs gap-1.5 rounded-lg",
+  md: "px-4 py-2.5 text-sm gap-2 rounded-xl",
+  lg: "px-6 py-3.5 text-base gap-2.5 rounded-xl",
+};
 
 export function Button({
   variant = "primary",
@@ -46,18 +53,16 @@ export function Button({
     <button
       {...rest}
       disabled={disabled || loading}
-      className={`inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-70 ${
-        size === "sm" ? "px-3 py-1.5 text-xs" : "px-4 py-2.5 text-sm"
-      } ${VARIANTS[variant]} ${className}`}
+      className={`inline-flex items-center justify-center font-semibold transition-all duration-200 ease-out-soft active:scale-[0.98] disabled:cursor-not-allowed disabled:active:scale-100 disabled:opacity-80 ${SIZES[size]} ${VARIANTS[variant]} ${className}`}
     >
-      {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : icon}
+      {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : icon}
       {children}
     </button>
   );
 }
 
 export const inputClass =
-  "w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3.5 py-2.5 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition disabled:opacity-60";
+  "w-full rounded-xl border border-[var(--border-subtle)] bg-[var(--surface-card)] px-3.5 py-2.5 text-sm text-sand-900 placeholder:text-sand-500 transition-colors duration-200 hover:border-sand-400 focus:border-clay-500 focus:ring-4 focus:ring-clay-500/10 outline-none disabled:opacity-60 dark:text-sand-100";
 
 interface FieldProps {
   label: string;
@@ -70,15 +75,15 @@ interface FieldProps {
 export function Field({ label, hint, error, required, children }: FieldProps) {
   return (
     <div className="space-y-1.5">
-      <label className="block text-sm font-semibold text-slate-700 dark:text-slate-200">
+      <label className="block text-sm font-semibold text-sand-800 dark:text-sand-200">
         {label}
-        {required && <span className="ml-1 text-rose-500">*</span>}
+        {required && <span className="ml-1 text-clay-600 dark:text-clay-400">*</span>}
       </label>
       {children}
       {error ? (
-        <p className="text-xs font-medium text-rose-600 dark:text-rose-400">{error}</p>
+        <p className="text-xs font-medium text-red-700 dark:text-red-400">{error}</p>
       ) : hint ? (
-        <p className="text-xs text-slate-500 dark:text-slate-400">{hint}</p>
+        <p className="text-xs text-sand-600 dark:text-sand-500">{hint}</p>
       ) : null}
     </div>
   );
@@ -88,6 +93,12 @@ export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
   return <input {...props} className={`${inputClass} ${props.className ?? ""}`} />;
 }
 
+export function Textarea(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
+  return (
+    <textarea {...props} className={`${inputClass} resize-y ${props.className ?? ""}`} />
+  );
+}
+
 export function Select(props: SelectHTMLAttributes<HTMLSelectElement>) {
   return <select {...props} className={`${inputClass} ${props.className ?? ""}`} />;
 }
@@ -95,14 +106,49 @@ export function Select(props: SelectHTMLAttributes<HTMLSelectElement>) {
 export function Card({
   children,
   className = "",
+  interactive = false,
 }: {
   children: ReactNode;
   className?: string;
+  interactive?: boolean;
 }) {
-  return <div className={`glass-panel p-5 sm:p-6 ${className}`}>{children}</div>;
+  return (
+    <div className={`${interactive ? "panel-interactive" : "panel"} p-5 sm:p-6 ${className}`}>
+      {children}
+    </div>
+  );
 }
 
 export function SectionTitle({
+  title,
+  description,
+  action,
+  rule = false,
+}: {
+  title: string;
+  description?: string;
+  action?: ReactNode;
+  /** Adds the short accent rule used on editorial section headings. */
+  rule?: boolean;
+}) {
+  return (
+    <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
+      <div>
+        <h2
+          className={`font-display text-xl font-semibold text-sand-900 dark:text-sand-50 ${rule ? "rule-accent" : ""}`}
+        >
+          {title}
+        </h2>
+        {description && (
+          <p className="mt-1 text-sm text-sand-600 dark:text-sand-500">{description}</p>
+        )}
+      </div>
+      {action}
+    </div>
+  );
+}
+
+export function PageHeader({
   title,
   description,
   action,
@@ -112,32 +158,34 @@ export function SectionTitle({
   action?: ReactNode;
 }) {
   return (
-    <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-      <div>
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white">{title}</h2>
+    <header className="mb-7 flex flex-wrap items-end justify-between gap-4">
+      <div className="max-w-2xl">
+        <h1 className="font-display text-display-sm font-semibold text-sand-900 sm:text-display-md dark:text-sand-50">
+          {title}
+        </h1>
         {description && (
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-            {description}
-          </p>
+          <p className="mt-2 text-sand-600 dark:text-sand-400">{description}</p>
         )}
       </div>
       {action}
-    </div>
+    </header>
   );
 }
 
-type Tone = "neutral" | "success" | "warning" | "danger" | "info";
+type Tone = "neutral" | "success" | "warning" | "danger" | "info" | "accent";
 
 const TONES: Record<Tone, string> = {
   neutral:
-    "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700",
+    "bg-sand-200/80 text-sand-700 border-sand-300 dark:bg-sand-800 dark:text-sand-300 dark:border-sand-700",
   success:
-    "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-500/30",
+    "bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/30",
   warning:
-    "bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-500/30",
+    "bg-amber-50 text-amber-800 border-amber-200 dark:bg-amber-500/10 dark:text-amber-300 dark:border-amber-500/30",
   danger:
-    "bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-500/30",
-  info: "bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-500/30",
+    "bg-red-50 text-red-800 border-red-200 dark:bg-red-500/10 dark:text-red-300 dark:border-red-500/30",
+  info: "bg-sky-50 text-sky-800 border-sky-200 dark:bg-sky-500/10 dark:text-sky-300 dark:border-sky-500/30",
+  accent:
+    "bg-clay-50 text-clay-700 border-clay-200 dark:bg-clay-500/10 dark:text-clay-300 dark:border-clay-500/30",
 };
 
 export function Badge({
@@ -175,29 +223,31 @@ export function Toggle({
       role="switch"
       aria-checked={checked}
       onClick={() => onChange(!checked)}
-      className="flex w-full items-start gap-3 text-left"
+      className="group flex w-full items-start gap-3 text-left"
     >
       <span
-        className={`mt-0.5 relative inline-flex h-5 w-9 shrink-0 rounded-full transition-colors ${
-          checked ? "bg-brand-500" : "bg-slate-300 dark:bg-slate-600"
+        className={`relative mt-0.5 inline-flex h-5 w-9 shrink-0 rounded-full transition-colors duration-200 ${
+          checked ? "bg-clay-600" : "bg-sand-400 dark:bg-sand-700"
         }`}
       >
         <span
-          className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${
+          className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out-soft ${
             checked ? "translate-x-4" : "translate-x-0.5"
           }`}
         />
       </span>
-      <span>
-        <span className="block text-sm font-medium text-slate-700 dark:text-slate-200">
-          {label}
+      {(label || hint) && (
+        <span>
+          {label && (
+            <span className="block text-sm font-medium text-sand-800 dark:text-sand-200">
+              {label}
+            </span>
+          )}
+          {hint && (
+            <span className="block text-xs text-sand-600 dark:text-sand-500">{hint}</span>
+          )}
         </span>
-        {hint && (
-          <span className="block text-xs text-slate-500 dark:text-slate-400">
-            {hint}
-          </span>
-        )}
-      </span>
+      )}
     </button>
   );
 }
@@ -216,10 +266,10 @@ export function CheckboxPill({
       type="button"
       aria-pressed={checked}
       onClick={() => onChange(!checked)}
-      className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
+      className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all duration-200 ease-out-soft active:scale-95 ${
         checked
-          ? "border-brand-500 bg-brand-500 text-white shadow-sm shadow-brand-500/25"
-          : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:border-brand-300"
+          ? "border-clay-600 bg-clay-600 text-white shadow-soft"
+          : "border-[var(--border-subtle)] bg-[var(--surface-card)] text-sand-700 hover:border-clay-300 hover:text-clay-700 dark:text-sand-300 dark:hover:text-clay-300"
       }`}
     >
       {children}
@@ -229,9 +279,18 @@ export function CheckboxPill({
 
 export function Spinner({ className = "" }: { className?: string }) {
   return (
-    <div className={`grid place-items-center py-12 ${className}`}>
-      <Loader2 className="w-6 h-6 animate-spin text-brand-500" />
+    <div className={`grid place-items-center py-16 ${className}`}>
+      <Loader2 className="h-6 w-6 animate-spin text-clay-500" />
     </div>
+  );
+}
+
+/** Blocked-out placeholder used while content loads, instead of a bare spinner. */
+export function Skeleton({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`animate-pulse rounded-lg bg-sand-200 dark:bg-sand-800 ${className}`}
+    />
   );
 }
 
@@ -247,22 +306,28 @@ export function EmptyState({
   action?: ReactNode;
 }) {
   return (
-    <div className="grid place-items-center rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 px-6 py-12 text-center">
-      {icon && <div className="mb-3 text-slate-400">{icon}</div>}
-      <p className="font-semibold text-slate-700 dark:text-slate-200">{title}</p>
+    <div className="grid place-items-center rounded-panel border border-dashed border-sand-300 bg-sand-100/50 px-6 py-16 text-center dark:border-sand-700 dark:bg-sand-900/40">
+      {icon && (
+        <div className="mb-4 grid h-14 w-14 place-items-center rounded-full bg-sand-200 text-sand-500 dark:bg-sand-800">
+          {icon}
+        </div>
+      )}
+      <p className="font-display text-lg font-semibold text-sand-900 dark:text-sand-100">
+        {title}
+      </p>
       {description && (
-        <p className="mt-1 max-w-sm text-sm text-slate-500 dark:text-slate-400">
+        <p className="mt-1.5 max-w-sm text-sm text-sand-600 dark:text-sand-500">
           {description}
         </p>
       )}
-      {action && <div className="mt-4">{action}</div>}
+      {action && <div className="mt-5">{action}</div>}
     </div>
   );
 }
 
 export function ErrorNote({ message }: { message: string }) {
   return (
-    <p className="rounded-xl border border-rose-200 dark:border-rose-500/30 bg-rose-50 dark:bg-rose-500/10 px-3.5 py-2.5 text-sm font-medium text-rose-700 dark:text-rose-300">
+    <p className="rounded-xl border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm font-medium text-red-800 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-300">
       {message}
     </p>
   );

@@ -41,7 +41,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 COPY frontend/package.json ./frontend/
 COPY server/package.json ./server/
-RUN npm ci --omit=dev --workspace gadam-restaurant-server --include-workspace-root
+RUN npm ci --omit=dev --workspace tagam-restaurant-server --include-workspace-root
 
 # npm hoists workspace dependencies to the root, so this directory usually ends
 # up empty. Creating it keeps the runtime COPY valid either way, and still

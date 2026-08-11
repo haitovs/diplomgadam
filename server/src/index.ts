@@ -42,7 +42,7 @@ async function main(): Promise<void> {
 
   const server: Server = app.listen(config.PORT, () => {
     console.log(
-      `Gadam API listening on port ${config.PORT} (${config.NODE_ENV})`,
+      `Tagam API listening on port ${config.PORT} (${config.NODE_ENV})`,
     );
   });
 

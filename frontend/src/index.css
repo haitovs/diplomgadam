@@ -1,99 +1,135 @@
-/* Inter is bundled rather than fetched from Google Fonts: the deployment
-   target may have no outbound internet access at all. */
-@import "@fontsource/inter/300.css";
+/* Inter for text and Playfair Display for headings, both bundled rather than
+   fetched: the deployment target may have no outbound internet at all. Both
+   include Cyrillic, so Russian renders in the intended face. */
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
-@import "@fontsource/inter/800.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
 @import "maplibre-gl/dist/maplibre-gl.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-  color: #0f172a;
-  background-color: #f8fafc;
+@layer base {
+  :root {
+    /* Warm surfaces. The page is cream rather than white so photography and
+       white cards both have something to sit against. */
+    --surface-page: #faf7f2;
+    --surface-card: #ffffff;
+    --surface-sunken: #f3ede3;
+    --border-subtle: #e7dfd3;
+    color-scheme: light;
+  }
+
+  .dark {
+    --surface-page: #17130f;
+    --surface-card: #211c17;
+    --surface-sunken: #1c1813;
+    --border-subtle: #332c24;
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--surface-page);
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: theme("colors.sand.900");
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
+  }
+
+  .dark body {
+    color: theme("colors.sand.100");
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: theme("fontFamily.display");
+    font-weight: 600;
+  }
+
+  /* Numbers in tables and prices should not jitter as they change. */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
 }
 
-.dark {
-  color-scheme: dark;
+@layer components {
+  /* The workhorse surface: a card on cream. Replaces the previous frosted
+     glass, which fought with photography and washed out in dark mode. */
+  .panel {
+    @apply rounded-panel border border-[var(--border-subtle)] bg-[var(--surface-card)] shadow-soft;
+  }
+
+  .panel-interactive {
+    @apply panel transition-all duration-300 ease-out-soft hover:-translate-y-0.5 hover:shadow-lifted;
+  }
+
+  /* Kept as an alias so older markup keeps rendering while pages migrate. */
+  .glass-panel {
+    @apply panel;
+  }
+
+  .surface-sunken {
+    @apply bg-[var(--surface-sunken)];
+  }
+
+  .hairline {
+    @apply border-[var(--border-subtle)];
+  }
+
+  /* A short rule under a section heading, in the accent. Editorial layouts
+     lean on these instead of heavier borders. */
+  .rule-accent::after {
+    content: "";
+    @apply mt-3 block h-px w-12 bg-clay-500;
+  }
+
+  .clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Photographs get a soft inner edge so they do not butt hard against a
+     white card. */
+  .photo-frame {
+    @apply relative overflow-hidden bg-sand-200 dark:bg-sand-800;
+  }
+
+  .photo-frame::after {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-[inherit];
+    box-shadow: inset 0 0 0 1px rgba(35, 30, 25, 0.06);
+  }
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-  transition:
-    background 300ms ease,
-    color 300ms ease;
-}
-
-.dark body {
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(94, 234, 212, 0.06),
-      transparent 26%
-    ),
-    radial-gradient(circle at 75% 0%, rgba(79, 70, 229, 0.08), transparent 34%),
-    radial-gradient(
-      circle at 50% 80%,
-      rgba(17, 152, 255, 0.04),
-      transparent 30%
-    ),
-    #0b1220;
-  color: #e2e8f0;
-}
-
-/* Glassmorphism panels */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  border-radius: 1.25rem;
-  box-shadow:
-    0 4px 24px rgba(15, 23, 42, 0.06),
-    0 1px 3px rgba(15, 23, 42, 0.04);
-  transition:
-    background 200ms ease,
-    border 200ms ease,
-    box-shadow 200ms ease;
-}
-
-.dark .glass-panel {
-  background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.85),
-    rgba(12, 18, 33, 0.9)
-  );
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* Text clamping */
-.clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Custom scrollbar */
+/* Scrollbars, tinted to the warm palette rather than the browser default. */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -101,61 +137,60 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.3);
+  background: theme("colors.sand.400");
+  border: 3px solid transparent;
+  background-clip: content-box;
   border-radius: 100px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.15);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.5);
+  background: theme("colors.sand.500");
+  background-clip: content-box;
 }
 
-/* Smooth selection */
+.dark ::-webkit-scrollbar-thumb {
+  background: theme("colors.sand.800");
+  background-clip: content-box;
+}
+
 ::selection {
-  background: rgba(17, 152, 255, 0.2);
-  color: inherit;
+  background: theme("colors.clay.200");
+  color: theme("colors.sand.950");
 }
 
 .dark ::selection {
-  background: rgba(17, 152, 255, 0.3);
+  background: theme("colors.clay.800");
+  color: theme("colors.sand.50");
 }
 
-/* Range slider styling */
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 6px;
-  border-radius: 100px;
-  background: linear-gradient(to right, #1198ff, #35b9ff);
-  outline: none;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid #1198ff;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(17, 152, 255, 0.3);
-  transition:
-    transform 150ms ease,
-    box-shadow 150ms ease;
-}
-
-input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 4px 12px rgba(17, 152, 255, 0.4);
-}
-
-/* Focus visible indicator */
+/* A single, visible focus treatment everywhere. */
 *:focus-visible {
-  outline: 2px solid #1198ff;
+  outline: 2px solid theme("colors.clay.500");
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+/* Respect a reduced-motion preference rather than animating regardless. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* MapLibre's controls default to a stark white; match them to the palette. */
+.maplibregl-ctrl-group {
+  border-radius: 12px !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 2px 8px rgba(35, 30, 25, 0.08) !important;
+  overflow: hidden;
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
 }

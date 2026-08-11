@@ -5,13 +5,13 @@
 #
 #   scripts/bundle.sh [--platform linux/amd64] [--tag v1.0.0]
 #
-# Produces dist-bundle/gadam-<tag>.tar.gz containing:
+# Produces dist-bundle/tagam-<tag>.tar.gz containing:
 #   images.tar        app + postgres + caddy, ready for `docker load`
 #   docker-compose.yml, deploy/, scripts/, .env.example
 #   INSTALL.md        the three commands to run on the target
 #
 # On the target machine:
-#   tar -xzf gadam-<tag>.tar.gz && cd gadam-<tag>
+#   tar -xzf tagam-<tag>.tar.gz && cd tagam-<tag>
 #   docker load -i images.tar
 #   cp .env.example .env && edit .env
 #   docker compose up -d
@@ -31,12 +31,12 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-APP_IMAGE="gadam-restaurant:${TAG}"
+APP_IMAGE="tagam-restaurant:${TAG}"
 POSTGRES_IMAGE="postgres:16-alpine"
 CADDY_IMAGE="caddy:2-alpine"
 
 OUT_DIR="$ROOT/dist-bundle"
-STAGE="$OUT_DIR/gadam-${TAG}"
+STAGE="$OUT_DIR/tagam-${TAG}"
 
 # The map bundle is not in git; without it the image would ship a working site
 # with a dead map, which is worse than failing here. These are the files the
@@ -72,7 +72,7 @@ sed -i.bak "s|^APP_IMAGE=.*|APP_IMAGE=${APP_IMAGE}|" "$STAGE/.env.example"
 rm -f "$STAGE/.env.example.bak"
 
 cat > "$STAGE/INSTALL.md" <<EOF
-# Gadam — offline install
+# Tagam — offline install
 
 Built $(date -u +"%Y-%m-%d %H:%M UTC") for \`${PLATFORM}\`.
 
@@ -125,10 +125,10 @@ plain HTTP behind another proxy — the comments at the top show both.
 EOF
 
 echo "==> Compressing"
-tar -czf "$OUT_DIR/gadam-${TAG}.tar.gz" -C "$OUT_DIR" "gadam-${TAG}"
+tar -czf "$OUT_DIR/tagam-${TAG}.tar.gz" -C "$OUT_DIR" "tagam-${TAG}"
 rm -rf "$STAGE"
 
-SIZE="$(du -h "$OUT_DIR/gadam-${TAG}.tar.gz" | cut -f1)"
+SIZE="$(du -h "$OUT_DIR/tagam-${TAG}.tar.gz" | cut -f1)"
 echo
-echo "Bundle ready: dist-bundle/gadam-${TAG}.tar.gz ($SIZE)"
+echo "Bundle ready: dist-bundle/tagam-${TAG}.tar.gz ($SIZE)"
 echo "Copy it to the target machine and follow INSTALL.md inside."

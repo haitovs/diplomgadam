@@ -14,10 +14,10 @@ export default defineConfig({
       NODE_ENV: "test",
       DATABASE_URL:
         process.env.TEST_DATABASE_URL ??
-        "postgres://gadam:gadam@localhost:5433/gadam_test",
+        "postgres://tagam:tagam@localhost:5433/tagam_test",
       // Kept out of the repo tree so a failed run cannot leave files behind.
-      UPLOAD_DIR: "/tmp/gadam-test-uploads",
-      MAPS_DIR: "/tmp/gadam-test-maps",
+      UPLOAD_DIR: "/tmp/tagam-test-uploads",
+      MAPS_DIR: "/tmp/tagam-test-maps",
       TRUST_PROXY: "false",
       BOOTSTRAP_ADMIN_USERNAME: "testadmin",
       LOGIN_MAX_ATTEMPTS: "5",

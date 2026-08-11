@@ -25,6 +25,6 @@ export const useFavorites = create<FavoritesState>()(
       has: (slug) => get().slugs.includes(slug),
       clear: () => set({ slugs: [] }),
     }),
-    { name: "gadam-favorites" },
+    { name: "tagam-favorites" },
   ),
 );

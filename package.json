@@ -1,5 +1,5 @@
 {
-  "name": "gadam-restaurant-finder",
+  "name": "tagam-restaurant-finder",
   "version": "1.0.0",
   "private": true,
   "description": "Multi-tenant restaurant discovery platform for Ashgabat, with a store-owner portal and admin moderation.",

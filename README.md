@@ -1,4 +1,4 @@
-# Gadam — restaurant platform for Ashgabat
+# Tagam — restaurant platform for Ashgabat
 
 A restaurant discovery site where the restaurants maintain their own listings.
 Owners register, describe their venue, build a menu and submit it; an
@@ -46,7 +46,7 @@ You need Node 20+ and a PostgreSQL 16 server.
 npm install
 
 # A database for development
-createdb gadam_dev
+createdb tagam_dev
 
 cp server/.env.sample server/.env
 # Edit DATABASE_URL if your Postgres is not on port 5433
@@ -89,7 +89,7 @@ missing.
 npm test          # server suite (needs a database) plus frontend unit tests
 ```
 
-The server suite runs against a real PostgreSQL database — create `gadam_test`
+The server suite runs against a real PostgreSQL database — create `tagam_test`
 first, or point `TEST_DATABASE_URL` at one. It covers password hashing, session
 lifecycle, cross-tenant access, the approval state machine, validation and
 migrations.
@@ -104,7 +104,7 @@ scripts/smoke-test.sh http://localhost:4080 admin 'your-admin-password'
 
 ```bash
 scripts/prepare-map-assets.sh     # once, if you haven't already
-scripts/bundle.sh --tag v1.0.0    # produces dist-bundle/gadam-v1.0.0.tar.gz
+scripts/bundle.sh --tag v1.0.0    # produces dist-bundle/tagam-v1.0.0.tar.gz
 ```
 
 Copy the tarball to the server and follow the `INSTALL.md` inside it. In short:

@@ -14,7 +14,7 @@ import {
   type TranslationKey,
 } from "./translations";
 
-const STORAGE_KEY = "gadam-lang";
+const STORAGE_KEY = "tagam-lang";
 
 interface LanguageContextValue {
   lang: Lang;

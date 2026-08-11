@@ -3,20 +3,20 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: gadam-postgres-dev
+    container_name: tagam-postgres-dev
     environment:
-      POSTGRES_USER: gadam
-      POSTGRES_PASSWORD: gadam
-      POSTGRES_DB: gadam_dev
+      POSTGRES_USER: tagam
+      POSTGRES_PASSWORD: tagam
+      POSTGRES_DB: tagam_dev
     ports:
       - "5433:5432"
     volumes:
-      - gadam-dev-db:/var/lib/postgresql/data
+      - tagam-dev-db:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U gadam -d gadam_dev"]
+      test: ["CMD-SHELL", "pg_isready -U tagam -d tagam_dev"]
       interval: 5s
       timeout: 5s
       retries: 10
 
 volumes:
-  gadam-dev-db:
+  tagam-dev-db:

@@ -8,7 +8,7 @@ export default defineConfig({
   dbCredentials: {
     url:
       process.env.DATABASE_URL ??
-      "postgres://gadam:gadam@localhost:5432/gadam_dev",
+      "postgres://tagam:tagam@localhost:5432/tagam_dev",
   },
   strict: true,
   verbose: true,

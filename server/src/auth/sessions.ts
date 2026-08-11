@@ -5,8 +5,8 @@ import { config } from "../config/index.js";
 import { db } from "../db/client.js";
 import { sessions, type SubjectType } from "../db/schema.js";
 
-export const ADMIN_COOKIE = "gadam_admin";
-export const STORE_COOKIE = "gadam_store";
+export const ADMIN_COOKIE = "tagam_admin";
+export const STORE_COOKIE = "tagam_store";
 
 /**
  * Admins and store owners get separate cookies so an admin using "view as
