@@ -67,6 +67,7 @@ export interface ResolvedSession {
   subjectType: SubjectType;
   subjectId: string;
   impersonatedByAdminId: string | null;
+  lastSeenAt: Date;
 }
 
 /** Returns the session for a raw token, or null when missing or expired. */
@@ -94,10 +95,24 @@ export async function resolveSession(
     subjectType: row.subjectType as SubjectType,
     subjectId: row.subjectId,
     impersonatedByAdminId: row.impersonatedByAdminId,
+    lastSeenAt: row.lastSeenAt,
   };
 }
 
-export async function touchSession(sessionId: string): Promise<void> {
+/** How stale `lastSeenAt` may get before it is worth another write. */
+const TOUCH_INTERVAL_MS = 15 * 60 * 1000;
+
+/**
+ * Records that a session is still in use. Skipped unless the stored timestamp
+ * is already stale: this is only used to show an operator when someone last
+ * signed in, and writing a row on every single request would add a database
+ * write to every page view for no benefit.
+ */
+export async function touchSession(
+  sessionId: string,
+  lastSeenAt: Date,
+): Promise<void> {
+  if (Date.now() - lastSeenAt.getTime() < TOUCH_INTERVAL_MS) return;
   await db
     .update(sessions)
     .set({ lastSeenAt: new Date() })

@@ -16,7 +16,12 @@ import {
   Toggle,
 } from "../../components/ui";
 import { useLanguage } from "../../i18n/LanguageContext";
-import { formatPrice, parsePrice, pickLocalized } from "../../lib/format";
+import {
+  formatPrice,
+  formatPriceInput,
+  parsePrice,
+  pickLocalized,
+} from "../../lib/format";
 import type { Lang } from "../../i18n/translations";
 import type { Localized, MediaItem, MenuItemRecord } from "../../types/api";
 
@@ -326,7 +331,7 @@ export default function StoreMenuPage() {
               <Input
                 inputMode="decimal"
                 defaultValue={
-                  editingItem.priceMinor ? String(editingItem.priceMinor / 100) : ""
+                  editingItem.priceMinor ? formatPriceInput(editingItem.priceMinor) : ""
                 }
                 onChange={(e) => {
                   const parsed = parsePrice(e.target.value);

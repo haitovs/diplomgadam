@@ -88,5 +88,8 @@ export async function ensureDefaultCategories(): Promise<void> {
     })),
   );
 
-  console.log(`Seeded ${DEFAULT_CATEGORIES.length} cuisine categories.`);
+  // Silent under test: the suite seeds categories for nearly every case.
+  if (!config.isTest) {
+    console.log(`Seeded ${DEFAULT_CATEGORIES.length} cuisine categories.`);
+  }
 }

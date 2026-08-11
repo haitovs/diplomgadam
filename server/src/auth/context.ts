@@ -73,7 +73,7 @@ export async function loadAuth(
           sessionId: adminSession.id,
           mustChangePassword: row.mustChangePassword,
         };
-        void touchSession(adminSession.id);
+        await touchSession(adminSession.id, adminSession.lastSeenAt);
       }
     }
 
@@ -98,7 +98,7 @@ export async function loadAuth(
           mustChangePassword: row.mustChangePassword,
           impersonatedByAdminId: storeSession.impersonatedByAdminId,
         };
-        void touchSession(storeSession.id);
+        await touchSession(storeSession.id, storeSession.lastSeenAt);
       }
     }
   } catch (err) {

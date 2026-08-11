@@ -18,10 +18,52 @@ export function formatPrice(priceMinor: number, lang: Lang): string {
   }).format(priceMinor / 100);
 }
 
-/** Parses "45", "45.5" or "45,50" into integer tenge. */
+/**
+ * Plain, ungrouped rendering for a form field: "45", "45.50".
+ *
+ * Deliberately separate from `formatPrice`. Display wants thousands
+ * separators; an input must not have them, because "1,234" and "45.999" are
+ * indistinguishable to a parser and guessing wrong would silently multiply a
+ * price by a thousand.
+ */
+export function formatPriceInput(priceMinor: number): string {
+  if (priceMinor % 100 === 0) return String(priceMinor / 100);
+  return (priceMinor / 100).toFixed(2);
+}
+
+/**
+ * Parses a typed price into integer tenge.
+ *
+ * Accepts what people actually type: "45", "45.50", "45,50" (the Russian
+ * convention), and spaced thousands like "1 200". A single separator is always
+ * the decimal one; when both appear the last one wins, which handles
+ * "1,234.56" and "1.234,56" alike. Anything else is rejected rather than
+ * guessed at, so an odd entry surfaces as a validation error instead of a
+ * thousand-fold wrong price.
+ */
 export function parsePrice(input: string): number | null {
-  const normalised = input.replace(",", ".").trim();
-  if (!/^\d+(\.\d{0,2})?$/.test(normalised)) return null;
+  // Strip every kind of space used as a thousands separator, including the
+  // non-breaking and narrow ones Intl emits.
+  const cleaned = input.replace(/\s/g, "").trim();
+  if (cleaned === "") return null;
+
+  const lastComma = cleaned.lastIndexOf(",");
+  const lastDot = cleaned.lastIndexOf(".");
+
+  let normalised: string;
+  if (lastComma !== -1 && lastDot !== -1) {
+    // Both present: whichever comes last is the decimal separator, and the
+    // other can only have been grouping.
+    const decimalAt = Math.max(lastComma, lastDot);
+    normalised = `${cleaned.slice(0, decimalAt).replace(/[.,]/g, "")}.${cleaned.slice(decimalAt + 1)}`;
+  } else if (lastComma !== -1 || lastDot !== -1) {
+    const separatorAt = Math.max(lastComma, lastDot);
+    normalised = `${cleaned.slice(0, separatorAt)}.${cleaned.slice(separatorAt + 1)}`;
+  } else {
+    normalised = cleaned;
+  }
+
+  if (!/^\d+(\.\d{1,2})?$/.test(normalised)) return null;
   return Math.round(Number(normalised) * 100);
 }
 
