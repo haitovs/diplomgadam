@@ -1,6 +1,12 @@
 import fs from "fs/promises";
 import type { Server } from "http";
 import { createApp } from "./app.js";
+import {
+  ensureBootstrapAdmin,
+  ensureDefaultCategories,
+} from "./auth/bootstrap.js";
+import { purgeOldLoginAttempts } from "./auth/rate-limit.js";
+import { purgeExpiredSessions } from "./auth/sessions.js";
 import { config } from "./config/index.js";
 import { closeDb } from "./db/client.js";
 import { runMigrations } from "./db/migrate.js";
@@ -11,7 +17,25 @@ async function main(): Promise<void> {
   console.log("Applying database migrations...");
   await runMigrations();
 
+  await ensureBootstrapAdmin();
+  await ensureDefaultCategories();
+
   const app = createApp();
+
+  // Housekeeping: expired sessions and stale login-attempt rows would
+  // otherwise grow without bound.
+  const housekeeping = setInterval(
+    () => {
+      void purgeExpiredSessions().catch((err) =>
+        console.error("Session purge failed", err),
+      );
+      void purgeOldLoginAttempts().catch((err) =>
+        console.error("Login attempt purge failed", err),
+      );
+    },
+    60 * 60 * 1000,
+  );
+  housekeeping.unref();
 
   const server: Server = app.listen(config.PORT, () => {
     console.log(

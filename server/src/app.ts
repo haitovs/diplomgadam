@@ -5,6 +5,8 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import authRouter from "./auth/auth.routes.js";
+import { loadAuth } from "./auth/context.js";
 import { config } from "./config/index.js";
 import { errorHandler, notFoundHandler } from "./lib/http.js";
 
@@ -62,7 +64,10 @@ export function createApp(): Express {
     res.json({ status: "ok", version: process.env.APP_VERSION ?? "1.0.0" });
   });
 
-  // Feature modules are mounted here as they come online.
+  // Every /api request carries its resolved sessions; guards enforce access.
+  app.use("/api", loadAuth);
+
+  app.use("/api/auth", authRouter);
 
   app.use("/api", notFoundHandler);
 
