@@ -24,7 +24,13 @@ export const LANGS = ["tk", "en", "ru"] as const;
 export type Lang = (typeof LANGS)[number];
 export type Localized = Partial<Record<Lang, string>>;
 
+/**
+ * `draft` exists so an owner has a store to hang venue photos and menu items
+ * off before anything reaches a moderator: uploads need a store id, and the
+ * admin queue should only ever show listings the owner considers finished.
+ */
 export const STORE_STATUSES = [
+  "draft",
   "pending",
   "approved",
   "rejected",
@@ -74,7 +80,7 @@ export const stores = pgTable(
   {
     id: uuid("id").primaryKey().defaultRandom(),
     slug: text("slug").notNull().unique(),
-    status: text("status").notNull().default("pending"),
+    status: text("status").notNull().default("draft"),
     primaryLang: text("primary_lang").notNull().default("tk"),
 
     name: jsonb("name").$type<Localized>().notNull().default({}),

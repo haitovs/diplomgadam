@@ -1,5 +1,5 @@
 import type { NextFunction, Request, RequestHandler, Response } from "express";
-import { ZodError, type ZodSchema } from "zod";
+import { z, ZodError, type ZodTypeAny } from "zod";
 import { config } from "../config/index.js";
 import { AppError, badRequest } from "./errors.js";
 
@@ -15,15 +15,28 @@ export function asyncHandler(
   };
 }
 
-/** Parses and returns a validated body, turning Zod issues into a 400. */
-export function parseBody<T>(schema: ZodSchema<T>, body: unknown): T {
+/**
+ * Parses and returns a validated body, turning Zod issues into a 400.
+ *
+ * Generic over the schema rather than over a single type so that `z.output` is
+ * used for the result: schemas with `.default()` or `.transform()` have an
+ * input type that differs from their output, and collapsing the two makes
+ * defaulted fields look optional to every caller.
+ */
+export function parseBody<S extends ZodTypeAny>(
+  schema: S,
+  body: unknown,
+): z.output<S> {
   const result = schema.safeParse(body);
   if (!result.success) throw badRequest("Invalid request body", formatZod(result.error));
   return result.data;
 }
 
 /** Parses and returns validated query parameters. */
-export function parseQuery<T>(schema: ZodSchema<T>, query: unknown): T {
+export function parseQuery<S extends ZodTypeAny>(
+  schema: S,
+  query: unknown,
+): z.output<S> {
   const result = schema.safeParse(query);
   if (!result.success)
     throw badRequest("Invalid query parameters", formatZod(result.error));

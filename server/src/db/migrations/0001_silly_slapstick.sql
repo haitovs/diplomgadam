@@ -1,0 +1,1 @@
+ALTER TABLE "stores" ALTER COLUMN "status" SET DEFAULT 'draft';

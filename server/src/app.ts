@@ -9,6 +9,7 @@ import authRouter from "./auth/auth.routes.js";
 import { loadAuth } from "./auth/context.js";
 import { config } from "./config/index.js";
 import { errorHandler, notFoundHandler } from "./lib/http.js";
+import storesRouter from "./modules/stores/stores.routes.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 
@@ -68,6 +69,7 @@ export function createApp(): Express {
   app.use("/api", loadAuth);
 
   app.use("/api/auth", authRouter);
+  app.use("/api/store", storesRouter);
 
   app.use("/api", notFoundHandler);
 
