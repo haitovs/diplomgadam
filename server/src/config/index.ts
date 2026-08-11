@@ -33,6 +33,20 @@ const schema = z.object({
    */
   MAPS_DIR: z.string().default("/app/maps"),
 
+  /**
+   * Optional raster tile template for a satellite layer, e.g.
+   * https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
+   *
+   * Left unset by default and deliberately so: satellite imagery cannot come
+   * from the offline bundle, so switching it on means the map depends on an
+   * outside host. A deployment with no outbound access simply omits it and the
+   * control never appears.
+   */
+  SATELLITE_TILE_URL: z.string().url().optional(),
+  SATELLITE_ATTRIBUTION: z
+    .string()
+    .default("Esri, Maxar, Earthstar Geographics"),
+
   MAX_UPLOAD_MB: z.coerce.number().positive().default(8),
   MAX_GALLERY_IMAGES: z.coerce.number().int().positive().default(12),
   MIN_VENUE_PROOF_IMAGES: z.coerce.number().int().nonnegative().default(2),

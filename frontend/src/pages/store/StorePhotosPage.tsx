@@ -89,7 +89,7 @@ function PhotoGroup({
               onClick={() => {
                 if (confirm(t("media_delete_confirm"))) onDelete(image.id);
               }}
-              className="absolute right-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-[var(--surface-card)]/90 text-sand-700 opacity-0 shadow-soft backdrop-blur transition-all duration-200 ease-out-soft hover:bg-red-700 hover:text-white focus-visible:opacity-100 group-hover:opacity-100 dark:text-sand-200"
+              className="absolute right-1.5 top-1.5 grid h-8 w-8 place-items-center rounded-full bg-[var(--surface-card)] text-sand-700 opacity-0 shadow-soft backdrop-blur transition-all duration-200 ease-out-soft hover:bg-red-700 hover:text-white focus-visible:opacity-100 group-hover:opacity-100 dark:text-sand-200"
               aria-label={t("action_delete")}
             >
               <Trash2 className="h-3.5 w-3.5" />

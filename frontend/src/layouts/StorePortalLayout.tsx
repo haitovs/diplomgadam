@@ -101,7 +101,7 @@ export default function StorePortalLayout() {
 
       {/* Masthead. Name, state and the controls an owner reaches for; it stays
           with them because the forms below are long. */}
-      <header className="sticky top-0 z-30 border-b border-[var(--border-subtle)] bg-[var(--surface-card)]/90 backdrop-blur-xl">
+      <header className="sticky top-0 z-30 border-b border-[var(--border-subtle)] bg-[var(--surface-card)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-3 px-4 py-3 sm:px-6">
           <div className="flex min-w-0 items-center gap-3">
             <img src={logo} alt="" className="h-9 w-9 shrink-0 rounded-xl" />

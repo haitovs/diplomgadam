@@ -501,7 +501,7 @@ export default function StoreListingPage() {
             lifted edge, so it reads as part of the form rather than a chip
             drifting over it. */}
         <div className="sticky bottom-0 z-20">
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-t-panel border border-b-0 border-[var(--border-subtle)] bg-[var(--surface-card)]/95 px-4 py-3.5 shadow-lifted backdrop-blur-md sm:px-5">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-t-panel border border-b-0 border-[var(--border-subtle)] bg-[var(--surface-card)] px-4 py-3.5 shadow-lifted backdrop-blur-md sm:px-5">
             <p className="min-w-0 text-sm">
               {save.isPending ? (
                 <span className="text-sand-600 dark:text-sand-400">

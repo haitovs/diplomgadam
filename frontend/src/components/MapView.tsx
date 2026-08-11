@@ -1,3 +1,4 @@
+import { Layers, LocateFixed } from "lucide-react";
 import maplibregl, {
   type Map as MapLibreMap,
   type StyleSpecification,
@@ -11,6 +12,10 @@ export const ASHGABAT_CENTER: [number, number] = [58.3833, 37.95];
 const SOURCE_ID = "tagam-stores";
 const HALO_LAYER = "tagam-store-halo";
 const DOT_LAYER = "tagam-store-dot";
+const SATELLITE_SOURCE = "tagam-satellite";
+const SATELLITE_LAYER = "tagam-satellite-layer";
+const ME_SOURCE = "tagam-me";
+const ME_LAYER = "tagam-me-layer";
 
 export interface MapMarker {
   id: string;
@@ -51,6 +56,11 @@ export default function MapView({
   const markerHandlers = useRef(new Map<string, () => void>());
   const clickHandler = useRef(onMapClick);
   const [style, setStyle] = useState<StyleSpecification | null>(null);
+  const [satellite, setSatellite] = useState<{ url: string; attribution: string } | null>(
+    null,
+  );
+  const [satelliteOn, setSatelliteOn] = useState(false);
+  const [locating, setLocating] = useState(false);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const { t } = useLanguage();
@@ -73,6 +83,20 @@ export default function MapView({
    * instead of depending on a timer, which reports failure on a slow network
    * and success on a fast one.
    */
+  // Whether this deployment has an imagery source at all.
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/maps/status")
+      .then((r) => r.json())
+      .then((status) => {
+        if (!cancelled && status?.satellite?.url) setSatellite(status.satellite);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
     fetch("/maps/style.json")
@@ -191,8 +215,6 @@ export default function MapView({
     } else {
       instance.addSource(SOURCE_ID, { type: "geojson", data });
 
-      // A white ring under the dot keeps it readable over dark photography
-      // and over the pale streets alike.
       instance.addLayer({
         id: HALO_LAYER,
         type: "circle",
@@ -246,6 +268,103 @@ export default function MapView({
     map.current?.easeTo({ center, zoom, duration: 600 });
   }, [center, zoom]);
 
+  /**
+   * Satellite is drawn beneath the vector labels rather than replacing the
+   * style: imagery alone has no street names, and swapping styles wholesale
+   * would tear down the restaurant layer with it. Ground fills and casings are
+   * hidden while it is on; symbols stay, so the photography keeps its labels.
+   */
+  useEffect(() => {
+    const instance = map.current;
+    if (!instance || !ready || !satellite) return;
+
+    if (satelliteOn && !instance.getSource(SATELLITE_SOURCE)) {
+      instance.addSource(SATELLITE_SOURCE, {
+        type: "raster",
+        tiles: [satellite.url],
+        tileSize: 256,
+        attribution: satellite.attribution,
+      });
+      const firstSymbol = instance
+        .getStyle()
+        .layers?.find((layer) => layer.type === "symbol")?.id;
+      instance.addLayer(
+        { id: SATELLITE_LAYER, type: "raster", source: SATELLITE_SOURCE },
+        firstSymbol,
+      );
+    }
+
+    if (instance.getLayer(SATELLITE_LAYER)) {
+      instance.setLayoutProperty(
+        SATELLITE_LAYER,
+        "visibility",
+        satelliteOn ? "visible" : "none",
+      );
+    }
+
+    for (const layer of instance.getStyle().layers ?? []) {
+      const isGround =
+        layer.type === "fill" ||
+        layer.type === "line" ||
+        layer.type === "background" ||
+        layer.type === "fill-extrusion";
+      if (!isGround || layer.id === SATELLITE_LAYER) continue;
+      instance.setLayoutProperty(
+        layer.id,
+        "visibility",
+        satelliteOn ? "none" : "visible",
+      );
+    }
+  }, [satelliteOn, ready, satellite]);
+
+  /** Shows the visitor's own position, which is what "where am I" needs. */
+  const locateMe = () => {
+    const instance = map.current;
+    if (!instance || !navigator.geolocation) return;
+
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setLocating(false);
+        const point: [number, number] = [
+          position.coords.longitude,
+          position.coords.latitude,
+        ];
+
+        const data: GeoJSON.FeatureCollection = {
+          type: "FeatureCollection",
+          features: [
+            { type: "Feature", geometry: { type: "Point", coordinates: point }, properties: {} },
+          ],
+        };
+
+        const src = instance.getSource(ME_SOURCE) as maplibregl.GeoJSONSource | undefined;
+        if (src) {
+          src.setData(data);
+        } else {
+          instance.addSource(ME_SOURCE, { type: "geojson", data });
+          instance.addLayer({
+            id: ME_LAYER,
+            type: "circle",
+            source: ME_SOURCE,
+            paint: {
+              "circle-radius": 7,
+              // Blue reads as "you" on every map people already use; the
+              // restaurants keep the terracotta so the two never blur.
+              "circle-color": "#1D4ED8",
+              "circle-stroke-width": 3,
+              "circle-stroke-color": "#ffffff",
+            },
+          });
+        }
+
+        instance.easeTo({ center: point, zoom: Math.max(instance.getZoom(), 15) });
+      },
+      () => setLocating(false),
+      { enableHighAccuracy: true, timeout: 8000 },
+    );
+  };
+
   if (failed) {
     return (
       <div
@@ -259,6 +378,35 @@ export default function MapView({
   return (
     <div className={`${className} relative rounded-2xl overflow-hidden`}>
       <div ref={container} className="absolute inset-0" />
+
+      {/* Right-hand side, clear of the zoom controls above and of any panel a
+          page overlays on the left. */}
+      {interactive && (
+        <div className="absolute right-3 top-24 z-10 flex flex-col items-end gap-2">
+          {/* Only offered when the deployment actually has an imagery source. */}
+          {satellite && (
+            <button
+              type="button"
+              onClick={() => setSatelliteOn((v) => !v)}
+              aria-pressed={satelliteOn}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--surface-card)] px-2.5 py-1.5 text-xs font-semibold text-sand-800 shadow-soft backdrop-blur transition-colors hover:text-clay-700 dark:text-sand-100"
+            >
+              <Layers className="h-3.5 w-3.5" />
+              {satelliteOn ? t("map_view_streets") : t("map_view_satellite")}
+            </button>
+          )}
+
+          <button
+            type="button"
+            onClick={locateMe}
+            aria-label={t("map_locate_me")}
+            className="inline-flex w-fit items-center gap-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--surface-card)] px-2.5 py-1.5 text-xs font-semibold text-sand-800 shadow-soft backdrop-blur transition-colors hover:text-clay-700 dark:text-sand-100"
+          >
+            <LocateFixed className={`h-3.5 w-3.5 ${locating ? "animate-pulse" : ""}`} />
+            {t("map_locate_me")}
+          </button>
+        </div>
+      )}
       {!style && (
         <div className="absolute inset-0 grid place-items-center bg-sand-100 dark:bg-sand-800">
           <span className="text-sm text-sand-500">{t("loading")}</span>

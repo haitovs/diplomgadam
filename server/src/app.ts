@@ -25,6 +25,16 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 export function createApp(): Express {
   const app = express();
 
+  /**
+   * The satellite layer, when a deployment enables one, is the only thing that
+   * fetches from outside this origin. Its host is added to the policy rather
+   * than the policy being loosened, so everything else stays same-origin.
+   */
+  const satelliteHost = config.SATELLITE_TILE_URL
+    ? new URL(config.SATELLITE_TILE_URL).origin
+    : null;
+  const tileHosts = satelliteHost ? [satelliteHost] : [];
+
   if (config.TRUST_PROXY) app.set("trust proxy", 1);
   app.disable("x-powered-by");
 
@@ -36,9 +46,9 @@ export function createApp(): Express {
           "script-src": ["'self'"],
           // Framer Motion and MapLibre both set element styles inline.
           "style-src": ["'self'", "'unsafe-inline'"],
-          "img-src": ["'self'", "data:", "blob:"],
+          "img-src": ["'self'", "data:", "blob:", ...tileHosts],
           "font-src": ["'self'"],
-          "connect-src": ["'self'"],
+          "connect-src": ["'self'", ...tileHosts],
           // MapLibre runs its tile parser in a blob-backed worker.
           "worker-src": ["'self'", "blob:"],
           "object-src": ["'none'"],

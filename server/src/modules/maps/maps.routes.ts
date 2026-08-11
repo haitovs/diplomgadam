@@ -1,5 +1,6 @@
 import express, { Router } from "express";
 import { z } from "zod";
+import { config } from "../../config/index.js";
 import { AppError, notFound } from "../../lib/errors.js";
 import { asyncHandler } from "../../lib/http.js";
 import {
@@ -36,6 +37,13 @@ router.get(
     res.json({
       available: mapsAvailable(),
       reason: mapsUnavailableReason(),
+      // Absent unless this deployment opted into an external imagery source.
+      satellite: config.SATELLITE_TILE_URL
+        ? {
+            url: config.SATELLITE_TILE_URL,
+            attribution: config.SATELLITE_ATTRIBUTION,
+          }
+        : null,
       ...(mapsAvailable() ? tileMetadata() : {}),
     });
   },

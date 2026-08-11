@@ -66,7 +66,7 @@ export default function AdminLayout() {
 
   return (
     <div className="min-h-screen bg-[var(--surface-page)] text-sand-900 dark:text-sand-100">
-      <header className="sticky top-0 z-30 border-b border-[var(--border-subtle)] bg-[var(--surface-card)]/95 backdrop-blur">
+      <header className="sticky top-0 z-30 border-b border-[var(--border-subtle)] bg-[var(--surface-card)] backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="flex min-w-0 items-center gap-3">
             <img src={logo} alt="" className="h-9 w-9 rounded-xl shadow-soft" />

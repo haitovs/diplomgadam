@@ -153,6 +153,11 @@ const tk = {
   map_title: "Karta",
   map_subtitle: "Restoranlary kartada görüň",
   map_unavailable: "Karta maglumatlary ýüklenmedi",
+  map_view_satellite: "Hemra suraty",
+  map_view_streets: "Köçe kartasy",
+  map_locate_me: "Men nirede",
+  map_fullscreen: "Doly ekran",
+  map_exit_fullscreen: "Doly ekrandan çyk",
   map_no_location: "Bu restoranyň kartada ýeri bellenmedi",
 
   // Insights
@@ -532,6 +537,11 @@ const en: Record<TranslationKey, string> = {
   map_title: "Map",
   map_subtitle: "See restaurants across the city",
   map_unavailable: "Map data could not be loaded",
+  map_view_satellite: "Satellite",
+  map_view_streets: "Street map",
+  map_locate_me: "Where am I",
+  map_fullscreen: "Fullscreen",
+  map_exit_fullscreen: "Exit fullscreen",
   map_no_location: "This restaurant has no map location set",
 
   insights_title: "Platform insights",
@@ -896,6 +906,11 @@ const ru: Record<TranslationKey, string> = {
   map_title: "Карта",
   map_subtitle: "Рестораны на карте города",
   map_unavailable: "Не удалось загрузить карту",
+  map_view_satellite: "Спутник",
+  map_view_streets: "Карта улиц",
+  map_locate_me: "Где я",
+  map_fullscreen: "Во весь экран",
+  map_exit_fullscreen: "Выйти из полноэкранного режима",
   map_no_location: "Для этого ресторана не указано место на карте",
 
   insights_title: "Статистика платформы",

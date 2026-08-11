@@ -387,7 +387,7 @@ export default function StoreHoursPage() {
 
       {/* The action bar follows the owner down a long week rather than sitting
           at the bottom of it. */}
-      <div className="sticky bottom-4 z-10 flex flex-wrap items-center gap-3 rounded-panel border border-[var(--border-subtle)] bg-[var(--surface-card)]/95 px-4 py-3 shadow-lifted backdrop-blur">
+      <div className="sticky bottom-4 z-10 flex flex-wrap items-center gap-3 rounded-panel border border-[var(--border-subtle)] bg-[var(--surface-card)] px-4 py-3 shadow-lifted backdrop-blur">
         <Button
           loading={save.isPending}
           onClick={() => save.mutate()}
