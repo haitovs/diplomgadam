@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { NavLink, Navigate, Outlet, useNavigate } from "react-router-dom";
 import { adminApi } from "../api/admin";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import { Badge, Button, Spinner } from "../components/ui";
 import { useStoreSession, useStoreSignOut } from "../hooks/useSessions";
 import { useLanguage } from "../i18n/LanguageContext";

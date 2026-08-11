@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tagam">
+  <!--
+    A monogram rather than an illustration: it stays legible at 24px in the
+    header, which a fork-and-plate drawing would not, and it carries the same
+    terracotta as the rest of the interface.
+  -->
+  <defs>
+    <linearGradient id="tagam-mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C85C2A" />
+      <stop offset="100%" stop-color="#8A3618" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="17" fill="url(#tagam-mark)" />
+
+  <!-- Serif T, matching the Playfair display face used for headings. -->
+  <path
+    d="M16.5 18.5h31v7.6h-1.9c-.5-3-1.4-4.1-4.2-4.1h-5.2v20.3c0 2.6.5 3.3 3.4 3.5v1.7H22.4v-1.7c2.9-.2 3.4-.9 3.4-3.5V22h-5.2c-2.8 0-3.7 1.1-4.2 4.1h-1.9z"
+    fill="#FDF6F1"
+  />
+
+  <!-- A small dot, echoing the accent rule used under section headings. -->
+  <circle cx="32" cy="52" r="2.1" fill="#F3CDB4" />
+</svg>

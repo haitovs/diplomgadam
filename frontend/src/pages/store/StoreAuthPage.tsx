@@ -7,7 +7,7 @@ import { storeApi } from "../../api/store";
 import { Button, ErrorNote, Field, Input, Select } from "../../components/ui";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { LANGS, LANG_LABELS, type Lang } from "../../i18n/translations";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 
 export default function StoreAuthPage({ mode }: { mode: "signin" | "register" }) {
   const { t } = useLanguage();

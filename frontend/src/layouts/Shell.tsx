@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import { useLanguage } from "../i18n/LanguageContext";
 import { LANGS, LANG_LABELS, LANG_SHORT } from "../i18n/translations";
 import { useTheme } from "../lib/useTheme";

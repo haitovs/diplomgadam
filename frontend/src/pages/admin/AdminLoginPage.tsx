@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { adminApi } from "../../api/admin";
 import { ApiError } from "../../api/client";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import { Button, ErrorNote, Field, Input } from "../../components/ui";
 import { useLanguage } from "../../i18n/LanguageContext";
 
