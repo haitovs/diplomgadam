@@ -38,7 +38,7 @@ server/src/
     menus/     sections and items
     media/     upload pipeline, quotas, delivery
     admin/     moderation, roles, categories, audit
-    public/    search, detail, categories, insights, opening hours
+    public/    search, detail, categories, statistics, opening hours
     maps/      tiles, glyphs, sprites, style
 ```
 

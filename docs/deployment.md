@@ -111,7 +111,22 @@ on port 4080, and terminate TLS upstream. Keep `TRUST_PROXY=true` so client
 addresses are read from the forwarded headers — login rate limiting depends on
 seeing the real address.
 
-## 4. Backups
+## 4. Satellite imagery (optional)
+
+The offline bundle contains vector tiles only. Satellite imagery is raster
+photography that is neither shipped nor ours to redistribute, so a satellite
+layer can only come from an outside tile service.
+
+It is therefore off unless a deployment asks for it. Set `SATELLITE_TILE_URL`
+in `.env` to a raster tile template and the control appears on the map; leave it
+blank and the map never requests anything beyond this server, which is the right
+choice on hosting with no outbound access.
+
+When it is set, that single host is added to the content security policy rather
+than the policy being relaxed. Check the terms of use of whichever service you
+point at — most imagery providers restrict caching and redistribution.
+
+## 5. Backups
 
 ```bash
 docker compose --profile backup up -d
@@ -144,7 +159,7 @@ overwrites live data. The uploads archive is optional.
 Check a restore works **before** you need it. Restore into a scratch deployment
 and sign in.
 
-## 5. Upgrading
+## 6. Upgrading
 
 Build a new bundle, copy it over, then:
 
@@ -176,6 +191,7 @@ migration that changed the schema needs a database restore too.
 | `MAX_GALLERY_IMAGES` | `12` | Gallery photos per restaurant |
 | `MIN_VENUE_PROOF_IMAGES` | `2` | Verification photos required to submit |
 | `LOGIN_MAX_ATTEMPTS` | `8` | Failures before a temporary lockout |
+| `SATELLITE_TILE_URL` | — | Raster tiles for the optional satellite layer; blank disables it |
 | `LOGIN_LOCKOUT_MINUTES` | `15` | How long that lockout lasts |
 | `BOOTSTRAP_ADMIN_USERNAME` | `admin` | First administrator's username |
 | `BOOTSTRAP_ADMIN_PASSWORD` | — | Blank generates a random one, printed once |
