@@ -17,7 +17,7 @@ const tk = {
   // Navigation and chrome
   nav_discover: "Gözle",
   nav_map: "Karta",
-  nav_insights: "Statistika",
+  nav_insights: "Siziň üçin",
   nav_favorites: "Halananlar",
   brand_name: "Tagam",
   brand_tagline: "Aşgabadyň restoranlary",
@@ -194,6 +194,21 @@ const tk = {
   insights_of_total: "hemmesinden",
   insights_view_all: "Ählisini gör",
   insights_no_nearby: "Ýakynda restoran tapylmady",
+  rail_open_now: "Häzir açyk",
+  rail_near_you: "Size ýakyn",
+  rail_worth_trip: "Baryp görmäge degýär",
+  rail_new: "Täze goşulanlar",
+  rail_popular: "Meşhur ýerler",
+  rail_all_cuisine: "Ähli tagamlar",
+  rail_show_all: "Ählisini gör",
+  rail_scroll_left: "Çepe süýşür",
+  rail_scroll_right: "Saga süýşür",
+  foryou_you_are_in: "Siz şu ýerde",
+  foryou_not_right: "Dogry dälmi?",
+  foryou_places: "ýer",
+  foryou_nothing_open: "Häzir açyk ýer ýok",
+  foryou_nothing_open_hint: "Ähli restoranlary görüp bilersiňiz.",
+
 
 
   // Auth — shared
@@ -392,7 +407,7 @@ export type TranslationKey = keyof typeof tk;
 const en: Record<TranslationKey, string> = {
   nav_discover: "Discover",
   nav_map: "Map",
-  nav_insights: "Insights",
+  nav_insights: "For you",
   nav_favorites: "Favorites",
   brand_name: "Tagam",
   brand_tagline: "Restaurants in Ashgabat",
@@ -556,6 +571,21 @@ const en: Record<TranslationKey, string> = {
   insights_of_total: "of all",
   insights_view_all: "See all",
   insights_no_nearby: "No restaurants found nearby",
+  rail_open_now: "Open right now",
+  rail_near_you: "Near you",
+  rail_worth_trip: "Worth the trip",
+  rail_new: "New on Tagam",
+  rail_popular: "Popular right now",
+  rail_all_cuisine: "All cuisines",
+  rail_show_all: "Show all",
+  rail_scroll_left: "Scroll left",
+  rail_scroll_right: "Scroll right",
+  foryou_you_are_in: "You appear to be in",
+  foryou_not_right: "Not right?",
+  foryou_places: "places",
+  foryou_nothing_open: "Nothing is open right now",
+  foryou_nothing_open_hint: "You can still browse every restaurant.",
+
 
 
   auth_phone: "Phone number",
@@ -741,7 +771,7 @@ const en: Record<TranslationKey, string> = {
 const ru: Record<TranslationKey, string> = {
   nav_discover: "Поиск",
   nav_map: "Карта",
-  nav_insights: "Статистика",
+  nav_insights: "Для вас",
   nav_favorites: "Избранное",
   brand_name: "Tagam",
   brand_tagline: "Рестораны Ашхабада",
@@ -905,6 +935,21 @@ const ru: Record<TranslationKey, string> = {
   insights_of_total: "из всех",
   insights_view_all: "Смотреть все",
   insights_no_nearby: "Рядом ничего не найдено",
+  rail_open_now: "Открыто сейчас",
+  rail_near_you: "Рядом с вами",
+  rail_worth_trip: "Стоит поехать",
+  rail_new: "Новое на Tagam",
+  rail_popular: "Сейчас популярно",
+  rail_all_cuisine: "Все кухни",
+  rail_show_all: "Показать все",
+  rail_scroll_left: "Прокрутить влево",
+  rail_scroll_right: "Прокрутить вправо",
+  foryou_you_are_in: "Вы, кажется, в районе",
+  foryou_not_right: "Не так?",
+  foryou_places: "мест",
+  foryou_nothing_open: "Сейчас ничего не открыто",
+  foryou_nothing_open_hint: "Вы можете посмотреть все рестораны.",
+
 
 
   auth_phone: "Номер телефона",
