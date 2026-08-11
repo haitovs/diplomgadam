@@ -334,6 +334,7 @@ export async function recordStoreView(slug: string): Promise<void> {
 export async function listPublicCategories(lang: Lang) {
   const rows = await db
     .select({
+      id: categories.id,
       slug: categories.slug,
       name: categories.name,
       icon: categories.icon,
@@ -348,6 +349,7 @@ export async function listPublicCategories(lang: Lang) {
     .orderBy(asc(categories.sortOrder));
 
   return rows.map((r) => ({
+    id: r.id,
     slug: r.slug,
     name: pickLocalized(r.name, lang, lang),
     icon: r.icon,
