@@ -192,11 +192,16 @@ retried:
 After both fixes the suite passed eight consecutive runs, and has since passed
 sixteen more.
 
-One further failure has been seen once — a category-count assertion in
-`public.test.ts` receiving a 404 — and has not reproduced in the twenty-four
-runs since, including six deliberate attempts to provoke it. It is recorded
-here as unexplained rather than fixed, because a flake that stops appearing has
-not been shown to be gone.
+One further failure remains unexplained. Twice, a test in `public.test.ts`
+received a 404 where a just-approved restaurant should have been visible. It
+has not reproduced in twenty-two subsequent runs, including twelve of that file
+alone and ten of the whole suite, so there is nothing to diagnose from.
+
+Rather than declare it fixed, the helper that publishes a restaurant now fails
+with the server's own explanation and the row's actual status instead of a bare
+`expected 200, got 404`. If it happens again it will say which step failed and
+whether the approval took, which is the difference between a third unexplained
+flake and a defect that can be found.
 
 ## Not covered
 

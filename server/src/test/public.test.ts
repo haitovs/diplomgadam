@@ -13,6 +13,27 @@ import {
   type RegisteredStore,
 } from "./helpers.js";
 
+/**
+ * Fails with the server's own explanation instead of a bare status code.
+ *
+ * Supertest reports `expected 200, got 404` and nothing else, which for a
+ * multi-step helper does not even say which step failed. A rare failure in
+ * here has been seen twice and reproduced in none of twenty-two subsequent
+ * runs; if it happens again this is what turns it into something diagnosable
+ * rather than another unexplained flake.
+ */
+async function expectOk(
+  step: string,
+  response: request.Response,
+): Promise<request.Response> {
+  if (response.status !== 200 && response.status !== 201) {
+    throw new Error(
+      `${step} returned ${response.status}: ${JSON.stringify(response.body)}`,
+    );
+  }
+  return response;
+}
+
 /** Registers a store, fills it in, submits and approves it. */
 async function publishStore(name: string, phone: string): Promise<RegisteredStore> {
   const store = await registerStore(name, phone);
@@ -27,10 +48,28 @@ async function publishStore(name: string, phone: string): Promise<RegisteredStor
     .field("kind", "venue_proof")
     .attach("image", testImage(), "venue.png")
     .expect(201);
-  await store.client.post("/api/store/me/submit").expect(200);
+  await expectOk("submit", await store.client.post("/api/store/me/submit"));
 
   const admin = await signInAdmin(`admin-${phone}`);
-  await admin.post(`/api/admin/stores/${store.storeId}/approve`).expect(200);
+  await expectOk(
+    `approve ${store.storeId} (${store.slug})`,
+    await admin.post(`/api/admin/stores/${store.storeId}/approve`),
+  );
+
+  // Reading it back proves the row really is approved before a test asserts on
+  // the public site. Both observed failures were a 404 where this store should
+  // have been visible, and this distinguishes "approval did not take" from
+  // "the public query cannot see an approved row".
+  const [row] = await db
+    .select({ status: stores.status })
+    .from(stores)
+    .where(eq(stores.id, store.storeId));
+  if (row?.status !== "approved") {
+    throw new Error(
+      `${store.slug} is "${row?.status ?? "missing"}" after a successful approve`,
+    );
+  }
+
   return store;
 }
 
