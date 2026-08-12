@@ -108,3 +108,24 @@ test("the language switch changes the content, not just the chrome", async ({ pa
   await expect(page.locator("h1").first()).not.toHaveText(turkmen);
   await expect(page.locator("article").first()).toBeVisible();
 });
+
+test("a failed request says the server is unreachable, and retrying recovers", async ({
+  page,
+}) => {
+  // This page used to render a failed request as "nothing found, try clearing
+  // some filters" — with no filters set. The visitor was told the platform was
+  // empty and offered a remedy for a problem they did not have, which is how a
+  // restarting dev server looked like a site with no restaurants in it.
+  let offline = true;
+  await page.route("**/api/public/stores**", (route) =>
+    offline ? route.abort("failed") : route.continue(),
+  );
+
+  await page.goto("/");
+  await expect(page.getByText(/cannot reach|baglanyşyk ýok|нет связи/i)).toBeVisible();
+  await expect(page.locator("article")).toHaveCount(0);
+
+  offline = false;
+  await page.getByRole("button", { name: /try again|gaýtadan|повтор/i }).click();
+  await expect(page.locator("article").first()).toBeVisible();
+});

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { publicApi, type StoreQuery } from "../api/public";
 import DiscoveryRails from "../components/DiscoveryRails";
 import StoreCard, { StoreCardSkeleton } from "../components/StoreCard";
-import { Button, CheckboxPill, EmptyState, Select } from "../components/ui";
+import { Button, CheckboxPill, EmptyState, LoadFailed, Select } from "../components/ui";
 import { useLanguage } from "../i18n/LanguageContext";
 import type { TranslationKey } from "../i18n/translations";
 
@@ -265,6 +265,15 @@ export default function HomePage() {
             <StoreCardSkeleton key={i} />
           ))}
         </div>
+      ) : stores.isError ? (
+        // Before the count checks below, because a failed request also reports
+        // a total of zero and would otherwise be shown as an empty platform.
+        <LoadFailed
+          title={t("error_network")}
+          description={t("home_load_failed_hint")}
+          onRetry={() => stores.refetch()}
+          retryLabel={t("action_retry")}
+        />
       ) : isEmptyPlatform ? (
         <EmptyState
           icon={<Store className="h-6 w-6" />}

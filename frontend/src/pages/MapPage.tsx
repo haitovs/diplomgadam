@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { publicApi } from "../api/public";
 import { directionsUrl, loadMapView, saveMapView } from "../lib/useNearby";
 import MapView, { ASHGABAT_CENTER, type MapMarker } from "../components/MapView";
-import { Button, Select, Spinner, inputClass } from "../components/ui";
+import { Button, LoadFailed, Select, Spinner, inputClass } from "../components/ui";
 import { useLanguage } from "../i18n/LanguageContext";
 
 /**
@@ -54,7 +54,7 @@ export default function MapPage() {
     };
   }, [fullscreen]);
 
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ["map-stores", lang],
     queryFn: () => publicApi.listStores({ lang, perPage: 60, sort: "name" }),
   });
@@ -99,6 +99,19 @@ export default function MapPage() {
   const selectedStore = visible.find((store) => store.id === selected);
 
   if (isLoading) return <Spinner className="min-h-[60vh]" />;
+
+  // Without this the map still draws, with an empty sidebar and no pins, which
+  // reads as "there are no restaurants" rather than "we could not load them".
+  if (isError) {
+    return (
+      <LoadFailed
+        title={t("error_network")}
+        description={t("home_load_failed_hint")}
+        onRetry={() => refetch()}
+        retryLabel={t("action_retry")}
+      />
+    );
+  }
 
   return (
     <motion.div

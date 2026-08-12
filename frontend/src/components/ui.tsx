@@ -1,4 +1,4 @@
-import { Loader2 } from "lucide-react";
+import { Loader2, WifiOff } from "lucide-react";
 import type {
   ButtonHTMLAttributes,
   InputHTMLAttributes,
@@ -322,6 +322,40 @@ export function EmptyState({
       )}
       {action && <div className="mt-5">{action}</div>}
     </div>
+  );
+}
+
+/**
+ * Shown when a request failed, as opposed to succeeding with nothing in it.
+ *
+ * These two cases look identical on screen unless they are deliberately kept
+ * apart, and this page got it wrong: a failed request fell through to "nothing
+ * found, try clearing some filters", which tells the visitor the platform is
+ * empty and suggests a remedy for a problem they do not have. A page that
+ * cannot reach the server should say so and offer to try again.
+ */
+export function LoadFailed({
+  title,
+  description,
+  onRetry,
+  retryLabel,
+}: {
+  title: string;
+  description?: string;
+  onRetry: () => void;
+  retryLabel: string;
+}) {
+  return (
+    <EmptyState
+      icon={<WifiOff className="h-6 w-6" />}
+      title={title}
+      description={description}
+      action={
+        <Button variant="secondary" onClick={onRetry}>
+          {retryLabel}
+        </Button>
+      }
+    />
   );
 }
 
